@@ -3,6 +3,8 @@
 | - | - | - | - |
 | 05/09/2019 | 0.1 | João Gabriel | Criação do índice e adição da introdução|
 | 05/09/2019 | 0.2 | Gabriel | Adição da visão lógica e desempenho|
+|06/09/2019|0.3|Isabella| Adição de Restrições do projeto|
+|06/09/2019|0.4|Isabella e João Gabriel| Adição de Qualidade|
 
 # Índice
 * [1. Introdução](#1.-Introdução)
@@ -12,7 +14,11 @@
 * [5. Visão Lógica](#5.-Visão-Lógica)
      * [5.1. Visão Geral](5.1.-Visão-Geral)
 
+* [6. Restrições](#6.-Restrições)
+
 * [7. Desempenho](#7.-Desempenho)
+
+* [8. Qualidade](#8.-Qualidade)
 
 
 # 1. Introdução
@@ -35,7 +41,7 @@ Conforme dito em Objetivos (1.1.), este documento conterá detalhes sobre a arqu
 
 O cliente solicitará uma função do aplicativo, por exemplo um pedido de crédito, que será enviada para o servidor, para análise dos dados. Caso a solicitação seja válida, o sistema efetuará o pedido e disponibilizará o crédito para o usuário.
 
-# 6 Restrições
+# 6. Restrições
 O sistema será desenvolvido para ser utilizado em smartphones com sistema Android. 
 Para alcançar tal finalidade será feito usando Node.js com express para o backend da aplicação e o frontend da mesma será utilizado o kotlin.
 O modelo pretendido é cliente-servidor, priorizando a experiência do cliente com o sistema.
@@ -43,3 +49,7 @@ O modelo pretendido é cliente-servidor, priorizando a experiência do cliente c
 # 7. Desempenho
 
 A funcionalidade integrada ao aplicativo utilizará um banco de dados, contendo uma grande quantidade de informações dos clientes, devendo realizar múltiplos processos em tempo real, sendo modificações ou adições, para uso sem interrupções do cliente. Esse desempenho também dependerá das especificações do sistema do usuário, no caso seu celular, e a qualidade da internet utilizada.
+
+# 8. Qualidade
+Como objetivo de qualidade a aplicação deseja ter um bom sistema de segurança, visto que existem importantes informações de usuários que serão acessadas pela aplicação e que não podem ser visualizados por todos.
+O código deverá ser bem estruturado, seguindo as normas de boas práticas para que terceiros, responsáveis por suas eventuais manutenções, consigam trabalhar sem a necessidade consultar os desenvolvedores originais.

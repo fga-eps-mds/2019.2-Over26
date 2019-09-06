@@ -35,6 +35,11 @@ Conforme dito em Objetivos (1.1.), este documento conterá detalhes sobre a arqu
 
 O cliente solicitará uma função do aplicativo, por exemplo um pedido de crédito, que será enviada para o servidor, para análise dos dados. Caso a solicitação seja válida, o sistema efetuará o pedido e disponibilizará o crédito para o usuário.
 
+# 6 Restrições
+O sistema será desenvolvido para ser utilizado em smartphones com sistema Android. 
+Para alcançar tal finalidade será feito usando Node.js com express para o backend da aplicação e o frontend da mesma será utilizado o kotlin.
+O modelo pretendido é cliente-servidor, priorizando a experiência do cliente com o sistema.
+
 # 7. Desempenho
 
 A funcionalidade integrada ao aplicativo utilizará um banco de dados, contendo uma grande quantidade de informações dos clientes, devendo realizar múltiplos processos em tempo real, sendo modificações ou adições, para uso sem interrupções do cliente. Esse desempenho também dependerá das especificações do sistema do usuário, no caso seu celular, e a qualidade da internet utilizada.

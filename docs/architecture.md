@@ -33,6 +33,46 @@ A nescessidade deste detalhamento se da para o melhor entendimento daqueles resp
 
 Conforme dito em Objetivos (1.1.), este documento conterá detalhes sobre a arquitetura escolhida para o sistema,as lógicas por trás das implementações, as linguagens/tecnologias usadas, os padrões estabelecidos pela equipe ,informaçoes referentes a bancos de dados, diagramas de classe  e de caso de uso.
 
+# 3. Restrições e Metas Arquiteturais
+
+A aplicação do Sistema de Oferta de Crédito terá como base de sua arquitetura o framework Express, que é baseado na linguagem de programação Node.js. O Express permite a criação de APIs de maneira robusta, rápida e fácil e conta com recursos para aplicativos mobile, necessários para o projeto. Ele conta também com um sistema de Views Intuitivo (MVC).
+
+Uma vantagem da utilização do framework é a sua escalabilidade, sendo um requisito necessário para sistemas com diversas conexões concorrentes, além disso o framework é minimalista e flexível, o Express conta com bibliotecas para trabalhar com cookies, sessões, login de usuário e diversas outras funcionalidades.
+
+# 4. Visão de Casos de Uso
+
+## 4.1 Atores
+
+### 4.1.1 Cliente do Banco
+
+Este ator tem acesso aos dados de seu perfil, as funcionalidades de cadastrar e descadastrar no sistema, login, solicitar crédito, pagar débito e fazer simulação.
+
+## 4.2 Descrição dos Casos de Uso
+
+### 4.2.1 Cadastrar Usuário
+
+Tem como objetivo realizar o cadastro do usuário no sistema, coletando seus dados pessoais para que ele tenha acesso ao aplicativo.
+
+### 4.2.2 Descadastrar Usuário
+
+Essa funcionalidade permite que o usuário solicite a retirada de seus dados do sistema, caso tenha algum débito em seu perfil ele só poderá se descadastrar quando o débito for quitado.
+
+### 4.2.3 Login
+
+Tem como objetivo fornecer o acesso do usuário ao sistema.
+
+### 4.2.4 Solicitar Crédito
+
+Essa funcionalidade tem como objetivo solicitar so sistema a liberação de créditos para o usuário, através dela é liberada uma quantia que o usuário poderá utilizar, apoś a liberação o usuário terá em seu perfil um débito com o banco, ao qual serão aplicados juros.
+
+### 4.2.5 Pagar Débito
+
+O usuário poderá quitar os seus débitos no sistema através dessa funcionalidade, o débito poderá ser pago parcialmente ou integramente, o valor adicionado será reduzido do débito até que ele seja quitado integralmente.
+
+### 4.2.6 Simulação de Crédito
+
+O usuário antes de solicitar o crédito poderá simular a transação, na funcionalidade serão mostrados os débitos gerados pela transação e total em juros de acordo com o tempo que o usuário estima quitar o débito.
+
 # 5. Visão Lógica
 
 ## 5.1. Visão Geral

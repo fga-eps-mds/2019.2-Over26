@@ -3,13 +3,20 @@
 | - | - | - | - |
 | 05/09/2019 | 0.1 | João Gabriel | Criação do índice e adição da introdução|
 | 05/09/2019 | 0.2 | Gabriel | Adição da visão lógica e desempenho|
-|06/09/2019|0.3|Isabella| Adição de Restrições do projeto|
-|06/09/2019|0.4|Isabella e João Gabriel| Adição de Qualidade|
+| 06/09/2019 | 0.3 | Isabella | Adição de Restrições do projeto|
+| 06/09/2019 | 0.4 | Isabella e João Gabriel | Adição de Qualidade|
+| 09/09/2019 | 0.5 | Erick | Adição de Representação da Arquitetura e correção de índice|
 
 # Índice
 * [1. Introdução](#1.-Introdução)
      * [1.1 Objetivos](1.1.-Objetivos)
      * [1.2. Escopo](1.2.-Escopo-do-documento)
+
+* [2. Representação da Arquitetura](#2.-Representação-da-Arquitetura)
+
+* [3. Restrições e Metas Arquiteturais](#3.-Restrições-e-Metas-Arquiteturais)
+
+* [4. Visão de Casos de Uso](#4.-Visão-de-Casos-de-Uso)
 
 * [5. Visão Lógica](#5.-Visão-Lógica)
      * [5.1. Visão Geral](5.1.-Visão-Geral)
@@ -32,6 +39,16 @@ A nescessidade deste detalhamento se da para o melhor entendimento daqueles resp
 ##  1.2. Escopo do documento
 
 Conforme dito em Objetivos (1.1.), este documento conterá detalhes sobre a arquitetura escolhida para o sistema,as lógicas por trás das implementações, as linguagens/tecnologias usadas, os padrões estabelecidos pela equipe ,informaçoes referentes a bancos de dados, diagramas de classe  e de caso de uso.
+
+# 2. Representação da Arquitetura
+
+A arquitetura irá seguir o modelo cliente-servidor, onde existe uma aplicação que realiza de fato as tarefas e serviços, o servidor, e outra que faz requisições desses servições e tarefas, o cliente.
+
+Este tipo de arquitetura fornece alta escalabilidade e tem uma grande vantagem quando se trata de manutenção, ponto crítico no caso desde projeto.
+
+Visando manter a escalabilidade da aplicação foi escolhido o Node.js como plataforma de desenvolvimento, além disso com o Express.js, framework de aplicação web, a criação de APIs deve se torna um processo mais simples. Ambas as tecnologias seriam utilizadas no back-end.
+
+Para o front-end será utilizada a linguagem de programação Kotlin visando manter o padrão do sistema da N26.
 
 # 3. Restrições e Metas Arquiteturais
 

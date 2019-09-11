@@ -7,12 +7,13 @@
 | 06/09/2019 | 0.4 | Isabella e João Gabriel | Adição de Qualidade|
 | 06/09/2019 | 0.5 | Luiza | Adição de Visão de Casos de Uso|
 | 09/09/2019 | 0.6 | Erick | Adição de Representação da Arquitetura e correção de índice|
-| 11/09/2019 | 0.7 | | Luiza | Refatoração da Visão de Casos de Uso|
+| 11/09/2019 | 0.7 |  Luiza | Refatoração da Visão de Casos de Uso|
+| 11/09/2019 |0.8 | João Gabriel |Refatoração da introdução e correção dos links do índice|
 
 # Índice
 * [1. Introdução](#1.-Introdução)
-     * [1.1 Objetivos](1.1.-Objetivos)
-     * [1.2. Escopo](1.2.-Escopo-do-documento)
+     * [1.1 Objetivos](##1.1.-Objetivos)
+     * [1.2. Escopo](##1.2.-Escopo-do-documento)
 
 * [2. Representação da Arquitetura](#2.-Representação-da-Arquitetura)
 
@@ -21,7 +22,7 @@
 * [4. Visão de Casos de Uso](#4.-Visão-de-Casos-de-Uso)
 
 * [5. Visão Lógica](#5.-Visão-Lógica)
-     * [5.1. Visão Geral](5.1.-Visão-Geral)
+     * [5.1. Visão Geral](##5.1.-Visão-Geral)
 
 * [6. Restrições](#6.-Restrições)
 
@@ -34,7 +35,7 @@
 
 ## 1.1. Objetivos
 
-Tem se por objetivo deste documento detalhar a arquitetura e tecnologias usadas na criação da funcionalidade de "cheque especial" que deverá ser implementada na versão mobile do sistema do banco europeu N26 ,no Brasil.
+Tem se por objetivo deste documento detalhar a arquitetura e tecnologias usadas na aplicação,que se trata de um aplicativo focado em "oferta de crédito". 
 
 A nescessidade deste detalhamento se da para o melhor entendimento daqueles responsaveis pelo desenvolvimento, sobre o que foi definido e o que foi produzido de que forma.
 

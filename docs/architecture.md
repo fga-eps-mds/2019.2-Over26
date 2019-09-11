@@ -7,28 +7,45 @@
 | 06/09/2019 | 0.4 | Isabella e João Gabriel | Adição de Qualidade|
 | 06/09/2019 | 0.5 | Luiza | Adição de Visão de Casos de Uso|
 | 09/09/2019 | 0.6 | Erick | Adição de Representação da Arquitetura e correção de índice|
-| 11/09/2019 | 0.7 | | Luiza | Refatoração da Visão de Casos de Uso|
+| 11/09/2019 | 0.7 | Luiza | Refatoração da Visão de Casos de Uso|
+| 11/09/2019 | 0.7.1 | Erick | Corrigindo índice|
 
 # Índice
-* [1. Introdução](#1.-Introdução)
-     * [1.1 Objetivos](1.1.-Objetivos)
-     * [1.2. Escopo](1.2.-Escopo-do-documento)
 
-* [2. Representação da Arquitetura](#2.-Representação-da-Arquitetura)
+- [1. Introdução](#1-introdução)
+  * [1.1. Objetivos](#11-objetivos)
+  * [1.2. Escopo do documento](#12-escopo-do-documento)
 
-* [3. Restrições e Metas Arquiteturais](#3.-Restrições-e-Metas-Arquiteturais)
+- [2. Representação da Arquitetura](#2-representação-da-arquitetura)
 
-* [4. Visão de Casos de Uso](#4.-Visão-de-Casos-de-Uso)
+- [3. Restrições e Metas Arquiteturais](#3-restrições-e-metas-arquiteturais)
 
-* [5. Visão Lógica](#5.-Visão-Lógica)
-     * [5.1. Visão Geral](5.1.-Visão-Geral)
+- [4. Visão de Casos de Uso](#4-visão-de-casos-de-uso)
+  * [UC01 - Realizar Login](#uc01-realizar-login)
+  * [UC02 - Cadastrar](#uc02-cadastrar)
+  * [UC03 - Solicitar Crédito](#uc03-solicitar-crédito)
+  * [UC04 - Visualizar Regras de Contratação](#uc04-visualizar-regras-de-contratação)
+  * [UC05 - Fornecer Feedback da Solicitação de Crédito](#uc05-fornecer-feedback-da-solicitação-de-crédito)
+  * [UC06 - Analisar Perfil do Usuário](#uc06-analisar-perfil-do-usuário)
+  * [UC07 - Ativar Limite de Crédito](#uc07---ativar-limite-de-crédito)
+  * [UC08 - Ajustar Limite](#uc08-ajustar-limite)
+  * [UC09 - Acompanhar Limite](#uc09-acompanhar-limite)
+  * [UC10 - Solicitar Aumento de Limite](#uc10-solicitar-aumento-de-limite)
+  * [UC11 - Fornecer Feedback da Solicitação de Aumento](#uc11-fornecer-feedback-da-solicitação-de-aumento)
+  * [UC12 - Visualizar Saldo da Conta](#uc12-visualizar-saldo-da-conta)
+  * [UC13 - Visualizar Extrato da Conta](#uc13-visualizar-extrato-da-conta)
+  * [UC14 - Pesquisar uma Transação](#uc1--pesquisar-uma-transação)
+  * [UC15 - Visualizar Detalhamento da Dívida](#uc15-visualizar-detalhamento-da-dívida)
+  * [UC16 - Solicitar Parcelamento da Dívida](#uc16-solicitar-parcelamento-da-dívida)
 
-* [6. Restrições](#6.-Restrições)
+- [5. Visão Lógica](#5-visão-l-gica)
+  * [5.1. Visão Geral](#51-visão-geral)
 
-* [7. Desempenho](#7.-Desempenho)
+- [6. Restrições](#6-restrições)
 
-* [8. Qualidade](#8.-Qualidade)
+- [7. Desempenho](#7-desempenho)
 
+- [8. Qualidade](#8-qualidade)
 
 # 1. Introdução
 

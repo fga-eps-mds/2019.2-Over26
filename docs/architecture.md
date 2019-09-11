@@ -5,7 +5,9 @@
 | 05/09/2019 | 0.2 | Gabriel | Adição da visão lógica e desempenho|
 | 06/09/2019 | 0.3 | Isabella | Adição de Restrições do projeto|
 | 06/09/2019 | 0.4 | Isabella e João Gabriel | Adição de Qualidade|
-| 09/09/2019 | 0.5 | Erick | Adição de Representação da Arquitetura e correção de índice|
+| 06/09/2019 | 0.5 | Luiza | Adição de Visão de Casos de Uso|
+| 09/09/2019 | 0.6 | Erick | Adição de Representação da Arquitetura e correção de índice|
+| 11/09/2019 | 0.7 | | Luiza | Refatoração da Visão de Casos de Uso|
 
 # Índice
 * [1. Introdução](#1.-Introdução)
@@ -58,37 +60,165 @@ Uma vantagem da utilização do framework é a sua escalabilidade, sendo um requ
 
 # 4. Visão de Casos de Uso
 
-## 4.1 Atores
+## UC01 - Realizar Login
 
-### 4.1.1 Cliente do Banco
+| Descrição | |
+| Atores | |
+| Pré-condições | |
+| Pós-condições | |
+| Fluxo principal | |
+| Fluxo alternativo | |
+| Fluxo de exceção | |
 
-Este ator tem acesso aos dados de seu perfil, as funcionalidades de cadastrar e descadastrar no sistema, login, solicitar crédito, pagar débito e fazer simulação.
+## UC02 - Cadastrar
 
-## 4.2 Descrição dos Casos de Uso
+| Descrição | |
+| Atores | |
+| Pré-condições | |
+| Pós-condições | |
+| Fluxo principal | |
+| Fluxo alternativo | |
+| Fluxo de exceção | |
 
-### 4.2.1 Cadastrar Usuário
+## UC03 - Solicitar Crédito
 
-Tem como objetivo realizar o cadastro do usuário no sistema, coletando seus dados pessoais para que ele tenha acesso ao aplicativo.
+| Descrição | |
+| Atores | |
+| Pré-condições | |
+| Pós-condições | |
+| Fluxo principal | |
+| Fluxo alternativo | |
+| Fluxo de exceção | |
 
-### 4.2.2 Descadastrar Usuário
+## UC04 - Visualizar Regras de Contratação 
 
-Essa funcionalidade permite que o usuário solicite a retirada de seus dados do sistema, caso tenha algum débito em seu perfil ele só poderá se descadastrar quando o débito for quitado.
+| Descrição | |
+| Atores | |
+| Pré-condições | |
+| Pós-condições | |
+| Fluxo principal | |
+| Fluxo alternativo | |
+| Fluxo de exceção | |
 
-### 4.2.3 Login
+## UC05 - Fornecer Feedback da Solicitação de Crédito
 
-Tem como objetivo fornecer o acesso do usuário ao sistema.
+| Descrição | |
+| Atores | |
+| Pré-condições | |
+| Pós-condições | |
+| Fluxo principal | |
+| Fluxo alternativo | |
+| Fluxo de exceção | |
 
-### 4.2.4 Solicitar Crédito
+## UC06 - Analisar Perfil do Usuário
 
-Essa funcionalidade tem como objetivo solicitar so sistema a liberação de créditos para o usuário, através dela é liberada uma quantia que o usuário poderá utilizar, apoś a liberação o usuário terá em seu perfil um débito com o banco, ao qual serão aplicados juros.
+| Descrição | |
+| Atores | |
+| Pré-condições | |
+| Pós-condições | |
+| Fluxo principal | |
+| Fluxo alternativo | |
+| Fluxo de exceção | |
 
-### 4.2.5 Pagar Débito
+## UC07 - Ativar Limite de Crédito
 
-O usuário poderá quitar os seus débitos no sistema através dessa funcionalidade, o débito poderá ser pago parcialmente ou integramente, o valor adicionado será reduzido do débito até que ele seja quitado integralmente.
+| Descrição | |
+| Atores | |
+| Pré-condições | |
+| Pós-condições | |
+| Fluxo principal | |
+| Fluxo alternativo | |
+| Fluxo de exceção | |
 
-### 4.2.6 Simulação de Crédito
+## UC08 - Ajustar Limite 
 
-O usuário antes de solicitar o crédito poderá simular a transação, na funcionalidade serão mostrados os débitos gerados pela transação e total em juros de acordo com o tempo que o usuário estima quitar o débito.
+| Descrição | |
+| Atores | |
+| Pré-condições | |
+| Pós-condições | |
+| Fluxo principal | |
+| Fluxo alternativo | |
+| Fluxo de exceção | |
+
+## UC09 - Acompanhar Limite
+
+| Descrição | |
+| Atores | |
+| Pré-condições | |
+| Pós-condições | |
+| Fluxo principal | |
+| Fluxo alternativo | |
+| Fluxo de exceção | |
+
+## UC10 - Solicitar Aumento de Limite
+
+| Descrição | |
+| Atores | |
+| Pré-condições | |
+| Pós-condições | |
+| Fluxo principal | |
+| Fluxo alternativo | |
+| Fluxo de exceção | |
+
+## UC11 - Fornecer Feedback da Solicitação de Aumento
+
+| Descrição | |
+| Atores | |
+| Pré-condições | |
+| Pós-condições | |
+| Fluxo principal | |
+| Fluxo alternativo | |
+| Fluxo de exceção | |
+
+## UC12 - Visualizar Saldo da Conta
+
+| Descrição | |
+| Atores | |
+| Pré-condições | |
+| Pós-condições | |
+| Fluxo principal | |
+| Fluxo alternativo | |
+| Fluxo de exceção | |
+
+## UC13 - Visualizar Extrato da Conta
+
+| Descrição | |
+| Atores | |
+| Pré-condições | |
+| Pós-condições | |
+| Fluxo principal | |
+| Fluxo alternativo | |
+| Fluxo de exceção | |
+
+## UC14 - Pesquisar uma Transação
+
+| Descrição | |
+| Atores | |
+| Pré-condições | |
+| Pós-condições | |
+| Fluxo principal | |
+| Fluxo alternativo | |
+| Fluxo de exceção | |
+
+## UC15 - Visualizar Detalhamento da Dívida
+
+| Descrição | |
+| Atores | |
+| Pré-condições | |
+| Pós-condições | |
+| Fluxo principal | |
+| Fluxo alternativo | |
+| Fluxo de exceção | |
+
+## UC16 - Solicitar Parcelamento da Dívida
+
+| Descrição | |
+| Atores | |
+| Pré-condições | |
+| Pós-condições | |
+| Fluxo principal | |
+| Fluxo alternativo | |
+| Fluxo de exceção | |
 
 # 5. Visão Lógica
 

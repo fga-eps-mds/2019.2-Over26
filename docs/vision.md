@@ -3,6 +3,7 @@
 | - | - | - | - |
 | 11/09/2019 | 0.1 | Erick Reis | Estrutura básica do documento e índice|
 | 11/09/2019 | 0.2 | Erick Reis | Adicionando Posicionamento e Restrições|
+| 12/09/2019 | 0.3 | Isabella Carneiro| Adicionando Visão Geral do Produto|
 
 ## Índice
 
@@ -78,8 +79,13 @@ Este produto visa não só facilitar a utilização de cheque especial, mas prin
 ## 4. Visão Geral do Produto
 
 ### 4.1. Perspectiva do produto
+ O aplicativo tem a função de realizar o processo de oferta de crédito aos clientes do banco que solicitarem o mesmo. Tal aplicação também oferecerá ao usuário a opção de gerenciar seu limite de crédito.
 
 ### 4.2. Resumo dos recursos
+| Benefício para os clientes | Recursos de suporte |
+| Facilidade de requisitar crédito | Layout simples |
+| Possibilidade de modificar o crédito | Tela em que é possível gerenciar o crédito|
+
 
 ## 5. Recursos do Produto
 

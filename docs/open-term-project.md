@@ -2,8 +2,9 @@
 
 | Data | Versão | Autor(a) | Descrição |
 | - | - | - | - |
-| 10/09/2019 | 0.1 |Maria Luiza | Início do Termo de Abertura do Projeto |
-| 12/09/2019 | 0.2 |Maria Luiza | Estimativas de custos, Requisitos de alto nível e riscos |
+| 10/09/2019 | 0.1 | Maria Luiza | Início do Termo de Abertura do Projeto |
+| 12/09/2019 | 0.2 | Maria Luiza | Estimativas de custos, Requisitos de alto nível e riscos |
+| 12/09/2019 | 0.3 | Natália Rodrigues | Partes Interessadas e Requisitos para a Aprovação |
 
 ## 1. Introdução 
 
@@ -99,5 +100,34 @@ Segundo o Ranking das Tarifas, o valor do kWh equivale a $0,557. Consulta realiz
 
 ## 8. Partes interessadas 
 
+### Idealizadores
+
+Como principal idealizadora do projeto posiciona-se a N26, interessada principalmente em, por meio do sistema a ser desenvolvido, testar experiência do usuário acerca da oferta de crédito.
+
+A N26 é uma empresa alemã que presta serviços de banco online em boa parte da Europa. No Brasil, ela chegará para oferecer serviços de conta digital, atuando em todo o país.
+
+### Usuários
+
+Os usuários do sistema serão os prováveis clientes da N26 no Brasil. Especificamente pessoas com predisposição à abertura de contas digitais e à utilização do crédito especial.
+
+### Equipe
+
+A equipe responsável pela realização do projeto está apresentada na tabela seguinte:
+
+Nome | Descrição
+-|-
+Andrew Lucas | DevOps
+Adrianne Souza | PO
+Maria Luiza | Scrum Master
+Natália Rodrigues | Arquiteta
+Erick Reis | Desenvolvedor
+Gabriel Ramalho | Desenvolvedor
+Isabella Carneiro | Desenvolvedora
+João Gabriel | Desenvolvedor
+João Paulo | Desenvolvedor
+Luiza Cezário | Desenvolvedora
+
 
 ## 9. Requisitos para a Aprovação 
+
+O sistema deverá apresentar as funcionalidades pertinentes à oferta de crédito definidas no escopo. Ressalvas são feitas quanto à operação funcional do sistema, não necessariamente oferecendo suporte a todo o fluxo de utilização do crédito especial.

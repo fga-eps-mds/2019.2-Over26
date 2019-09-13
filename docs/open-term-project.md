@@ -3,7 +3,7 @@
 | Data | Versão | Autor(a) | Descrição |
 | - | - | - | - |
 | 10/09/2019 | 0.1 |Maria Luiza | Início do Termo de Abertura do Projeto |
-| 12/09/2019 | 0.2 |Maria Luiza | Estimativas de custos |
+| 12/09/2019 | 0.2 |Maria Luiza | Estimativas de custos, Requisitos de alto nível e riscos |
 
 ## 1. Introdução 
 
@@ -15,9 +15,35 @@
 
 
 ## 5. Requisitos de Alto Nível 
+O projeto tem como objetivo criar oferta de crédito que se assemelha a experiência de cheque especial, porém é realizado no contexto de contas de pagamento e cartão pré-pago. Os requisitos gerais estão descritos abaixo: 
+
+* Viabilizar cheque especial em estrutura de conta de clientes 100% vinculadas ao Banco Central.
+* Criar estrutura de crédito apropriada para as condições da licença SCD.
+* Ofertar produto através de processo simples de onboarding e de concessão de crédito.
 
 
 ## 6. Riscos 
+
+Para um melhor gerenciamento de projeto, foram levantados alguns riscos do projeto. Esse levantamento permitirá que a equipe trate, previna e mitigue esses riscos ao longo do projeto para que estes não causem grandes impactos no desenvolvimento do projeto. 
+
+* Indefinição de escopo
+* Domínio do projeto complexo
+* Desconhecimento de conceitos financeiros
+* Indisponibilidade dos membros
+* Falta de integração entre a equipe
+* Baixa produtividade dos integrantes da equipe
+* Descomprometimento
+* Equipe de MDS não seguir orientações de EPS
+* Má gerência de EPS
+* Não entrega das atividades planejadas
+* Defeito de algum equipamento
+* Falta de conhecimento/experiência com as tecnologias escolhidas
+* Desavenças na equipe
+* Problemas com ambiente de desenvolvimento
+* Falhas de comunicação
+* Trancamento da matéria por parte dos membros
+
+É responsabilidade do Tech Leader monitorar esses riscos, através de um indicador pertinente, como o burndown de riscos, a fim de mitigá-los. 
 
 
 ## 7. Estimativas de custos  

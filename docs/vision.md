@@ -121,3 +121,11 @@ Por se tratar de uma aplicação bancária a segurança é algo essencial, por i
 Para o uso do sistema é necessário que o usuário tenha uma aparelho compatível com a aplicação e deve estar conectado à internet Caso o usuário do sistema não possua acesso à internet não será possível realizar o login.
 
 ## 7. Intervalos de Qualidade
+
+Para total desempenho e aproveitamento do cliente devem ser respeitados os seguintes intervalos de qualidade:
+
+Disponibilidade: O Sistema deve estar sempre disponível, isto é, 24 horas por dia e 7 dias por semana.
+
+Usabilidade: O Sistema deve ser intuitivo para facilitar o uso do cliente e um time de suporte online deve estar sempre a postos para tirar qualquer dúvida do cliente.
+
+Manutenção: O Sistema deve ser facilmente manutenível, para que todos dados dos clientes possam ser modificáveis sem a necessidade de uma recompilação e para facilitar um aprimoramento futuro.

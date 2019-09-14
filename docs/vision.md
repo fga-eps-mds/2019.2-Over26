@@ -6,7 +6,7 @@
 | 12/09/2019 | 0.3 | Isabella Carneiro| Adicionando Visão Geral do Produto|
 | 13/09/2019 | 0.4 | Luiza Cezario | Adicionando Descrição dos Envolvidos e dos Usuários
 | 13/09/2019 | 0.5 | João Gabriel | Adicionando Recursos|
-
+| 14/09/2019 | 0.6 | Gabriel | Adicionando Introdução|
 ## Índice
 
 - [1. Introdução](#1-introdução)
@@ -40,11 +40,19 @@
 
 ### 1.1. Finalidade
 
+Este documento tem como objetivo relatar as necessidades apresentadas pela empresa N26 e os requisitos mais importantes do projeto, tais como sua capacidade, recursos e relação com o usuário. 
+
 ### 1.2. Escopo
+
+O banco digital, N26,  tem o objetivo de encontrar novas soluções para a oferta de crédito, de maneira que a licença obtida para operar no Brasil seja respeitada. Tal funcionalidade permite que o usuário com saldo zerado ainda consiga continuar comprando. Assim, o projeto tem  o propósito de ajudar a empresa a testar a funcionalidade no país, focando na experiência do usuário. 
 
 ### 1.3. Visão geral
 
+O documento traz consigo todas as informações essenciais referentes ao projeto trazendo para o leitor a melhor forma de visualizar as informações passadas. Dessa forma, começa-se demonstrando o contexto no qual o projeto foi pensado, em seguida é descrito os envolvidos no sistema e como se relacionam. Por fim, o documento foca nas especificações do projeto. 
+
 ### 1.4. Referências
+
+Templete do documento. Disponível em: https://www.ibm.com/support/knowledgecenter/pt-br/SSWMEQ_4.0.6/com.ibm.rational.rrm.help.doc/topics/r_vision_doc.html. Acesso em: 13 de Setembro de 2019.
 
 ## 2. Posicionamento
 

@@ -13,7 +13,7 @@ As atividades financeiras, assim como as demais relações humanas com o meio fo
 
 No cenário apresentado surge a N26, um banco completamente digital cuja ideia se alastrou, positivamente, por toda a Europa e recentemente nos Estados Unidos. Por si só o seu sucesso demonstrou um aspecto importante do consumidor dessa geração : O êxtase experimentado quando há independência de uma agência física para acompanhar aspectos básicos das suas finanças e recursos, como por exemplo a lista de compras, a solicitação de crédito, entre outros. Esse banco tornou-se inspiração para empresas como o Nubank ofertarem um serviço com maior liberdade e menor buracracia aos amantes de tecnologia, o que se mostrou extremamente eficaz, ainda que como conta de pagamento. Visto o sucesso dessas iniciativas e o perfil consumidor brasileiro, a N26 decidiu vir para o Brasil portanto uma licença de Sociedade de Crédito direto. 
 
-Nesse contexto, para atender devidamente o público brasileiro, o intuito é ofertar uma experiência de crédito especial, respeitando a licença obtida para operacionalizar no país. Essa iniciativa provê ao usuário a possibilidade de continuar realizando compras mesmo que o seu saldo esteja zerado, uma prática não tão comum nos demais países, mas que se adequa ao perfil de consumo no Brasil. Dessa forma, esse projeto tem como objetivo auxiliar a N26 no processo de testar uma solução de oferta de crédito para a sua expansão.
+Nesse contexto, para atender devidamente o público brasileiro, o intuito é ofertar uma experiência de crédito especial que se assemelhe ao cheque especial, respeitando a licença obtida para operacionalizar no país. Essa iniciativa provê ao usuário a possibilidade de continuar realizando compras mesmo que o seu saldo esteja zerado, uma prática não tão comum nos demais países, mas que se adequa ao perfil de consumo no Brasil. Dessa forma, esse projeto tem como objetivo auxiliar a N26 no processo de testar uma solução de oferta de crédito para a sua expansão.
 
 ## 2. Descrição 
 
@@ -23,41 +23,40 @@ O presente projeto foi idealizado pela N26, em conjunto com a lift, como tentati
 
 ## 4. Objetivos 
 
-
 ## 5. Requisitos de Alto Nível 
-O projeto tem como objetivo criar oferta de crédito que se assemelha a experiência de cheque especial, porém é realizado no contexto de contas de pagamento e cartão pré-pago. Os requisitos gerais estão descritos abaixo: 
+O projeto tem como objetivo criar um MVP para oferta de crédito que se assemelha à experiência de cheque especial, porém é realizado no contexto de contas de pagamento e cartão pré-pago. Os requisitos gerais de alto nível estão descritos abaixo: 
 
 * Viabilizar cheque especial em estrutura de conta de clientes 100% vinculadas ao Banco Central.
 * Criar estrutura de crédito apropriada para as condições da licença SCD.
 * Ofertar produto através de processo simples de onboarding e de concessão de crédito.
 
-
 ## 6. Riscos 
 
-Para um melhor gerenciamento de projeto, foram levantados alguns riscos do projeto. Esse levantamento permitirá que a equipe trate, previna e mitigue esses riscos ao longo do projeto para que estes não causem grandes impactos no desenvolvimento do projeto. 
+Para um melhor gerenciamento de projeto, foram levantados alguns riscos relativos à sua execução. Esse levantamento permitirá que a equipe trate, previna e mitigue esses riscos ao longo do projeto para que estes não causem grandes impactos no seu desenvolvimento.
 
 * Indefinição de escopo
-* Domínio do projeto complexo
+* Projeto de domínio complexo
 * Desconhecimento de conceitos financeiros
 * Indisponibilidade dos membros
 * Falta de integração entre a equipe
 * Baixa produtividade dos integrantes da equipe
-* Descomprometimento
+* Descomprometimento da equipe
 * Equipe de MDS não seguir orientações de EPS
 * Má gerência de EPS
 * Não entrega das atividades planejadas
 * Defeito de algum equipamento
 * Falta de conhecimento/experiência com as tecnologias escolhidas
 * Desavenças na equipe
-* Problemas com ambiente de desenvolvimento
-* Falhas de comunicação
+* Problemas relacionados ao ambiente de desenvolvimento
+* Falhas na comunicação entre os membros da equipe
 * Trancamento da matéria por parte dos membros
+* Planejamento de entregas não serem assertivos
 
 É responsabilidade do Tech Leader monitorar esses riscos, através de um indicador pertinente, como o burndown de riscos, a fim de mitigá-los. 
 
 
 ## 7. Estimativas de custos  
-A estimativa de custos tem como objetivo definir os recursos disponíveis para o projeto. Estes recursos estão relacionados à pessoal, aquisições, infraestrutura, se necessário,  treinamentos e implantação do produto ou serviço. As tabelas abaixo mostram a estimativa de custo do projeto. 
+A estimativa de custos tem como objetivo definir os recursos necessários para a execução do projeto. Estes recursos estão relacionados à pessoal, aquisições, infraestrutura, treinamentos, se necessário e implantação do produto ou serviço. As tabelas abaixo mostram a estimativa dos custos mapeados. 
 
 
 
@@ -65,7 +64,7 @@ A estimativa de custos tem como objetivo definir os recursos disponíveis para o
 
 | Cargo | Quantidade | Salário Mensal | Salário Total |
 | - | -  | - | - | 
-| Tech Leader | 1  | R$ 8.038,00 | R$ 32.152,00 |
+| Tech Leader (Scrum Master) | 1  | R$ 8.038,00 | R$ 32.152,00 |
 | Product Owner | 1  | R$ 7.130,00 | R$ 28.520,00 |
 | Arquiteto | 1  | R$ 8.821,00 | R$35.284,00 | 
 | DevOps | 1  | R$ 9.825,00 | R$39.300,00 |
@@ -117,18 +116,24 @@ A N26 é uma empresa alemã que presta serviços de banco online em boa parte da
 
 ### Usuários
 
-Os usuários do sistema serão os prováveis clientes da N26 no Brasil. Especificamente pessoas com predisposição à abertura de contas digitais e à utilização do crédito especial.
+Os usuários do sistema serão os prováveis clientes da N26 no Brasil. Especificamente pessoas com predisposição à abertura de contas digitais e à utilização do crédito especial. 
 
 ### Equipe
 
 A equipe responsável pela realização do projeto está apresentada na tabela seguinte:
 
+#### Gestão do Projeto
+
 Nome | Descrição
 -|-
-Andrew Lucas | DevOps
 Adrianne Souza | PO
+Andrew Lucas | DevOps
 Maria Luiza | Scrum Master
 Natália Rodrigues | Arquiteta
+
+#### Desenvolvimento 
+Nome | Descrição
+-|-
 Erick Reis | Desenvolvedor
 Gabriel Ramalho | Desenvolvedor
 Isabella Carneiro | Desenvolvedora
@@ -139,4 +144,4 @@ Luiza Cezário | Desenvolvedora
 
 ## 9. Requisitos para a Aprovação 
 
-O sistema deverá apresentar as funcionalidades pertinentes à oferta de crédito definidas no escopo. Ressalvas são feitas quanto à operação funcional do sistema, não necessariamente oferecendo suporte a todo o fluxo de utilização do crédito especial.
+O sistema deverá apresentar as funcionalidades pertinentes à oferta de crédito definidas no escopo. Ressalvas são feitas quanto à operação funcional do sistema, não necessariamente oferecendo suporte a todo o fluxo de utilização do crédito especial, a saber : Processamento da solicitação do crédito.

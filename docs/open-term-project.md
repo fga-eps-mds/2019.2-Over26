@@ -3,9 +3,10 @@
 | Data | Versão | Autor(a) | Descrição |
 | - | - | - | - |
 | 10/09/2019 | 0.1 | Maria Luiza | Início do Termo de Abertura do Projeto |
-| 12/09/2019 | 0.2 | Maria Luiza | Estimativas de custos, Requisitos de alto nível e riscos |
+| 12/09/2019 | **0.2** | Maria Luiza | Estimativas de custos, Requisitos de alto nível e riscos |
 | 12/09/2019 | 0.3 | Natália Rodrigues | Partes Interessadas e Requisitos para a Aprovação |
 | 13/09/2019 | 0.4 | Adrianne Alves | Introdução e Descrição |
+| 14/09/2019 | 0.5 | Andrew Lucas | Propósito e Justificativa  e objetivo |
 
 ## 1. Introdução 
 
@@ -20,11 +21,14 @@ Nesse contexto, para atender devidamente o público brasileiro, o intuito é ofe
 O presente projeto foi idealizado pela N26, em conjunto com a lift, como tentativa de prover novas soluções para a oferta de crédito. O principal objetivo consiste em produzir um Mínimo Produto Viável (MVP) com foco na experiência de concessão de crédito especial para o cliente brasileiro, a fim de conseguir elaborar ou captar por meio de ciclos de feedback a melhor maneira de ofertar esse serviço. O sistema contará com um conjunto de funcionalidades básicas relacionadas ao domínio, na tentativa de tornar os testes mais reais. Procura-se, dessa maneira fornecer uma interface intuitiva, amigável e que induza o cliente a usar o serviço.
 
 ## 3. Propósito e Justificativa 
+Apesar do rápido aumento de popularidade e da variedade dos serviços de bancos digitais no Brasil, ainda não há um serviço consolidado de oferta de crédito. Na Europa o N26 já possuir um serviço de oferta de crédito (overdraft), e com a sua vinda para o mercado brasileiro, será necessário adaptar esse serviço para os clientes brasileiros.  
+Como no Brasil o N26 não possui a licença de banco, esse projeto surge com o propósito de validar um mecanismo de oferta de crédito para instituições de pagamento no Brasil.
 
 ## 4. Objetivos 
+O projeto tem como objetivo criar um MVP para oferta de crédito que se assemelha à experiência de cheque especial, porém é realizado no contexto de contas de pagamento e cartão pré-pago. Com isso a meta desse projeto é produzir um MVP dessa solução.
 
 ## 5. Requisitos de Alto Nível 
-O projeto tem como objetivo criar um MVP para oferta de crédito que se assemelha à experiência de cheque especial, porém é realizado no contexto de contas de pagamento e cartão pré-pago. Os requisitos gerais de alto nível estão descritos abaixo: 
+ Os requisitos gerais de alto nível estão descritos abaixo: 
 
 * Viabilizar cheque especial em estrutura de conta de clientes 100% vinculadas ao Banco Central.
 * Criar estrutura de crédito apropriada para as condições da licença SCD.

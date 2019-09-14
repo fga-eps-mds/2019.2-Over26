@@ -17,14 +17,17 @@ import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 class MainActivity : AppCompatActivity() {
 
     var curLimit: Float = 0F
-    var maxLimit: Float = 200F *100
+    var maxLimit: Float = 200F
+    var curUsage: Float = 50F
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        text_view_cur.setText(String.format("%.2f", curLimit))
-        text_view_max.setText(String.format("%.2f", maxLimit/100))
+        text_view_usage.setText("R$ " + curUsage.toInt().toString())
+        text_view_usage2.setText("R$0,00")
+        text_view_cur.setText("R$ " + curLimit.toInt().toString())
+        text_view_max.setText("R$ " + maxLimit.toInt().toString())
         seek_bar.max = maxLimit.toInt()
 
         //Log.d(arc_bar.onProgressChangedListener.toString())
@@ -42,9 +45,8 @@ class MainActivity : AppCompatActivity() {
 
             override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
                 // Display the current progress of SeekBar
-                //var cur: Float = i.toFloat()/100
 
-                text_view_cur.text = String.format("%.2f", i.toFloat()/100);
+                text_view_cur.text = "R$"+i.toString()
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar) {

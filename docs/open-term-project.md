@@ -17,6 +17,8 @@ Nesse contexto, para atender devidamente o público brasileiro, o intuito é ofe
 
 ## 2. Descrição 
 
+O presente projeto foi idealizado pela N26, em conjunto com a lift, como tentativa de prover novas soluções para a oferta de crédito. O principal objetivo consiste em produzir um Mínimo Produto Viável (MVP) com foco na experiência de concessão de crédito especial para o cliente brasileiro, a fim de conseguir elaborar ou captar por meio de ciclos de feedback a melhor maneira de ofertar esse serviço. O sistema contará com um conjunto de funcionalidades básicas relacionadas ao domínio, na tentativa de tornar os testes mais reais. Procura-se, dessa maneira fornecer uma interface intuitiva, amigável e que induza o cliente a usar o serviço.
+
 ## 3. Propósito e Justificativa 
 
 ## 4. Objetivos 

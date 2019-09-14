@@ -2,7 +2,7 @@
 | Data | Versão | Autor(a) | Descrição |
 | - | - | - | - |
 | 05/09/2019 | 0.1 | João Gabriel | Criação do índice e adição da introdução|
-| 05/09/2019 | 0.2 | Gabriel | Adição da visão lógica e desempenho|
+| 05/09/2019 | 0.2 | Gabriel e João Paulo | Adição da visão lógica e desempenho|
 | 06/09/2019 | 0.3 | Isabella | Adição de Restrições do projeto|
 | 06/09/2019 | 0.4 | Isabella e João Gabriel | Adição de Qualidade|
 | 06/09/2019 | 0.5 | Luiza | Adição de Visão de Casos de Uso|
@@ -11,6 +11,7 @@
 | 11/09/2019 | 0.7.1 | Erick | Corrigindo índice|
 | 11/09/2019 | 0.8 | Erick | Refatorando desempenho e realocando restrições|
  11/09/2019 | 0.9| João Gabriel| Refatoração da introdução|
+ 13/09/2019 | 0.10 | João Paulo e Gabriel | Refatoração da Visão Lógica |
  log
 ## Índice
 
@@ -289,6 +290,35 @@ Fluxo de exceção | [FE01] O usuário pode desistir de parcelar e clicar em "Ca
  A arquitetura utilizada no projeto é a arquitetura Cliente/Servidor, que se baseia na relação de dois módulos, o cliente e o servidor. O servidor será responsável pela manutenção e processamento dos dados, enquanto ao cliente será encarregada a função de fornecer os dados.
 
 O cliente solicitará uma função do aplicativo, por exemplo um pedido de crédito, que será enviada para o servidor, para análise dos dados. Caso a solicitação seja válida, o sistema efetuará o pedido e disponibilizará o crédito para o usuário.
+
+### 5.2. Visão Geral: Classes
+
+O diagrama de classes a seguir tem como finalidade demonstrar todas classes, atributos, métodos e tipo de restrição de acesso dos dados utilizados.
+
+Segue o diagrama de classes:
+
+![Diagrama de Classes](https://i.imgur.com/Lgw0sdn.png)
+
+- Classes
+
+    * User: Classe destinada ao cliente que abriga todas informações de sua conta.
+    * UserWithCredit: Classe destinada ao cliente que já solicitou e recebeu seu crédito.
+    * CreditRequest: Classe que permite a clase User solicitar crédito para sua conta.
+    * Debt: Classe que armazena os dados relacionados ao pagamento do crédito concedido ao cliente e suas devidas prestações.
+    * Account: Classe que dispõem os dados bancários do cliente, como transações e seu saldo bancário.
+    * Transaction: Classe que detalha as transações realizadas.
+- Relações
+
+    * User é composto por CreditRequest: Demonstra que um usuário pode demandar várias solicitações de crédito e cada solicitação de crédito pertenca à um usuário. 
+    * Account é composto por User: Demonstra que um conta só pode ser possuida por um usuário e também que um usuário só pode possuir uma conta.
+    * Account é composto por Transaction: Demonstra que uma conta pode realizar várias transações, mas que casa transação está associada a apenas uma conta.
+    * UserWithCreadt é composto por Debt: Demonstra que um usuário com crédito pode ter várias pendências, mas uma pendência remete à apenas um usuário.
+
+### 5.3. Visão Geral: Banco de dados
+
+O banco de dados permite com que os dados sejam persistidos para possibilitar a realização das funções do sistema, como por exemplo, permitir que o usuário solicite crédito. Esse banco de dados é composto pelas 6 a seguir:
+
+![Banco de Dados](https://i.imgur.com/3PuRsu2.png)
 
 ## 6. Desempenho
 

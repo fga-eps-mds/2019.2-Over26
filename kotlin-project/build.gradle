@@ -19,7 +19,9 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+
+        //Arc Seek Bar
+        maven { url 'https://jitpack.io' }
     }
 }
 

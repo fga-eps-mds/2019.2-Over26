@@ -5,6 +5,7 @@
 | 11/09/2019 | 0.2 | Erick Reis | Adicionando Posicionamento e Restrições|
 | 12/09/2019 | 0.3 | Isabella Carneiro| Adicionando Visão Geral do Produto|
 | 13/09/2019 | 0.4 | Luiza Cezario | Adicionando Descrição dos Envolvidos e dos Usuários
+| 13/09/2019 | 0.5 | João Gabriel | Adicionando Recursos|
 
 ## Índice
 
@@ -101,6 +102,7 @@ Como alternativa diversos bancos oferecem a funcionalidade de cheque especial, b
 
 
 ## 5. Recursos do Produto
+A aplicação permitirá ao usuario solicitar crédito de cheque especial,aceitar ou recusar o crédito,controlar o quanto deste credito estará disponivel para gasto,sendo que existirão telas especificas na mesma para poder acessar essas informações e fazer as solicitações.
 
 ## 6. Restrições
 

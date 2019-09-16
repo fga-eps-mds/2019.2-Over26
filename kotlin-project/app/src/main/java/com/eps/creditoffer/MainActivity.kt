@@ -11,9 +11,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btn.setOnClickListener {
-            val intent = Intent(this, TelaDeConfirmacaoChequeEspecial::class.java)
-            startActivity(intent)
         }
     }
-}
+

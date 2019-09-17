@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".TrackLimit">
+        <activity android:name=".eligibilidade"></activity>
+        <activity android:name=".Activity" />
+        <activity android:name=".TelaDeConfirmacaoChequeEspecial" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

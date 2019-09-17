@@ -1,0 +1,12 @@
+package com.eps.creditoffer
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+
+class eligibilidade : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_eligibilidade)
+    }
+}

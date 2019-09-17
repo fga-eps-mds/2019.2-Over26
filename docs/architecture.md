@@ -12,7 +12,7 @@
 | 11/09/2019 | 0.8 | Erick | Refatorando desempenho e realocando restrições|
  11/09/2019 | 0.9| João Gabriel| Refatoração da introdução|
  13/09/2019 | 0.10 | João Paulo e Gabriel | Refatoração da Visão Lógica |
- log
+ 
 ## Índice
 
 - [1. Introdução](#1-introdução)
@@ -49,7 +49,7 @@
 - [6. Desempenho](#6-desempenho)
 
 - [7. Qualidade](#7-qualidade)
-S
+
 ## 1. Introdução
 
 ### 1.1. Objetivos
@@ -90,100 +90,78 @@ Uma vantagem da utilização do framework é a sua escalabilidade, sendo um requ
 
 ### UC01 - Realizar Login
 
------ | ------ 
- Descrição | Esta funcionalidade é responsável por realizar login no aplicativo 
- Atores | Usuário 
- Pré-condições | Usuário deve estar conectado à internet 
- Pós-condições | Usuário estará logado na aplicação
-Usuário terá acesso às funcionalidades da aplicação
-Fluxo principal | [FP01] Este fluxo se inicia quando o usuário deseja realizar login na aplicação:
-1. Usuário deve inserir o seu e-mail
-2. Usuário deve inserir sua senha
-3. Usuário deve clicar “Entrar” [FE01] 
-Fluxo de exceção | [FE01] Verificação de conexão à internet
-No passo 3 do fluxo principal a aplicação verificará se o usuário está conectado a internet, se não, o sistema não permitirá o login 
+|||
+|--|--|
+| Descrição | Esta funcionalidade é responsável por realizar login no aplicativo |
+| Atores | Usuário |
+| Pré-condições | Usuário deve estar conectado à internet |
+| Pós-condições | Usuário estará logado na aplicação e Usuário terá acesso às funcionalidades da aplicação |
+| Fluxo principal | [FP01] Este fluxo se inicia quando o usuário deseja realizar login na aplicação: <br>1. Usuário deve inserir o seu e-mail <br> 2. Usuário deve inserir sua senha <br>3. Usuário deve clicar “Entrar” [FE01] |
+|Fluxo de exceção | [FE01] Verificação de conexão à internet <br> No passo 3 do fluxo principal a aplicação verificará se o usuário está conectado a internet, se não, o sistema não permitirá o login|
 
 ### UC02 - Cadastrar
 
------ | -----
-Descrição | Esta funcionalidade é responsável por realizar cadastro. 
-Atores | Usuário 
-Pré-condições | Usuário deve estar conectado à internet 
-Pós-condições | Aplicação permitirá que o usuário possua um cadastro na aplicação
-A aplicação dará como resposta de sucesso no cadastro ao usuário o acesso às funcionalidades 
-Fluxo principal | [FP01] Este fluxo se inicia quando o usuário deseja realizar cadastro na aplicação:
-1. Usuário insere seu e-mail ou telefone
-2. Usuário insere seu nome completo
-3. Usuário insere seu nome de usuário (username)
-4. Usuário insere sua senha
-5. Usuário clica “Cadastre-se”"[FE01] 
-Fluxo de exceção | [FE01] Verificação de conexão à internet
-No passo 5 do fluxo principal a aplicação verifica se o usuário está conectado a internet, se não, o sistema não permitirá o cadastro na aplicação 
+|||
+|--|--|
+| Descrição | Esta funcionalidade é responsável por realizar cadastro. |
+| Atores | Usuário| 
+| Pré-condições | Usuário deve estar conectado à internet| 
+| Pós-condições | Aplicação permitirá que o usuário possua um cadastro e dará como resposta de sucesso no cadastro ao usuário o acesso às funcionalidades.| 
+| Fluxo principal | [FP01] Este fluxo se inicia quando o usuário deseja realizar cadastro na aplicação: <br> 1. Usuário insere seu e-mail ou telefone <br> 2. Usuário insere seu nome completo <br> 3. Usuário insere seu nome de usuário (username) <br> 4. Usuário insere sua senha <br>5. Usuário clica “Cadastre-se”"[FE01] 
+| Fluxo de exceção | [FE01] Verificação de conexão à internet <br> No passo 5 do fluxo principal a aplicação verifica se o usuário está conectado a internet, se não, o sistema não permitirá o cadastro na aplicação. |
 
 ### UC03 - Solicitar Crédito
-
+|||
  ----- | ----- 
 Descrição | Esta função solicita a liberação da funcionalidade de crédito para o sistema 
 Atores | Usuário 
 Pré-condições | O usuário deverá estar logado no aplicativo 
 Pós-condições | A solicitação deverá ter sido enviada para o sistema para análise 
-Fluxo principal | [FP01] Este fluxo se inicia quando o usuário deseja solicitar o acesso à funcionalidade de crédito:
-1. O usuário clica em "Solicitar Crédito"
-2. O usuário lê os termos de uso da funcionalidade [UC04]
-3. O usuário clica em "Aceitar Termos de Uso" [FE01]
-4. O usuário clica em "Confirmar Solicitação" [FE02]
-Fluxo de exceção | [FE01] Se o usuário prosseguir para o passo 4 antes de realizar o passo 3 o sistema retornará uma mensagem de erro
-[FE02] O usuário poderá decidir não realizar a solicitação e clicar em "Cancelar" 
+Fluxo principal | [FP01] Este fluxo se inicia quando o usuário deseja solicitar o acesso à funcionalidade de crédito:<br>1. O usuário clica em "Solicitar Crédito"<br>2. O usuário lê os termos de uso da funcionalidade [UC04]<br>3. O usuário clica em "Aceitar Termos de Uso" [FE01]<br>4. O usuário clica em "Confirmar Solicitação" [FE02]
+Fluxo de exceção | [FE01] Se o usuário prosseguir para o passo 4 antes de realizar o passo 3 o sistema retornará uma mensagem de erro<br>[FE02] O usuário poderá decidir não realizar a solicitação e clicar em "Cancelar" 
 
 ## UC04 - Visualizar Regras de Contratação de Crédito
-
+|||
 ----- | -----
 Descrição | A aplicação mostra ao usuário uma tela com as regras de contratação de crédito
 Atores | Usuário 
 Pré-condições | O usuário deverá ter clicado em "Solicitar Crédito" 
 Pós-condições | Deverá ter sido aberta uma tela com as regras de contratação de crédito 
-Fluxo principal | Este fluxo se inicia quando o usuário clica no botão de "Solicitar Crédito" [UC01]:
-[FP01] O usuário lê as regras de contratação e decide aceitar ou não os termos de uso, podendo ir para o passo 3 em [UC03] ou para [FE02] em [UC03] 
+Fluxo principal | Este fluxo se inicia quando o usuário clica no botão de "Solicitar Crédito" [UC01];<br>[FP01] O usuário lê as regras de contratação e decide aceitar ou não os termos de uso, podendo ir para o passo 3 em [UC03] ou para [FE02] em [UC03] 
 
 ### UC05 - Fornecer Feedback da Solicitação de Crédito
-
+|||
 ----- | -----
-Descrição | O sistema fornece ao usuário o retorno sobre sua solicitação de crédito [UC03] 
-Atores | Sistema 
-Pré-condições | O usuário deverá ter solicitado a funcionalidade de crédito
-O sistema deverá ter analisado o perfil do usuário [UC06] |
-Pós-condições | O usuário deverá ter recebido o retorno de sua solicitação
-Fluxo principal | [FP01] O sistema envia ao usuário a mensagem sinalizando a aprovação do crédito
-Fluxo alternativo | [FA01] O sistema envia ao usuário a mensagem sinalizando que seu crédito não foi aprovado e a lista de possíveis motivos para o retorno negativo 
+| Descrição | O sistema fornece ao usuário o retorno sobre sua solicitação de crédito [UC03] |
+| Atores | Sistema |
+|Pré-condições | O usuário deverá ter solicitado a funcionalidade de crédito e O sistema deverá ter analisado o perfil do usuário [UC06] |
+| Pós-condições | O usuário deverá ter recebido o retorno de sua solicitação |
+|Fluxo principal | [FP01] O sistema envia ao usuário a mensagem sinalizando a aprovação do crédito|
+|Fluxo alternativo | [FA01] O sistema envia ao usuário a mensagem sinalizando que seu crédito não foi aprovado e a lista de possíveis motivos para o retorno negativo | 
 
 ### UC06 - Analisar Perfil do Usuário
-
+|||
 ----- | ----- 
 Descrição | O sistema envia a solicitação para que o servidor do banco analise o perfil do usuário com base nos dados que tem disponível 
 Atores | Sistema 
 Pré-condições | O usuário deverá ter solicitado a funcionalidade de crédito [UC03] 
 Pós-condições | O sistema deverá aprovar ou recusar o crédito 
 Fluxo principal | [FP01] O sistema envia a solicitação de análise para o servidor com os dados do usuário [FE01] 
-Fluxo de exceção | Verificação de conexão à internet
-A aplicação verifica se o usuário está conectado a internet, se não, o sistema não enviará a solicitação de análise para o servidor 
+Fluxo de exceção | A aplicação verifica se o usuário está conectado a internet, se não, o sistema não enviará a solicitação de análise para o servidor 
 
 ### UC07 - Ativar Limite de Crédito
-
+|||
 ----- | ----- 
-Descrição | Essa funcionalidade permite que o usuário ative o crédito que deseja usar 
-Atores | Usuário 
-Pré-condições | O usuário deverá ter acesso a funcionalidade de crédito 
-Pós-condições | O crédito deverá estar disponível para o uso pelo usuário |
-Fluxo principal | [FP01] Esse fluxo occore quando o usuário deseja ativar o crédito:
-1. O usuário seleciona o valor que deseja ativar em [UC08] [FA01]
-2. O usário clica em ativar crédito
-3. Aparecem as regras e condições de uso
-4. O usuário clica em "Confirmar Operação" [FE01] 
-Fluxo alternativo | [FA01] O usuário necessita de um valor de crédito maior do que ele tem disponível no sistema e clica em "Solicitar Aumento de Limite" [UC10] 
-Fluxo de exceção | [FE01] O usuário decide não realizar a operação e clica em "Cancelar" 
+| Descrição | Essa funcionalidade permite que o usuário ative o crédito que deseja usar |
+| Atores | Usuário |
+| Pré-condições | O usuário deverá ter acesso a funcionalidade de crédito |
+| Pós-condições | O crédito deverá estar disponível para o uso pelo usuário |
+| Fluxo principal | [FP01] Esse fluxo occore quando o usuário deseja ativar o crédito: <br>1. O usuário seleciona o valor que deseja ativar em [UC08] [FA01]<br> 2. O usário clica em ativar crédito<br> 3. Aparecem as regras e condições de uso <br> 4. O usuário clica em "Confirmar Operação" [FE01] 
+| Fluxo alternativo | [FA01] O usuário necessita de um valor de crédito maior do que ele tem disponível no sistema e clica em "Solicitar Aumento de Limite" [UC10] |
+| Fluxo de exceção | [FE01] O usuário decide não realizar a operação e clica em "Cancelar" |
 
 ### UC08 - Ajustar Limite
-
+|||
 ----- | ----- 
 Descrição | Essa função permite que o usuário ajuste o valor do crédito que deseja usar
 Atores | Usuário 
@@ -194,7 +172,7 @@ Fluxo alternativo | [FA01] O usuário pode desejar um limite maior e clicar na o
 
 
 ### UC09 - Acompanhar Limite
-
+|||
 ----- | ----- 
 Descrição | Essa funcionalidade tem como objetivo apresentar ao usuário o valor de limite que ele tem disponível 
 Atores | Usuário
@@ -204,32 +182,27 @@ Fluxo principal | [FP01] O usuário clica em "Acompanhar Limite" e visualiza as 
 
 
 ### UC10 - Solicitar Aumento de Limite
-
+|||
 ----- | -----
 Descrição | Essa funcionalidade tem como objetivo realizar a solicitação de aumento do limite de crédito
 Atores | Usuário
 Pré-condições | O usuário deve ter acesso a funcionalidade de crédito
 Pós-condições | A solicitação deve ter sido enviada para análise do sistema
-Fluxo principal | [FP01] Este fluxo se inicia quando o usuário deseja solicitar o acesso à funcionalidade de crédito:
-1. O usuário clica em "Solicitar Aumento de Limite"
-2. O usuário digita o valor que deseja de limite [FE01]
-3. O usuário clica em "Confirmar Solicitação" [FE02]
-Fluxo de exceção | [FE01] O usuário prossegue para o passo 3 antes de realizar o passo 2 e o sistema retorna uma mensagem de erro
-[FE02] O usuário pode decidir não aumentar o limite e clicar em "Cancelar"
+Fluxo principal | [FP01] Este fluxo se inicia quando o usuário deseja solicitar o acesso à funcionalidade de crédito:<br>1. O usuário clica em "Solicitar Aumento de Limite"<br>2. O usuário digita o valor que deseja de limite [FE01]<br>3. O usuário clica em "Confirmar Solicitação" [FE02]
+Fluxo de exceção | [FE01] O usuário prossegue para o passo 3 antes de realizar o passo 2 e o sistema retorna uma mensagem de erro<br>[FE02] O usuário pode decidir não aumentar o limite e clicar em "Cancelar"
 
 ### UC11 - Fornecer Feedback da Solicitação de Aumento
-
+|||
 ----- | -----
 Descrição | O sistema fornece ao usuário o retorno sobre sua solicitação de crédito [UC10] 
 Atores | Sistema 
-Pré-condições | O usuário deverá ter solicitado o aumento de limite
-O sistema deverá ter analisado o perfil do usuário [UC06] |
+Pré-condições | O usuário deverá ter solicitado o aumento de limite<br>O sistema deverá ter analisado o perfil do usuário [UC06] |
 Pós-condições | O usuário deverá ter recebido o retorno de sua solicitação
 Fluxo principal | [FP01] O sistema envia ao usuário a mensagem sinalizando a aprovação do aumento de limite
 Fluxo alternativo | [FA01] O sistema envia ao usuário a mensagem sinalizando que seu aumento não foi aprovado e a lista de possíveis motivos para o retorno negativo 
 
 ### UC12 - Visualizar Saldo da Conta
-
+|||
 ----- | ----- 
 Descrição | Essa funcionalidade tem como objetivo mostar o saldo da conta do usuário
 Atores | Usuário
@@ -239,7 +212,7 @@ Fluxo principal | [FP01] O usuário clica em "Saldo da Conta" e o saldo é mostr
 
 
 ### UC13 - Visualizar Extrato da Conta
-
+|||
 ----- | ----- 
 Descrição | Essa funcionalidade tem como objetivo apresentar as transações realizadas pelo usuário
 Atores | Usuário
@@ -248,19 +221,17 @@ Pós-condições | O extrato completo deverá ter sido apresentado
 Fluxo principal | [FP01] O usuário deverá clicar em "Extrato da Conta" e o extrato será mostrado na tela
 
 ### UC14 - Pesquisar uma Transação
-
+|||
 ----- | -----
 Descrição | Essa funcionalidade tem como objetivo pesquisar uma transação no extrato do usuário
 Atores | Usuário
 Pré-condições | O usuário deverá ter clicado em "Extrato da Conta"
 Pós-condições | A pesquisa deverá retornar os resultados na tela
-Fluxo principal | [FP01] 1. O usuário digita a palavra chave
-2. O usuário clica em pesquisar
-Fluxo de exceção | [FE01] A pesquisa pode não ecnontrar a palavra chave
-[FE02] O usuário pode realizar o passo 2 antes do 1 e o sistema retorna uma mensagem de erro
+Fluxo principal | [FP01] 1. O usuário digita a palavra chave <br>2. O usuário clica em pesquisar
+Fluxo de exceção | [FE01] A pesquisa pode não ecnontrar a palavra chave<br> [FE02] O usuário pode realizar o passo 2 antes do 1 e o sistema retorna uma mensagem de erro
 
 ### UC15 - Visualizar Detalhamento da Dívida
-
+|||
 ----- | -----
 Descrição | Essa funcionalidade mostra a dívida em detalhes
 Atores | Usuário 
@@ -269,19 +240,14 @@ Pós-condições | Os detalhes da dívida devem ter sido mostrados
 Fluxo principal | [FP01] O usuário deve clicar em "Destalhamento da Dívida"
 
 ### UC16 - Solicitar Parcelamento da Dívida
-
+|||
 ----- | ----- 
 Descrição | Essa função permite que o usuário parcele a sua dívida 
 Atores | Usuário
 Pré-condições | O usuário deverá ter utilizado uma quantidade de créditos
 Pós-condições | A dívida deverá ter sido parcelada
-Fluxo principal | [FP01] Esse fluxo ocorre quando o usuário deseja parcelar sua dívida:
-1. O usuário clica em parcelar a dívida
-2. O usuário seleciona a quantidade de parcelas
-3. O usuário visualiza os detalhes do parcelamento
-4. O usuário clica em "Confirmar Operação"
-Fluxo de exceção | [FE01] O usuário pode desistir de parcelar e clicar em "Cancelar"
-[FE02] O usuário pode passar para o passo 4 sem ter realizado o passo 2 e o sistema retorna uma mensagem de erro
+Fluxo principal | [FP01] Esse fluxo ocorre quando o usuário deseja parcelar sua dívida:<br>1. O usuário clica em parcelar a dívida<br>2. O usuário seleciona a quantidade de parcelas<br>3. O usuário visualiza os detalhes do parcelamento<br>4. O usuário clica em "Confirmar Operação"
+Fluxo de exceção | [FE01] O usuário pode desistir de parcelar e clicar em "Cancelar"<br>[FE02] O usuário pode passar para o passo 4 sem ter realizado o passo 2 e o sistema retorna uma mensagem de erro
 
 ## 5. Visão Lógica
 

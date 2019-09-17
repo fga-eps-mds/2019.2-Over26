@@ -26,7 +26,7 @@ Fazer principais documentos que ficaram de dívida técnica da sprint passada e 
 | [D01 - Fazer Documento de Visão](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/10) | 3 | Isabella, Luiza, João Gabriel, Gabriel, João Paulo e Erick |Sim|
 | [D02 - Fazer Estrutura analítica de projetos](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/8) | 5 | Adrianne, Andrew, Maria Luiza, Natália |Sim|
 | [D03 - Fazer Termo de abertura de projetos](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/7) | 5 | Adrianne, Andrew, Maria Luiza, Natália |Sim|
-| [D04 - Fazer Documento de Arquitetura](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/11) | 5 | Isabella, Luiza, João Gabriel, Gabriel, João Paulo e Erick |Sim|
+| [D10 - Refatorar Documento de Arquitetura](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/28) | 5 | Isabella, Luiza, João Gabriel, Gabriel, João Paulo e Erick |Sim|
 | [US05 - Ativar crédito especial](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/23) | 8 | Isabella, João Gabriel, Gabriel |Não|
 | [US06 - Acompanhar limite de crédito](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/24) | 5 | Luiza, Erick, João Paulo  |Não|
 

@@ -23,17 +23,11 @@ Fazer funcionalidades que agreguem valor ao projeto priorizadas pela Product Own
 ### Overview
 | Atividade | Pontuação | Responsável | Dívida |
 | -------- | :----: | :----: | :----: |
-| [US05 - Ativar crédito especial - BackEnd](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/32) | 5 | João Paulo e João Gabriel | |
-| [US06 - Acompanhar limite de crédito - BackEnd](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/33) | 5 | Luiza e Isabella | |
-| [US15 - Criar Perfil do Usuário](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/31) | 5 | Erick e Gabriel ||
-| [US02 - Solicitar Crédito](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/30) | 8 | Erick e Gabriel  ||
-| [Acompanhar limite - Front] | 5 | Luiza e Isabella ||
-| [Ativar crédito especial - Front] | 5 | João Paulo e João Gabriel ||
+| [US05 - Ativar crédito especial - BackEnd](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/32) | 8 | João Paulo e João Gabriel | Não|
+| [US06 - Acompanhar limite de crédito - BackEnd](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/33) | 8 | Luiza e Isabella |Não |
+| [US15 - Criar Perfil do Usuário - Backend](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/31) | 5 | Erick e Gabriel |Não|
+| [US02 - Solicitar Crédito](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/30) | 8 | Erick e Gabriel  |Não|
 
-
-MDS - História CRUD conta
-
-EPS - Plano de comunicação, Gerenciamento de risco, Burndown de riscos, GQM
 
 
 ## 4. Pareamento

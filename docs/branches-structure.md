@@ -9,13 +9,13 @@
 
 # Índice
 
-* [1. Estrutura de branches](#1-Estrutura-de-branches)
-* [2. Padrões definidos](#2-Padrões-definidos)
-    * [2.1. Nomes de branches](#21-Nomes-de-branches)
-    * [2.2. Commits](#22-Commits)
-    * [2.3. Fluxo de adição de uma nova funcionalidade](#23-Fluxo-de-adição-de-uma-nova-funcionalidade)
-    * [2.4. Fluxo de adição de documentos](#24-Fluxo-de-adição-de-documentos)
-* [3. Referências](#3-Referências)
+* [1. Estrutura de branches](#_1-estrutura-de-branches)
+* [2. Padrões definidos](#_2-padrões-definidos)
+    * [2.1. Nomes de branches](#_21-nomes-de-branches)
+    * [2.2. Commits](#_22-commits)
+    * [2.3. Fluxo de adição de uma nova funcionalidade](#_23-fluxo-de-adição-de-uma-nova-funcionalidade)
+    * [2.4. Fluxo de adição de documentos](#_24-fluxo-de-adição-de-documentos)
+* [3. Referências](#_3-referências)
     
 
 # 1. Estrutura de branches

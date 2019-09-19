@@ -12,3 +12,4 @@
 * [Documento de Arquitetura](./docs/architecture.md)
 * [Documento de Visão](./docs/vision.md)
 * [Estrutura de Branches e Padrões](./docs/branches-structure.md)
+* [Folha de Estilo](./docs/style-sheet.md)

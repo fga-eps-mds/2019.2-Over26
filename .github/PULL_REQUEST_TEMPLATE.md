@@ -1,37 +1,29 @@
-## Proposed Changes
+##  Mudanças propostas
 <!--- Faça um breve resumo das mudanças feitas. -->
-<!--- Make a brief outline of the changes made. -->
 
-## _Issue_ Related
-<!--- This project only accepts _pull requests_ related to opened _issues_. -->
-<!--- If you are suggesting a new _feature_ , change or correcting a _bug_ , please discuss or relate in a _issue_. -->
-<!--- Add the link to _issue_ here: -->
+## _Issue_ relatada
 <!--- Este projeto apenas aceita _pull requests_ relacionadas à _issues_ abertas. -->
 <!--- Se está sugerindo uma nova _feature_, mudança ou corrigindo um bug, por favor discuta ou relate em uma _issue_. -->
 <!--- Adicione o link para a _issue_ aqui: -->
 
-## Type of Changes
-<!--- What type of change this Pull Request brings to the project?  -->
+## Tipo de mudanças
 <!--- Que tipo de mudança o Pull Request traz para o projeto? -->
 
-- [ ] New feature.
-- [ ] Bug fix.
-- [ ] Another change (what was the change?).
+- [ ] Nova Feature
+- [ ] Conserto de bug
+- [ ] Outra mudança (Qual foi a mudança?).
 
 ## Checklist
-<!---If you're confused about any topic, ask us. We can help you! -->
-<!---Se você está confuso sobre qualquer tópicp, pergunte-nos. Nós podemos ajudar você! -->
+<!---Se você está confuso sobre qualquer tópico, pergunte-nos. Nós podemos ajudar você! -->
 
-- [ ] This Pull Request has a significant name.
-- [ ] The commits follow the commits policy.
-- [ ] The build is okay.
-- [ ] This Pull Request mentions a related issue.
-- [ ] The change was necessary to the progress of the project.
+- [ ] Este Pull Requeste tem um nome significante.
+- [ ] Os commits seguem a política de commits.
+- [ ] A build está passando.
+- [ ] Este Pull Request menciona uma issue relatada.
+- [ ] A mudança é necessária para o progresso do projeto.
 
 ## Screenshots
-<!--- If necessary, use screenshots to show us your changes on the frontend. -->
 <!--- Se necessário, use capturas de tela para nos mostrar suas alterações no frontend. -->
 
-## Further comments
-<!--- If you have something more to tell us (questions, explanations, etc) write them down here.-->
+## Demais comentários
 <!--- Se você tem algo mais para nos dizer (perguntas, explicações, etc) escreva-os aqui.-->

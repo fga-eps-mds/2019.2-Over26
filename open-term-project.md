@@ -3,14 +3,35 @@
 | Data | Versão | Autor(a) | Descrição |
 | - | - | - | - |
 | 10/09/2019 | 0.1 | Maria Luiza | Início do Termo de Abertura do Projeto |
-| 12/09/2019 | **0.2** | Maria Luiza | Estimativas de custos, Requisitos de alto nível e Riscos |
+| 12/09/2019 | **0.2** | Maria Luiza | Estimativas de custos, Requisitos de alto nível e riscos |
 | 12/09/2019 | 0.3 | Natália Rodrigues | Partes Interessadas e Requisitos para a Aprovação |
 | 13/09/2019 | 0.4 | Adrianne Alves | Introdução e Descrição |
 | 14/09/2019 | 0.5 | Andrew Lucas | Propósito e Justificativa  e objetivo |
 
+## Índice
+- [Histórico de Versões](#Hist%C3%B3rico-de-Vers%C3%B5es)
+  - [1. Introdução](#_1-Introdu%C3%A7%C3%A3o)
+  - [2. Descrição](#_2-Descri%C3%A7%C3%A3o)
+  - [3. Propósito e Justificativa](#_3-Prop%C3%B3sito-e-Justificativa)
+  - [4. Objetivos](#_4-Objetivos)
+  - [5. Requisitos de Alto Nível](#_5-Requisitos-de-Alto-N%C3%ADvel)
+  - [6. Riscos](#_6-Riscos)
+  - [7. Estimativas de custos](#_7-Estimativas-de-custos)
+    - [Recursos Humanos](#Recursos-Humanos)
+    - [Aquisições](#Aquisi%C3%A7%C3%B5es)
+    - [Ferramentas](#Ferramentas)
+    - [Custo Total](#Custo-Total)
+  - [8. Partes interessadas](#_8-Partes-interessadas)
+    - [Idealizadores](#Idealizadores)
+    - [Usuários](#Usu%C3%A1rios)
+    - [Equipe](#Equipe)
+      - [Gestão do Projeto](#Gest%C3%A3o-do-Projeto)
+      - [Desenvolvimento](#Desenvolvimento)
+  - [9. Requisitos para a Aprovação](#_9-Requisitos-para-a-Aprova%C3%A7%C3%A3o)
+
 ## 1. Introdução 
 
-As atividades financeiras, assim como as demais relações humanas com o meio foram se modificando ao longo do tempo devido às mudanças constantes na tecnologia ofertada em diferentes domínios. Em gerações anteriores vía-se a presença constante do cliente bancário nas grandes agências dos centros das cidades para resolver assuntos pertinentes aos recursos que o banco ofertava para o seu perfil. Hoje em dia, entretanto, essa prática tornou-se escassa, devido ao conceito de banco digital e uso de contas de pagamento com licenças de Sociedade de Crédito Direto, por exemplo. 
+As atividades financeirasup0, assim como as demais relações humanas com o meio foram se modificando ao longo do tempo devido às mudanças constantes na tecnologia ofertada em diferentes domínios. Em gerações anteriores vía-se a presença constante do cliente bancário nas grandes agências dos centros das cidades para resolver assuntos pertinentes aos recursos que o banco ofertava para o seu perfil. Hoje em dia, entretanto, essa prática tornou-se escassa, devido ao conceito de banco digital e uso de contas de pagamento com licenças de Sociedade de Crédito Direto, por exemplo. 
 
 No cenário apresentado surge a N26, um banco completamente digital cuja ideia se alastrou, positivamente, por toda a Europa e recentemente nos Estados Unidos. Por si só o seu sucesso demonstrou um aspecto importante do consumidor dessa geração : O êxtase experimentado quando há independência de uma agência física para acompanhar aspectos básicos das suas finanças e recursos, como por exemplo a lista de compras, a solicitação de crédito, entre outros. Esse banco tornou-se inspiração para empresas como o Nubank ofertarem um serviço com maior liberdade e menor buracracia aos amantes de tecnologia, o que se mostrou extremamente eficaz, ainda que como conta de pagamento. Visto o sucesso dessas iniciativas e o perfil consumidor brasileiro, a N26 decidiu vir para o Brasil portanto uma licença de Sociedade de Crédito direto. 
 
@@ -132,7 +153,7 @@ Nome | Descrição
 -|-
 Adrianne Souza | PO
 Andrew Lucas | DevOps
-Maria Luiza | Tech Leader
+Maria Luiza | Scrum Master
 Natália Rodrigues | Arquiteta
 
 #### Desenvolvimento 

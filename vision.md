@@ -7,36 +7,39 @@
 | 13/09/2019 | 0.4 | Luiza Cezario | Adicionando Descrição dos Envolvidos e dos Usuários
 | 13/09/2019 | 0.5 | João Gabriel | Adicionando Recursos|
 | 14/09/2019 | 0.6 | Gabriel | Adicionando Introdução|
+
 ## Índice
 
-- [1. Introdução](#1-introdução)
-  * [1.1. Finalidade](#11-finalidade)
-  * [1.2. Escopo](#12-escopo)
-  * [1.3. Visão geral](#13-visão-geral)
-  * [1.4. Referências](#14-referências)
-- [2. Posicionamento](#2-posicionamento)
-  * [2.1. Oportunidade de Negócios](#21-oportunidade-de-negõcios)
-  * [2.2. Descrição do problema](#22-descrição-do-problema)
-  * [2.3. Sentença de Posição do Produto](#23-sentença-de-posição-do-produto)
-- [3. Descrição dos Envolvidos e dos Usuários](#3-descrição-dos-envolvidos-e-dos-usuários)
-  * [3.1. Resumo dos Envolvidos](#31-resumo-dos-envolvidos)
-  * [3.2. Resumo dos Usuários](#32-resumo-dos-usuários)
-  * [3.3. Ambiente do Usuário](#33-ambiente-do-usuário)
-  * [3.4. Perfis dos Envolvidos](#34-perfis-dos-envolvidos)
-  * [3.5. Perfis dos Usuários](#35-perfis-dos-usuários)
-  * [3.6. Alternativas e concorrência](#36-alternativas-e-concorrência)
-- [4. Visão Geral do Produto](#4-visão-geral-do-produto)
-  * [4.1. Perspectiva do produto](#41-perspectiva-do-produto)
-  * [4.2. Resumo dos recursos](#42-resumo-dos-recursos)
-- [5. Recursos do Produto](#5-recursos-do-produto)
-- [6. Restrições](#6-restrições)
-  * [6.1. Restrições de Design](#61-restrições-de-design)
-  * [6.2. Restrições de Implementação](#62-restrições-de-implementação)
-  * [6.3. Restrições de Segurança](#63-restrições-de-segurança)
-  * [6.4. Restrições de Uso](#64-restrições-de-uso)
-- [7. Intervalos de Qualidade](#7-intervalos-de-qualidade)
+- [Documento de Visão](#Documento-de-Vis%C3%A3o)
+  - [Índice](#%C3%8Dndice)
+  - [1. Introdução](#__1-Introdu%C3%A7%C3%A3o)
+    - [1.1. Finalidade](#_11-Finalidade)
+    - [1.2. Escopo](#_12-Escopo)
+    - [1.3. Visão geral](#_13-Vis%C3%A3o-geral)
+    - [1.4. Referências](#_14-Refer%C3%AAncias)
+  - [2. Posicionamento](#_2-Posicionamento)
+    - [2.1. Oportunidade de Negócios](#_21-Oportunidade-de-Neg%C3%B3cios)
+    - [2.2. Descrição do problema](#_22-Descri%C3%A7%C3%A3o-do-problema)
+    - [2.3. Sentença de Posição do Produto](#_23-Senten%C3%A7a-de-Posi%C3%A7%C3%A3o-do-Produto)
+  - [3. Descrição dos Envolvidos e dos Usuários](#_3-Descri%C3%A7%C3%A3o-dos-Envolvidos-e-dos-Usu%C3%A1rios)
+    - [3.1. Resumo dos Envolvidos](#_31-Resumo-dos-Envolvidos)
+    - [3.2. Resumo dos Usuários](#_32-Resumo-dos-Usu%C3%A1rios)
+    - [3.3. Ambiente do Usuário](#_33-Ambiente-do-Usu%C3%A1rio)
+    - [3.4. Perfis dos Envolvidos](#_34-Perfis-dos-Envolvidos)
+    - [3.5. Perfis dos Usuários](#_35-Perfis-dos-Usu%C3%A1rios)
+    - [3.6. Alternativas e concorrência](#_36-Alternativas-e-concorr%C3%AAncia)
+  - [4. Visão Geral do Produto](#_4-Vis%C3%A3o-Geral-do-Produto)
+    - [4.1. Perspectiva do produto](#_41-Perspectiva-do-produto)
+    - [4.2. Resumo dos recursos](#_42-Resumo-dos-recursos)
+  - [5. Recursos do Produto](#_5-Recursos-do-Produto)
+  - [6. Restrições](#_6-Restri%C3%A7%C3%B5es)
+    - [6.1. Restrições de Design](#_61-Restri%C3%A7%C3%B5es-de-Design)
+    - [6.2. Restrições de Implementação](#_62-Restri%C3%A7%C3%B5es-de-Implementa%C3%A7%C3%A3o)
+    - [6.3. Restrições de Segurança](#_63-Restri%C3%A7%C3%B5es-de-Seguran%C3%A7a)
+    - [6.4. Restrições de Uso](#_64-Restri%C3%A7%C3%B5es-de-Uso)
+  - [7. Intervalos de Qualidade](#_7-Intervalos-de-Qualidade)
 
-## 1. Introdução
+## 1. Introdução 
 
 ### 1.1. Finalidade
 

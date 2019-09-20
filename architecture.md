@@ -11,7 +11,7 @@
 | 11/09/2019 | 0.7.1 | Erick | Corrigindo índice|
 | 11/09/2019 | 0.8 | Erick | Refatorando desempenho e realocando restrições|
  11/09/2019 | 0.9| João Gabriel| Refatoração da introdução|
- 13/09/2019 | 0.10 | João Paulo e Gabriel | Refatoração da Visão Lógica |
+ 13/09/2019 | 1.0 | João Paulo e Gabriel | Refatoração da Visão Lógica |
  
 ## Índice
 
@@ -120,7 +120,7 @@ Pós-condições | A solicitação deverá ter sido enviada para o sistema para 
 Fluxo principal | [FP01] Este fluxo se inicia quando o usuário deseja solicitar o acesso à funcionalidade de crédito:<br>1. O usuário clica em "Solicitar Crédito"<br>2. O usuário lê os termos de uso da funcionalidade [UC04]<br>3. O usuário clica em "Aceitar Termos de Uso" [FE01]<br>4. O usuário clica em "Confirmar Solicitação" [FE02]
 Fluxo de exceção | [FE01] Se o usuário prosseguir para o passo 4 antes de realizar o passo 3 o sistema retornará uma mensagem de erro<br>[FE02] O usuário poderá decidir não realizar a solicitação e clicar em "Cancelar" 
 
-## UC04 - Visualizar Regras de Contratação de Crédito
+### UC04 - Visualizar Regras de Contratação de Crédito
 |||
 ----- | -----
 Descrição | A aplicação mostra ao usuário uma tela com as regras de contratação de crédito

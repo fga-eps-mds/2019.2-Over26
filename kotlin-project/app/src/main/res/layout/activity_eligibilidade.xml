@@ -19,6 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.025" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -27,8 +28,13 @@
         android:text="Cheque Especial"
         android:textColor="@android:color/black"
         android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="57dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.095" />
+
     <Button
         android:id="@+id/button_X"
         android:layout_width="43dp"
@@ -37,19 +43,27 @@
         android:text="X"
         android:textColor="@android:color/black"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="352dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.923"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.036" />
 
     <Button
-        android:id="@+id/button_eligibility"
+        android:id="@+id/eligibility_button"
         android:layout_width="198dp"
         android:layout_height="43dp"
         android:background="@android:color/holo_green_dark"
         android:text="Checar eligibilidade"
         android:textColor="@android:color/white"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="634dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.905" />
 
     <TextView
         android:id="@+id/textView2"
@@ -58,8 +72,12 @@
         android:text="Flexível"
         android:textColor="@android:color/black"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="177dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.326"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.24" />
 
     <TextView
         android:id="@+id/textView3"
@@ -68,8 +86,13 @@
         android:text="Transparente"
         android:textColor="@android:color/black"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="332dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.463" />
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
@@ -77,55 +100,86 @@
         android:text="Fácil"
         android:textColor="@android:color/black"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="477dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.299"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.682" />
+
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="216dp"
-        android:layout_height="92dp"
+        android:layout_width="228dp"
+        android:layout_height="94dp"
         android:text="Novos clientes recebem até R$ 1.000 enquanto existem clientes que são elegíveis para até R$ 10.000"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="209dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.584"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.331" />
+
     <TextView
         android:id="@+id/textView6"
         android:layout_width="222dp"
         android:layout_height="96dp"
         android:text="Seu cheque especial é atualizado diariamente no aplicativo, então você sempre sabe quanto deve"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="364dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.573" />
+
     <TextView
         android:id="@+id/textView7"
         android:layout_width="226dp"
         android:layout_height="71dp"
         android:text="Cheque sua eligibilidade em 2 minutos sem nenhuma papelada"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="509dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.616"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.784" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/ic_launcher_flexivel"
-        tools:layout_editor_absoluteX="-6dp"
-        tools:layout_editor_absoluteY="161dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.288"
+        app:srcCompat="@mipmap/ic_launcher_flexivel" />
 
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/ic_launcher_transparente"
-        tools:layout_editor_absoluteX="-6dp"
-        tools:layout_editor_absoluteY="340dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.52"
+        app:srcCompat="@mipmap/ic_launcher_transparente" />
 
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/ic_launcher_facil"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="488dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.765"
+        app:srcCompat="@mipmap/ic_launcher_facil" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

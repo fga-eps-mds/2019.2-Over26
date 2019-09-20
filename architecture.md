@@ -15,40 +15,40 @@
  
 ## Índice
 
-- [1. Introdução](#1-introdução)
-  * [1.1. Objetivos](#11-objetivos)
-  * [1.2. Escopo do documento](#12-escopo-do-documento)
+- [1. Introdução](#_1-introdução)
+  * [1.1. Objetivos](#_11-objetivos)
+  * [1.2. Escopo do documento](#_12-escopo-do-documento)
 
-- [2. Representação da Arquitetura](#2-representação-da-arquitetura)
+- [2. Representação da Arquitetura](#_2-representação-da-arquitetura)
 
-- [3. Restrições e Metas Arquiteturais](#3-restrições-e-metas-arquiteturais)
-  * [3.1. Restrições](#31-restrições)
-  * [3.2. Metas Arquiteturais](#32-metas-arquiteturais)
+- [3. Restrições e Metas Arquiteturais](#_3-restrições-e-metas-arquiteturais)
+  * [3.1. Restrições](#_31-restrições)
+  * [3.2. Metas Arquiteturais](#_32-metas-arquiteturais)
 
-- [4. Visão de Casos de Uso](#4-visão-de-casos-de-uso)
-  * [UC01 - Realizar Login](#uc01-\--realizar-login)
-  * [UC02 - Cadastrar](#uc02-\--cadastrar)
-  * [UC03 - Solicitar Crédito](#uc03-\--solicitar-crédito)
-  * [UC04 - Visualizar Regras de Contratação](#uc04-\--visualizar-regras-de-contratação)
-  * [UC05 - Fornecer Feedback da Solicitação de Crédito](#uc05-\--fornecer-feedback-da-solicitação-de-crédito)
-  * [UC06 - Analisar Perfil do Usuário](#uc06-\--analisar-perfil-do-usuário)
-  * [UC07 - Ativar Limite de Crédito](#uc07-\--ativar-limite-de-crédito)
+- [4. Visão de Casos de Uso](#_4-visão-de-casos-de-uso)
+  * [UC01 - Realizar Login](#uc01-realizar-login)
+  * [UC02 - Cadastrar](#uc02-cadastrar)
+  * [UC03 - Solicitar Crédito](#uc03-solicitar-crédito)
+  * [UC04 - Visualizar Regras de Contratação](#uc04-visualizar-regras-de-contratação-de-crédito)
+  * [UC05 - Fornecer Feedback da Solicitação de Crédito](#uc05-fornecer-feedback-da-solicitação-de-crédito)
+  * [UC06 - Analisar Perfil do Usuário](#uc06-analisar-perfil-do-usuário)
+  * [UC07 - Ativar Limite de Crédito](#uc07-ativar-limite-de-crédito)
   * [UC08 - Ajustar Limite](#uc08---ajustar-limite)
-  * [UC09 - Acompanhar Limite](#uc09-\--acompanhar-limite)
-  * [UC10 - Solicitar Aumento de Limite](#uc10-\--solicitar-aumento-de-limite)
-  * [UC11 - Fornecer Feedback da Solicitação de Aumento](#uc11-\--fornecer-feedback-da-solicitação-de-aumento)
-  * [UC12 - Visualizar Saldo da Conta](#uc12-\--visualizar-saldo-da-conta)
-  * [UC13 - Visualizar Extrato da Conta](#uc13-\--visualizar-extrato-da-conta)
-  * [UC14 - Pesquisar uma Transação](#uc1-\--pesquisar-uma-transação)
-  * [UC15 - Visualizar Detalhamento da Dívida](#uc15-\--visualizar-detalhamento-da-dívida)
-  * [UC16 - Solicitar Parcelamento da Dívida](#uc16-\--solicitar-parcelamento-da-dívida)
+  * [UC09 - Acompanhar Limite](#uc09-acompanhar-limite)
+  * [UC10 - Solicitar Aumento de Limite](#uc10-solicitar-aumento-de-limite)
+  * [UC11 - Fornecer Feedback da Solicitação de Aumento](#uc11-fornecer-feedback-da-solicitação-de-aumento)
+  * [UC12 - Visualizar Saldo da Conta](#uc12-visualizar-saldo-da-conta)
+  * [UC13 - Visualizar Extrato da Conta](#uc13-visualizar-extrato-da-conta)
+  * [UC14 - Pesquisar uma Transação](#uc1-pesquisar-uma-transação)
+  * [UC15 - Visualizar Detalhamento da Dívida](#uc15-visualizar-detalhamento-da-dívida)
+  * [UC16 - Solicitar Parcelamento da Dívida](#uc16-solicitar-parcelamento-da-dívida)
 
-- [5. Visão Lógica](#5-visão-lógica)
-  * [5.1. Visão Geral](#51-visão-geral)
+- [5. Visão Lógica](#_5-visão-lógica)
+  * [5.1. Visão Geral](#_51-visão-geral)
 
-- [6. Desempenho](#6-desempenho)
+- [6. Desempenho](#_6-desempenho)
 
-- [7. Qualidade](#7-qualidade)
+- [7. Qualidade](#_7-qualidade)
 
 ## 1. Introdução
 

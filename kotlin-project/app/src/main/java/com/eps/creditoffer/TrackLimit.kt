@@ -1,7 +1,9 @@
 package com.eps.creditoffer
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import kotlinx.android.synthetic.main.track_limit.*
 import android.widget.SeekBar
 
@@ -38,5 +40,31 @@ class TrackLimit : AppCompatActivity() {
                 // Do something
             }
         })
+
+        val url: String = "http://10.0.2.2:3000/api/overdrafts"
+        val cancel_overdraft = findViewById(R.id.button2) as Button
+        cancel_overdraft.setOnClickListener {
+
+
+            Fuel.put(url)
+                .response { request, response, result ->
+                    println(request)
+                    println(response)
+                    val (bytes, error) = result
+                    if (bytes != null) {
+                        println("[response bytes] ${String(bytes)}")
+                    }
+                    when(result){
+                        is Result.Success -> {
+
+                            val intent = Intent(this, TrackLimit::class.java)
+                            startActivity(intent)
+
+                        }
+                        is Result.Failure -> {
+                            println("Falha no cancelamento")
+                        }
+                    }
+                }
     }
 }

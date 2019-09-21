@@ -19,7 +19,7 @@
  ### Sobre o projeto
 
 <p align="justify"> &emsp;&emsp;
-  O Over26 consiste em um Mínimo Produto viável (MVP) para o teste de uma nova experiência de crédito por meio do cheque especial em uma conta de pagamento. O objetivo deste produto consiste em estabelecer um melhor resultado em termos de experiência de usuário e usabilidade para a oferta do serviço no Brasil. Caso você deseje embarcar nessa aventura conosco e contribuir com o nosso projeto, você pode obter mais informações no nosso <a href="https://github.com/fga-eps-mds/2019.2-Grupo2/blob/master/.github/CONTRIBUTING.md">Contributing </a> e [Code of Conduct]()
+  O Over26 consiste em um Mínimo Produto viável (MVP) para o teste de uma nova experiência de crédito por meio do cheque especial em uma conta de pagamento. O objetivo deste produto consiste em estabelecer um melhor resultado em termos de experiência de usuário e usabilidade para a oferta do serviço no Brasil. Caso você deseje embarcar nessa aventura conosco e contribuir com o nosso projeto, você pode obter mais informações no nosso <a href="https://github.com/fga-eps-mds/2019.2-Grupo2/blob/master/.github/CONTRIBUTING.md">Contributing </a> e <a href="https://github.com/fga-eps-mds/2019.2-Grupo2/blob/master/.github/CODE_OF_CONDUCT.md">Code of Conduct </a>
 </p>
 
 ### Principais funcionalidades

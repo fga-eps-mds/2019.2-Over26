@@ -4,7 +4,7 @@
 **Data de início**: 01/09/2019 <br/>
 **Data de fim**: 07/09/2019 <br/>
 **Duração**: 1 semana <br/>
-**Pontuação**: 29 pontos
+**Pontuação**: 30 pontos
 
 ## 1. Objetivo
 
@@ -30,6 +30,7 @@ Definir e desenvolver principais documentos necessários para o projeto. **A pon
 | [D04 - Fazer Documento de Arquitetura](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/11) | 8 | Isabella, Luiza, João Gabriel, Gabriel, João Paulo e Erick |Não|
 | [D05 - Fazer Protótipo de Baixa Fidelidade](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/12) | 3 | Isabella, Luiza, João Gabriel, Gabriel, João Paulo e Erick |Não|
 | [S11 - Conceitos Financeiros](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/16) | 3 | Todos do grupo (MDS e EPS) |Não|
+| [D06 - Criar template de issue](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/17) | 1 | Adrianne |Não|
 
 
 ## 4. Pareamento

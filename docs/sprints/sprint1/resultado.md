@@ -4,9 +4,9 @@
 
 ### 1.1 Fechamento da Sprint 
 
-**Pontos planejados: 29 pontos**
+**Pontos planejados: 30 pontos**
 <br>
-**Pontos concluídos: 11 pontos**
+**Pontos concluídos: 12 pontos**
 <br>
 **Dívida para a próxima Sprint: 15 pontos**
 <br>
@@ -20,12 +20,12 @@
 |[D04 - Fazer Documento de Arquitetura](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/11)| Concluída | 
 |[D05 - Fazer Protótipo de Baixa Fidelidade](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/12)| Cancelada | 
 |[S11 - Conceitos Financeiros](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/16)| Concluída | 
+| [D06 - Criar template de issue](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/17) | Concluída |
 
 
 ## 1.2 Burndown
 
 ## 1.3 Velocity   
-![](../../images/metrics_agile/velocity_sprint1.png)
 
 ## 1.4 Retrospectiva 
 | Membro | Pontos Positivos | Pontos Negativos | Sugestão de Melhoria | Pontuação das Histórias |

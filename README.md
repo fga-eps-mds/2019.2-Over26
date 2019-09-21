@@ -4,7 +4,7 @@
 <br/><br/>
 
 <p align="center">
-  <img src="https://i.ibb.co/ccTVXKf/Sem-t-tulo2.png" alt="Logo">
+  <img src="https://i.ibb.co/TcRs6mJ/2e4fe184-7bdd-4498-ae84-d88d4c00fc71.jpg" alt="Logo">
 </p>
 
 <h1 align="center"> Over26 - Uma nova experiência de cheque especial </h1> 

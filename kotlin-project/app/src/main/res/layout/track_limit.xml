@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+        android:layout_marginTop="510dp"
+        android:background="#00FCFCFC"
+        android:fontFamily="@font/antic"
+        android:gravity="left|center_vertical"
+        android:isScrollContainer="false"
+        android:text="Cancel  Overdraft"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:baselineAligned="false"
+        android:fontFamily="@font/antic"
+        android:gravity="center_horizontal"
+        android:shadowColor="#00D62323"
+        android:text="Overdraft"
+        android:textColor="#000000"
+        android:textColorHighlight="#000000"
+        android:textColorHint="#050000"
+        android:textColorLink="#090000"
+        android:textIsSelectable="false"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="460dp"
+        android:baselineAligned="false"
+        android:fontFamily="@font/antic"
+        android:shadowColor="#00D62323"
+        android:text="Interest incurred this quarter"
+        android:textColor="#000000"
+        android:textColorHighlight="#000000"
+        android:textColorHint="#050000"
+        android:textColorLink="#090000"
+        android:textIsSelectable="false"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="480dp"
+        android:baselineAligned="false"
+        android:fontFamily="@font/antic"
+        android:shadowColor="#00D62323"
+        android:text="Nominal annual interest rate 8,9%"
+        android:textColor="#80000000"
+        android:textColorHighlight="#000000"
+        android:textColorHint="#050000"
+        android:textColorLink="#090000"
+        android:textIsSelectable="false"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/text_view_usage"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_alignEnd="@+id/text_view_max"
+        android:layout_alignRight="@+id/text_view_max"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="right|center_horizontal"
+        android:layout_marginTop="270dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginRight="155dp"
+        android:foregroundGravity="center_vertical|center|center_horizontal"
+        android:gravity="center_horizontal"
+        android:text="1"
+        android:textAlignment="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/text_view_usage2"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/text_view_max"
+        android:layout_alignRight="@+id/text_view_max"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="right|center_horizontal"
+        android:layout_marginTop="470dp"
+        android:layout_marginEnd="-4dp"
+        android:layout_marginRight="-4dp"
+        android:foregroundGravity="center_vertical|center|center_horizontal"
+        android:gravity="center_horizontal"
+        android:text="1"
+        android:textAlignment="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="#80000000"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:baselineAligned="false"
+        android:fontFamily="@font/antic"
+        android:gravity="center_horizontal"
+        android:shadowColor="#00D62323"
+        android:text="Current Usage"
+        android:textColor="#7A000000"
+        android:textColorHighlight="#000000"
+        android:textColorHint="#050000"
+        android:textColorLink="#090000"
+        android:textIsSelectable="false"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/seek_bar"
+        style="@android:style/Widget.Material.SeekBar.Discrete"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:filterTouchesWhenObscured="false" />
+
+    <TextView
+        android:id="@+id/text_view_cur"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="190dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_view_min"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="200dp"
+        android:gravity="left"
+        android:text="R$ 0"
+        android:textAlignment="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/text_view_max"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="160dp"
+        android:baselineAligned="false"
+        android:fontFamily="@font/antic"
+        android:gravity="center_horizontal"
+        android:shadowColor="#00D62323"
+        android:text="My Limit"
+        android:textColor="#000000"
+        android:textColorHighlight="#000000"
+        android:textColorHint="#050000"
+        android:textColorLink="#090000"
+        android:textIsSelectable="false"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="0dp"
+        android:background="#00FCFCFC"
+        android:fontFamily="@font/antic"
+        android:isScrollContainer="false"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="#AE009688"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>

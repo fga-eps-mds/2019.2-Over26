@@ -4,8 +4,19 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.track_limit.*
 import android.widget.SeekBar
+import android.content.Intent
+import com.github.kittinunf.result.Result
+import android.widget.Button
+import com.github.kittinunf.fuel.httpGet
+import com.github.kittinunf.fuel.httpPost
+import com.github.kittinunf.fuel.Fuel
+import com.github.kittinunf.fuel.android.core.Json
+import com.github.kittinunf.fuel.android.extension.responseJson
+import com.github.kittinunf.fuel.core.FuelError
 
 class TrackLimit : AppCompatActivity() {
+
+    val url: String = "http://10.0.2.2:3000/api/overdrafts"
 
     var curLimit: Float = 0F
     var maxLimit: Float = 200F
@@ -28,10 +39,33 @@ class TrackLimit : AppCompatActivity() {
                 // Display the current progress of SeekBar
 
                 text_view_cur.text = "R$"+i.toString()
-            }
 
+
+                Fuel.put(url)
+                    .response { request, response, result ->
+                        println(request)
+                        println(response)
+                        val (bytes, error) = result
+                        if (bytes != null) {
+                            println("[response bytes] ${String(bytes)}")
+                        }
+
+                        when(result){
+                            is Result.Success -> {
+                                Fuel.put(url)
+                                    .response { request, response, result ->
+                                        println(request)
+                                        println(response)
+                                        val i = result
+                                    }
+                            }
+                            is Result.Failure -> {
+                                println("Não foi possivel atualizar")
+                            } }
+                    }
             override fun onStartTrackingTouch(seekBar: SeekBar) {
-                // Do something
+                //Do something
+
             }
 
             override fun onStopTrackingTouch(seekBar: SeekBar) {
@@ -39,4 +73,6 @@ class TrackLimit : AppCompatActivity() {
             }
         })
     }
+
+
 }

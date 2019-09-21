@@ -34,6 +34,17 @@ class eligibilidade : AppCompatActivity() {
                     if (bytes != null) {
                         println("[response bytes] ${String(bytes)}")
                     }
+                    when(result){
+                        is Result.Success -> {
+
+                            val intent = Intent(this, TelaDeConfirmacaoChequeEspecial::class.java)
+                            startActivity(intent)
+
+                        }
+                        is Result.Failure -> {
+                        println("Deu ruim")
+                        }
+                    }
                 }
 
 

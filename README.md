@@ -19,7 +19,7 @@
  ### Sobre o projeto
 
 <p align="justify"> &emsp;&emsp;
-  O Over26 consiste em um Mínimo Produto viável (MVP) para o teste de uma nova experiência de crédito por meio do cheque especial em uma conta de pagamento. O objetivo deste produto consiste em estabelecer um melhor resultado em termos de experiência de usuário e usabilidade para a oferta do serviço no Brasil. Caso você deseje embarcar nessa aventura conosco e contribuir com o nosso projeto, você pode obter mais informações no nosso [Contributing](https://github.com/fga-eps-mds/2019.2-Grupo2/blob/master/.github/CONTRIBUTING.md) e [Code of Conduct]()
+  O Over26 consiste em um Mínimo Produto viável (MVP) para o teste de uma nova experiência de crédito por meio do cheque especial em uma conta de pagamento. O objetivo deste produto consiste em estabelecer um melhor resultado em termos de experiência de usuário e usabilidade para a oferta do serviço no Brasil. Caso você deseje embarcar nessa aventura conosco e contribuir com o nosso projeto, você pode obter mais informações no nosso <a href="https://github.com/fga-eps-mds/2019.2-Grupo2/blob/master/.github/CONTRIBUTING.md">Contributing </a> e [Code of Conduct]()
 </p>
 
 ### Principais funcionalidades
@@ -43,7 +43,7 @@ Para visualizar a licença, acesse [Licence](https://github.com/fga-eps-mds/2019
 
 O projeto Over26 utiliza o docker para isolar os ambientes de desenvolvimento e produção, sendo o primeiro deles utilizado também para o teste de novas features ou correção de bugs. Assim, em conjunto com o docker compose os ambientes poderão ser utilizados mais facilmente e em poucos comandos no terminal, desde que você possua o docker e o docker compose instalados na sua máquina.
 
-#### Configuração usando Docker
+### Configuração usando Docker
 
 **O docker ainda não está configurado para o frontend da aplicação**
 
@@ -77,6 +77,6 @@ O projeto Over26 utiliza o docker para isolar os ambientes de desenvolvimento e 
 
 * Após subir o ambiente, abra http://localhost:3000/ no browser
 
-#### Rodando os teste
+### Rodando os testes
 
-#### Usando a aplicação
+### Usando a aplicação

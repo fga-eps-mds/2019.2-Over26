@@ -20,11 +20,7 @@ class TelaDeConfirmacaoChequeEspecial : AppCompatActivity() {
 
         activateOverdraft.setEnabled(false)
         activateOverdraft.setClickable(false)
-
-        activateOverdraft.setOnClickListener {
-
-
-            val checkBox = findViewById<CheckBox>(R.id.checkBox2)
+        val checkBox = findViewById<CheckBox>(R.id.checkBox2)
         checkBox?.setOnCheckedChangeListener { buttonView, isChecked ->
             if(isChecked){
                 activateOverdraft.setEnabled(true)
@@ -34,6 +30,10 @@ class TelaDeConfirmacaoChequeEspecial : AppCompatActivity() {
                 activateOverdraft.setEnabled(false)
                 activateOverdraft.setClickable(false)
             }
+
+        activateOverdraft.setOnClickListener {
+
+
 
             Fuel.put(url)
                 .response { request, response, result ->

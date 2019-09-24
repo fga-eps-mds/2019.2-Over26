@@ -20,7 +20,7 @@ class eligibilidade : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_eligibilidade)
-        println("1")
+        println("2")
 
         val eligibility_button = findViewById(R.id.eligibility_button) as Button
         eligibility_button.setOnClickListener {
@@ -34,6 +34,7 @@ class eligibilidade : AppCompatActivity() {
                     if (bytes != null) {
                         println("[response bytes] ${String(bytes)}")
                     }
+                    println(result)
                     when(result){
                         is Result.Success -> {
 

@@ -10,15 +10,17 @@
 
 * [1. Introdução](#_1-introdução)
 * [2. Objetivos](#_2-objetivos)
-* [3. Guia de Estilo para o projeto Kotlin (frontend)](#_3-guia-de-estilo-para-o-projeto-kotlin-frontend)
-    * [3.1. Organização do Código Fonte]()
-    * [3.2. Estrutura dos Arquivos]()
+* [3. Guia de estilo para o projeto Kotlin (frontend)](#_3-guia-de-estilo-para-o-projeto-kotlin-frontend)
+    * [3.1. Organização do código fonte]()
+    * [3.2. Estrutura dos arquivos]()
     * [3.3. Formatação]()
-        * [3.3.1. Organização do Código]()
+        * [3.3.1. Organização do código]()
         * [3.3.2. Chaves]()
-        * [3.3.3. Espaços em Branco]()
-        * [3.3.4. Construtores Específicos]()
+        * [3.3.3. Espaços em branco]()
+        * [3.3.4. Construtores específicos]()
         * [3.3.5. Nomenclatura]()
+* [4. Guia de estilo para o projeto Node (backend)]()
+* [5. Referências]()
 
 # 1. Introdução
 
@@ -30,13 +32,13 @@ Por conta disso, este documento foi criado. Serão apontados aqui os padrões re
 
 Este documento tem como objetivo principal guiar o desenvolvimento, apresentando os padrões a serem seguidos com a finalidade de manter o projeto em uma estrutura bem organizada e aumentar a legibilidade do código produzido.
 
-# 3. Guia de Estilo para o projeto Kotlin (frontend)
+# 3. Guia de estilo para o projeto Kotlin (frontend)
 
-## 3.1. Organização do Código Fonte
+## 3.1. Organização do código fonte
 
 
 
-## 3.2. Estrutura dos Arquivos
+## 3.2. Estrutura dos arquivos
 
 A estrutura dos arquivos seguirá a seguinte ordem:
 
@@ -173,7 +175,7 @@ As chaves `{}` seguem o estilo _Kernighan and Ritchie_ (K&R).
     override fun toString(): String = "Hey"
     ```
 
-### 3.3.3. Espaços em Branco
+### 3.3.3. Espaços em branco
 
 * **Verticalmente**
 
@@ -327,9 +329,9 @@ As chaves `{}` seguem o estilo _Kernighan and Ritchie_ (K&R).
         ```
     
 
-### 3.3.4. Construtores Específicos
+### 3.3.4. Construtores específicos
 
-* **Classes Enum**
+* **Classes enum**
 
     Uma classe enum com nenhuma declaração de função ou documentação nas suas constantes pode ser opcionalmente formatada em uma única linha.
     
@@ -379,27 +381,99 @@ As chaves `{}` seguem o estilo _Kernighan and Ritchie_ (K&R).
     
 * **Tipos implícitos de propriedades e retornos**
 
-Se uma o corpo da função de uma expressão ou um inicializador de uma propriedade é um valor escalar ou o tipo de retorno pode ser claramente inferido pelo corpo, então ele pode ser omitido.
+    Se uma o corpo da função de uma expressão ou um inicializador de uma propriedade é um valor escalar ou o tipo de retorno pode ser claramente inferido pelo corpo, então ele pode ser omitido.
 
-```
-override fun toString(): String = "Hey"
-// se torna
-override fun toString() = "Hey
-```
+    ```
+    override fun toString(): String = "Hey"
+    // se torna
+    override fun toString() = "Hey
+    ```
 
-```
-private val ICON: Icon = IconLoader.getIcon("/icons/kotlin.png")
-// se torna
-private val ICON = IconLoader.getIcon("/icons/kotlin.png")
+    ```
+    private val ICON: Icon = IconLoader.getIcon("/icons/kotlin.png")
+    // se torna
+    private val ICON = IconLoader.getIcon("/icons/kotlin.png")
 
-```
+    ```
 
 
 ### 3.3.5. Nomenclatura
 
-# 4.  Guia de Estilo para o projeto Node (backend)
+* **Nomes de pacotes**
+    * Faça:
+    ```
+    package com.example.deepspace
+    ```
+    * Não faça:
+    ```
+    package com.example.deepSpace
 
-# 7. Referências
+    package com.example.deep_space
+    ```
+
+* **Nomes de tipos**
+
+    Nomes de classes são escritos em _PascalCase_ e são tipicamente substantivos ou frases substantivas.
+
+    ```
+    Character
+    ImmutableList
+    ```
+
+    Interfaces podem também ser substantivos ou frases substantivas, mas podem às vezes ser adjetivos ou frases adjetivas.
+
+    ```
+    List
+    Readable
+    ```
+
+    Classes de teste são nomeadas iniciando com o nome da classe sendo testada e terminando com `Test`.
+
+    ```
+    HashTest
+    HashIntegrationTest
+    ```
+
+* **Nomes de funções**
+
+    Nomes de funções são escritos em _camelCase_ e são tipicamente verbos ou frases verbais.
+
+    ```
+    sendMessage
+    stop
+    ```
+
+* **Nomes de constantes**
+
+    Nomes de constantes utilizam _UPPER_SNAKE_CASE_ e são tipicamente substantivos ou frases substantivas.
+
+    ```
+    const val NUMBER = 5
+    val NAMES = listOf("Alice", "Bob")
+    val AGES = mapOf("Alice" to 35, "Bob" to 32)
+    val COMMA_JOINER = Joiner.on(',')
+    val EMPTY_ARRAY = arrayOf()
+    ```
+
+    Constantes cujos valores são escalares devem utilizar o modificador `const`.
+
+* **Nomes de variáveis**
+
+    Nomes de variáveis são escritos em _camelCase_ e são tipicamente substantivos ou frases substantivas.
+
+    ```
+    val variable = "var"
+    val nonConstScalar = "non-const"
+    val mutableCollection: MutableSet = HashSet()
+    val mutableElements = listOf(mutableInstance)
+    val mutableValues = mapOf("Alice" to mutableInstance, "Bob" to mutableInstance2)
+    val logger = Logger.getLogger(MyClass::class.java.name)
+    val nonEmptyArray = arrayOf("these", "can", "change")
+    ```
+
+# 4.  Guia de estilo para o projeto Node (backend)
+
+# 5. Referências
 
 * https://developer.android.com/kotlin/style-guide
 * https://kotlinlang.org/docs/reference/coding-conventions.html

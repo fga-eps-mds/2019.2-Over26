@@ -5,28 +5,34 @@
 | 18/09/2019 | 0.1 |Natália Rodrigues | Criação da estrutura do documento, adicionando introdução e objetivos. |
 | 23/09/2019 | 0.2 | Natália Rodrigues | Adicionando padrões de formatação do código |
 | 24/09/2019 | 0.3 | Natália Rodrigues | Completando guia de estilo para o projeto Kotlin |
+| 25/09/2019 | 0.4 | Natália Rodrigues | Adicionando o guia de estilo para o projeto Node |
 
 # Índice
 
 * [1. Introdução](#_1-introdução)
 * [2. Objetivos](#_2-objetivos)
-* [3. Guia de estilo para o projeto Kotlin (frontend)](#_3-guia-de-estilo-para-o-projeto-kotlin-frontend)
-    * [3.1. Organização do código fonte]()
-    * [3.2. Estrutura dos arquivos]()
-    * [3.3. Formatação]()
-        * [3.3.1. Organização do código]()
-        * [3.3.2. Chaves]()
-        * [3.3.3. Espaços em branco]()
-        * [3.3.4. Construtores específicos]()
-        * [3.3.5. Nomenclatura]()
-* [4. Guia de estilo para o projeto Node (backend)]()
-* [5. Referências]()
+* [3. Guia de estilo para o projeto Kotlin (frontend)](#_3-Guia-de-estilo-para-o-projeto-Kotlin-frontend)
+    * [3.1. Estrutura dos arquivos](#_31-Estrutura-dos-arquivos)
+    * [3.2. Formatação](#_32-Formatação)
+        * [3.2.1. Organização do código](#_321-Organização-do-código)
+        * [3.2.2. Chaves](#_322-Chaves)
+        * [3.2.3. Espaços em branco](#_323-Espaços-em-branco)
+        * [3.2.4. Construtores específicos](#_324-Construtores-específicos)
+    * [3.3. Nomenclatura](#_33-Nomenclatura)
+    * [3.4. Comentários](#_34-Comentários)
+* [4. Guia de estilo para o projeto Node (backend)](#_4-Guia-de-estilo-para-o-projeto-Node-backend)
+    * [4.1 Estrutura dos arquivos](#_41-Estrutura-dos-arquivos)
+    * [4.2. Formatação](#_42-Formatação)
+    * [4.3. Nomenclatura](#_43-Nomenclatura)
+    * [4.4. Comentários](#_44-Comentários)
+* [5. Recomendações](#_5-Recomendações)
+* [6. Referências](#_6-Referências)
 
 # 1. Introdução
 
 A necessidade da determinação de padrões estruturais e de código se faz presente em todo projeto de software, isso porque projetos mal organizados e com códigos pouco legíveis tendem a se tornar custosos no que se refere à manutenção, entre outros aspectos.
 
-Por conta disso, este documento foi criado. Serão apontados aqui os padrões referentes à formatação de código, comentários e nomenclatura do projeto, além de algumas recomendações relevantes para o desenvolvimento. 
+Por conta disso, este documento foi criado. Serão apontados aqui os padrões para os projetos do frontend e do backend, além de algumas recomendações relevantes para o desenvolvimento.
 
 # 2. Objetivos
 
@@ -34,11 +40,7 @@ Este documento tem como objetivo principal guiar o desenvolvimento, apresentando
 
 # 3. Guia de estilo para o projeto Kotlin (frontend)
 
-## 3.1. Organização do código fonte
-
-
-
-## 3.2. Estrutura dos arquivos
+## 3.1. Estrutura dos arquivos
 
 A estrutura dos arquivos seguirá a seguinte ordem:
 
@@ -69,9 +71,9 @@ A estrutura dos arquivos seguirá a seguinte ordem:
 
     As declarações de tipos, funções e propriedades são colocadas após os imports, mas não tem restrições de ordenação. Orienta-se ordenar essas declarações de forma mais legível e lógica possível.
     
-## 3.3. Formatação
+## 3.2. Formatação
 
-### 3.3.1. Organização do código
+### 3.2.1. Organização do código
 
 * **Identação**
 
@@ -105,7 +107,7 @@ A estrutura dos arquivos seguirá a seguinte ordem:
 
 
 
-### 3.3.2. Chaves
+### 3.2.2. Chaves
 
 As chaves `{}` seguem o estilo _Kernighan and Ritchie_ (K&R).
 
@@ -175,7 +177,7 @@ As chaves `{}` seguem o estilo _Kernighan and Ritchie_ (K&R).
     override fun toString(): String = "Hey"
     ```
 
-### 3.3.3. Espaços em branco
+### 3.2.3. Espaços em branco
 
 * **Verticalmente**
 
@@ -329,7 +331,7 @@ As chaves `{}` seguem o estilo _Kernighan and Ritchie_ (K&R).
         ```
     
 
-### 3.3.4. Construtores específicos
+### 3.2.4. Construtores específicos
 
 * **Classes enum**
 
@@ -397,7 +399,22 @@ As chaves `{}` seguem o estilo _Kernighan and Ritchie_ (K&R).
     ```
 
 
-### 3.3.5. Nomenclatura
+## 3.3. Nomenclatura
+
+* **Nomes de arquivos**
+
+    Para arquivos .kt, utilize o nome da classe comportada pelo mesmo para nomeá-lo. O nome deve estar em Inglês e seguir o padrão _PascalCase_.
+
+    ```
+    MainActivity.kt
+    ```
+
+    Para arquivos de outras extensões, utilize o padrão _lowercase_, separando as palavras com _underscores_.
+
+    ```
+    main_activity.xml
+    example_image.png
+    ```
 
 * **Nomes de pacotes**
     * Faça:
@@ -470,10 +487,239 @@ As chaves `{}` seguem o estilo _Kernighan and Ritchie_ (K&R).
     val logger = Logger.getLogger(MyClass::class.java.name)
     val nonEmptyArray = arrayOf("these", "can", "change")
     ```
+    
+## 3.4. Comentários
+
+TODO
 
 # 4.  Guia de estilo para o projeto Node (backend)
 
-# 5. Referências
+## 4.1. Estrutura dos Arquivos
+
+TODO
+
+## 4.2. Formatação
+
+* **Use 4 espaços para a identação**
+
+    Use 4 espaços para identar o seu código e nunca misture tabs e espaços.
+    
+* **Novas linhas**
+    
+    Use o estilo de novas linhas do UNIX (\n), e um caractere de nova linha como último caractere de um arquivo.
+    
+* **Nenhum espaço em branco à direita**
+
+    Retire todos os espaços em branco que estiverem sobrando à direita de todo código no seu arquivo .js.
+    
+* **Use ponto e vírgula `;`**
+
+    O uso de ponto e vírgula é um valor central da comunidade JavaScript.
+
+* **80 caracteres por linha**
+
+    Limte as linhas do código a 80 caracteres.
+
+* **Use aspas simples**
+
+    Use aspas simples, a menos que você esteja codificando um tipo JSON.
+    
+    * Faça:
+    ```
+    var foo = ‘bar’;
+    ```
+    
+    * Não faça:
+    ```
+    var foo = "bar";
+    ```
+    
+* **Chaves de abertura `{` vão na mesma linha**
+
+    * Faça:
+    ```
+    if (true) {
+        console.log(‘winning’);
+    }
+    ```
+    
+    ```
+    if (true) {
+        console.log(‘winning’);
+    } else if (false) {
+        console.log(‘this is good’);
+    } else {
+        console.log(‘finally’);
+    }
+    ```
+    
+    * Não faça:
+    ```
+    if (true)
+    {
+        console.log(‘winning’);
+    }
+    ```
+    
+    ```
+    if (true) 
+    {
+        console.log(‘winning’);
+    } 
+    else if (false) 
+    {
+        console.log(‘this is good’);
+    } 
+    else 
+    {
+        console.log(‘finally’);
+    }
+    ```
+    
+* **Declare uma variável por declaração `var` ou `const`**
+
+    * Faça:
+    ```
+    var keys = [‘foo’, ‘bar’];
+    var values = [23, 42];
+    var object = {};
+    ```
+    
+    * Não faça:
+    ```
+    var keys = [‘foo’, ‘bar’],
+    values = [23, 42],
+    object = {},
+    key;
+    ```
+    
+* **Use vírgulas à direita e coloque declarações curtas em uma única linha**
+
+    * Faça:
+    ```
+    var a = ['hello', 'world'];
+    var b = {
+      good: 'code',
+      'is generally': 'pretty',
+    };
+    ```
+    
+    * Não faça:
+    
+    ```
+    var a = [
+      'hello', 'world'
+    ];
+    var b = {"good": 'code'
+            , is generally: 'pretty'
+            };
+    ```
+
+Use trailing commas and put short declarations on a single line. 
+
+## 4.3. Nomenclatura
+
+* **Use _camelCase_ para variáveis propriedades e nomes de funções**
+
+    Variáveis, propriedades e nomes de funções devem usar _camelCase_. Eles devem também ser descritivos. Variáveis identificadas com apenas um caracter e abreviações incomuns devem geralmente ser evitadas.
+
+    * Faça:
+    ```
+    var adminUser = db.query(‘SELECT * FROM users …’);
+    ```
+    
+    * Não faça:
+    ```
+    var admin_user = db.query(‘SELECT * FROM users …’);
+    ```
+    
+* **Use _PascalCase_ para nomes de classes**
+
+    * Faça:
+    ```
+    function BankAccount() {
+    
+    }
+    ```
+    
+    * Não faça:
+    ```
+    function bank_Account() {
+    
+    }
+    ```
+    
+* **Use _UPPERCASE_ para propriedades estáticas de classe**
+
+    * Faça:
+    ```
+    function File() {
+    
+    }
+    
+    File.FULL_PERMISSIONS = 0777;
+    ```
+    
+    * Não faça:
+    ```
+    function File() {
+    
+    }
+    
+    File.fullPermissions = 0777;
+    ```
+
+## 4.4. Comentários
+
+Use barras duplas `//` para ambos os comentários de uma única linha e de múltiplas linhas. Tente escrever comentários que explicam mecanismos de alto nível ou que esclareçam partes difíceis do seu código. Não use comentários para reafirmar coisas triviais.
+
+* Faça:
+
+```
+// 'ID_SOMETHING=VALUE' -> ['ID_SOMETHING=VALUE', 
+// 'SOMETHING', 'VALUE']
+var matches = item.match(/ID_([^\n]+)=([^\n]+)/));
+
+// This function has a nasty side effect where a failure to 
+// increment a redis counter used for statistics will 
+// cause an exception. This needs to be fixed in a later iteration.
+function loadUser(id, cb) {
+  // ...
+}
+
+var isSessionValid = (session.expires < Date.now());
+if (isSessionValid) {
+  // ...
+}
+```
+
+* Não faça:
+
+```
+// Execute a regex
+var matches = item.match(/ID_([^\n]+)=([^\n]+)/);
+
+// Usage: loadUser(5, function() { ... })
+function loadUser(id, cb) {
+  // ...
+}
+
+// Check if the session is valid
+var isSessionValid = (session.expires < Date.now());
+// If the session is valid
+if (isSessionValid) {
+  // ...
+}
+```
+
+# 5. Recomendações
+
+* Escreva tudo em Inglês (código, comentários, nomes de arquivos e diretórios, etc.), com exceção das informações exibidas para usuários finais.
+* Mantenha o código logicamente organizado, para que outras pessoas consigam entendê-lo de maneira fácil.
+* Utilize uma nomenclatura simples e descritiva.
+* **Não ignore os padrões definidos neste documento.**
+
+# 6. Referências
 
 * https://developer.android.com/kotlin/style-guide
 * https://kotlinlang.org/docs/reference/coding-conventions.html

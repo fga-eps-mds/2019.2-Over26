@@ -1,15 +1,8 @@
-# Histórico de Versões
+# Estrutura Analítica do Projeto
 
-| Data | Versão | Autor(a) | Descrição |
-| - | - | - | - |
-| 12/09/2019 | 0.1 | Adrianne Alves | Elaboração da Estrutura analítica do Projeto |
-| 13/09/2019 | 0.2 | Adrianne Alves | Atualização da Estrutura analítica do Projeto com considerações da Maria Luiza |
-
-# Índice
-
-* [1. Sobre](#1.-Sobre)
-* [2. Versão 1](#2.-Versão-1)
-* [3. Versão 1](#3.-Versão-2)
+* [1. Sobre](#_1-Sobre)
+* [2. Versão 1](#_2-Versão-1)
+* [3. Versão 1](#_3-Versão-2)
 
 # 1. Sobre
 
@@ -25,3 +18,9 @@ A Estrutura Analítica do Projeto consiste num documento que comporta pacotes de
 
 
 
+# Histórico de Versões
+
+| Data | Versão | Autor(a) | Descrição |
+| - | - | - | - |
+| 12/09/2019 | 0.1 | Adrianne Alves | Elaboração da Estrutura analítica do Projeto |
+| 13/09/2019 | 0.2 | Adrianne Alves | Atualização da Estrutura analítica do Projeto com considerações da Maria Luiza |

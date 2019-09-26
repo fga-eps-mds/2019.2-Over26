@@ -19,7 +19,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/calculadora_foreground"
-        tools:srcCompat="@mipmap/calculadora" />
+        tools:srcCompat="@mipmap/calculadora"
+        android:clickable="true"
+        android:onClick="mudarTela"/>
 
     <TextView
         android:id="@+id/textView"
@@ -149,7 +151,7 @@
             android:layout_height="60dp"
             android:layout_weight="1"
             android:background="#fff"
-            app:srcCompat="@drawable/ic_add_black_24dp" />
+            app:srcCompat="@drawable/ic_add_black_24dp"/>
 
         <ImageButton
             android:id="@+id/imageButton2"

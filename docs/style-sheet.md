@@ -6,6 +6,7 @@
 | 23/09/2019 | 0.2 | Natália Rodrigues | Adicionando padrões de formatação do código |
 | 24/09/2019 | 0.3 | Natália Rodrigues | Completando guia de estilo para o projeto Kotlin |
 | 25/09/2019 | 0.4 | Natália Rodrigues | Adicionando o guia de estilo para o projeto Node |
+| 26/09/2019 | 0.5 | Natália Rodrigues | Finalizando o guia de estilo para o projeto Node e fazendo algumas alterações no documento. |
 
 # Índice
 
@@ -490,13 +491,52 @@ As chaves `{}` seguem o estilo _Kernighan and Ritchie_ (K&R).
     
 ## 3.4. Comentários
 
-TODO
+* O uso de barras duplas `//` ou barras com asteriscos `/**/` é opcional. Recomenda-se utilizar `//` para comentários de uma única linha e `/**/` para comentários de múltiplas linhas.
+
+
+* Tente escrever comentários que explicam mecanismos de alto nível ou que esclareçam partes difíceis do seu código. Não use comentários para reafirmar coisas triviais.
+
+
+    * Faça:
+    ```
+    // Returns the absolute value of the given [number].
+    fun abs(number: Int) = ...
+    ```
+    ```
+    /*
+     * This function is intended to return all the objetcs
+     * corresponding with the given [id]. If any object matches with
+     * [id], then it returns an empty list.
+     */
+     fun getObjects(id: Int): List<Object> {
+         ...
+     }
+    ```
+    
+    * Não faça:
+    ```
+    // Execute abs.
+    fun abs(number: Int) = ...
+    ```
+    ```
+     // This function is intended to return all the objetcs
+     // corresponding with the given [id]. If any object matches with
+     // [id], then it returns an empty list.
+     fun getObjects(id: Int): List<Object> {
+         ...
+     }
+    ```
 
 # 4.  Guia de estilo para o projeto Node (backend)
 
 ## 4.1. Estrutura dos Arquivos
 
-TODO
+A estrutura dos arquivos .js devem seguir a seguinte ordem:
+
+1. Informações de licensa ou de direitos autorais
+2. Declarações de `import`
+3. Declarações de `require`
+4. Implementação
 
 ## 4.2. Formatação
 
@@ -671,46 +711,49 @@ Use trailing commas and put short declarations on a single line.
 
 ## 4.4. Comentários
 
-Use barras duplas `//` para ambos os comentários de uma única linha e de múltiplas linhas. Tente escrever comentários que explicam mecanismos de alto nível ou que esclareçam partes difíceis do seu código. Não use comentários para reafirmar coisas triviais.
+* O uso de barras duplas `//` ou barras com asteriscos `/**/` é opcional. Recomenda-se utilizar `//` para comentários de uma única linha e `/**/` para comentários de múltiplas linhas.
 
-* Faça:
 
-```
-// 'ID_SOMETHING=VALUE' -> ['ID_SOMETHING=VALUE', 
-// 'SOMETHING', 'VALUE']
-var matches = item.match(/ID_([^\n]+)=([^\n]+)/));
+* Tente escrever comentários que explicam mecanismos de alto nível ou que esclareçam partes difíceis do seu código. Não use comentários para reafirmar coisas triviais.
 
-// This function has a nasty side effect where a failure to 
-// increment a redis counter used for statistics will 
-// cause an exception. This needs to be fixed in a later iteration.
-function loadUser(id, cb) {
-  // ...
-}
+    * Faça:
 
-var isSessionValid = (session.expires < Date.now());
-if (isSessionValid) {
-  // ...
-}
-```
+    ```
+    /* 
+     * This function has a nasty side effect where a failure to 
+     *  increment a redis counter used for statistics will 
+     * cause an exception. This needs to be fixed in a later iteration.
+     */
+    function loadUser(id, cb) {
+        ...
+    }
 
-* Não faça:
 
-```
-// Execute a regex
-var matches = item.match(/ID_([^\n]+)=([^\n]+)/);
+    // Check if user is able to access system functionalities
+    var isSessionValid = (session.expires < Date.now());
+    if (isSessionValid) {
+        ...
+    }
+    ```
 
-// Usage: loadUser(5, function() { ... })
-function loadUser(id, cb) {
-  // ...
-}
+    * Não faça:
 
-// Check if the session is valid
-var isSessionValid = (session.expires < Date.now());
-// If the session is valid
-if (isSessionValid) {
-  // ...
-}
-```
+    ```
+    // Execute a regex
+    var matches = item.match(/ID_([^\n]+)=([^\n]+)/);
+
+    // Usage: loadUser(5, function() { ... })
+    function loadUser(id, cb) {
+      // ...
+    }
+
+    // Check if the session is valid
+    var isSessionValid = (session.expires < Date.now());
+    // If the session is valid
+    if (isSessionValid) {
+      // ...
+    }
+    ```
 
 # 5. Recomendações
 

@@ -18,7 +18,7 @@ Esteja ciente que a sua contribuição é importante para nós! O que você est�
 
 * As suas mudanças devem ser submetidas por meio de [_Pull Requests_](https://github.com/fga-eps-mds/2019.2-Grupo2/pulls), que conta com um [_Template_](https://github.com/fga-eps-mds/2019.2-Grupo2/blob/master/.github/PULL_REQUEST_TEMPLATE.md).
 
-# Padrão de Commmits 
+# Padrão de Commits 
 
 ## Para padronizar os commits no repositório, recomendamos que seja seguido o nosso estilo de commits, tal que: 
 

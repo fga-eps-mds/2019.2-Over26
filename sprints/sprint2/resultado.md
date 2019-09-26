@@ -4,22 +4,27 @@
 
 ### 1.1 Fechamento da Sprint 
 
-**Pontos concluídos:**
+**Pontos planejados: 36 pontos**
+<br>
+**Pontos concluídos: 36 pontos**
+<br>
 
 | Atividade | Situação |
 | --------  | :----:   |
-| [D01 - Fazer Documento de Visão](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/10) | Feito | 
-| [D02 - Fazer Estrutura analítica de projetos](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/8) | Feito | 
-| [D03 - Fazer Termo de abertura de projetos](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/7) | Feito  |
-| [D10 - Refatorar Documento de Arquitetura](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/28) | Feito |
-| [US05 - Ativar crédito especial](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/23) | Feito |
-| [US06 - Acompanhar limite de crédito](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/24) | Feito |
- 
+| [D01 - Fazer Documento de Visão](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/10) | Concluído | 
+| [D02 - Fazer Estrutura analítica de projetos](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/8) | Concluído | 
+| [D03 - Fazer Termo de abertura de projetos](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/7) | Concluído  |
+| [D10 - Refatorar Documento de Arquitetura](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/28) | Concluído |
+| [US05 - Ativar crédito especial](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/23) | Concluído |
+| [US06 - Acompanhar limite de crédito](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/24) | Concluído |
+| [D11 - Delinear entidades do projeto](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/29) | Concluído |
 
 
 ## 1.2 Burndown
+![](../../images/metrics_agile/burndown_sprint2.png)
 
 ## 1.3 Velocity   
+![](../../images/metrics_agile/velocity_sprint2.png)
 
 ## 1.4 Retrospectiva 
 | Membro | Pontos Positivos | Pontos Negativos | Sugestão de Melhoria | Pontuação das Histórias |
@@ -38,8 +43,12 @@
 
 
 ## 1.6 Quadro de conhecimento
-
+![](../../images/metrics_agile/quadro_conhecimento_sprint2.png)
 
 
 # 2. Visão do Tech Leader
+Foi planejado 36 pontos e todos eles foram concluídos. Essa sprint foi de bastante valia, onde a equipe conseguiu amadurecer mais o escopo, já que foi feita a documentação necessária para a iniciação do projeto, além da iniciação de código. Porém, a equipe continuou realizando as tarefas de forma tardia, como é evidenciado no Burndown, o que mostra que os membros não tiveram disponibilidade de realizar as suas tarefas ao longo da sprint, acumulando tudo para o final. 
 
+Outro ponto crítico que persistiu entre a sprint passada e essa foi a falha na comunicação da equipe, prejudicando a realização das tarefas. Além da curva de aprendizagem alta de Kotlin, visto que foi o primeiro contato com o código dentro do projeto.
+
+As práticas ágeis foram aplicadas, com reuniões diárias via Telegram e reuniões semanais de planejamento ocorrida no início da sprint. Além das reuniões de retrospectiva e revisão ocorridas no final da sprint. Essas reuniões ocorrem todos os sábados presencialmente. 

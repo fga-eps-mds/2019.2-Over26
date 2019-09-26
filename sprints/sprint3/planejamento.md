@@ -31,3 +31,4 @@ Fazer funcionalidades que agreguem valor ao projeto priorizadas pela Product Own
 | [Criar Protótipo de Alta Fidelidade ](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/49) | 5 | Maria Luiza  |Não|
 
 ## 4. Pareamento
+![](../../images/metrics_agile/pareamento_sprint3.png)

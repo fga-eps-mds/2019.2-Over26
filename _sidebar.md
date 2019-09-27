@@ -1,13 +1,13 @@
 ﻿* [Início](/)
  
- * [Sprints](/sprints/)
+* [Sprints](/sprints/)
 
- <b>Projeto</b>
+* **Projeto**
 * [Abertura do Projeto](/abertura/)
 * [Roadmaps](/roadmaps/)
 * [Gerenciamento de Comunicação](/comunication-plan.md)
 
-<b>Produto</b>
+* **Produto**
 * [Estrutura de Branches e Padrões](/branches-structure.md)
 * [Folha de Estilo](/style-sheet.md)
 * [Documento de Arquitetura](/architecture.md)

@@ -7,3 +7,4 @@
 * [Folha de Estilo](/style-sheet.md)
 * [Documento de Arquitetura](/architecture.md)
 * [Documento de Visão](/vision.md)
+* [Gerenciamento de Comunicação](/comunication-plan.md)

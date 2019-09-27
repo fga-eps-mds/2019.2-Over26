@@ -4,7 +4,9 @@
 
 ### 1.1 Fechamento da Sprint 
 
-**Pontos concluídos: 36 pontos**
+**Pontos concluídos: 28 pontos**
+<br>
+**Dívida Técnica: 8 pontos**
 
 | Atividade | Situação |
 | --------  | :----:   |
@@ -43,3 +45,6 @@
 
 # 2. Visão do Tech Leader
 
+
+
+As práticas ágeis foram aplicadas, com reuniões diárias via Telegram e reuniões semanais de planejamento ocorrida no início da sprint. Além das reuniões de retrospectiva e revisão ocorridas no final da sprint. Essas reuniões ocorrem todos os sábados presencialmente. 

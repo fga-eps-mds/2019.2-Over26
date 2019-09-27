@@ -1,3 +1,3 @@
 ## RoadMap Arquiteto
 
-![](../../images/roadmaps/RoadMapArquiteto.png)
+![](../images/roadmaps/RoadMapArquiteto.png)

@@ -1,3 +1,3 @@
 ## RoadMap Scrum Master
 
-![](../../images/roadmaps/RoadMapScruMaster.png)
+![](../images/roadmaps/RoadMapScruMaster.png)

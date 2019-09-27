@@ -7,11 +7,14 @@
 | 06/09/2019 | 0.4 | Isabella e João Gabriel | Adição de Qualidade|
 | 06/09/2019 | 0.5 | Luiza | Adição de Visão de Casos de Uso|
 | 09/09/2019 | 0.6 | Erick | Adição de Representação da Arquitetura e correção de índice|
-| 11/09/2019 | 0.7 | Luiza | Refatoração da Visão de Casos de Uso|
-| 11/09/2019 | 0.7.1 | Erick | Corrigindo índice|
-| 11/09/2019 | 0.8 | Erick | Refatorando desempenho e realocando restrições|
- 11/09/2019 | 0.9| João Gabriel| Refatoração da introdução|
- 13/09/2019 | 1.0 | João Paulo e Gabriel | Refatoração da Visão Lógica |
+| 10/09/2019 | 0.7 | Natália, Luiza, João Paulo, Erick, Maria Luiza | Adição do Diagrama de Casos de Uso |
+| 11/09/2019 | 0.8 | Luiza | Refatoração da Visão de Casos de Uso|
+| 11/09/2019 | 0.9 | Erick | Corrigindo índice|
+| 11/09/2019 | 1.0 | Erick | Refatorando desempenho e realocando restrições|
+| 11/09/2019 | 1.1 | João Gabriel| Refatoração da introdução|
+| 11/09/2019 | 1.2 | Natália | Adição do diagrama de classes e do diagrama lógico |
+| 13/09/2019 | 1.3 | João Paulo e Gabriel | Refatoração da Visão Lógica |
+| 24/09/2019 | 1.4 | Natália | Refatoração do diagrama de classes e do diagrama lógico |
  
 ## Índice
 
@@ -26,22 +29,24 @@
   * [3.2. Metas Arquiteturais](#_32-metas-arquiteturais)
 
 - [4. Visão de Casos de Uso](#_4-visão-de-casos-de-uso)
-  * [UC01 - Realizar Login](#uc01-realizar-login)
-  * [UC02 - Cadastrar](#uc02-cadastrar)
-  * [UC03 - Solicitar Crédito](#uc03-solicitar-crédito)
-  * [UC04 - Visualizar Regras de Contratação](#uc04-visualizar-regras-de-contratação-de-crédito)
-  * [UC05 - Fornecer Feedback da Solicitação de Crédito](#uc05-fornecer-feedback-da-solicitação-de-crédito)
-  * [UC06 - Analisar Perfil do Usuário](#uc06-analisar-perfil-do-usuário)
-  * [UC07 - Ativar Limite de Crédito](#uc07-ativar-limite-de-crédito)
-  * [UC08 - Ajustar Limite](#uc08---ajustar-limite)
-  * [UC09 - Acompanhar Limite](#uc09-acompanhar-limite)
-  * [UC10 - Solicitar Aumento de Limite](#uc10-solicitar-aumento-de-limite)
-  * [UC11 - Fornecer Feedback da Solicitação de Aumento](#uc11-fornecer-feedback-da-solicitação-de-aumento)
-  * [UC12 - Visualizar Saldo da Conta](#uc12-visualizar-saldo-da-conta)
-  * [UC13 - Visualizar Extrato da Conta](#uc13-visualizar-extrato-da-conta)
-  * [UC14 - Pesquisar uma Transação](#uc1-pesquisar-uma-transação)
-  * [UC15 - Visualizar Detalhamento da Dívida](#uc15-visualizar-detalhamento-da-dívida)
-  * [UC16 - Solicitar Parcelamento da Dívida](#uc16-solicitar-parcelamento-da-dívida)
+  * [4.1. Diagrama de Casos de Uso](#_41-Diagrama-de-Casos-de-Uso)
+  * [4.2. Descrição dos Casos de Uso](#_42-Descrição-dos-Casos-de-Uso)
+    * [UC01 - Realizar Login](#uc01-realizar-login)
+    * [UC02 - Cadastrar](#uc02-cadastrar)
+    * [UC03 - Solicitar Crédito](#uc03-solicitar-crédito)
+    * [UC04 - Visualizar Regras de Contratação](#uc04-visualizar-regras-de-contratação-de-crédito)
+    * [UC05 - Fornecer Feedback da Solicitação de Crédito](#uc05-fornecer-feedback-da-solicitação-de-crédito)
+    * [UC06 - Analisar Perfil do Usuário](#uc06-analisar-perfil-do-usuário)
+    * [UC07 - Ativar Limite de Crédito](#uc07-ativar-limite-de-crédito)
+    * [UC08 - Ajustar Limite](#uc08---ajustar-limite)
+    * [UC09 - Acompanhar Limite](#uc09-acompanhar-limite)
+    * [UC10 - Solicitar Aumento de Limite](#uc10-solicitar-aumento-de-limite)
+    * [UC11 - Fornecer Feedback da Solicitação de Aumento](#uc11-fornecer-feedback-da-solicitação-de-aumento)
+    * [UC12 - Visualizar Saldo da Conta](#uc12-visualizar-saldo-da-conta)
+    * [UC13 - Visualizar Extrato da Conta](#uc13-visualizar-extrato-da-conta)
+    * [UC14 - Pesquisar uma Transação](#uc1-pesquisar-uma-transação)
+    * [UC15 - Visualizar Detalhamento da Dívida](#uc15-visualizar-detalhamento-da-dívida)
+    * [UC16 - Solicitar Parcelamento da Dívida](#uc16-solicitar-parcelamento-da-dívida)
 
 - [5. Visão Lógica](#_5-visão-lógica)
   * [5.1. Visão Geral](#_51-visão-geral)
@@ -88,7 +93,13 @@ Uma vantagem da utilização do framework é a sua escalabilidade, sendo um requ
 
 ## 4. Visão de Casos de Uso
 
-### UC01 - Realizar Login
+### 4.1. Diagrama de Casos de Uso
+
+![Diagrama de Casos de Uso](/images/use_cases_diagram.png)
+
+### 4.2. Descrição dos Casos de Uso
+
+#### UC01 - Realizar Login
 
 |||
 |--|--|
@@ -99,7 +110,7 @@ Uma vantagem da utilização do framework é a sua escalabilidade, sendo um requ
 | Fluxo principal | [FP01] Este fluxo se inicia quando o usuário deseja realizar login na aplicação: <br>1. Usuário deve inserir o seu e-mail <br> 2. Usuário deve inserir sua senha <br>3. Usuário deve clicar “Entrar” [FE01] |
 |Fluxo de exceção | [FE01] Verificação de conexão à internet <br> No passo 3 do fluxo principal a aplicação verificará se o usuário está conectado a internet, se não, o sistema não permitirá o login|
 
-### UC02 - Cadastrar
+#### UC02 - Cadastrar
 
 |||
 |--|--|
@@ -110,7 +121,7 @@ Uma vantagem da utilização do framework é a sua escalabilidade, sendo um requ
 | Fluxo principal | [FP01] Este fluxo se inicia quando o usuário deseja realizar cadastro na aplicação: <br> 1. Usuário insere seu e-mail ou telefone <br> 2. Usuário insere seu nome completo <br> 3. Usuário insere seu nome de usuário (username) <br> 4. Usuário insere sua senha <br>5. Usuário clica “Cadastre-se”"[FE01] 
 | Fluxo de exceção | [FE01] Verificação de conexão à internet <br> No passo 5 do fluxo principal a aplicação verifica se o usuário está conectado a internet, se não, o sistema não permitirá o cadastro na aplicação. |
 
-### UC03 - Solicitar Crédito
+#### UC03 - Solicitar Crédito
 |||
  ----- | ----- 
 Descrição | Esta função solicita a liberação da funcionalidade de crédito para o sistema 
@@ -120,7 +131,7 @@ Pós-condições | A solicitação deverá ter sido enviada para o sistema para 
 Fluxo principal | [FP01] Este fluxo se inicia quando o usuário deseja solicitar o acesso à funcionalidade de crédito:<br>1. O usuário clica em "Solicitar Crédito"<br>2. O usuário lê os termos de uso da funcionalidade [UC04]<br>3. O usuário clica em "Aceitar Termos de Uso" [FE01]<br>4. O usuário clica em "Confirmar Solicitação" [FE02]
 Fluxo de exceção | [FE01] Se o usuário prosseguir para o passo 4 antes de realizar o passo 3 o sistema retornará uma mensagem de erro<br>[FE02] O usuário poderá decidir não realizar a solicitação e clicar em "Cancelar" 
 
-### UC04 - Visualizar Regras de Contratação de Crédito
+#### UC04 - Visualizar Regras de Contratação de Crédito
 |||
 ----- | -----
 Descrição | A aplicação mostra ao usuário uma tela com as regras de contratação de crédito
@@ -129,7 +140,7 @@ Pré-condições | O usuário deverá ter clicado em "Solicitar Crédito"
 Pós-condições | Deverá ter sido aberta uma tela com as regras de contratação de crédito 
 Fluxo principal | Este fluxo se inicia quando o usuário clica no botão de "Solicitar Crédito" [UC01];<br>[FP01] O usuário lê as regras de contratação e decide aceitar ou não os termos de uso, podendo ir para o passo 3 em [UC03] ou para [FE02] em [UC03] 
 
-### UC05 - Fornecer Feedback da Solicitação de Crédito
+#### UC05 - Fornecer Feedback da Solicitação de Crédito
 |||
 ----- | -----
 | Descrição | O sistema fornece ao usuário o retorno sobre sua solicitação de crédito [UC03] |
@@ -139,7 +150,7 @@ Fluxo principal | Este fluxo se inicia quando o usuário clica no botão de "Sol
 |Fluxo principal | [FP01] O sistema envia ao usuário a mensagem sinalizando a aprovação do crédito|
 |Fluxo alternativo | [FA01] O sistema envia ao usuário a mensagem sinalizando que seu crédito não foi aprovado e a lista de possíveis motivos para o retorno negativo | 
 
-### UC06 - Analisar Perfil do Usuário
+#### UC06 - Analisar Perfil do Usuário
 |||
 ----- | ----- 
 Descrição | O sistema envia a solicitação para que o servidor do banco analise o perfil do usuário com base nos dados que tem disponível 
@@ -149,7 +160,7 @@ Pós-condições | O sistema deverá aprovar ou recusar o crédito
 Fluxo principal | [FP01] O sistema envia a solicitação de análise para o servidor com os dados do usuário [FE01] 
 Fluxo de exceção | A aplicação verifica se o usuário está conectado a internet, se não, o sistema não enviará a solicitação de análise para o servidor 
 
-### UC07 - Ativar Limite de Crédito
+#### UC07 - Ativar Limite de Crédito
 |||
 ----- | ----- 
 | Descrição | Essa funcionalidade permite que o usuário ative o crédito que deseja usar |
@@ -160,7 +171,7 @@ Fluxo de exceção | A aplicação verifica se o usuário está conectado a inte
 | Fluxo alternativo | [FA01] O usuário necessita de um valor de crédito maior do que ele tem disponível no sistema e clica em "Solicitar Aumento de Limite" [UC10] |
 | Fluxo de exceção | [FE01] O usuário decide não realizar a operação e clica em "Cancelar" |
 
-### UC08 - Ajustar Limite
+#### UC08 - Ajustar Limite
 |||
 ----- | ----- 
 Descrição | Essa função permite que o usuário ajuste o valor do crédito que deseja usar
@@ -171,7 +182,7 @@ Fluxo principal | [FP01] O usuário seleciona na barrinha o valor que deseja de 
 Fluxo alternativo | [FA01] O usuário pode desejar um limite maior e clicar na opção "Aumentar Limite"
 
 
-### UC09 - Acompanhar Limite
+#### UC09 - Acompanhar Limite
 |||
 ----- | ----- 
 Descrição | Essa funcionalidade tem como objetivo apresentar ao usuário o valor de limite que ele tem disponível 
@@ -181,7 +192,7 @@ Pós-condições | O usuário deve ter visualizado o limite de crédito disponí
 Fluxo principal | [FP01] O usuário clica em "Acompanhar Limite" e visualiza as informações
 
 
-### UC10 - Solicitar Aumento de Limite
+#### UC10 - Solicitar Aumento de Limite
 |||
 ----- | -----
 Descrição | Essa funcionalidade tem como objetivo realizar a solicitação de aumento do limite de crédito
@@ -191,7 +202,7 @@ Pós-condições | A solicitação deve ter sido enviada para análise do sistem
 Fluxo principal | [FP01] Este fluxo se inicia quando o usuário deseja solicitar o acesso à funcionalidade de crédito:<br>1. O usuário clica em "Solicitar Aumento de Limite"<br>2. O usuário digita o valor que deseja de limite [FE01]<br>3. O usuário clica em "Confirmar Solicitação" [FE02]
 Fluxo de exceção | [FE01] O usuário prossegue para o passo 3 antes de realizar o passo 2 e o sistema retorna uma mensagem de erro<br>[FE02] O usuário pode decidir não aumentar o limite e clicar em "Cancelar"
 
-### UC11 - Fornecer Feedback da Solicitação de Aumento
+#### UC11 - Fornecer Feedback da Solicitação de Aumento
 |||
 ----- | -----
 Descrição | O sistema fornece ao usuário o retorno sobre sua solicitação de crédito [UC10] 
@@ -201,7 +212,7 @@ Pós-condições | O usuário deverá ter recebido o retorno de sua solicitaçã
 Fluxo principal | [FP01] O sistema envia ao usuário a mensagem sinalizando a aprovação do aumento de limite
 Fluxo alternativo | [FA01] O sistema envia ao usuário a mensagem sinalizando que seu aumento não foi aprovado e a lista de possíveis motivos para o retorno negativo 
 
-### UC12 - Visualizar Saldo da Conta
+#### UC12 - Visualizar Saldo da Conta
 |||
 ----- | ----- 
 Descrição | Essa funcionalidade tem como objetivo mostar o saldo da conta do usuário
@@ -211,7 +222,7 @@ Pós-condições | O usuário deverá ter visualizado o saldo
 Fluxo principal | [FP01] O usuário clica em "Saldo da Conta" e o saldo é mostrado na tela
 
 
-### UC13 - Visualizar Extrato da Conta
+#### UC13 - Visualizar Extrato da Conta
 |||
 ----- | ----- 
 Descrição | Essa funcionalidade tem como objetivo apresentar as transações realizadas pelo usuário
@@ -220,7 +231,7 @@ Pré-condições | O usuário deverá estar logado
 Pós-condições | O extrato completo deverá ter sido apresentado
 Fluxo principal | [FP01] O usuário deverá clicar em "Extrato da Conta" e o extrato será mostrado na tela
 
-### UC14 - Pesquisar uma Transação
+#### UC14 - Pesquisar uma Transação
 |||
 ----- | -----
 Descrição | Essa funcionalidade tem como objetivo pesquisar uma transação no extrato do usuário
@@ -230,7 +241,7 @@ Pós-condições | A pesquisa deverá retornar os resultados na tela
 Fluxo principal | [FP01] 1. O usuário digita a palavra chave <br>2. O usuário clica em pesquisar
 Fluxo de exceção | [FE01] A pesquisa pode não ecnontrar a palavra chave<br> [FE02] O usuário pode realizar o passo 2 antes do 1 e o sistema retorna uma mensagem de erro
 
-### UC15 - Visualizar Detalhamento da Dívida
+#### UC15 - Visualizar Detalhamento da Dívida
 |||
 ----- | -----
 Descrição | Essa funcionalidade mostra a dívida em detalhes
@@ -239,7 +250,7 @@ Pré-condições | O usuáro deverá ter utilizado uma quantidade de créditos
 Pós-condições | Os detalhes da dívida devem ter sido mostrados
 Fluxo principal | [FP01] O usuário deve clicar em "Destalhamento da Dívida"
 
-### UC16 - Solicitar Parcelamento da Dívida
+#### UC16 - Solicitar Parcelamento da Dívida
 |||
 ----- | ----- 
 Descrição | Essa função permite que o usuário parcele a sua dívida 
@@ -263,7 +274,7 @@ O diagrama de classes a seguir tem como finalidade demonstrar todas classes, atr
 
 Segue o diagrama de classes:
 
-![Diagrama de Classes](https://i.imgur.com/Lgw0sdn.png)
+![Diagrama de Classes](/images/classes_diagram.png)
 
 - Classes
 
@@ -284,7 +295,7 @@ Segue o diagrama de classes:
 
 O banco de dados permite com que os dados sejam persistidos para possibilitar a realização das funções do sistema, como por exemplo, permitir que o usuário solicite crédito. Esse banco de dados é composto pelas 6 a seguir:
 
-![Banco de Dados](https://i.imgur.com/3PuRsu2.png)
+![Banco de Dados](/images/logic_diagram.png)
 
 ## 6. Desempenho
 

@@ -1,14 +1,6 @@
-# Histórico de Versões
 
-| Data | Versão | Autor(a) | Descrição |
-| - | - | - | - |
-| 10/09/2019 | 0.1 | Maria Luiza | Início do Termo de Abertura do Projeto |
-| 12/09/2019 | **0.2** | Maria Luiza | Estimativas de custos, Requisitos de alto nível e riscos |
-| 12/09/2019 | 0.3 | Natália Rodrigues | Partes Interessadas e Requisitos para a Aprovação |
-| 13/09/2019 | 0.4 | Adrianne Alves | Introdução e Descrição |
-| 14/09/2019 | 0.5 | Andrew Lucas | Propósito e Justificativa  e objetivo |
 
-## Índice
+# Termo de Abertura 
 - [Histórico de Versões](#Hist%C3%B3rico-de-Vers%C3%B5es)
   - [1. Introdução](#_1-Introdu%C3%A7%C3%A3o)
   - [2. Descrição](#_2-Descri%C3%A7%C3%A3o)
@@ -170,3 +162,13 @@ Luiza Cezário | Desenvolvedora
 ## 9. Requisitos para a Aprovação 
 
 O sistema deverá apresentar as funcionalidades pertinentes à oferta de crédito definidas no escopo. Ressalvas são feitas quanto à operação funcional do sistema, não necessariamente oferecendo suporte a todo o fluxo de utilização do crédito especial, a saber : Processamento da solicitação do crédito.
+
+# Histórico de Versões
+
+| Data | Versão | Autor(a) | Descrição |
+| - | - | - | - |
+| 10/09/2019 | 0.1 | Maria Luiza | Início do Termo de Abertura do Projeto |
+| 12/09/2019 | **0.2** | Maria Luiza | Estimativas de custos, Requisitos de alto nível e riscos |
+| 12/09/2019 | 0.3 | Natália Rodrigues | Partes Interessadas e Requisitos para a Aprovação |
+| 13/09/2019 | 0.4 | Adrianne Alves | Introdução e Descrição |
+| 14/09/2019 | 0.5 | Andrew Lucas | Propósito e Justificativa  e objetivo |

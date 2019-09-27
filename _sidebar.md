@@ -11,6 +11,7 @@
 * **Produto**
 * [Estrutura de Branches e Padrões](/branches-structure.md)
 * [Folha de Estilo](/style-sheet.md)
-* [Documento de Arquitetura](/architecture.md)
-* [Documento de Visão](/vision.md)
+* [Documentação do Projeto](/documentation/)
+
+
 

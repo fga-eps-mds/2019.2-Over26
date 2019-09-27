@@ -5,6 +5,7 @@
 * **Projeto**
 * [Abertura do Projeto](/abertura/)
 * [Roadmaps](/roadmaps/)
+* [Metodologia](/metodology/)
 * [Gerenciamento de Comunicação](/comunication-plan.md)
 
 * **Produto**

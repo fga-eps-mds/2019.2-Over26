@@ -47,7 +47,7 @@ class TelaDeConfirmacaoChequeEspecial : AppCompatActivity() {
                     when(result){
                         is Result.Success -> {
 
-                            val intent = Intent(this, TelaDeConfirmacaoChequeEspecial::class.java)
+                            val intent = Intent(this, TrackLimit::class.java)
                             startActivity(intent)
 
                         }

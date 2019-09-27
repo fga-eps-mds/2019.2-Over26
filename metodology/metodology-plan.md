@@ -47,4 +47,57 @@ Responsável por programar as histórias de usuário; Seguir técnicas de progra
 
 
 ## 3. Planejamento
+
+* Issues 
+    - As issues serão criadas para todos os tipos de contribuição com o projeto, a fim de registrar o trabalho da equipe. Ainda com esse objetivo, o uso de labels servirão identificar facilmente : O responsável e o tipo de atividade relacionada. 
+    - As labels utilizadas até o momento, são: 
+        - Architecture
+        - Bug
+        - Devops
+        - Documentation
+        - Enhancement
+        - EPS
+        - MDS
+        - Meetings
+        - Planning
+        - PO
+        - Question
+        - Scrum Master
+        - Spike
+        - Technical Story
+        - TechnicalT
+        - StoryUS 
+        - Wontfix
+        
+* Milestones
+
+    - As milestones serão utilizadas para identificar as sprints, visto que considera-se que a cada sprint tem-se uma entrega de funcionalidades/incrementos, é possível caracterizá-las como macros do projeto. Assim, as issues planejadas devem ser mapeadas para as milestones referentes.
+
+* Épicos
+
+    - Os épicos serão utilizados para associar issues de um mesmo módulo ou para representar issues que possuam um alto nível de complexidade/dificuldade, a fim de facilitar o desenvolvimento.
+    
+* User Story
+
+    - As user stories seguirão o seguinte padrão: Eu como [usuário] desejo [ação que será executada] para [justificativa];
+    - Toda user story, associada à uma issue deve possuir critérios de aceitação a serem verificados a fim de definir uma tela como concluída;
+
+* Planning Poker
+
+    - Técnica aplicada para auxiliar na estimativa da dificuldade das atividades a serem realizadas nas sprints, a fim de conseguir mapear a capacide de produção da equipe;
+    - Os pontos estimados para as issues devem constar no seu registro;
+    - As pontuações consideradas são: 0, 1, 2, 3, 5, 8, 13 e 21;
+
+* Priorização 
+    - A priorização foi simplificada adotando-se os seguintes níveis: Baixa, média, alta.
+
 ## 4. Gerenciamento
+
+* Velocity
+    - O velocity atuará como ferramenta para análise da capacidade de desenvolvimento da equipe. Ele será elaborado ao fim de cada sprint e será consultado pelo Scrum Master no planejamento da sprint seguinte.
+
+* Burndown
+    - Para monitorar as atividades entregues, o Scrum Master utilizará também o burndown, gerado pelo kanban usado pela equipe. Ele irá utilizá-lo inclusive ao longo das sprints para garantir as entregas. 
+
+* Burndown de Riscos
+    - Para monitorar os riscos do projeto, a fim de evitar complicações e maiores problemas, o Scrum Master irá criar e monitorar o burndown de riscos ao longo das sprints. 

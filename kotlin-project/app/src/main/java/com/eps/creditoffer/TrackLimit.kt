@@ -39,7 +39,8 @@ class TrackLimit : AppCompatActivity() {
         })
 
         button_installment.setOnClickListener(View.OnClickListener {
-            startActionMode(Intent(this, ))
+            val intent = Intent(this, Installment::class.java)
+            startActivity(intent)
         })
 
 
@@ -47,9 +48,9 @@ class TrackLimit : AppCompatActivity() {
 
     fun showSeekBar(overdraft: Overdraft){
         if(overdraft.isActive){
-            text_view_usage.setText("R$ " + overdraft.limitUsed.toInt().toString())
-            text_view_cur.setText("R$ " + overdraft.limit.toInt().toString())
-            text_view_max.setText("R$ " + overdraft.limitMax.toInt().toString())
+            textView_usage.setText("R$ " + overdraft.limitUsed.toInt().toString())
+            textView_cur.setText("R$ " + overdraft.limit.toInt().toString())
+            textView_max.setText("R$ " + overdraft.limitMax.toInt().toString())
             seek_bar.progress = overdraft.limit.toInt()
             seek_bar.max = overdraft.limitMax.toInt()
 
@@ -60,24 +61,24 @@ class TrackLimit : AppCompatActivity() {
 
                 // SeekBar
                 textView_currentUsage.text = "Uso Atual"
-                text_view_usage.setTextColor(Color.BLACK)
-                text_view_usage.setTypeface(Typeface.DEFAULT)
+                textView_usage.setTextColor(Color.BLACK)
+                textView_usage.setTypeface(Typeface.DEFAULT)
 
                 // Set a SeekBar change listener
                 seek_bar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
 
                     override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
                         // Display the current progress of SeekBar
-                        text_view_cur.text = "R$"+i.toString()
+                        textView_cur.text = "R$"+i.toString()
                         overdraft.limit = i.toFloat()
                     }
 
                     override fun onStartTrackingTouch(seekBar: SeekBar) {
-                        // Do something
+
                     }
 
                     override fun onStopTrackingTouch(seekBar: SeekBar) {
-                        // Do something
+                        button_save.visibility = View.VISIBLE
                     }
                 })
             }
@@ -89,14 +90,16 @@ class TrackLimit : AppCompatActivity() {
                 seek_bar.isEnabled = FALSE
 
                 textView_currentUsage.text = "TOTAL A SER PAGO"
-                text_view_cur.text = "-"
-                text_view_usage.setTextColor(Color.RED)
-                text_view_usage.setTypeface(Typeface.DEFAULT_BOLD)
+                textView_cur.text = "-"
+                textView_usage.setTextColor(Color.RED)
 
             }
         }
         else {}//mudar tela
 
+    }
+
+    fun installmentScreen(){
 
     }
 

@@ -8,7 +8,7 @@
     android:padding="16dp">
 
     <Button
-        android:id="@+id/button-installment"
+        android:id="@+id/button_installment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -20,11 +20,12 @@
         android:text="Parcelar Dívida"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="#FF0000"
-        android:textSize="16sp" />
+        android:textColor="#AE009688"
+        android:textSize="16sp"
+        android:onClick="installmentScreen"/>
 
     <Button
-        android:id="@+id/button-cancel"
+        android:id="@+id/button_cancel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="false"
@@ -78,7 +79,7 @@
 
 
     <TextView
-        android:id="@+id/text_view_usage"
+        android:id="@+id/textView_usage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="false"
@@ -136,13 +137,10 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="100dp"
-        android:clickable="false"
-        android:filterTouchesWhenObscured="false"
-        android:soundEffectsEnabled="false" />
+        android:layout_marginTop="100dp" />
 
     <TextView
-        android:id="@+id/text_view_cur"
+        android:id="@+id/textView_cur"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
@@ -170,7 +168,7 @@
         android:textSize="12sp" />
 
     <TextView
-        android:id="@+id/text_view_max"
+        android:id="@+id/textView_max"
         android:layout_width="50dp"
         android:layout_height="20dp"
         android:layout_alignParentTop="true"
@@ -219,7 +217,8 @@
         android:text="Salvar"
         android:textAllCaps="false"
         android:textColor="#AE009688"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:visibility="invisible" />
 
 
 </RelativeLayout>

@@ -1,8 +1,8 @@
 # Planejamento SPRINT 4
 
-**Data de início**: 22/09/2019 <br/>
-**Data de fim**: 28/09/2019 <br/>
-**Duração**: 1 semana <br/>
+**Data de início**: 29/09/2019 <br/>
+**Data de fim**: 01/10/2019 <br/>
+**Duração**: 4 dias <br/>
 **Pontuação**:  pontos 
 
 ## 1. Objetivo
@@ -35,33 +35,4 @@ Fazer funcionalidades que agreguem valor ao projeto priorizadas pela Product Own
 
 ## 4. Pareamento
 
-
-
-
-
-
-
-* Testes unitários (cobertura de 50%  - back) - Andrew 
-* US17 - Parcelar a dívida após os 26 dias - Front - Erick,  João Gabriel e Luiza
-* US17 - Parcelar a dívida após os 26 dias - Back - Erick, João Gabriel e Luiza
-* US06 - Acompanhar limite de crédito - Backend - João Paulo e Gabriel
-* Revisar e refatorar documento de arquitetura - Isabella e Natália, 
-* Revisar e refatorar documento de visão - Adrianne e Isabella 
-* Fazer a apresentação 
-
-
-EPS
-* Plano de Qualidade
-* Documento de Arquitetura
-* Analisar PRs
-* Burndown de Riscos 
-* Gerenciamento de Riscos 
-* Documentar sprint 4 e estabilização
-* Documentar métricas de produtividade
-* Deploy do back 
-* Documentar a parte do Devops
-* Gerar Realease (Colocar Realease Notes)
-* Documento de Visão 
-* Refatorar EAP 
-* Elicitação de requisitos
 

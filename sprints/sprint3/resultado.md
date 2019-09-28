@@ -4,16 +4,21 @@
 
 ### 1.1 Fechamento da Sprint 
 
-**Pontos concluídos: 28 pontos**
+**Pontos planejados: 35 pontos**
 <br>
-**Dívida Técnica: 8 pontos**
+**Pontos concluídos: 22 pontos**
+<br>
+**Dívida para a próxima Sprint: 5 pontos**
+<br>
+**Pontos Cancelados: 8 pontos**
 
 | Atividade | Situação |
 | --------  | :----:   |
-|[US05 - Ativar crédito especial - BackEnd](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/32) | Concluído | 
+|[US04 - Checar Elegibilidade de Uso de Cheque Especial - Backend](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/51) | Concluído | 
 | [US06 - Acompanhar limite de crédito - BackEnd](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/33) | Dívida Técnica| 
 |[US15 - Criar Perfil do Usuário - Backend](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/31)| Concluído| 
-|[US02 - Solicitar Crédito](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/30)|Concluído |
+|[US16 - Manter conta de pagamento - Backend](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/38)| Concluído| 
+|[US02 - Solicitar Crédito](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/30)|Cancelada |
 | [D05 - Fazer Protótipos de Baixa Fidelidade](https://github.com/fga-eps-mds/2019.2-Over26/issues/12) | Concluído | 
 | [Criar Protótipo de Alta Fidelidade ](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/49) | Concluído | 
 
@@ -44,7 +49,12 @@
 
 
 # 2. Visão do Tech Leader
+Essa sprint teve 35 pontos planejados, porém somente 22 pontos concluídos.
 
+ Houve uma falha de planejamento, devido a falta de entendimento do escopo do projeto. Isso resultou na mudança de tarefa no meio da sprint, cancelando a história [US02 - Solicitar Crédito](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/30) e inserindo a história [US16 - Manter conta de pagamento - Backend](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/38). Esse replanejamento no meio da sprint foi devido ao erro de entendimento do escopo, o que resultou em um erro no planejamento. O que prejudicou a produtividade e dificuldade de entendimento de quais as atividades seriam executadas pelo paremento do Erick e Gabriel. Outra falha no planejamento foi a dependência de duas histórias na mesma sprint, o que resultou na execução de códigos iguais ao final da sprint, pois as duas histórias dependendiam de uma mesma Model que foi criada duas vezes. 
 
+A falha no entendimento do escopo e a inexperiência de MDS não permitiu a iniciação dos teste unitários no Backend, o que resultou na falta de qualidade dos entregáveis da equipe. 
 
-As práticas ágeis foram aplicadas, com reuniões diárias via Telegram e reuniões semanais de planejamento ocorrida no início da sprint. Além das reuniões de retrospectiva e revisão ocorridas no final da sprint. Essas reuniões ocorrem todos os sábados presencialmente. 
+Outra questão crítica envolve problemas de saúde e pessoais de alguns membros da equipe de MDS, o que resultou no atraso das atividades durante a sprint, acumulando para o final da mesma, como pode-se ver no Burndown. Porém no Velocity, a equipe permaneceu com uma produtividade semelhante da sprint passada.
+
+As práticas ágeis foram aplicadas, com reuniões diárias via Telegram e reuniões semanais de planejamento ocorrida no início da sprint. Além das reuniões de retrospectiva e revisão ocorridas no final da sprint. Essas reuniões ocorrem todos os sábados presencialmente. A comunicação melhorou entre a equipe, porém há a necessidade de melhorar ainda mais nas próximas sprints para melhor produtividade dos membros. 

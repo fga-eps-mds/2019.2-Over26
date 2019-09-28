@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,22 +8,39 @@
     android:padding="16dp">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button-installment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="420dp"
+        android:background="#00FCFCFC"
+        android:fontFamily="@font/antic"
+        android:gravity="center_vertical"
+        android:isScrollContainer="false"
+        android:text="Parcelar Dívida"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FF0000"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/button-cancel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="false"
-        android:layout_marginTop="510dp"
+        android:layout_marginTop="480dp"
         android:background="#00FCFCFC"
         android:fontFamily="@font/antic"
         android:gravity="left|center_vertical"
         android:isScrollContainer="false"
-        android:text="Cancel  Overdraft"
+        android:text="Cancelar Overdraft"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#000000"
-        android:textSize="14sp" />
+        android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView-pageTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -41,81 +59,59 @@
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textView-interest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="460dp"
+        android:layout_marginTop="300dp"
         android:baselineAligned="false"
         android:fontFamily="@font/antic"
         android:shadowColor="#00D62323"
-        android:text="Interest incurred this quarter"
+        android:text="Taxa de juros anual nominal"
         android:textColor="#000000"
         android:textColorHighlight="#000000"
         android:textColorHint="#050000"
         android:textColorLink="#090000"
         android:textIsSelectable="false"
-        android:textSize="14sp" />
+        android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="480dp"
-        android:baselineAligned="false"
-        android:fontFamily="@font/antic"
-        android:shadowColor="#00D62323"
-        android:text="Nominal annual interest rate 8,9%"
-        android:textColor="#80000000"
-        android:textColorHighlight="#000000"
-        android:textColorHint="#050000"
-        android:textColorLink="#090000"
-        android:textIsSelectable="false"
-        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/text_view_usage"
-        android:layout_width="40dp"
-        android:layout_height="20dp"
-        android:layout_alignEnd="@+id/text_view_max"
-        android:layout_alignRight="@+id/text_view_max"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="false"
-        android:layout_centerHorizontal="true"
         android:layout_gravity="right|center_horizontal"
         android:layout_marginTop="270dp"
-        android:layout_marginEnd="155dp"
-        android:layout_marginRight="155dp"
         android:foregroundGravity="center_vertical|center|center_horizontal"
         android:gravity="center_horizontal"
         android:text="1"
         android:textAlignment="center"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:textSize="14sp" />
+        android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/text_view_usage2"
+        android:id="@+id/text_view_interestValue"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/text_view_max"
-        android:layout_alignRight="@+id/text_view_max"
         android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_gravity="right|center_horizontal"
-        android:layout_marginTop="470dp"
-        android:layout_marginEnd="-4dp"
-        android:layout_marginRight="-4dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="345dp"
         android:foregroundGravity="center_vertical|center|center_horizontal"
         android:gravity="center_horizontal"
-        android:text="1"
+        android:text="5%"
         android:textAlignment="center"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
         android:textColor="#80000000"
-        android:textSize="14sp" />
+        android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView_currentUsage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -125,13 +121,13 @@
         android:fontFamily="@font/antic"
         android:gravity="center_horizontal"
         android:shadowColor="#00D62323"
-        android:text="Current Usage"
+        android:text="Uso Atual"
         android:textColor="#7A000000"
         android:textColorHighlight="#000000"
         android:textColorHint="#050000"
         android:textColorLink="#090000"
         android:textIsSelectable="false"
-        android:textSize="12sp"
+        android:textSize="16sp"
         android:textStyle="bold" />
 
     <SeekBar
@@ -141,7 +137,9 @@
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="100dp"
-        android:filterTouchesWhenObscured="false" />
+        android:clickable="false"
+        android:filterTouchesWhenObscured="false"
+        android:soundEffectsEnabled="false" />
 
     <TextView
         android:id="@+id/text_view_cur"
@@ -149,7 +147,7 @@
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="190dp"
+        android:layout_marginTop="175dp"
         android:textAlignment="center"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
         android:textSize="40sp"
@@ -187,7 +185,7 @@
         android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView_mylimit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -197,7 +195,7 @@
         android:fontFamily="@font/antic"
         android:gravity="center_horizontal"
         android:shadowColor="#00D62323"
-        android:text="My Limit"
+        android:text="Limite"
         android:textColor="#000000"
         android:textColorHighlight="#000000"
         android:textColorHint="#050000"
@@ -207,7 +205,7 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -218,7 +216,7 @@
         android:background="#00FCFCFC"
         android:fontFamily="@font/antic"
         android:isScrollContainer="false"
-        android:text="Save"
+        android:text="Salvar"
         android:textAllCaps="false"
         android:textColor="#AE009688"
         android:textSize="18sp" />

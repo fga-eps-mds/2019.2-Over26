@@ -52,6 +52,9 @@ class TrackLimit : AppCompatActivity() {
                 textView_usage.setTextColor(Color.BLACK)
                 textView_usage.setTypeface(Typeface.DEFAULT)
 
+                // Save button
+                button_save.visibility = View.INVISIBLE
+
                 // Set a SeekBar change listener
                 seek_bar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
 

@@ -22,7 +22,7 @@ class OverdraftLink(UserId: Int){
         limit = 100F
         limitMax = 200F
         limitUsed = 50F
-        isBlocked = TRUE
+        isBlocked = FALSE
 
     }
 }

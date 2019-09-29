@@ -13,6 +13,8 @@ var cpf: Int = 1234
 class TelaDeConfirmacaoChequeEspecial : AppCompatActivity() {
     val url: String = "http://10.0.2.2:3000/api/accounts/"+ cpf + "/overdrafts"
 
+    val urlErick: String = "http://192.168.0.16:3000/api/accounts/"+ cpf + "/overdrafts"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_de_confirmacao_cheque_especial)
@@ -37,7 +39,7 @@ class TelaDeConfirmacaoChequeEspecial : AppCompatActivity() {
 
 
 
-            Fuel.put(url)
+            Fuel.put(urlErick)
                 .response { request, response, result ->
                     println(request)
                     println(response)

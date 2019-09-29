@@ -31,11 +31,11 @@
 
     <TextView
         android:id="@+id/textView_title_installment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="401dp"
+        android:layout_height="39dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="0dp"
         android:baselineAligned="false"
         android:fontFamily="@font/antic"
         android:gravity="center_horizontal"
@@ -150,7 +150,7 @@
         android:id="@+id/button_day1"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="350dp"
         android:background="#00FFFFFF"
         android:text="1"
@@ -206,8 +206,8 @@
         android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="350dp"
-        android:background="#00FFFFFF"
         android:layout_toRightOf="@+id/button_day20"
+        android:background="#00FFFFFF"
         android:text="25"
         android:textSize="16sp" />
 

@@ -80,6 +80,22 @@
         android:textIsSelectable="false"
         android:textSize="18sp" />
 
+    <TextView
+        android:id="@+id/textView_info3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="325dp"
+        android:fontFamily="@font/antic"
+        android:gravity="center_horizontal"
+        android:shadowColor="#00D62323"
+        android:text="Data de Vencimento"
+        android:textColor="#000000"
+        android:textColorHighlight="#000000"
+        android:textColorHint="#050000"
+        android:textColorLink="#090000"
+        android:textIsSelectable="false"
+        android:textSize="18sp" />
+
     <Button
         android:id="@+id/button_cancel_installment"
         android:layout_width="match_parent"
@@ -113,19 +129,86 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="227dp"
+        android:layout_marginTop="225dp"
         android:layout_toEndOf="@+id/textView_installment_quant"
+        android:background="#00FFFFFF"
         android:text="+"
-        android:textSize="16sp" />
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/button_minus"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginTop="227dp"
+        android:layout_marginTop="225dp"
         android:layout_marginEnd="50dp"
         android:layout_toStartOf="@+id/textView_installment_quant"
+        android:background="#00FFFFFF"
         android:text="-"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/button_day1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="350dp"
+        android:background="#00FFFFFF"
+        android:text="1"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/button_day5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="350dp"
+        android:background="#00FFFFFF"
+        android:layout_toRightOf="@+id/button_day1"
+        android:text="5"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/button_day10"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="350dp"
+        android:background="#00FFFFFF"
+        android:layout_toRightOf="@+id/button_day5"
+        android:text="10"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/button_day15"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="350dp"
+        android:background="#00FFFFFF"
+        android:layout_toRightOf="@+id/button_day10"
+        android:text="15"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/button_day20"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="350dp"
+        android:background="#00FFFFFF"
+        android:layout_toRightOf="@+id/button_day15"
+        android:text="20"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/button_day25"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="350dp"
+        android:background="#00FFFFFF"
+        android:layout_toRightOf="@+id/button_day20"
+        android:text="25"
         android:textSize="16sp" />
 
 

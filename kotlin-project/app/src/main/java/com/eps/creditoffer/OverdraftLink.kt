@@ -4,7 +4,7 @@ import java.lang.Boolean.FALSE
 import java.lang.Boolean.TRUE
 import java.util.*
 
-class Overdraft(UserId: Int){
+class OverdraftLink(UserId: Int){
 
     var userId: Int = UserId        // alterar para objeto Usuário
     var firstUseDate: Date

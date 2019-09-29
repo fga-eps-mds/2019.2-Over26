@@ -1,7 +1,6 @@
 package com.eps.creditoffer
 
 import android.graphics.Color
-import android.graphics.ColorSpace
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,25 +8,16 @@ import android.view.View
 import kotlinx.android.synthetic.main.track_limit.*
 import android.widget.SeekBar
 import java.lang.Boolean.FALSE
-import java.lang.Boolean.TRUE
-import android.R.attr.button
 import android.content.Intent
-import androidx.core.app.ComponentActivity
-import androidx.core.app.ComponentActivity.ExtraData
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
-
 
 
 class TrackLimit : AppCompatActivity() {
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.track_limit)
 
-        val overdraft = Overdraft(UserId = 1)
+        val overdraft = OverdraftLink(UserId = 1)
         showSeekBar(overdraft)
 
         button_save.setOnClickListener(View.OnClickListener {
@@ -42,11 +32,9 @@ class TrackLimit : AppCompatActivity() {
             val intent = Intent(this, Installment::class.java)
             startActivity(intent)
         })
-
-
     }
 
-    fun showSeekBar(overdraft: Overdraft){
+    fun showSeekBar(overdraft: OverdraftLink){
         if(overdraft.isActive){
             textView_usage.setText("R$ " + overdraft.limitUsed.toInt().toString())
             textView_cur.setText("R$ " + overdraft.limit.toInt().toString())
@@ -96,10 +84,6 @@ class TrackLimit : AppCompatActivity() {
             }
         }
         else {}//mudar tela
-
-    }
-
-    fun installmentScreen(){
 
     }
 

@@ -7,6 +7,7 @@
 | 13/09/2019 | 0.4 | Luiza Cezario | Adicionando Descrição dos Envolvidos e dos Usuários
 | 13/09/2019 | 0.5 | João Gabriel | Adicionando Recursos|
 | 14/09/2019 | 0.6 | Gabriel | Adicionando Introdução|
+|29/09/2019 | 0.7 | Isabella Carneiro | Atualizando Introdução|
 ## Índice
 
 - [1. Introdução](#1-introdução)

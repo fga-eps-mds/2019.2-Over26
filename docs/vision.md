@@ -40,7 +40,7 @@
 
 ### 1.1. Finalidade
 
-Este documento tem como objetivo relatar as necessidades apresentadas pela empresa N26 e os requisitos mais importantes do projeto, tais como sua capacidade, recursos e relação com o usuário. 
+Este documento tem como objetivo fazer a apresentação do aplicativo mobile Over26, assim como suas funcionalidades e os requisitos mais importantes do projeto, tais como sua capacidade, recursos e relação com o usuário.
 
 ### 1.2. Escopo
 
@@ -48,17 +48,17 @@ O banco digital, N26,  tem o objetivo de encontrar novas soluções para a ofert
 
 ### 1.3. Visão geral
 
-O documento traz consigo todas as informações essenciais referentes ao projeto trazendo para o leitor a melhor forma de visualizar as informações passadas. Dessa forma, começa-se demonstrando o contexto no qual o projeto foi pensado, em seguida é descrito os envolvidos no sistema e como se relacionam. Por fim, o documento foca nas especificações do projeto. 
+O documento apresenta todas as informações essenciais referentes ao projeto trazendo para o leitor a melhor forma de visualizar as informações passadas. Dessa forma, começa-se demonstrando o contexto no qual o projeto foi pensado, em seguida são descritos os envolvidos no sistema e como se relacionam. Por fim, o documento foca nas especificações do projeto. 
 
 ### 1.4. Referências
 
-Templete do documento. Disponível em: https://www.ibm.com/support/knowledgecenter/pt-br/SSWMEQ_4.0.6/com.ibm.rational.rrm.help.doc/topics/r_vision_doc.html. Acesso em: 13 de Setembro de 2019.
+Template do documento. Disponível em: https://www.ibm.com/support/knowledgecenter/pt-br/SSWMEQ_4.0.6/com.ibm.rational.rrm.help.doc/topics/r_vision_doc.html. Acesso em: 13 de Setembro de 2019.
 
 ## 2. Posicionamento
 
 ### 2.1. Oportunidade de Negócios
 
-Diversos bancos disponibilizam o sistema de cheque especial para seus cliente, para utilizar esta função normalmente são necessárias algumas etapas por mais que este crédito já seja pré-ativado. Além disso, sempre que necessário, o cliente deve voltar a ativá-lo.
+Diversos bancos já disponibilizam o sistema de cheque especial para seus cliente e para utilizar esta função normalmente são necessárias algumas etapas por mais que este crédito já seja pré-ativado. Além disso, sempre que necessário, o cliente deve voltar a ativá-lo.
 
 Este projeto oferecerá uma maneira muito mais prática não só para fazer a ativição do seu cheque especial mas também monitorar sua utilização. O sistema manterá o cheque especial ativo para que sempre que necessário o cliente posso utiliza-lo sem se preocupar com etapas de ativação.
 
@@ -105,6 +105,7 @@ Como alternativa diversos bancos oferecem a funcionalidade de cheque especial, b
 
 ### 4.2. Resumo dos recursos
 | Benefício para os clientes | Recursos de suporte |
+| - | - |
 | Facilidade de requisitar crédito | Layout simples |
 | Possibilidade de modificar o crédito | Tela em que é possível gerenciar o crédito|
 

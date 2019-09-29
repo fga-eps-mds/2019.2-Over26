@@ -7,7 +7,7 @@
 | 13/09/2019 | 0.4 | Luiza Cezario | Adicionando Descrição dos Envolvidos e dos Usuários
 | 13/09/2019 | 0.5 | João Gabriel | Adicionando Recursos|
 | 14/09/2019 | 0.6 | Gabriel | Adicionando Introdução|
-|29/09/2019 | 0.7 | Isabella Carneiro | Atualizando Introdução|
+|29/09/2019 | 0.7 | Isabella Carneiro | Atualizando Introdução e Posicionamento|
 ## Índice
 
 - [1. Introdução](#1-introdução)
@@ -59,9 +59,9 @@ Template do documento. Disponível em: https://www.ibm.com/support/knowledgecent
 
 ### 2.1. Oportunidade de Negócios
 
-Diversos bancos já disponibilizam o sistema de cheque especial para seus cliente e para utilizar esta função normalmente são necessárias algumas etapas por mais que este crédito já seja pré-ativado. Além disso, sempre que necessário, o cliente deve voltar a ativá-lo.
+Diversos bancos já disponibilizam o sistema de cheque especial para seus cliente e para utilizar esta função normalmente são necessárias algumas etapas por mais que este crédito já seja pré-ativado. 
 
-Este projeto oferecerá uma maneira muito mais prática não só para fazer a ativição do seu cheque especial mas também monitorar sua utilização. O sistema manterá o cheque especial ativo para que sempre que necessário o cliente posso utiliza-lo sem se preocupar com etapas de ativação.
+Este projeto oferecerá uma simplificada etapa de ativação de seu cheque especial, e também será fácil de monitorar sua utilização.
 
 Usuário do aplicativo terão o cheque especial no momento que precisarem e além disso poderão acompanhar com detalhes essa funcionalidade.
 
@@ -71,7 +71,7 @@ Solicitar o cheque especial quase sempre não é uma tarefa prática, a falta de
 
 ### 2.3. Sentença de Posição do Produto
 
-Este produto visa não só facilitar a utilização de cheque especial, mas principalmente tornar o controle de sue uso muito mais simples e intuitivo.
+Este produto visa não só facilitar a utilização de cheque especial, mas principalmente tornar o controle de seu uso muito mais simples e intuitivo, assim como facilita a quitação da dívida.
 
 ## 3. Descrição dos Envolvidos e dos Usuários
 

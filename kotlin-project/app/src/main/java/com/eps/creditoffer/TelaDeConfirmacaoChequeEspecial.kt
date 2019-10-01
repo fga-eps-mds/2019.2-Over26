@@ -8,10 +8,10 @@ import android.content.Intent
 import com.github.kittinunf.result.Result
 import com.github.kittinunf.fuel.Fuel
 
-var cpf: Int = 1234
+var idOverdraft: Int = 1
 
 class TelaDeConfirmacaoChequeEspecial : AppCompatActivity() {
-    val url: String = "http://10.0.2.2:3000/api/accounts/"+ cpf + "/overdrafts"
+    val url: String = "http://172.24.0.1:3000/api/users/"+ idOverdraft + "/overdrafts"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,7 +51,6 @@ class TelaDeConfirmacaoChequeEspecial : AppCompatActivity() {
 
                             val intent = Intent(this, TrackLimit::class.java)
                             startActivity(intent)
-
                         }
                         is Result.Failure -> {
                             println("Deu ruim")

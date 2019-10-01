@@ -23,7 +23,7 @@
 | [Criar Protótipo de Alta Fidelidade ](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/49) | Concluído | 
 
 ## 1.2 Burndown
-
+![](../../images/metrics_agile/burndown_sprint3.png)
 
 ## 1.3 Velocity   
 ![](../../images/metrics_agile/velocity_sprint3.png)

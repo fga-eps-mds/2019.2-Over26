@@ -13,9 +13,9 @@ import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.FuelError
 
 
-
 class eligibilidade : AppCompatActivity() {
-    val url: String = "http://10.0.2.2:3000/api/overdrafts"
+    var cpf: Int = 1234
+    val url: String = "http://10.0.2.2:3000/api/users/"+ cpf + "/overdrafts"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +24,11 @@ class eligibilidade : AppCompatActivity() {
 
         val eligibility_button = findViewById(R.id.eligibility_button) as Button
         eligibility_button.setOnClickListener {
+
+            //To skip the eligibility verification
+       // val intent = Intent(this, TelaDeConfirmacaoChequeEspecial::class.java)
+         //   startActivity(intent)
+
 
 
             Fuel.post(url)

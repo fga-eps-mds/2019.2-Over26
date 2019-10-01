@@ -12,15 +12,15 @@ import com.github.kittinunf.fuel.Fuel
 //import com.github.kittinunf.fuel.android.extension.responseJson
 import com.github.kittinunf.fuel.core.FuelError
 
-
+var cpfUser: Int = 4321;
 
 class eligibilidade : AppCompatActivity() {
-    val url: String = "http://10.0.2.2:3000/api/overdrafts"
+    val url: String = "http://172.24.0.1:3000/api/users/" + cpfUser +"/overdrafts"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_eligibilidade)
-        println("1")
+        println("2")
 
         val eligibility_button = findViewById(R.id.eligibility_button) as Button
         eligibility_button.setOnClickListener {
@@ -34,6 +34,7 @@ class eligibilidade : AppCompatActivity() {
                     if (bytes != null) {
                         println("[response bytes] ${String(bytes)}")
                     }
+                    println(result)
                     when(result){
                         is Result.Success -> {
 
@@ -47,15 +48,7 @@ class eligibilidade : AppCompatActivity() {
                     }
                 }
 
-
-
-
-
-
-
-
-
-        }
+            }
         }
     }
 

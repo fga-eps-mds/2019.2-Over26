@@ -16,7 +16,7 @@
 ## Checklist
 <!---Se você está confuso sobre qualquer tópico, pergunte-nos. Nós podemos ajudar você! -->
 
-- [ ] Este Pull Requeste tem um nome significante.
+- [ ] Este Pull Request tem um nome significante.
 - [ ] Os commits seguem a política de commits.
 - [ ] A build está passando.
 - [ ] Este Pull Request menciona uma issue relatada.

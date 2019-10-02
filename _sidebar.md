@@ -1,11 +1,17 @@
-﻿[Início](/)
+﻿* [Início](/)
+ 
+* [Sprints](/sprints/)
 
-**Produto**
+* **Projeto**
+* [Abertura do Projeto](/abertura/)
+* [Roadmaps](/roadmaps/)
+* [Metodologia](/metodology/)
+* [Gerenciamento de Comunicação](/comunication-plan.md)
 
-**Sprints**
-* [Sprints](./docs/sprints/sprints.md)
+* **Produto**
+* [Estrutura de Branches e Padrões](/branches-structure.md)
+* [Folha de Estilo](/style-sheet.md)
+* [Documentação do Projeto](/documentation/)
+* [Protótipos](/prototype.md)
 
-**Projeto**
-* [Estrutura Analítica do Projeto](./docs/eap.md)
-* [Estrutura de Branches e Padrões](./docs/branches-structure.md)
-* [Documento de Visão](./docs/vision.md)
+

@@ -8,7 +8,7 @@
 | 13/09/2019 | 0.5 | João Gabriel | Adicionando Recursos|
 | 14/09/2019 | 0.6 | Gabriel | Adicionando Introdução|
 |29/09/2019 | 0.7 | Isabella Carneiro | Atualizando Introdução e Posicionamento|
-|30/09/2019 | 0.8 | Adrianne Alves | Revisão da finalidade e Escopo |
+|30/09/2019 | 0.8 | Adrianne Alves | Revisão da finalidade, Escopo, Referências |
 
 ## Índice
 
@@ -55,7 +55,7 @@ De modo geral, o produto final tem como propósito auxiliar a empresa a testar a
 
 ### 1.3. Visão geral
 
-O documento apresenta todas as informações essenciais referentes ao projeto trazendo para o leitor a melhor forma de visualizar as informações passadas. Dessa forma, começa-se demonstrando o contexto no qual o projeto foi pensado, em seguida são descritos os envolvidos no sistema e como se relacionam. Por fim, o documento foca nas especificações do projeto.
+O documento apresenta informações essenciais relacionadas ao projeto, organizadas de modo a fornecer ao leitor a melhor forma de visualizá-las. Dessa forma, inicia-se demonstrando o contexto no qual o projeto foi pensado, expondo os envolvidos e a equipe responsável por desenvolver o software e gerir toda a produção. Por fim, o documento foca nas especificações do projeto, em termos de requisitos e funcionalidades do sistema.
 
 ### 1.4. Referências
 

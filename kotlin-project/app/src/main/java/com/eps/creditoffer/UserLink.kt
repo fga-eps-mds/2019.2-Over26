@@ -17,7 +17,7 @@ class UserLink(){
     var phone: Int = 0
     var monthlyIncome: Float = 0F
 
-    private val ip: String = "192.168.0.16"
+    private val ip: String = "192.168.43.224"
 
     class Deserializer : ResponseDeserializable<UserLink> {
         override fun deserialize(content: String) = Gson().fromJson(content, UserLink::class.java)
@@ -39,6 +39,7 @@ class UserLink(){
                 when(result){
                     is Result.Success -> {
                         print("Sucecss")
+
                     }
                     is Result.Failure -> {
                         print("Failure")

@@ -9,7 +9,10 @@ import kotlinx.android.synthetic.main.track_limit.*
 import android.widget.SeekBar
 import java.lang.Boolean.FALSE
 import android.content.Intent
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import java.lang.Boolean.TRUE
+import java.lang.Thread.sleep
 
 
 class TrackLimit : AppCompatActivity() {
@@ -21,9 +24,13 @@ class TrackLimit : AppCompatActivity() {
         val overdraft = OverdraftLink()
         //overdraft.create(1)
 
-        overdraft.get(1)
+        overdraft.get(1, this)
 
-        initSeekBar(overdraft)
+        println("AAAAAAAAAAAAa")
+        println(overdraft.limitUsed)
+
+
+        //initSeekBar(overdraft)
 
         button_installment.setOnClickListener(View.OnClickListener {
             val intent = Intent(this, Installment::class.java)
@@ -45,17 +52,20 @@ class TrackLimit : AppCompatActivity() {
     }
 
     fun initSeekBar(overdraft: OverdraftLink){
-        val usage = 30
+        val usage: Float = overdraft.limitUsed
 
         if(overdraft.isActive){
-            textView_usage.text = "R$ " + usage
-            textView_cur.text = "R$ " + overdraft.limit.toInt()
+            println("BBBBBBBBBBBBBBBBB")
+            println(overdraft.limitUsed)
+
+            textView_usage.text = "R$ " + usage.toInt().toString()
+            textView_cur.text = "R$ "+overdraft.limit.toInt().toString()
             textView_max.text = "R$ " + overdraft.limitMax.toInt()
-            seek_bar.progress = overdraft.limit.toInt()
             seek_bar.max = overdraft.limitMax.toInt()
+            seek_bar.progress = overdraft.limit.toInt()
             seek_bar.isEnabled = TRUE
 
-            println("AAAAAAAAAAAAAAAAAA")
+            println("CCCCCCCCCCCCCCCCCCCC")
 
             if(overdraft.isBlocked == FALSE){
 

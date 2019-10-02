@@ -112,13 +112,16 @@ Como alternativa diversos bancos oferecem a funcionalidade de cheque especial, b
 ## 4. Visão Geral do Produto
 
 ### 4.1. Perspectiva do produto
- O aplicativo tem a função de realizar o processo de oferta de crédito aos clientes do banco que solicitarem o mesmo. Tal aplicação também oferecerá ao usuário a opção de gerenciar seu limite de crédito.
+ O aplicativo tem como função principal realizar o processo de solicitação e gerenciamento de cheque especial aos clientes do banco N26.
+ O mesmo, ainda facilita o pagamento da quantia disponibilizada de forma que durante os 26 primeiros dias não será computado juros ao valor. Além disso, após os 26 dias é criada uma dívida que pode ser parcelada.
 
 ### 4.2. Resumo dos recursos
 | Benefício para os clientes | Recursos de suporte |
 | - | - |
 | Facilidade de requisitar crédito | Layout simples |
 | Possibilidade de modificar o crédito | Tela em que é possível gerenciar o crédito|
+| Facilidade em pagar a dívida | Opção de parcelar a dívida |
+| Taxa de juros diferenciada | Juros só começam a cobrar depois de 26 dias |
 
 
 ## 5. Recursos do Produto
@@ -132,7 +135,7 @@ O _design_ deve se manter no padrão presente na aplicação principal da N26, m
 
 ### 6.2. Restrições de Implementação
 
-O projeto será desenvolvido utlizando o Node.js e o Express.js com _framework_, e todo _front-end_ sob a linguagem Kotlin numa aplicação Android. A aquitetura sequirá o modelo de cliente-servidor.
+O projeto será desenvolvido utlizando o Node.js e o Express.js com _framework_, e todo _front-end_ sob a linguagem Kotlin numa aplicação Android. A aquitetura seguirá o modelo de cliente-servidor.
 
 ### 6.3. Restrições de Segurança
 
@@ -162,3 +165,4 @@ Manutenção: O Sistema deve ser facilmente manutenível, para que todos dados d
 | 13/09/2019 | 0.4 | Luiza Cezario | Adicionando Descrição dos Envolvidos e dos Usuários
 | 13/09/2019 | 0.5 | João Gabriel | Adicionando Recursos|
 | 14/09/2019 | 0.6 | Gabriel | Adicionando Introdução|
+| 01/10/2019 | 0.7 | Isabella Carneiro | Refatorando Visão Geral do Produto |

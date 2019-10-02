@@ -1,8 +1,8 @@
 # Planejamento SPRINT 4
 
 **Data de início**: 29/09/2019 <br/>
-**Data de fim**: 01/10/2019 <br/>
-**Duração**: 4 dias <br/>
+**Data de fim**: 03/10/2019 <br/>
+**Duração**: 5 dias <br/>
 **Pontuação**:  pontos 
 
 ## 1. Objetivo
@@ -23,16 +23,29 @@ Fazer funcionalidades que agreguem valor ao projeto priorizadas pela Product Own
 ### Overview
 | Atividade | Pontuação | Responsável | Dívida |
 | -------- | :----: | :----: | :----: |
-| [US02 - Interface Cash-in](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/40) | 5 | João Paulo e Gabriel | Não|
-|[US01 - Cash Out](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/41) | 5 | João Paulo e Gabriel |Não |
-| [US05 - Ativar cheque especial - Backend](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/42)| 3 | João Paulo e Gabriel  |Não|
-| [US17 - Parcelar a dívida após os 26 dias - Back](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/43)| 8 |  João Gabriel e Luiza |Não|
-| [US17 - Parcelar a dívida após os 26 dias - Front](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/44)| 5 |  João Gabriel e Luiza |Não|
-| [US14 - Acompanhar dívida - Back](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/45)| 5 |  Erick e Isabela |Não|
-| [US14 - Acompanhar dívida - Front](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/46)| 8 |  Erick e Isabela |Não|
-| [US06 - Acompanhar limite de crédito - BackEnd](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/33) | 8 | Luiza e Isabella |Sim |
+| [US17 - Parcelar a dívida após os 26 dias - Back](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/43)| 13 |  João Gabriel, Luiza e Erick |Sim|
+| [US17 - Parcelar a dívida após os 26 dias - Front](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/44)| 13 |  João Gabriel, Luiza e Erick |Sim|
+| [US06 - Acompanhar limite de crédito - BackEnd](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/33) | 8 | João Paulo e Gabriel |Sim |
+| [Revisar e refatorar documento de arquitetura](https://github.com/fga-eps-mds/2019.2-Over26/issues/78) | 3 | Isabella e Natália | Não |
+| [Testes unitários](https://github.com/fga-eps-mds/2019.2-Over26/issues/81) | 5 | Andrew | Não |
+| [Revisar e refatorar Documento de Visão](https://github.com/fga-eps-mds/2019.2-Over26/issues/79)|3 | Adrianne e Isabella |Não|
+| [Fazer a apresentação](https://github.com/fga-eps-mds/2019.2-Over26/issues/80) | 2 | Todos | Não |
+
+### EPS
+| Atividade | Responsável |
+| -------- | :----: |
+| [Plano de Qualidade]() | Natália  |
+| [Fazer Burndown de Riscos](https://github.com/fga-eps-mds/2019.2-Over26/issues/72)  | Maria Luiza |
+| [Criar documento de Gerenciamento de Riscos](https://github.com/fga-eps-mds/2019.2-Over26/issues/65) | Maria Luiza |
+| [Documentar sprint 4](https://github.com/fga-eps-mds/2019.2-Over26/issues/63) | Maria Luiza |
+| [Documentar sprint 5](https://github.com/fga-eps-mds/2019.2-Over26/issues/77) | Maria Luiza |
+| [Definir métricas de produtividade](https://github.com/fga-eps-mds/2019.2-Over26/issues/70) | Maria Luiza |
+| [Deploy do Backend]() | Andrew |
+| [Documentar a parte do Devops]() | Andrew |
+| [Gerar Realease]() | Andrew |
+| [Refatorar EAP ]() | Adrianne |
+| [Documentar Elicitação de requisitos]() | Adrianne |
 
 
 ## 4. Pareamento
-
-
+![](../../images/metrics_agile/pareamento_sprint5.png)

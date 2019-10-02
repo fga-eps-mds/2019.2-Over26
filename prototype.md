@@ -13,7 +13,6 @@ A fim de validar e orientar o desenvolvimento da nova funcionalidade, referente 
     <img src="./images/prototipo-alta-fidelidade/Elegibilidade.png">
     <img src="./images/prototipo-alta-fidelidade/Ativar Cheque Especial.png">
     <img src="./images/prototipo-alta-fidelidade/Acompanhar limite.png">
-    <img src="./images/prototipo-alta-fidelidade/Acompanhar limite.png">
     <img src="./images/prototipo-alta-fidelidade/Parcelamento.png">
     <img src="./images/prototipo-alta-fidelidade/Parcelamento-2.png">
     <img src="./images/prototipo-alta-fidelidade/Acompanhar limite-2.png">

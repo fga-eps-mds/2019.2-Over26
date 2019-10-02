@@ -8,7 +8,9 @@
 # Índice
 
 * [Gerenciamento de Riscos](#_Gerenciamento-de-Riscos)
-    
+* [Riscos e Consequências](#Riscos-e-Consequências)
+* [Grau dos Riscos](#Grau-dos-Riscos) 
+* [Plano de Ação para os Riscos](#Plano-de-Ação-para-os-Riscos)    
 
 # Gerenciamento de Riscos
 Este plano tem como objetivo descrever quais são os riscos do projeto e como eles serão controlados ao longo das sprints, a fim de mitigá-los. 

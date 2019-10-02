@@ -8,7 +8,7 @@
 | 13/09/2019 | 0.5 | João Gabriel | Adicionando Recursos|
 | 14/09/2019 | 0.6 | Gabriel | Adicionando Introdução|
 |29/09/2019 | 0.7 | Isabella Carneiro | Atualizando Introdução e Posicionamento|
-|30/09/2019 | 0.8 | Adrianne Alves | Revisão da finalidade, Escopo, Referências, Oportunidade de Negócios, Descrição do problema, Sentença de Posição do Produto |
+|30/09/2019 | 0.8 | Adrianne Alves | Revisão da finalidade, Escopo, Referências, Oportunidade de Negócios, Descrição do problema, Sentença de Posição do Produto, Descrição dos Envolvidos e dos Usuários |
 
 ## Índice
 
@@ -96,27 +96,78 @@ Isso porque irá facilitar a ativação do serviço e reduzir os custos do usuá
 
 ### 3.1. Resumo dos Envolvidos
 
-Os envolvidos são a empresa N26 que será a entidade que fornece o crédito e os usuários que possuem uma conta no aplicativo que serão os solicitantes do crédito.
+| Nome | Descrição | Finalidade
+| -- | -- | -- |
+| Equipe de Desenvolvimento | Estudantes da Universidade de Brasília, discentes da disciplina de Métodos de Desenvolvimento de Software. | Desenvolver, testar e implantar o Software descrito neste documento. |
+| Equipe de Gestão do Projeto | Estudantes da Universidade de Brasília, discentes da disciplina de Engenharia de Produto. | Gerir a equipe visando prever e mitigar possíveis riscos relativos à aplicação a ser desenvolvida, no que diz respeito à qualidade, custos e tempo previsto, assim como as relações entre os membros da equipe. Além disso, compete aos gestores disseminar o conhecimento da equipe e garantir a máxima produtividade. |
+| Cliente | Responsável por definir o produto, objetivo do projeto. | Descrever o problema a ser solucionado, validar delimitação de escopo e  entregas. |
 
 ### 3.2. Resumo dos Usuários
 
-Os usuários podem ser pessoas físicas ou jurídicas que tem cadastro ativo no aplicativo da N26 e que tem interesse na funcionalidade de cheque especial.
+| Nome | Descrição |
+| -- | -- |
+| Pessoas físicas |  Todo ser humano enquanto indivíduo que possua conta na N26 e queira ativar e/ou utilizar o serviço de cheque especial |
 
 ### 3.3. Ambiente do Usuário
 
-O usuário poderá em seu ambiente solicitar o crédito, ativar o crédito, ajustar o limite de crédito disponível, pedir aumento do limite de crédito, visualizar suas dívidas e pedir parcelamento da dívida.
+O software será um aplicativo mobile para sistemas android. Ele funcionará para as seguintes versões:
+
+- Versão mínima: Android 4.4;
+- Versão ideal: Android 7.0;
 
 ### 3.4. Perfis dos Envolvidos
 
-Banco N26 - Entidade financeira fornecedora de crédito - Tem interesse em implementar a função para agregar valor aos usuários e para que seja mais confortável para eles utulizar a função de crédito quando precisarem.
+#### 3.4.1 Equipe de Gestão de Projeto
 
-Usuários - Os usuários do sistema são pessoas que precisaram em determinado momento de u valor maior do que tinham disponível em conta para realizar uma compra ou pagar uma dívida.
+| |  |
+| -- | -- |
+| Representantes | Maria Luiza <br> Adrianne Alves <br> Natália Rodrigues <br> Andrew Lucas |
+| Descrição | Equipe de Gestão do Projeto |
+| Tipo | 	Discentes da disciplina de Engenharia de Produto de Software da Universidade de Brasília. |
+| Critérios de sucesso | Nivelar o conhecimento da equipe, mantê-la organizada, motivada, harmoniosa e alinhada. Coordenar a qualidade e prazos das entregas feitas, tal que a aplicaçã o seja finalizada no tempo previsto e conforme exigências do cliente. |
+| Envolvimento | Alto |
+
+
+#### 3.4.2 Equipe de Desenvolvimento
+
+| |  |
+| -- | -- |
+| Representantes | Luiza Cesário <br> Erick Antônio <br> Gabriel Lopes <br> Isabella Carneiro <br> João Gabriel <br> João Paulo |
+| Descrição | Time de Desenvolvimento |
+| Tipo | 	Discentes da disciplina de Metodologia de Desenvolmento de Software da Universidade de Brasília. |
+| Critérios de sucesso | Entregar as funcionalidades solicitadas no prazo, com qualidade e de acordo aos critérios de aceitação estabelecidos. |
+| Envolvimento | Alto |
+
+#### 3.4.3 Cliente
+
+| |  |
+| -- | -- |
+| Representantes | Banco N26 |
+| Descrição | Solicitante do Projeto |
+| Tipo | Cliente |
+| Critérios de sucesso | Fornecer o problema a ser desenvolvido, auxiliar no estabelecimento do escopo, validar a solução do time |
+| Envolvimento | Alto |
 
 ### 3.5. Perfis dos Usuários
 
+| |  |
+| -- | -- |
+| Representantes | Pessoas físicas |
+| Descrição | Pessoas físicas que possuem contas em bancos digitais |
+| Tipo | Usuários do sistema |
+| Critérios de sucesso | Usuário conseguir utilizar o aplicativo com uma boa experiência de usabilidade |
+| Envolvimento | Alto |
+
 ### 3.6. Alternativas e concorrência
 
-Como alternativa diversos bancos oferecem a funcionalidade de cheque especial, bancos como Bradesco, Banco do Brasil, Santander, Caixa e diversos outros presentes no Brasil.
+O cheque especial é um sistema bastante difundido entre os bancos, assim, como alternativa à essa funcionalidade da N26, teríamos as ofertas de bancos como:
+
+- Bradesco;
+- Banco do Brasil;
+- Santander;
+- Caixa Econômica, entre outros.
+
+Entretanto, os bancos possuem licença diferente da Sociedade de Crédito Direto e não possuem sistemas digitais eficientes para oferta desse serviço. Além disso, implementam taxas exorbitantes aos usuários.
 
 ## 4. Visão Geral do Produto
 

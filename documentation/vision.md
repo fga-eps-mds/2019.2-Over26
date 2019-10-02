@@ -9,6 +9,7 @@
 | 14/09/2019 | 0.6 | Gabriel | Adicionando Introdução|
 |29/09/2019 | 0.7 | Isabella Carneiro | Atualizando Introdução e Posicionamento|
 |30/09/2019 | 0.8 | Adrianne Alves | Revisão da finalidade, Escopo, Referências |
+| 01/10/2019 | 0.9 | Isabella Carneiro | Refatorando Visão Geral do Produto |
 
 ## Índice
 
@@ -155,14 +156,4 @@ Usabilidade: O Sistema deve ser intuitivo para facilitar o uso do cliente e um t
 
 Manutenção: O Sistema deve ser facilmente manutenível, para que todos dados dos clientes possam ser modificáveis sem a necessidade de uma recompilação e para facilitar um aprimoramento futuro.
 
-## Histórico de Versões
 
-| Data | Versão | Autor(a) | Descrição |
-| - | - | - | - |
-| 11/09/2019 | 0.1 | Erick Reis | Estrutura básica do documento e índice|
-| 11/09/2019 | 0.2 | Erick Reis | Adicionando Posicionamento e Restrições|
-| 12/09/2019 | 0.3 | Isabella Carneiro| Adicionando Visão Geral do Produto|
-| 13/09/2019 | 0.4 | Luiza Cezario | Adicionando Descrição dos Envolvidos e dos Usuários
-| 13/09/2019 | 0.5 | João Gabriel | Adicionando Recursos|
-| 14/09/2019 | 0.6 | Gabriel | Adicionando Introdução|
-| 01/10/2019 | 0.7 | Isabella Carneiro | Refatorando Visão Geral do Produto |

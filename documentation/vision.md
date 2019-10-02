@@ -1,16 +1,4 @@
 # Documento de Visão
-| Data | Versão | Autor(a) | Descrição |
-| - | - | - | - |
-| 11/09/2019 | 0.1 | Erick Reis | Estrutura básica do documento e índice|
-| 11/09/2019 | 0.2 | Erick Reis | Adicionando Posicionamento e Restrições|
-| 12/09/2019 | 0.3 | Isabella Carneiro| Adicionando Visão Geral do Produto|
-| 13/09/2019 | 0.4 | Luiza Cezario | Adicionando Descrição dos Envolvidos e dos Usuários
-| 13/09/2019 | 0.5 | João Gabriel | Adicionando Recursos|
-| 14/09/2019 | 0.6 | Gabriel | Adicionando Introdução|
-|29/09/2019 | 0.7 | Isabella Carneiro | Atualizando Introdução e Posicionamento|
-|30/09/2019 | 0.8 | Adrianne Alves | Revisão da finalidade, Escopo, Referências, Oportunidade de Negócios, Descrição do problema, Sentença de Posição do Produto, Descrição dos Envolvidos e dos Usuários, Visão Geral do Produto, Restrições e Intervalos de Qualidade |
-
-## Índice
 
 - [1. Introdução](#1-introdução)
   * [1.1. Finalidade](#11-finalidade)
@@ -231,3 +219,6 @@ Manutenção: O Sistema deve ter boa manutenabilidade, a fim de facilitar futura
 | 13/09/2019 | 0.4 | Luiza Cezario | Adicionando Descrição dos Envolvidos e dos Usuários
 | 13/09/2019 | 0.5 | João Gabriel | Adicionando Recursos|
 | 14/09/2019 | 0.6 | Gabriel | Adicionando Introdução|
+| 29/09/2019 | 0.7 | Isabella Carneiro | Atualizando Introdução e Posicionamento|
+| 30/09/2019 | 0.8 | Adrianne Alves | Revisão da finalidade, Escopo, Referências, Oportunidade de Negócios, Descrição do problema, Sentença de Posição do Produto, Descrição dos Envolvidos e dos Usuários, Visão Geral do Produto, Restrições e Intervalos de Qualidade |
+

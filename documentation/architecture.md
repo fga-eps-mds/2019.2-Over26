@@ -1,5 +1,25 @@
 # Documento de Arquitetura
 
+## Histórico de Versões
+
+| Data | Versão | Autor(a) | Descrição |
+| - | - | - | - |
+| 05/09/2019 | 0.1 | João Gabriel | Criação do índice e adição da introdução|
+| 05/09/2019 | 0.2 | Gabriel e João Paulo | Adição da visão lógica e desempenho|
+| 06/09/2019 | 0.3 | Isabella | Adição de Restrições do projeto|
+| 06/09/2019 | 0.4 | Isabella e João Gabriel | Adição de Qualidade|
+| 06/09/2019 | 0.5 | Luiza | Adição de Visão de Casos de Uso|
+| 09/09/2019 | 0.6 | Erick | Adição de Representação da Arquitetura e correção de índice|
+| 10/09/2019 | 0.7 | Natália, Luiza, João Paulo, Erick, Maria Luiza | Adição do Diagrama de Casos de Uso |
+| 11/09/2019 | 0.8 | Luiza | Refatoração da Visão de Casos de Uso|
+| 11/09/2019 | 0.9 | Erick | Corrigindo índice|
+| 11/09/2019 | 1.0 | Erick | Refatorando desempenho e realocando restrições|
+| 11/09/2019 | 1.1 | João Gabriel| Refatoração da introdução|
+| 11/09/2019 | 1.2 | Natália | Adição do diagrama de classes e do diagrama lógico |
+| 13/09/2019 | 1.3 | João Paulo e Gabriel | Refatoração da Visão Lógica |
+| 24/09/2019 | 1.4 | Natália | Refatoração do diagrama de classes e do diagrama lógico |
+| 01/10/1029 | 1.5 | Isabella Carneiro | Refatoração da Introdução e Representação de Arquitetura |
+
 - [1. Introdução](#_1-introdução)
   * [1.1. Objetivos](#_11-objetivos)
   * [1.2. Escopo do documento](#_12-escopo-do-documento)
@@ -41,13 +61,13 @@
 
 ### 1.1. Objetivos
 
-O objetivo deste documento é detalhar a arquitetura e tecnologias usadas na aplicação,que se trata de um aplicativo mobile focado na função de Cheque Especial do banco N26 que será implementado no Brasil.
+O objetivo deste documento é detalhar a arquitetura e tecnologias usadas no projeto, que se trata de um aplicativo mobile focado na função de Cheque Especial.
 
 A necessidade deste detalhamento se dá para o melhor entendimento do que está sendo produzido e de que forma está sendo realizado.
 
 ###  1.2. Escopo do documento
 
-Este documento contém detalhes sobre a arquitetura escolhida para o sistema, as lógicas por trás das implementações, as linguagens/tecnologias usadas, os padrões estabelecidos pela equipe , informações referentes à bancos de dados, além dos  diagramas de classe e de caso de uso.
+Este documento contém detalhes sobre a arquitetura escolhida para o sistema, as lógicas por trás das implementações, as linguagens/tecnologias usadas, os padrões estabelecidos pela equipe, informações referentes à bancos de dados, além dos  diagramas de classe e de caso de uso.
 
 ## 2. Representação da Arquitetura
 
@@ -55,7 +75,11 @@ A arquitetura que está sendo utilizada segue o modelo cliente-servidor, que fun
 
 No caso da aplicação o responsável pelo primeiro processo citado será o FrontEnd que fará as requisições na API. A mesma está sendo feita em Node.js e é responsável por fazer a comunicação com o Banco de Dados.
 
+<!-- No parágrafo acima, eu colocaria "No caso deste projeto, o papel de cliente será desempenhado pelo frontend da aplicação (que está sendo implementado em Kotlin) e o de servidor pela API (implementada em Node.js), que faz toda a comunicação com a camada de persistência dos dados." -->
+
 Este tipo de arquitetura fornece alta escalabilidade e tem uma grande vantagem quando se trata de manutenção, ponto crítico no caso desde projeto.
+
+<!-- Acho que não é preciso colocar que a manutenção é ponto crítico do projeto (porque ele vai ser um MVP utilizado para o teste da funcionalidade, não um sistema que será utilizado e mantido de fato). -->
 
 ![Arquitetura](/images/architecture.png)
 
@@ -67,13 +91,19 @@ O sistema será desenvolvido para ser utilizado em smartphones com sistema Andro
 Para alcançar tal finalidade será feito usando Node.js com express para o backend da aplicação e o frontend da mesma será utilizado o kotlin.
 O modelo pretendido é cliente-servidor, priorizando a experiência do cliente com o sistema.
 
+<!-- Aqui eu colocaria "Para alcançar tal finalidade, o backend do sistema (API que fará a comunicação com o banco de dados) será desenvolvido utilizando o Node.js com o framework Express, e o frontend (que fará interface com o usuário final) em Kotlin.-->
+
 ### 3.2. Metas Arquiteturais
 
 A aplicação do Sistema de Oferta de Crédito terá como base de sua arquitetura o framework Express, que é baseado na linguagem de programação Node.js. O Express permite a criação de APIs de maneira robusta, rápida e fácil e conta com recursos para aplicativos mobile, necessários para o projeto. Ele conta também com um sistema de Views Intuitivo (MVC).
 
 Uma vantagem da utilização do framework é a sua escalabilidade, sendo um requisito necessário para sistemas com diversas conexões concorrentes, além disso o framework é minimalista e flexível, o Express conta com bibliotecas para trabalhar com cookies, sessões, login de usuário e diversas outras funcionalidades.
 
+<!-- Acho que o texto deste tópico não está adequado, ele está muito focado na utilização do Node com o Express e a aplicação não está sendo desenvolvida utilizando apenas essas tecnologias. Seria interessante colocar aqui, ao invés do detalhamento das tecnologias, o que se deseja entregar para o usuário final com o sistema. -->
+
 ## 4. Visão de Casos de Uso
+
+<!-- Esse tópico aqui pode deixar que eu vou tomar conta. -->
 
 ### 4.1. Diagrama de Casos de Uso
 
@@ -244,6 +274,8 @@ Fluxo de exceção | [FE01] O usuário pode desistir de parcelar e clicar em "Ca
 
 ## 5. Visão Lógica
 
+<!-- Esse daqui tbm pode deixar que eu vou cuidar. -->
+
 ### 5.1. Visão Geral
 
  A arquitetura utilizada no projeto é a arquitetura Cliente/Servidor, que se baseia na relação de dois módulos, o cliente e o servidor. O servidor será responsável pela manutenção e processamento dos dados, enquanto ao cliente será encarregada a função de fornecer os dados.
@@ -284,25 +316,8 @@ O banco de dados permite com que os dados sejam persistidos para possibilitar a 
 O desempempenho do sistema está relacionado ao aparelho utilizado para rodar a aplicação, entretanto a conexão com a internet é o fator que pode causar os maiores problemas de desempenho.
 
 ## 7. Qualidade
+
 Como objetivo de qualidade a aplicação deseja ter um bom sistema de segurança, visto que existem importantes informações de usuários que serão acessadas pela aplicação e que não podem ser visualizados por todos.
 O código deverá ser bem estruturado, seguindo as normas de boas práticas para que terceiros, responsáveis por suas eventuais manutenções, consigam trabalhar sem a necessidade consultar os desenvolvedores originais.
 
-## Histórico de Versão
-
-| Data | Versão | Autor(a) | Descrição |
-| - | - | - | - |
-| 05/09/2019 | 0.1 | João Gabriel | Criação do índice e adição da introdução|
-| 05/09/2019 | 0.2 | Gabriel e João Paulo | Adição da visão lógica e desempenho|
-| 06/09/2019 | 0.3 | Isabella | Adição de Restrições do projeto|
-| 06/09/2019 | 0.4 | Isabella e João Gabriel | Adição de Qualidade|
-| 06/09/2019 | 0.5 | Luiza | Adição de Visão de Casos de Uso|
-| 09/09/2019 | 0.6 | Erick | Adição de Representação da Arquitetura e correção de índice|
-| 10/09/2019 | 0.7 | Natália, Luiza, João Paulo, Erick, Maria Luiza | Adição do Diagrama de Casos de Uso |
-| 11/09/2019 | 0.8 | Luiza | Refatoração da Visão de Casos de Uso|
-| 11/09/2019 | 0.9 | Erick | Corrigindo índice|
-| 11/09/2019 | 1.0 | Erick | Refatorando desempenho e realocando restrições|
-| 11/09/2019 | 1.1 | João Gabriel| Refatoração da introdução|
-| 11/09/2019 | 1.2 | Natália | Adição do diagrama de classes e do diagrama lógico |
-| 13/09/2019 | 1.3 | João Paulo e Gabriel | Refatoração da Visão Lógica |
-| 24/09/2019 | 1.4 | Natália | Refatoração do diagrama de classes e do diagrama lógico |
-| 01/10/1029 | 1.5 | Isabella Carneiro | Refatoração da Introdução e Representação de Arquitetura |
+<!-- O primeiro parágrafo tá todo errado. Creio que o foco principal do sistema será a experiência do usuário, teremos que oferecer um sistema amigável para os possíveis usuários finais, visto que é um MVP sendo desenvolvido para testar uma funcionalidade em específico. O segundo parágrafo tá de boa. -->

@@ -87,17 +87,15 @@ Este tipo de arquitetura fornece alta escalabilidade e tem uma grande vantagem q
 
 ### 3.1. Restrições
 
-O sistema será desenvolvido para ser utilizado em smartphones com sistema Android.
-Para alcançar tal finalidade será feito usando Node.js com express para o backend da aplicação e o frontend da mesma será utilizado o kotlin.
-O modelo pretendido é cliente-servidor, priorizando a experiência do cliente com o sistema.
+O sistema está sendo feito utilizando a linguagem Kotlin para desenvolver o FrontEnd da aplicação de modo que se assemelhe ao aplicativo já existente do banco N26.
+Já o BackEnd do programa está sendo feito com a linguagem Node.js juntamente com o Express.js
 
 <!-- Aqui eu colocaria "Para alcançar tal finalidade, o backend do sistema (API que fará a comunicação com o banco de dados) será desenvolvido utilizando o Node.js com o framework Express, e o frontend (que fará interface com o usuário final) em Kotlin.-->
 
 ### 3.2. Metas Arquiteturais
 
-A aplicação do Sistema de Oferta de Crédito terá como base de sua arquitetura o framework Express, que é baseado na linguagem de programação Node.js. O Express permite a criação de APIs de maneira robusta, rápida e fácil e conta com recursos para aplicativos mobile, necessários para o projeto. Ele conta também com um sistema de Views Intuitivo (MVC).
-
-Uma vantagem da utilização do framework é a sua escalabilidade, sendo um requisito necessário para sistemas com diversas conexões concorrentes, além disso o framework é minimalista e flexível, o Express conta com bibliotecas para trabalhar com cookies, sessões, login de usuário e diversas outras funcionalidades.
+Por ser um sistema de um banco, a aplicação deve garantir ao usuário a segurança de suas informações pessoais.
+O programa deve ser feito para que as requisições sejam feitas de maneira ágil.
 
 <!-- Acho que o texto deste tópico não está adequado, ele está muito focado na utilização do Node com o Express e a aplicação não está sendo desenvolvida utilizando apenas essas tecnologias. Seria interessante colocar aqui, ao invés do detalhamento das tecnologias, o que se deseja entregar para o usuário final com o sistema. -->
 
@@ -316,8 +314,8 @@ O banco de dados permite com que os dados sejam persistidos para possibilitar a 
 O desempempenho do sistema está relacionado ao aparelho utilizado para rodar a aplicação, entretanto a conexão com a internet é o fator que pode causar os maiores problemas de desempenho.
 
 ## 7. Qualidade
+Como objetivo de qualidade a aplicação deseja ter um bom sistema de segurança, visto que existem importantes informações pessoais de usuários que serão acessadas pela aplicação e que não podem ser visualizados por todos.
 
-Como objetivo de qualidade a aplicação deseja ter um bom sistema de segurança, visto que existem importantes informações de usuários que serão acessadas pela aplicação e que não podem ser visualizados por todos.
-O código deverá ser bem estruturado, seguindo as normas de boas práticas para que terceiros, responsáveis por suas eventuais manutenções, consigam trabalhar sem a necessidade consultar os desenvolvedores originais.
+O código deverá ser bem estruturado, seguindo as normas de Boas Práticas de programação para que terceiros, responsáveis por suas eventuais manutenções, consigam trabalhar sem a necessidade consultar os desenvolvedores originais.
 
 <!-- O primeiro parágrafo tá todo errado. Creio que o foco principal do sistema será a experiência do usuário, teremos que oferecer um sistema amigável para os possíveis usuários finais, visto que é um MVP sendo desenvolvido para testar uma funcionalidade em específico. O segundo parágrafo tá de boa. -->

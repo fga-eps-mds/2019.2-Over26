@@ -8,7 +8,7 @@
 | 13/09/2019 | 0.5 | João Gabriel | Adicionando Recursos|
 | 14/09/2019 | 0.6 | Gabriel | Adicionando Introdução|
 |29/09/2019 | 0.7 | Isabella Carneiro | Atualizando Introdução e Posicionamento|
-|30/09/2019 | 0.8 | Adrianne Alves | Revisão da finalidade, Escopo, Referências, Oportunidade de Negócios, Descrição do problema |
+|30/09/2019 | 0.8 | Adrianne Alves | Revisão da finalidade, Escopo, Referências, Oportunidade de Negócios, Descrição do problema, Sentença de Posição do Produto |
 
 ## Índice
 
@@ -83,7 +83,14 @@ Isso porque irá facilitar a ativação do serviço e reduzir os custos do usuá
 
 ### 2.3. Sentença de Posição do Produto
 
-Este produto visa não só facilitar a utilização de cheque especial, mas principalmente tornar o controle de seu uso muito mais simples e intuitivo, assim como facilita a quitação da dívida.
+| | |
+| -- | -- |
+| Para | usuários de bancos digitais endividados |
+| Que | precisam utilizar o serviço de cheque especial |
+| O Over26 | é um Mínimo Produto Viável funcional de código aberto, que implementa uma nova experiência da funcionalidade de cheque especial |
+| Diferente dos | demais bancos que fornecem cheque especial de uso burocrático, nada transparente e com taxas aplicadas imediatamente após a instância da dívidas |
+| Nosso produto | irá fornecer uma experiência transparente e menos burocrática de contratação e acompanhamento do serviço, reduzindo o impacto expressivo das altas taxas por meio de uma margem de 26 dias antes que elas sejam computadas sobre a dívida |
+
 
 ## 3. Descrição dos Envolvidos e dos Usuários
 

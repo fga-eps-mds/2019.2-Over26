@@ -8,7 +8,7 @@
 | 13/09/2019 | 0.5 | João Gabriel | Adicionando Recursos|
 | 14/09/2019 | 0.6 | Gabriel | Adicionando Introdução|
 |29/09/2019 | 0.7 | Isabella Carneiro | Atualizando Introdução e Posicionamento|
-|30/09/2019 | 0.8 | Adrianne Alves | Revisão da finalidade, Escopo, Referências, Oportunidade de Negócios, Descrição do problema, Sentença de Posição do Produto, Descrição dos Envolvidos e dos Usuários, Visão Geral do Produto |
+|30/09/2019 | 0.8 | Adrianne Alves | Revisão da finalidade, Escopo, Referências, Oportunidade de Negócios, Descrição do problema, Sentença de Posição do Produto, Descrição dos Envolvidos e dos Usuários, Visão Geral do Produto, Restrições e Intervalos de Qualidade |
 
 ## Índice
 
@@ -201,29 +201,25 @@ A aplicação permitirá ao usuario solicitar crédito de cheque especial, cance
 
 ### 6.1. Restrições de Design
 
-O _design_ deve se manter no padrão presente na aplicação principal da N26, mantendo a simplicidade proposta pelo projeto.
+O _design_ deve se manter no padrão presente na aplicação principal da N26, mantendo a simplicidade proposta pelo projeto, conforme [video](https://www.youtube.com/watch?v=T6JfLJ1zaXA&feature=youtu.be)
 
 ### 6.2. Restrições de Implementação
 
-O projeto será desenvolvido utlizando o Node.js e o Express.js com _framework_, e todo _front-end_ sob a linguagem Kotlin numa aplicação Android. A aquitetura sequirá o modelo de cliente-servidor.
+O projeto será desenvolvido utlizando o Node.js e o Express.js com _framework_, e todo _front-end_ sob a linguagem Kotlin numa aplicação Android. A aquitetura seguirá o modelo cliente-servidor.
 
-### 6.3. Restrições de Segurança
+### 6.3. Restrições de Uso
 
-Por se tratar de uma aplicação bancária a segurança é algo essencial, por isso todo acesso deve ser precedido de um login que deve deixar todas a funcionalidades protegidas.
-
-### 6.4. Restrições de Uso
-
-Para o uso do sistema é necessário que o usuário tenha uma aparelho compatível com a aplicação e deve estar conectado à internet Caso o usuário do sistema não possua acesso à internet não será possível realizar o login.
+Para o uso do sistema é necessário que o usuário tenha uma aparelho compatível com a aplicação e deve estar conectado à internet . As versões suportadas do android são a partir da 4.4, logo, para versões anteriores não é possível garantir o bom funcionamento do produto.
 
 ## 7. Intervalos de Qualidade
 
-Para total desempenho e aproveitamento do cliente devem ser respeitados os seguintes intervalos de qualidade:
+Para total desempenho e aproveitamento por parte dos usuários devem ser respeitados os seguintes intervalos de qualidade:
 
-Disponibilidade: O Sistema deve estar sempre disponível, isto é, 24 horas por dia e 7 dias por semana.
+Disponibilidade: O Sistema deve estar disponível na maior parte do tempo, utilizando-se as madrugadas para manutenção, ou seja, 20 horas por dia e 7 dias por semana.
 
-Usabilidade: O Sistema deve ser intuitivo para facilitar o uso do cliente e um time de suporte online deve estar sempre a postos para tirar qualquer dúvida do cliente.
+Usabilidade: O Sistema deve ser intuitivo, possuir um baixo número de passos para alcançar o objetivo, ser fácil de compreender.
 
-Manutenção: O Sistema deve ser facilmente manutenível, para que todos dados dos clientes possam ser modificáveis sem a necessidade de uma recompilação e para facilitar um aprimoramento futuro.
+Manutenção: O Sistema deve ter boa manutenabilidade, a fim de facilitar futuras evoluções e correções por equipes diferentes da original. Assim, esses aspectos de qualidade devem ser observados no código entregue.
 
 ## Histórico de Versões
 

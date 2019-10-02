@@ -4,17 +4,28 @@
 
 ### 1.1 Fechamento da Sprint 
 
-**Pontos concluídos:**
+**Pontos concluídos: 13 pontos concluídos**
+<br>
+**Dívida Técnica: 34 pontos de dívida**
 
 | Atividade | Situação |
 | --------  | :----:   |
-| |  | 
+|[US02 - Interface Cash-in](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/40) | Concluído | 
+| [US01 - Cash Out](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/41)| Concluído | 
+| [US05 - Ativar cheque especial - Backend](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/42)| Concluído | 
+| [US17 - Parcelar a dívida após os 26 dias - Back](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/43) | Dívida Técnica | 
+|[US17 - Parcelar a dívida após os 26 dias - Front](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/44) | Dívida Técnica | 
+| [US14 - Acompanhar dívida - Back](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/45) | Dívida Técnica | 
+|[US14 - Acompanhar dívida - Front](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/46) | Dívida Técnica  | 
+| [US06 - Acompanhar limite de crédito - BackEnd](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/33) | Dívida Técnica | 
 
- 
 
 ## 1.2 Burndown
+![](../../images/metrics_agile/burndown_sprint4.png)
 
 ## 1.3 Velocity   
+![](../../images/metrics_agile/velocity_sprint4.png)
+
 
 ## 1.4 Retrospectiva 
 | Membro | Pontos Positivos | Pontos Negativos | Sugestão de Melhoria | Pontuação das Histórias |
@@ -33,7 +44,16 @@
 
 
 ## 1.6 Quadro de conhecimento
-
+![](../../images/metrics_agile/quadro_conhecimento_sprint4.png)
 
 
 # 2. Visão do Tech Leader
+Essa sprint foi planejada com 47 pontos, porém somente 13 pontos foram entregues. 
+
+Essa semana teve a semana universitária, onde os estudantes não teriam aulas e a expectativa era que pudessémos fazer mais pontos e ter mais disponibilidade para trabalhar no projeto. Porém, houve falha no planejamento, pois as histórias ficaram muito grande e, por isso, não foram concluídas a tempo. Este fato, foi refletido diretamente no Velocity, pois teve uma leve queda. Outro fator crítico nessa sprint foi devido a viagem de um dos membros de MDS, Gabriel.  
+
+Com a dificuldade de realizar as tarefas, devido a tecnologia e ao tamanho das histórias, os testes unitários continuaram comprometidos, nessa sprint. O que causa problema na qualidade do código e produto entregues.
+
+A comunicação tem melhorado a cada sprint e a colaboração do grupo também, apesar das dificuldades com a tecnologia e os imprevistos pessoais de cada membro. 
+
+As práticas ágeis foram aplicadas, com reuniões diárias via Telegram e reuniões semanais de planejamento ocorrida no início da sprint. Além das reuniões de retrospectiva e revisão ocorridas no final da sprint. Essas reuniões ocorrem todos os sábados presencialmente.

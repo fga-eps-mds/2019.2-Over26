@@ -3,17 +3,20 @@
 * [Sprints](/sprints/)
 
 * **Projeto**
-* [Abertura do Projeto](/abertura/)
+* [Termo de Abertura do Projeto](/abertura/open-term-project.md)
+* [Estrutura Analítica do Projeto](/abertura/eap.md)
 * [Roadmaps](/roadmaps/)
 * [Metodologia](/metodology/)
 * [Gerenciamento de Comunicação](/comunication-plan.md)
 * [Gerenciamento de Riscos](/risk-manegement.md)
 * [Burndown de Riscos](/risks-burndown.md)
+* [Plano de Qualidade](/documentation/quality.md)
 
 * **Produto**
 * [Estrutura de Branches e Padrões](/branches-structure.md)
 * [Folha de Estilo](/style-sheet.md)
-* [Documentação do Projeto](/documentation/)
+* [Documento de Arquitetura](/documentation/architecture.md)
+* [Documento de Visão](/documentation/vision.md)
 * [Protótipos](/prototype.md)
 
 

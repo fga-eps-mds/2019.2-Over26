@@ -54,6 +54,8 @@ Essa semana teve a semana universitária, onde os estudantes não teriam aulas e
 
 Com a dificuldade de realizar as tarefas, devido a tecnologia e ao tamanho das histórias, os testes unitários continuaram comprometidos, nessa sprint. O que causa problema na qualidade do código e produto entregues.
 
+Para resolver este problema, foi feita uma adaptação no escopo que será entregue na R1.
+
 A comunicação tem melhorado a cada sprint e a colaboração do grupo também, apesar das dificuldades com a tecnologia e os imprevistos pessoais de cada membro. 
 
 As práticas ágeis foram aplicadas, com reuniões diárias via Telegram e reuniões semanais de planejamento ocorrida no início da sprint. Além das reuniões de retrospectiva e revisão ocorridas no final da sprint. Essas reuniões ocorrem todos os sábados presencialmente.

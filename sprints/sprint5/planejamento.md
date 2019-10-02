@@ -3,7 +3,7 @@
 **Data de início**: 29/09/2019 <br/>
 **Data de fim**: 03/10/2019 <br/>
 **Duração**: 5 dias <br/>
-**Pontuação**:  pontos 
+**Pontuação**: 47 pontos 
 
 ## 1. Objetivo
 

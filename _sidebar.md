@@ -7,6 +7,7 @@
 * [Roadmaps](/roadmaps/)
 * [Metodologia](/metodology/)
 * [Gerenciamento de Comunicação](/comunication-plan.md)
+* [Gerenciamento de Riscos](/risk-manegement.md)
 
 * **Produto**
 * [Estrutura de Branches e Padrões](/branches-structure.md)

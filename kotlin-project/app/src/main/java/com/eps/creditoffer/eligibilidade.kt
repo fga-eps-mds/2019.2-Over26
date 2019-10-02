@@ -8,9 +8,9 @@ import android.widget.Button
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.extensions.jsonBody
 
-
 class eligibilidade : AppCompatActivity() {
-    val url: String = "http://10.0.2.2:3000/api/overdrafts"
+    var cpf: Int = 1234
+    val url: String = "http://10.0.2.2:3000/api/users/"+ cpf + "/overdrafts"
 
     val urlErick: String = "http://192.168.0.16:3000/api/overdrafts"
 

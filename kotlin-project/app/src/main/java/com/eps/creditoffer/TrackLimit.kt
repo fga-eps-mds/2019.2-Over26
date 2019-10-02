@@ -9,9 +9,25 @@ import kotlinx.android.synthetic.main.track_limit.*
 import android.widget.SeekBar
 import java.lang.Boolean.FALSE
 import android.content.Intent
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
+import kotlinx.android.synthetic.main.track_limit.*
+import android.widget.SeekBar
+import com.github.kittinunf.fuel.Fuel
+import com.github.kittinunf.fuel.core.extensions.jsonBody
+import com.github.kittinunf.result.Result
+import com.github.kittinunf.result.getAs
+import org.json.JSONObject
 
 
 class TrackLimit : AppCompatActivity() {
+    var curLimit: Float = 0F
+    var maxLimit: Float = 200F
+    var curUsage: Float = 50F
+    var cpf: Int = 1234
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,6 +64,9 @@ class TrackLimit : AppCompatActivity() {
 
                 // Hide installment button
                 button_installment.visibility = View.INVISIBLE
+                text_view_cur.text = "R$"+i.toString()
+                curLimit = i.toFloat()
+            }
 
                 // SeekBar
                 textView_currentUsage.text = "Uso Atual"
@@ -93,3 +112,99 @@ class TrackLimit : AppCompatActivity() {
     }
 
 }
+        })
+
+
+
+        val  cancelCredit = findViewById(R.id.cancelCredit) as Button
+
+
+
+        cancelCredit.setOnClickListener {
+
+            var url: String = "http://10.0.2.2:3000/api/users/"+ cpf + "/overdrafts/cancel"
+
+            Fuel.put(url)
+                .response { request, response, result ->
+                    println(request)
+                    println(response)
+                    val (bytes, error) = result
+                    if (bytes != null) {
+                        println("[response bytes] ${String(bytes)}")
+                    }
+                    println(result)
+                    when(result){
+                        is Result.Success -> {
+
+                            val intent = Intent(this, TrackLimit::class.java)
+                            startActivity(intent)
+
+                        }
+                        is Result.Failure -> {
+                            println("Deu ruim")
+                        }
+                    }
+                }
+
+
+        }
+
+        val  save = findViewById(R.id.save) as Button
+        save.setOnClickListener {
+
+            var url: String = "http://10.0.2.2:3000/api/users/"+ 1 + "/overdrafts"
+
+            val json = JSONObject()
+            json.put("limit", curLimit)
+
+            println(curLimit)
+
+            Fuel.put(url).jsonBody(json.toString())
+                .response { request, response, result ->
+                    println(request)
+                    println(response)
+                    val (bytes, error) = result
+                    if (bytes != null) {
+                        println("[response bytes] ${String(bytes)}")
+                    }
+                    println(result)
+                    when(result){
+                        is Result.Success -> {
+
+                            val intent = Intent(this, TrackLimit::class.java)
+                            startActivity(intent)
+
+                        }
+                        is Result.Failure -> {
+                            println("Deu ruim")
+                        }
+                    }
+                }
+
+
+        }
+
+        var url: String = "http://10.0.2.2:3000/api/users/"+ 1 + "/overdrafts"
+
+        Fuel.get(url)
+            .response { request, response, result ->
+                println(request)
+                println(response)
+                val (bytes, error) = result
+                if (bytes != null) {
+                    println("[response bytes] ${String(bytes)}")
+                }
+                println(result)
+                when(result){
+                    is Result.Success -> {
+                        println(result)
+
+                    }
+                    is Result.Failure -> {
+                        println("Deu ruim")
+                    }
+                }
+            }
+    }
+    }
+

@@ -1,3 +1,12 @@
+---
+name: Template de Issue
+about: Este template objetiva padronizar a criação de issues no repositório
+title: ''
+labels: ''
+assignees: ''
+
+---
+
 ## Descrição da Mudança *
 <!--- Forneça um resumo geral da _issue_ -->
 
@@ -38,5 +47,4 @@
 2.
 
 ## Screenshots
-<!--- If you want, add some screenshots of the _bug_ or prototype to new additions -->
 <!--- Se relevante, adicione alguns _screenshots_ ou protótipos para novas adições -->

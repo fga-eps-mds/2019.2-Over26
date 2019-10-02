@@ -1,5 +1,5 @@
 ﻿* [Início](/)
- 
+
 * [Sprints](/sprints/)
 
 * **Projeto**
@@ -13,10 +13,9 @@
 * [Plano de Qualidade](/documentation/quality.md)
 
 * **Produto**
+* [Backlog](/product-backlog.md)
 * [Estrutura de Branches e Padrões](/branches-structure.md)
 * [Folha de Estilo](/style-sheet.md)
 * [Documento de Arquitetura](/documentation/architecture.md)
 * [Documento de Visão](/documentation/vision.md)
 * [Protótipos](/prototype.md)
-
-

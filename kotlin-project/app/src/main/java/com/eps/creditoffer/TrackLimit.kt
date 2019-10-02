@@ -9,64 +9,58 @@ import kotlinx.android.synthetic.main.track_limit.*
 import android.widget.SeekBar
 import java.lang.Boolean.FALSE
 import android.content.Intent
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.widget.Button
-import kotlinx.android.synthetic.main.track_limit.*
-import android.widget.SeekBar
-import com.github.kittinunf.fuel.Fuel
-import com.github.kittinunf.fuel.core.extensions.jsonBody
-import com.github.kittinunf.result.Result
-import com.github.kittinunf.result.getAs
-import org.json.JSONObject
+import java.lang.Boolean.TRUE
 
 
 class TrackLimit : AppCompatActivity() {
-    var curLimit: Float = 0F
-    var maxLimit: Float = 200F
-    var curUsage: Float = 50F
-    var cpf: Int = 1234
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.track_limit)
 
         val overdraft = OverdraftLink()
-        overdraft.post(1)
+        //overdraft.create(1)
 
-        showSeekBar(overdraft)
+        overdraft.get(1)
 
-        button_save.setOnClickListener(View.OnClickListener {
-            // overdraft update
-        })
-
-        button_cancel.setOnClickListener(View.OnClickListener {
-            // disable overdraft
-        })
+        initSeekBar(overdraft)
 
         button_installment.setOnClickListener(View.OnClickListener {
             val intent = Intent(this, Installment::class.java)
             startActivity(intent)
         })
+
+        cancelCredit.setOnClickListener(View.OnClickListener {
+            overdraft.cancel(1)
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        })
+
+        save.setOnClickListener(View.OnClickListener {
+            overdraft.save(1)
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        })
+
     }
 
-    fun showSeekBar(overdraft: OverdraftLink){
+    fun initSeekBar(overdraft: OverdraftLink){
+        val usage = 30
+
         if(overdraft.isActive){
-            textView_usage.setText("R$ " + overdraft.limitUsed.toInt().toString())
-            textView_cur.setText("R$ " + overdraft.limit.toInt().toString())
-            textView_max.setText("R$ " + overdraft.limitMax.toInt().toString())
+            textView_usage.text = "R$ " + usage
+            textView_cur.text = "R$ " + overdraft.limit.toInt()
+            textView_max.text = "R$ " + overdraft.limitMax.toInt()
             seek_bar.progress = overdraft.limit.toInt()
             seek_bar.max = overdraft.limitMax.toInt()
+            seek_bar.isEnabled = TRUE
 
-            if(!overdraft.isBlocked){
+            println("AAAAAAAAAAAAAAAAAA")
+
+            if(overdraft.isBlocked == FALSE){
 
                 // Hide installment button
                 button_installment.visibility = View.INVISIBLE
-                text_view_cur.text = "R$"+i.toString()
-                curLimit = i.toFloat()
-            }
 
                 // SeekBar
                 textView_currentUsage.text = "Uso Atual"
@@ -74,15 +68,15 @@ class TrackLimit : AppCompatActivity() {
                 textView_usage.setTypeface(Typeface.DEFAULT)
 
                 // Save button
-                button_save.visibility = View.INVISIBLE
+                save.visibility = View.INVISIBLE
 
                 // Set a SeekBar change listener
                 seek_bar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
 
-                    override fun onProgressChanged(seekBar: SeekBar, value: Int, b: Boolean) {
+                    override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
                         // Display the current progress of SeekBar
-                        textView_cur.text = "R$"+value.toString()
-                        overdraft.limit = value.toFloat()
+                        textView_cur.text = "R$"+i.toString()
+                        overdraft.limit = i.toFloat()
                     }
 
                     override fun onStartTrackingTouch(seekBar: SeekBar) {
@@ -90,7 +84,7 @@ class TrackLimit : AppCompatActivity() {
                     }
 
                     override fun onStopTrackingTouch(seekBar: SeekBar) {
-                        button_save.visibility = View.VISIBLE
+                        save.visibility = View.VISIBLE
                     }
                 })
             }
@@ -104,107 +98,9 @@ class TrackLimit : AppCompatActivity() {
                 textView_currentUsage.text = "TOTAL A SER PAGO"
                 textView_cur.text = "-"
                 textView_usage.setTextColor(Color.RED)
-
             }
         }
         else {}//mudar tela
 
     }
-
 }
-        })
-
-
-
-        val  cancelCredit = findViewById(R.id.cancelCredit) as Button
-
-
-
-        cancelCredit.setOnClickListener {
-
-            var url: String = "http://10.0.2.2:3000/api/users/"+ cpf + "/overdrafts/cancel"
-
-            Fuel.put(url)
-                .response { request, response, result ->
-                    println(request)
-                    println(response)
-                    val (bytes, error) = result
-                    if (bytes != null) {
-                        println("[response bytes] ${String(bytes)}")
-                    }
-                    println(result)
-                    when(result){
-                        is Result.Success -> {
-
-                            val intent = Intent(this, TrackLimit::class.java)
-                            startActivity(intent)
-
-                        }
-                        is Result.Failure -> {
-                            println("Deu ruim")
-                        }
-                    }
-                }
-
-
-        }
-
-        val  save = findViewById(R.id.save) as Button
-        save.setOnClickListener {
-
-            var url: String = "http://10.0.2.2:3000/api/users/"+ 1 + "/overdrafts"
-
-            val json = JSONObject()
-            json.put("limit", curLimit)
-
-            println(curLimit)
-
-            Fuel.put(url).jsonBody(json.toString())
-                .response { request, response, result ->
-                    println(request)
-                    println(response)
-                    val (bytes, error) = result
-                    if (bytes != null) {
-                        println("[response bytes] ${String(bytes)}")
-                    }
-                    println(result)
-                    when(result){
-                        is Result.Success -> {
-
-                            val intent = Intent(this, TrackLimit::class.java)
-                            startActivity(intent)
-
-                        }
-                        is Result.Failure -> {
-                            println("Deu ruim")
-                        }
-                    }
-                }
-
-
-        }
-
-        var url: String = "http://10.0.2.2:3000/api/users/"+ 1 + "/overdrafts"
-
-        Fuel.get(url)
-            .response { request, response, result ->
-                println(request)
-                println(response)
-                val (bytes, error) = result
-                if (bytes != null) {
-                    println("[response bytes] ${String(bytes)}")
-                }
-                println(result)
-                when(result){
-                    is Result.Success -> {
-                        println(result)
-
-                    }
-                    is Result.Failure -> {
-                        println("Deu ruim")
-                    }
-                }
-            }
-    }
-    }
-

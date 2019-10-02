@@ -126,7 +126,7 @@
         android:text="R$ 0"
         android:textAlignment="center"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:textSize="12sp" />
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/textView_max"
@@ -135,7 +135,6 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="200dp"
         android:layout_marginEnd="16dp"
-        android:text="max"
         android:textAlignment="center"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
         android:textSize="14sp" />

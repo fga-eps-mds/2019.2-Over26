@@ -16,7 +16,8 @@ class MainActivity : AppCompatActivity() {
         //user.post()
         user.get(1)
 
-        println("Main 1")
+        println("---------------------Main 1:")
+        println(user.cpf)
 
         /*Botão auxiliar q será removido posteriormente*/
         val auxiliar = findViewById(R.id.auxiliar) as Button

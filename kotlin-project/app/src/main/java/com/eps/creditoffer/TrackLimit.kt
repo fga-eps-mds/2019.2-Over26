@@ -17,7 +17,9 @@ class TrackLimit : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.track_limit)
 
-        val overdraft = OverdraftLink(UserId = 1)
+        val overdraft = OverdraftLink()
+        overdraft.post(1)
+
         showSeekBar(overdraft)
 
         button_save.setOnClickListener(View.OnClickListener {
@@ -58,10 +60,10 @@ class TrackLimit : AppCompatActivity() {
                 // Set a SeekBar change listener
                 seek_bar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
 
-                    override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
+                    override fun onProgressChanged(seekBar: SeekBar, value: Int, b: Boolean) {
                         // Display the current progress of SeekBar
-                        textView_cur.text = "R$"+i.toString()
-                        overdraft.limit = i.toFloat()
+                        textView_cur.text = "R$"+value.toString()
+                        overdraft.limit = value.toFloat()
                     }
 
                     override fun onStartTrackingTouch(seekBar: SeekBar) {

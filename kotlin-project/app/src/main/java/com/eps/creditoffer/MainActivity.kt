@@ -12,6 +12,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val user = UserLink()
+        //user.post()
+        user.get(1)
+
+        println("Main 1")
 
         /*Botão auxiliar q será removido posteriormente*/
         val auxiliar = findViewById(R.id.auxiliar) as Button

@@ -1,44 +1,39 @@
 package com.eps.creditoffer
 
+
 import com.github.kittinunf.fuel.Fuel
+import com.github.kittinunf.fuel.core.ResponseDeserializable
+import com.github.kittinunf.fuel.core.extensions.jsonBody
 import com.github.kittinunf.result.Result
+import com.google.gson.Gson
+import org.json.JSONArray
 import org.json.JSONObject
-import java.lang.Boolean.FALSE
-import java.lang.Boolean.TRUE
-import java.util.*
 
-class OverdraftLink(){
+class UserLink(){
 
-    var user: Int = 0
-    var firstUseDate: Date? = null
-    var isActive: Boolean = FALSE
-    var limit: Float = 0F
-    var limitMax: Float = 0F
-    var limitUsed: Float = 0F
-    var isBlocked: Boolean = TRUE
-
+    var cpf: Int = 0
+    var name: String = ""
+    var email: String = ""
+    var phone: Int = 0
+    var monthlyIncome: Float = 0F
 
     private val ip: String = "192.168.0.16"
-    private var data = JSONObject()
 
-    private fun parsedata(){
-        println("ParseData:")
-        println(data)
+    class Deserializer : ResponseDeserializable<UserLink> {
+        override fun deserialize(content: String) = Gson().fromJson(content, UserLink::class.java)
     }
 
     fun get(id: Int){
 
-        val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts"
+        val url: String = "http://" + ip + ":3000/api/users/" + id.toString()
 
         Fuel.get(url)
-            .response { request, response, result ->
+            .responseObject(UserLink.Deserializer()){ request, response, result ->
                 println(request)
                 println(response)
                 val (bytes, error) = result
                 if (bytes != null) {
-                    println("[response bytes] ${String(bytes)}")
-                    //data.getJSONArray(bytes.toString())
-                    //parsedata()
+                    println("[response bytes.cpf]" + bytes.cpf)
                 }
                 println(result)
                 when(result){
@@ -53,11 +48,11 @@ class OverdraftLink(){
             }
     }
 
-    fun post(id: Int){
-        val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts"
+    fun post(){
+        val url: String = "http://" + ip + ":3000/api/users"
 
-        Fuel.get(url)
-            .body("")
+        Fuel.post(url)
+            .jsonBody("{ \"cpf\" : 1 }")
             .response { request, response, result ->
                 println(request)
                 println(response)
@@ -81,12 +76,10 @@ class OverdraftLink(){
 
     fun put(id: Int){
 
-        val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts"
+        val url: String = "http://" + ip + ":3000/api/users/" + id.toString()
 
         Fuel.get(url)
-            .body("{" +
-                    "\"limitUsed\": 50," +
-                    "\"firstUseDate\": \"2019-09-02T01:10:53.081Z\"}")
+            .body("")
             .response { request, response, result ->
                 println(request)
                 println(response)

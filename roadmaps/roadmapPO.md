@@ -1,3 +1,3 @@
 ## RoadMap Product Owner
 
-![](../../images/roadmaps/RoadMapPO.png)
+![](../images/roadmaps/RoadMapPO.png)

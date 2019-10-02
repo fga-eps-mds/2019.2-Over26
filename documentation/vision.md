@@ -1,14 +1,4 @@
 # Documento de Visão
-| Data | Versão | Autor(a) | Descrição |
-| - | - | - | - |
-| 11/09/2019 | 0.1 | Erick Reis | Estrutura básica do documento e índice|
-| 11/09/2019 | 0.2 | Erick Reis | Adicionando Posicionamento e Restrições|
-| 12/09/2019 | 0.3 | Isabella Carneiro| Adicionando Visão Geral do Produto|
-| 13/09/2019 | 0.4 | Luiza Cezario | Adicionando Descrição dos Envolvidos e dos Usuários
-| 13/09/2019 | 0.5 | João Gabriel | Adicionando Recursos|
-| 14/09/2019 | 0.6 | Gabriel | Adicionando Introdução|
-
-## Índice
 
 - [Documento de Visão](#Documento-de-Vis%C3%A3o)
   - [Índice](#%C3%8Dndice)
@@ -142,3 +132,14 @@ Disponibilidade: O Sistema deve estar sempre disponível, isto é, 24 horas por 
 Usabilidade: O Sistema deve ser intuitivo para facilitar o uso do cliente e um time de suporte online deve estar sempre a postos para tirar qualquer dúvida do cliente.
 
 Manutenção: O Sistema deve ser facilmente manutenível, para que todos dados dos clientes possam ser modificáveis sem a necessidade de uma recompilação e para facilitar um aprimoramento futuro.
+
+## Histórico de Versões 
+
+| Data | Versão | Autor(a) | Descrição |
+| - | - | - | - |
+| 11/09/2019 | 0.1 | Erick Reis | Estrutura básica do documento e índice|
+| 11/09/2019 | 0.2 | Erick Reis | Adicionando Posicionamento e Restrições|
+| 12/09/2019 | 0.3 | Isabella Carneiro| Adicionando Visão Geral do Produto|
+| 13/09/2019 | 0.4 | Luiza Cezario | Adicionando Descrição dos Envolvidos e dos Usuários
+| 13/09/2019 | 0.5 | João Gabriel | Adicionando Recursos|
+| 14/09/2019 | 0.6 | Gabriel | Adicionando Introdução|

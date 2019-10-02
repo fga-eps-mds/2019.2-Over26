@@ -1,3 +1,3 @@
 ## RoadMap Geral
 
-![img](https://i.ibb.co/4dxwSTn/ROADMAP2.png)
+![](../images/roadmaps/RoadMapGeral2.png)

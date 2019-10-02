@@ -1,22 +1,4 @@
 # Documento de Arquitetura
-| Data | Versão | Autor(a) | Descrição |
-| - | - | - | - |
-| 05/09/2019 | 0.1 | João Gabriel | Criação do índice e adição da introdução|
-| 05/09/2019 | 0.2 | Gabriel e João Paulo | Adição da visão lógica e desempenho|
-| 06/09/2019 | 0.3 | Isabella | Adição de Restrições do projeto|
-| 06/09/2019 | 0.4 | Isabella e João Gabriel | Adição de Qualidade|
-| 06/09/2019 | 0.5 | Luiza | Adição de Visão de Casos de Uso|
-| 09/09/2019 | 0.6 | Erick | Adição de Representação da Arquitetura e correção de índice|
-| 10/09/2019 | 0.7 | Natália, Luiza, João Paulo, Erick, Maria Luiza | Adição do Diagrama de Casos de Uso |
-| 11/09/2019 | 0.8 | Luiza | Refatoração da Visão de Casos de Uso|
-| 11/09/2019 | 0.9 | Erick | Corrigindo índice|
-| 11/09/2019 | 1.0 | Erick | Refatorando desempenho e realocando restrições|
-| 11/09/2019 | 1.1 | João Gabriel| Refatoração da introdução|
-| 11/09/2019 | 1.2 | Natália | Adição do diagrama de classes e do diagrama lógico |
-| 13/09/2019 | 1.3 | João Paulo e Gabriel | Refatoração da Visão Lógica |
-| 24/09/2019 | 1.4 | Natália | Refatoração do diagrama de classes e do diagrama lógico |
- 
-## Índice
 
 - [1. Introdução](#_1-introdução)
   * [1.1. Objetivos](#_11-objetivos)
@@ -304,3 +286,22 @@ O desempempenho do sistema está relacionado ao aparelho utilizado para rodar a 
 ## 7. Qualidade
 Como objetivo de qualidade a aplicação deseja ter um bom sistema de segurança, visto que existem importantes informações de usuários que serão acessadas pela aplicação e que não podem ser visualizados por todos.
 O código deverá ser bem estruturado, seguindo as normas de boas práticas para que terceiros, responsáveis por suas eventuais manutenções, consigam trabalhar sem a necessidade consultar os desenvolvedores originais.
+
+## Histórico de Versão
+
+| Data | Versão | Autor(a) | Descrição |
+| - | - | - | - |
+| 05/09/2019 | 0.1 | João Gabriel | Criação do índice e adição da introdução|
+| 05/09/2019 | 0.2 | Gabriel e João Paulo | Adição da visão lógica e desempenho|
+| 06/09/2019 | 0.3 | Isabella | Adição de Restrições do projeto|
+| 06/09/2019 | 0.4 | Isabella e João Gabriel | Adição de Qualidade|
+| 06/09/2019 | 0.5 | Luiza | Adição de Visão de Casos de Uso|
+| 09/09/2019 | 0.6 | Erick | Adição de Representação da Arquitetura e correção de índice|
+| 10/09/2019 | 0.7 | Natália, Luiza, João Paulo, Erick, Maria Luiza | Adição do Diagrama de Casos de Uso |
+| 11/09/2019 | 0.8 | Luiza | Refatoração da Visão de Casos de Uso|
+| 11/09/2019 | 0.9 | Erick | Corrigindo índice|
+| 11/09/2019 | 1.0 | Erick | Refatorando desempenho e realocando restrições|
+| 11/09/2019 | 1.1 | João Gabriel| Refatoração da introdução|
+| 11/09/2019 | 1.2 | Natália | Adição do diagrama de classes e do diagrama lógico |
+| 13/09/2019 | 1.3 | João Paulo e Gabriel | Refatoração da Visão Lógica |
+| 24/09/2019 | 1.4 | Natália | Refatoração do diagrama de classes e do diagrama lógico |

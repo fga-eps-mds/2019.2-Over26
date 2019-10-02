@@ -8,7 +8,7 @@
 | 13/09/2019 | 0.5 | João Gabriel | Adicionando Recursos|
 | 14/09/2019 | 0.6 | Gabriel | Adicionando Introdução|
 |29/09/2019 | 0.7 | Isabella Carneiro | Atualizando Introdução e Posicionamento|
-|30/09/2019 | 0.8 | Adrianne Alves | Revisão da finalidade, Escopo, Referências, Oportunidade de Negócios, Descrição do problema, Sentença de Posição do Produto, Descrição dos Envolvidos e dos Usuários |
+|30/09/2019 | 0.8 | Adrianne Alves | Revisão da finalidade, Escopo, Referências, Oportunidade de Negócios, Descrição do problema, Sentença de Posição do Produto, Descrição dos Envolvidos e dos Usuários, Visão Geral do Produto |
 
 ## Índice
 
@@ -172,13 +172,17 @@ Entretanto, os bancos possuem licença diferente da Sociedade de Crédito Direto
 ## 4. Visão Geral do Produto
 
 ### 4.1. Perspectiva do produto
- O aplicativo tem a função de realizar o processo de oferta de crédito aos clientes do banco que solicitarem o mesmo. Tal aplicação também oferecerá ao usuário a opção de gerenciar seu limite de crédito.
+ O aplicativo tem a função de fornecer o serviço de cheque especial aos clientes que necessitarem, oferecendo cobertura desde a ativação do serviço ao parcelamento da dívida gerada. O mesmo fornecerá um prazo de 26 dias a partir da instância da dívida para começar a aplicar as taxas, fornecendo ao usuário maior controle para programar a quitação da mesma.
 
 ### 4.2. Resumo dos recursos
-| Benefício para os clientes | Recursos de suporte |
+| Benefício para os usuários | Recursos de suporte |
 | - | - |
-| Facilidade de requisitar crédito | Layout simples |
-| Possibilidade de modificar o crédito | Tela em que é possível gerenciar o crédito|
+| Facilidade na solicitação do serviço de cheque especial | Fluxo de solicitação simples e enxuto. |
+| Fácil controle do valor máximo de crédito | Ajuste de valor máximo de limite |
+| Acompanhamento transparente da dívida | Relatório de parcelamento de dívidas por cheque especial |
+| Transparência nas taxas aplicadas | Demonstração das taxas aplicadas à dívida |
+| Controle do pagamento da dívida | Parcelamento da dívida por cheque especial |
+| Feedback constante | Notificação a cada passo do fluxo de cheque especial. |
 
 
 ## 5. Recursos do Produto

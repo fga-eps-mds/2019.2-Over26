@@ -31,3 +31,9 @@
     - Sprint 4
 
       - [Planejamento](/sprints/sprint4/planejamento.md) 
+
+      - [Resultado](/sprints/sprint4/resultado.md)
+
+    - Sprint 5
+
+      - [Planejamento](/sprints/sprint5/planejamento.md) 

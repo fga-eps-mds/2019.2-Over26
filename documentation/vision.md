@@ -186,7 +186,16 @@ Entretanto, os bancos possuem licença diferente da Sociedade de Crédito Direto
 
 
 ## 5. Recursos do Produto
-A aplicação permitirá ao usuario solicitar crédito de cheque especial,aceitar ou recusar o crédito,controlar o quanto deste credito estará disponivel para gasto,sendo que existirão telas especificas na mesma para poder acessar essas informações e fazer as solicitações.
+A aplicação permitirá ao usuario solicitar crédito de cheque especial, cancelar o crédito,controlar o quanto deste crédito estará disponivel para gasto, entre outros, como se segue:
+
+- Visualizar saldo e extrato da conta;
+- Checar elegibilidade para uso do cheque especial;
+- Ativar o serviço;
+- Acompanhar limite de cheque especial;
+- Acompanhar e parcelar dívida;
+- Feedback de elegibilidade;
+- Ativação do serviço;
+- Acompanhamento do período de isenção de juros;
 
 ## 6. Restrições
 

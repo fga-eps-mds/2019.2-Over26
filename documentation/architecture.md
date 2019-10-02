@@ -41,23 +41,23 @@
 
 ### 1.1. Objetivos
 
-Tem se por objetivo deste documento detalhar a arquitetura e tecnologias usadas na aplicação,que se trata de um aplicativo focado em "oferta de crédito". 
+O objetivo deste documento é detalhar a arquitetura e tecnologias usadas na aplicação,que se trata de um aplicativo mobile focado na função de Cheque Especial do banco N26 que será implementado no Brasil.
 
-A nescessidade deste detalhamento se da para o melhor entendimento daqueles responsaveis pelo desenvolvimento, sobre o que foi definido e o que foi produzido de que forma.
+A necessidade deste detalhamento se dá para o melhor entendimento do que está sendo produzido e de que forma está sendo realizado.
 
 ###  1.2. Escopo do documento
 
-Conforme dito em Objetivos (1.1.), este documento conterá detalhes sobre a arquitetura escolhida para o sistema,as lógicas por trás das implementações, as linguagens/tecnologias usadas, os padrões estabelecidos pela equipe ,informaçoes referentes a bancos de dados, diagramas de classe  e de caso de uso.
+Este documento contém detalhes sobre a arquitetura escolhida para o sistema, as lógicas por trás das implementações, as linguagens/tecnologias usadas, os padrões estabelecidos pela equipe , informações referentes à bancos de dados, além dos  diagramas de classe e de caso de uso.
 
 ## 2. Representação da Arquitetura
 
-A arquitetura irá seguir o modelo cliente-servidor, onde existe uma aplicação que realiza de fato as tarefas e serviços, o servidor, e outra que faz requisições desses servições e tarefas, o cliente.
+A arquitetura que está sendo utilizada segue o modelo cliente-servidor, que funciona de forma que o processamento de dados é dividido em processos diferentes. O primeiro processo é o que obtém os dados e o outro é o que realiza a manutenção das informações.
+
+No caso da aplicação o responsável pelo primeiro processo citado será o FrontEnd que fará as requisições na API. A mesma está sendo feita em Node.js e é responsável por fazer a comunicação com o Banco de Dados.
 
 Este tipo de arquitetura fornece alta escalabilidade e tem uma grande vantagem quando se trata de manutenção, ponto crítico no caso desde projeto.
 
-Visando manter a escalabilidade da aplicação foi escolhido o Node.js como plataforma de desenvolvimento, além disso com o Express.js, framework de aplicação web, a criação de APIs deve se torna um processo mais simples. Ambas as tecnologias seriam utilizadas no back-end.
-
-Para o front-end será utilizada a linguagem de programação Kotlin visando manter o padrão do sistema da N26.
+![Arquitetura](/images/architecture.png)
 
 ## 3. Restrições e Metas Arquiteturais
 

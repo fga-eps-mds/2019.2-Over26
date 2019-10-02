@@ -18,7 +18,7 @@
 | 11/09/2019 | 1.2 | Natália | Adição do diagrama de classes e do diagrama lógico |
 | 13/09/2019 | 1.3 | João Paulo e Gabriel | Refatoração da Visão Lógica |
 | 24/09/2019 | 1.4 | Natália | Refatoração do diagrama de classes e do diagrama lógico |
-| 01/10/1029 | 1.5 | Isabella Carneiro | Refatoração da Introdução e Representação de Arquitetura |
+| 01/10/1029 | 1.5 | Isabella Carneiro | Refatoração do Documento de Arquitetura |
 
 - [1. Introdução](#_1-introdução)
   * [1.1. Objetivos](#_11-objetivos)
@@ -61,7 +61,9 @@
 
 ### 1.1. Objetivos
 
-O objetivo deste documento é detalhar a arquitetura e tecnologias usadas no projeto, que se trata de um aplicativo mobile focado na função de Cheque Especial.
+O objetivo deste documento é detalhar a arquitetura e tecnologias utilizadas no projeto, que se trata de um aplicativo mobile focado na experiência do usuário utilizando uma função de Cheque Especial do banco N26. 
+
+Visto que, o projeto um Mínimo Produto Viável o maior objetivo é ter um sistema de fácil usabilidade, proporcionando a melhor experiência possível ao utilizar o serviço ofertado.
 
 A necessidade deste detalhamento se dá para o melhor entendimento do que está sendo produzido e de que forma está sendo realizado.
 
@@ -73,11 +75,8 @@ Este documento contém detalhes sobre a arquitetura escolhida para o sistema, as
 
 A arquitetura que está sendo utilizada segue o modelo cliente-servidor, que funciona de forma que o processamento de dados é dividido em processos diferentes. O primeiro processo é o que obtém os dados e o outro é o que realiza a manutenção das informações.
 
-No caso da aplicação o responsável pelo primeiro processo citado será o FrontEnd que fará as requisições na API. A mesma está sendo feita em Node.js e é responsável por fazer a comunicação com o Banco de Dados.
-
+No caso deste projeto, o papel de cliente será desempenhado pelo frontend da aplicação, que está sendo implementado em Kotlin, e o de servidor pela API, implementada em Node.js, que faz toda a comunicação com a camada de persistência dos dados.
 <!-- No parágrafo acima, eu colocaria "No caso deste projeto, o papel de cliente será desempenhado pelo frontend da aplicação (que está sendo implementado em Kotlin) e o de servidor pela API (implementada em Node.js), que faz toda a comunicação com a camada de persistência dos dados." -->
-
-Este tipo de arquitetura fornece alta escalabilidade e tem uma grande vantagem quando se trata de manutenção, ponto crítico no caso desde projeto.
 
 <!-- Acho que não é preciso colocar que a manutenção é ponto crítico do projeto (porque ele vai ser um MVP utilizado para o teste da funcionalidade, não um sistema que será utilizado e mantido de fato). -->
 
@@ -87,15 +86,15 @@ Este tipo de arquitetura fornece alta escalabilidade e tem uma grande vantagem q
 
 ### 3.1. Restrições
 
-O sistema está sendo feito utilizando a linguagem Kotlin para desenvolver o FrontEnd da aplicação de modo que se assemelhe ao aplicativo já existente do banco N26.
-Já o BackEnd do programa está sendo feito com a linguagem Node.js juntamente com o Express.js
+Para alcançar tal finalidade, o backend do sistema, API que fará a comunicação com o banco de dados, será desenvolvido utilizando o Node.js com o framework Express e o frontend, que fará interface com o usuário final, em Kotlin.
 
 <!-- Aqui eu colocaria "Para alcançar tal finalidade, o backend do sistema (API que fará a comunicação com o banco de dados) será desenvolvido utilizando o Node.js com o framework Express, e o frontend (que fará interface com o usuário final) em Kotlin.-->
 
 ### 3.2. Metas Arquiteturais
 
-Por ser um sistema de um banco, a aplicação deve garantir ao usuário a segurança de suas informações pessoais.
-O programa deve ser feito para que as requisições sejam feitas de maneira ágil.
+A meta com esse projeto é disponibilizar uma aplicação que facilite a utilização de um serviço que já é muito utilizado no país, que é o Cheque Especial.
+Deseja-se tornar menos burocrático, economizando tempo e permitindo que o usuário consiga gerenciar seu crédito.
+Além disso, a intenção é que o pagamento seja diferenciado dos bancos que já oferecem tal função, visto que as taxas de juros só são contabilizadas a partir do 26º dia e o cliente consegue acessar as parcelas futuras.
 
 <!-- Acho que o texto deste tópico não está adequado, ele está muito focado na utilização do Node com o Express e a aplicação não está sendo desenvolvida utilizando apenas essas tecnologias. Seria interessante colocar aqui, ao invés do detalhamento das tecnologias, o que se deseja entregar para o usuário final com o sistema. -->
 

@@ -8,8 +8,7 @@
 | 13/09/2019 | 0.5 | João Gabriel | Adicionando Recursos|
 | 14/09/2019 | 0.6 | Gabriel | Adicionando Introdução|
 |29/09/2019 | 0.7 | Isabella Carneiro | Atualizando Introdução e Posicionamento|
-|30/09/2019 | 0.8 | Adrianne Alves | Revisão da finalidade, Escopo, Referências |
-| 01/10/2019 | 0.9 | Isabella Carneiro | Refatorando Visão Geral do Produto |
+|30/09/2019 | 0.8 | Adrianne Alves | Revisão da finalidade, Escopo, Referências, Oportunidade de Negócios, Descrição do problema |
 
 ## Índice
 
@@ -65,20 +64,22 @@ N26: maior fintech da Europa chega ao Brasil ainda em 2019. Disponível em: http
 Banco N26 começa a operar nos EUA. Disponível em: https://www.mobiletime.com.br/noticias/11/07/2019/banco-n26-comeca-a-operar-nos-eua/. Acesso em: 30 de Setembro de 2019.
 Endividamento entre jovens: 12 milhões de brasileiros, entre 25 e 29 anos, estão inadimplentes. Disponível em: https://www.folhape.com.br/noticias/noticias/educa-mais-brasil/2019/03/20/NWS,99493,70,1296,NOTICIAS,2190-ENDIVIDAMENTO-ENTRE-JOVENS-MILHOES-BRASILEIROS-ENTRE-ANOS-ESTAO-INADIMPLENTES.aspx. Acesso em: 30 de Setembro de 2019.
 
-
 ## 2. Posicionamento
 
 ### 2.1. Oportunidade de Negócios
 
-Diversos bancos já disponibilizam o sistema de cheque especial para seus cliente e para utilizar esta função normalmente são necessárias algumas etapas por mais que este crédito já seja pré-ativado.
+O serviço de cheque especial já é disponibilizado por inúmeros bancos, mas para utilizá-lo os clientes precisam se submeter a etapas burocráticas, mesmo possuindo um crédito pré-ativado. Além disso, eles não têm acesso transparente às taxas pagas com a dívida adquirida, que, além de serem altas, já incidem desde o primeiro uso do serviço. O Over26 vem para simplificar esse processo e auxiliar o usuário à acompanhar a sua dívida.
 
-Este projeto oferecerá uma simplificada etapa de ativação de seu cheque especial, e também será fácil de monitorar sua utilização.
-
-Usuário do aplicativo terão o cheque especial no momento que precisarem e além disso poderão acompanhar com detalhes essa funcionalidade.
+Isso porque irá facilitar a ativação do serviço e reduzir os custos do usuário referentes à absorção das taxas nos primeiros 26 dias da instanciação da dívida. Além disso, tornará mais fácil para o usuário conhecer as taxas a serem pagas no momento de contratação do serviço, trazendo a ele o domínio sobre a decisão de adquirir o cheque ou planejar o pagamento. Essa funcionalidade tem o potencial de transformar o modo como a experiência de cheque especial é vista e sentida pelos usuários, sendo de menor custo para os mesmos.
 
 ### 2.2. Descrição do problema
 
-Solicitar o cheque especial quase sempre não é uma tarefa prática, a falta de controle e detalhes sobre sua utilação podem causar um grande problema financeiro para aqueles que não têm facilidade com organização de gastos.
+| |  |
+| -- | -- |
+| O problema seria | Complexidade da contratação do serviço de crédito especial e taxas elevadas sobre o serviço assim que ele é utilizado |
+| que afeta | o usuário |
+| cujo o impacto é | frustração durante o processo de contratação e descontrole da dívida |
+| e uma boa solução seria | uma funcionalidade de crédito especial que fornecesse um período de tempo para o usuário organizar o pagamento da sua dívida, sem incidẽncia de taxa, que estivesse focada na transparência para o usuário e facilidade de contratação do serviço. |
 
 ### 2.3. Sentença de Posição do Produto
 
@@ -113,16 +114,13 @@ Como alternativa diversos bancos oferecem a funcionalidade de cheque especial, b
 ## 4. Visão Geral do Produto
 
 ### 4.1. Perspectiva do produto
- O aplicativo tem como função principal realizar o processo de solicitação e gerenciamento de cheque especial aos clientes do banco N26.
- O mesmo, ainda facilita o pagamento da quantia disponibilizada de forma que durante os 26 primeiros dias não será computado juros ao valor. Além disso, após os 26 dias é criada uma dívida que pode ser parcelada.
+ O aplicativo tem a função de realizar o processo de oferta de crédito aos clientes do banco que solicitarem o mesmo. Tal aplicação também oferecerá ao usuário a opção de gerenciar seu limite de crédito.
 
 ### 4.2. Resumo dos recursos
 | Benefício para os clientes | Recursos de suporte |
 | - | - |
 | Facilidade de requisitar crédito | Layout simples |
 | Possibilidade de modificar o crédito | Tela em que é possível gerenciar o crédito|
-| Facilidade em pagar a dívida | Opção de parcelar a dívida |
-| Taxa de juros diferenciada | Juros só começam a cobrar depois de 26 dias |
 
 
 ## 5. Recursos do Produto
@@ -136,7 +134,7 @@ O _design_ deve se manter no padrão presente na aplicação principal da N26, m
 
 ### 6.2. Restrições de Implementação
 
-O projeto será desenvolvido utlizando o Node.js e o Express.js com _framework_, e todo _front-end_ sob a linguagem Kotlin numa aplicação Android. A aquitetura seguirá o modelo de cliente-servidor.
+O projeto será desenvolvido utlizando o Node.js e o Express.js com _framework_, e todo _front-end_ sob a linguagem Kotlin numa aplicação Android. A aquitetura sequirá o modelo de cliente-servidor.
 
 ### 6.3. Restrições de Segurança
 
@@ -156,4 +154,13 @@ Usabilidade: O Sistema deve ser intuitivo para facilitar o uso do cliente e um t
 
 Manutenção: O Sistema deve ser facilmente manutenível, para que todos dados dos clientes possam ser modificáveis sem a necessidade de uma recompilação e para facilitar um aprimoramento futuro.
 
+## Histórico de Versões
 
+| Data | Versão | Autor(a) | Descrição |
+| - | - | - | - |
+| 11/09/2019 | 0.1 | Erick Reis | Estrutura básica do documento e índice|
+| 11/09/2019 | 0.2 | Erick Reis | Adicionando Posicionamento e Restrições|
+| 12/09/2019 | 0.3 | Isabella Carneiro| Adicionando Visão Geral do Produto|
+| 13/09/2019 | 0.4 | Luiza Cezario | Adicionando Descrição dos Envolvidos e dos Usuários
+| 13/09/2019 | 0.5 | João Gabriel | Adicionando Recursos|
+| 14/09/2019 | 0.6 | Gabriel | Adicionando Introdução|

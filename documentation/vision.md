@@ -8,6 +8,8 @@
 | 13/09/2019 | 0.5 | João Gabriel | Adicionando Recursos|
 | 14/09/2019 | 0.6 | Gabriel | Adicionando Introdução|
 |29/09/2019 | 0.7 | Isabella Carneiro | Atualizando Introdução e Posicionamento|
+|30/09/2019 | 0.8 | Adrianne Alves | Revisão da finalidade e Escopo |
+
 ## Índice
 
 - [1. Introdução](#1-introdução)
@@ -41,25 +43,33 @@
 
 ### 1.1. Finalidade
 
-Este documento tem como objetivo fazer a apresentação do aplicativo mobile Over26, assim como suas funcionalidades e os requisitos mais importantes do projeto, tais como sua capacidade, recursos e relação com o usuário.
+Objetiva-se, por meio deste documento, apresentar o Over26, um Mínimo Produto Viável funcional e determinar sua utilidade e funcionalidades, abordando sua capacidade, recursos e relação com o usuário. Além disso, pretende-se ressaltar a inovação ofertada por meio da descrição do problema que ele aborda, oportunidades de negócios, envolvidos, entre outros. Espera-se então que o leitor entenda a proposta do projeto e sua aplicabilidade.
 
 ### 1.2. Escopo
 
-O banco digital, N26,  tem o objetivo de encontrar novas soluções para a oferta de crédito, de maneira que a licença obtida para operar no Brasil seja respeitada. Tal funcionalidade permite que o usuário com saldo zerado ainda consiga continuar comprando. Assim, o projeto tem  o propósito de ajudar a empresa a testar a funcionalidade no país, focando na experiência do usuário. 
+O N26 é um banco digital alemão que se tornou popular na Europa e está em recente expansão para outros países como por exemplo, os EUA. Nesse aspecto, existe um interesse recente da empresa em trazer os seus serviços ao Brasil, na modalidade de conta de pagamento.
+
+Segundo a FolhaPe, o endividamento entre jovens alcança a casa de 12 milhões de brasileiros, com idades entre 25 e 29 anos. Assim, dado o perfil financeiro brasileiro de endividamento, o N26 viu a possibilidade de inovar ou trazer novas soluções para a oferta de crédito no país, com foco na experiência do uso do cheque especial, cujas taxas são exorbitantes, por meio do seu aplicativo. Dessa forma, idealizou-se o Over26, um Mínimo Produto Viável funcional destinado a avaliar a experiência de usuário com um novo modo de oferta do serviço.
+
+De modo geral, o produto final tem como propósito auxiliar a empresa a testar a experiência do usuário com a funcionalidade de cheque especial, considerando o principal diferencial das demais implementações: O usuário possui 26 dias a partir da primeira data de uso do serviço para pagar a sua dívida.
 
 ### 1.3. Visão geral
 
-O documento apresenta todas as informações essenciais referentes ao projeto trazendo para o leitor a melhor forma de visualizar as informações passadas. Dessa forma, começa-se demonstrando o contexto no qual o projeto foi pensado, em seguida são descritos os envolvidos no sistema e como se relacionam. Por fim, o documento foca nas especificações do projeto. 
+O documento apresenta todas as informações essenciais referentes ao projeto trazendo para o leitor a melhor forma de visualizar as informações passadas. Dessa forma, começa-se demonstrando o contexto no qual o projeto foi pensado, em seguida são descritos os envolvidos no sistema e como se relacionam. Por fim, o documento foca nas especificações do projeto.
 
 ### 1.4. Referências
 
 Template do documento. Disponível em: https://www.ibm.com/support/knowledgecenter/pt-br/SSWMEQ_4.0.6/com.ibm.rational.rrm.help.doc/topics/r_vision_doc.html. Acesso em: 13 de Setembro de 2019.
+N26: maior fintech da Europa chega ao Brasil ainda em 2019. Disponível em: https://www.infomoney.com.br/consumo/n26-maior-fintech-da-europa-chega-ao-brasil-ainda-em-2019-diz-executivo/. Acesso em: 30 de Setembro de 2019.
+Banco N26 começa a operar nos EUA. Disponível em: https://www.mobiletime.com.br/noticias/11/07/2019/banco-n26-comeca-a-operar-nos-eua/. Acesso em: 30 de Setembro de 2019.
+Endividamento entre jovens: 12 milhões de brasileiros, entre 25 e 29 anos, estão inadimplentes. Disponível em: https://www.folhape.com.br/noticias/noticias/educa-mais-brasil/2019/03/20/NWS,99493,70,1296,NOTICIAS,2190-ENDIVIDAMENTO-ENTRE-JOVENS-MILHOES-BRASILEIROS-ENTRE-ANOS-ESTAO-INADIMPLENTES.aspx. Acesso em: 30 de Setembro de 2019.
+
 
 ## 2. Posicionamento
 
 ### 2.1. Oportunidade de Negócios
 
-Diversos bancos já disponibilizam o sistema de cheque especial para seus cliente e para utilizar esta função normalmente são necessárias algumas etapas por mais que este crédito já seja pré-ativado. 
+Diversos bancos já disponibilizam o sistema de cheque especial para seus cliente e para utilizar esta função normalmente são necessárias algumas etapas por mais que este crédito já seja pré-ativado.
 
 Este projeto oferecerá uma simplificada etapa de ativação de seu cheque especial, e também será fácil de monitorar sua utilização.
 
@@ -142,7 +152,7 @@ Usabilidade: O Sistema deve ser intuitivo para facilitar o uso do cliente e um t
 
 Manutenção: O Sistema deve ser facilmente manutenível, para que todos dados dos clientes possam ser modificáveis sem a necessidade de uma recompilação e para facilitar um aprimoramento futuro.
 
-## Histórico de Versões 
+## Histórico de Versões
 
 | Data | Versão | Autor(a) | Descrição |
 | - | - | - | - |

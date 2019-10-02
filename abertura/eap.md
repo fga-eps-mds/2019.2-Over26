@@ -16,6 +16,10 @@ A Estrutura Analítica do Projeto consiste num documento que comporta pacotes de
 
 ![EAP - Crédito Especial (1)](https://user-images.githubusercontent.com/16694289/64900638-a3873200-d668-11e9-9f4e-0ea2f6a7a511.png)
 
+# 4. Versão 3
+
+![](../images/eap.png)
+
 
 
 # Histórico de Versões

@@ -305,3 +305,4 @@ O código deverá ser bem estruturado, seguindo as normas de boas práticas para
 | 11/09/2019 | 1.2 | Natália | Adição do diagrama de classes e do diagrama lógico |
 | 13/09/2019 | 1.3 | João Paulo e Gabriel | Refatoração da Visão Lógica |
 | 24/09/2019 | 1.4 | Natália | Refatoração do diagrama de classes e do diagrama lógico |
+| 01/10/1029 | 1.5 | Isabella Carneiro | Refatoração da Introdução e Representação de Arquitetura |

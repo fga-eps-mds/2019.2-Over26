@@ -20,39 +20,22 @@
 | 24/09/2019 | 1.4 | Natália | Refatoração do diagrama de classes e do diagrama lógico |
 | 01/10/1029 | 1.5 | Isabella Carneiro | Refatoração do Documento de Arquitetura |
 | 02/10/2019 | 1.6 | Natália Rodrigues | Modificando diagrama e descrição dos casos de uso |
+| 02/10/2019 | 1.7 | Natália Rodrigues | Atualizando diagramas de classe e lógico e adicionando diagrama de pacotes | 
 
 - [1. Introdução](#_1-introdução)
   * [1.1. Objetivos](#_11-objetivos)
   * [1.2. Escopo do documento](#_12-escopo-do-documento)
-
 - [2. Representação da Arquitetura](#_2-representação-da-arquitetura)
-
 - [3. Restrições e Metas Arquiteturais](#_3-restrições-e-metas-arquiteturais)
   * [3.1. Restrições](#_31-restrições)
   * [3.2. Metas Arquiteturais](#_32-metas-arquiteturais)
-
 - [4. Visão de Casos de Uso](#_4-visão-de-casos-de-uso)
   * [4.1. Diagrama de Casos de Uso](#_41-Diagrama-de-Casos-de-Uso)
   * [4.2. Descrição dos Casos de Uso](#_42-Descrição-dos-Casos-de-Uso)
-    * [UC01 - Realizar Login](#uc01-realizar-login)
-    * [UC02 - Cadastrar](#uc02-cadastrar)
-    * [UC03 - Solicitar Crédito](#uc03-solicitar-crédito)
-    * [UC04 - Visualizar Regras de Contratação](#uc04-visualizar-regras-de-contratação-de-crédito)
-    * [UC05 - Fornecer Feedback da Solicitação de Crédito](#uc05-fornecer-feedback-da-solicitação-de-crédito)
-    * [UC06 - Analisar Perfil do Usuário](#uc06-analisar-perfil-do-usuário)
-    * [UC07 - Ativar Limite de Crédito](#uc07-ativar-limite-de-crédito)
-    * [UC08 - Ajustar Limite](#uc08---ajustar-limite)
-    * [UC09 - Acompanhar Limite](#uc09-acompanhar-limite)
-    * [UC10 - Solicitar Aumento de Limite](#uc10-solicitar-aumento-de-limite)
-    * [UC11 - Fornecer Feedback da Solicitação de Aumento](#uc11-fornecer-feedback-da-solicitação-de-aumento)
-    * [UC12 - Visualizar Saldo da Conta](#uc12-visualizar-saldo-da-conta)
-    * [UC13 - Visualizar Extrato da Conta](#uc13-visualizar-extrato-da-conta)
-    * [UC14 - Pesquisar uma Transação](#uc1-pesquisar-uma-transação)
-    * [UC15 - Visualizar Detalhamento da Dívida](#uc15-visualizar-detalhamento-da-dívida)
-    * [UC16 - Solicitar Parcelamento da Dívida](#uc16-solicitar-parcelamento-da-dívida)
-
 - [5. Visão Lógica](#_5-visão-lógica)
-  * [5.1. Visão Geral](#_51-visão-geral)
+  * [5.1. Visão Geral: Pacotes e Camadas](#_51-visão-geral-pacotes-e-camadas)
+  * [5.2. Visão Geral: Classes](#_52-visão-geral-classes)
+  * [5.3. Visão Geral: Banco de Dados](#_53-visão-geral-banco-de-dados)
 
 - [6. Desempenho](#_6-desempenho)
 
@@ -64,8 +47,6 @@
 
 O objetivo deste documento é detalhar a arquitetura e tecnologias utilizadas no projeto, que se trata de um aplicativo mobile focado na experiência do usuário utilizando uma função de Cheque Especial do banco N26. 
 
-Visto que, o projeto um Mínimo Produto Viável o maior objetivo é ter um sistema de fácil usabilidade, proporcionando a melhor experiência possível ao utilizar o serviço ofertado.
-
 A necessidade deste detalhamento se dá para o melhor entendimento do que está sendo produzido e de que forma está sendo realizado.
 
 ###  1.2. Escopo do documento
@@ -74,12 +55,9 @@ Este documento contém detalhes sobre a arquitetura escolhida para o sistema, as
 
 ## 2. Representação da Arquitetura
 
-A arquitetura que está sendo utilizada segue o modelo cliente-servidor, que funciona de forma que o processamento de dados é dividido em processos diferentes. O primeiro processo é o que obtém os dados e o outro é o que realiza a manutenção das informações.
+A arquitetura utilizada no projeto é a arquitetura Cliente/Servidor, que se baseia na relação de dois módulos, o cliente e o servidor. O servidor será responsável pela manutenção e processamento dos dados, enquanto ao cliente será encarregada a função de fornecer os dados.
 
 No caso deste projeto, o papel de cliente será desempenhado pelo frontend da aplicação, que está sendo implementado em Kotlin, e o de servidor pela API, implementada em Node.js, que faz toda a comunicação com a camada de persistência dos dados.
-<!-- No parágrafo acima, eu colocaria "No caso deste projeto, o papel de cliente será desempenhado pelo frontend da aplicação (que está sendo implementado em Kotlin) e o de servidor pela API (implementada em Node.js), que faz toda a comunicação com a camada de persistência dos dados." -->
-
-<!-- Acho que não é preciso colocar que a manutenção é ponto crítico do projeto (porque ele vai ser um MVP utilizado para o teste da funcionalidade, não um sistema que será utilizado e mantido de fato). -->
 
 ![Arquitetura](/images/architecture.png)
 
@@ -87,21 +65,13 @@ No caso deste projeto, o papel de cliente será desempenhado pelo frontend da ap
 
 ### 3.1. Restrições
 
-Para alcançar tal finalidade, o backend do sistema, API que fará a comunicação com o banco de dados, será desenvolvido utilizando o Node.js com o framework Express e o frontend, que fará interface com o usuário final, em Kotlin.
-
-<!-- Aqui eu colocaria "Para alcançar tal finalidade, o backend do sistema (API que fará a comunicação com o banco de dados) será desenvolvido utilizando o Node.js com o framework Express, e o frontend (que fará interface com o usuário final) em Kotlin.-->
+O sistema será desenvolvido para ser utilizado em smartphones com sistema Android. Para alcançar tal finalidade, o backend do sistema, API que fará a comunicação com o banco de dados, será desenvolvido utilizando o Node.js com o framework Express e o frontend, que fará interface com o usuário final, em Kotlin.
 
 ### 3.2. Metas Arquiteturais
 
-A meta com esse projeto é disponibilizar uma aplicação que facilite a utilização de um serviço que já é muito utilizado no país, que é o Cheque Especial.
-Deseja-se tornar menos burocrático, economizando tempo e permitindo que o usuário consiga gerenciar seu crédito.
-Além disso, a intenção é que o pagamento seja diferenciado dos bancos que já oferecem tal função, visto que as taxas de juros só são contabilizadas a partir do 26º dia e o cliente consegue acessar as parcelas futuras.
-
-<!-- Acho que o texto deste tópico não está adequado, ele está muito focado na utilização do Node com o Express e a aplicação não está sendo desenvolvida utilizando apenas essas tecnologias. Seria interessante colocar aqui, ao invés do detalhamento das tecnologias, o que se deseja entregar para o usuário final com o sistema. -->
+O sistema deve garantir uma boa experiência do usuário durante sua utilização, busca-se eficiência e respostas rápidas às requisições e uma aplicação amigável do ponto de vista do usuário. Ele também deverá atender aos requisitos não funcionais, como o estruturamento de código, para que assim seja garantida a manutenibilidade do projeto.
 
 ## 4. Visão de Casos de Uso
-
-<!-- Esse tópico aqui pode deixar que eu vou tomar conta. -->
 
 ### 4.1. Diagrama de Casos de Uso
 
@@ -282,13 +252,15 @@ Além disso, a intenção é que o pagamento seja diferenciado dos bancos que j�
 
 ## 5. Visão Lógica
 
-<!-- Esse daqui tbm pode deixar que eu vou cuidar. -->
-
 ### 5.1. Visão Geral
 
- A arquitetura utilizada no projeto é a arquitetura Cliente/Servidor, que se baseia na relação de dois módulos, o cliente e o servidor. O servidor será responsável pela manutenção e processamento dos dados, enquanto ao cliente será encarregada a função de fornecer os dados.
+### 5.1. Visão Geral: Pacotes e Camadas
 
-O cliente solicitará uma função do aplicativo, por exemplo um pedido de crédito, que será enviada para o servidor, para análise dos dados. Caso a solicitação seja válida, o sistema efetuará o pedido e disponibilizará o crédito para o usuário.
+A arquitetura Cliente/Servidor se baseia em dois módulos principais, que farão a comunicação entre si para fornecer ao usuário os serviços necessários. No caso deste projeto, o cliente será a aplicação Kotlin, organizada em pacote(s) interno(s), e o servidor a API REST desenvolvida em Node.js, que utiliza o modelo MVC por padrão e possui módulos internos bem definidos (models, views, controllers, database, etc.). É válido ressaltar que como se trata de uma API REST, o servidor da aplicação não fará uso das views do modelo MVC utilizado pelo Node.
+
+A figura a seguir mostra a estrutura de pacotes do sistema:
+
+![Packages Diagram](/images/packages_diagram.png)
 
 ### 5.2. Visão Geral: Classes
 
@@ -296,26 +268,28 @@ O diagrama de classes a seguir tem como finalidade demonstrar todas classes, atr
 
 Segue o diagrama de classes:
 
-![Diagrama de Classes](/images/classes_diagram.png)
+![Classes Diagram](/images/classes_diagram.png)
 
-- Classes
+#### Classes
 
-    * User: Classe destinada ao cliente que abriga todas informações de sua conta.
-    * UserWithCredit: Classe destinada ao cliente que já solicitou e recebeu seu crédito.
-    * CreditRequest: Classe que permite a clase User solicitar crédito para sua conta.
-    * Debt: Classe que armazena os dados relacionados ao pagamento do crédito concedido ao cliente e suas devidas prestações.
-    * Account: Classe que dispõem os dados bancários do cliente, como transações e seu saldo bancário.
-    * Transaction: Classe que detalha as transações realizadas.
-- Relações
+* **User:** Classe destinada ao cliente que abriga todas informações de sua conta.
+* **Overdraft:** Classe que detalha as informações referentes ao cheque especial do usuário.
+* **OverdraftDebt:** Classe referente às dívidas de cheque especial do usuário.
+* **Installment:** Classe referente às parcelas de uma dívida de cheque especial.
+* **Account:** Classe que dispõe os dados bancários do cliente, como transações e seu saldo bancário.
+* **Transaction:** Classe que detalha as transações realizadas.
 
-    * User é composto por CreditRequest: Demonstra que um usuário pode demandar várias solicitações de crédito e cada solicitação de crédito pertenca à um usuário. 
-    * Account é composto por User: Demonstra que um conta só pode ser possuida por um usuário e também que um usuário só pode possuir uma conta.
-    * Account é composto por Transaction: Demonstra que uma conta pode realizar várias transações, mas que casa transação está associada a apenas uma conta.
-    * UserWithCreadt é composto por Debt: Demonstra que um usuário com crédito pode ter várias pendências, mas uma pendência remete à apenas um usuário.
+#### Relações
+
+* User é composta por OverdraftDebt: Demonstra que um usuário pode ter várias dívidas de cheque especial.
+* OverdraftDebt é composta por Installment: Demonstra que uma dívida pode ser parcelada.
+* Overdraft é composta por User: Demonstra que a classe de cheque especial está atrelada a um usuário.
+* Account é composta por User: Demonstra que um conta só pode ser possuida por um usuário e também que um usuário só pode possuir uma conta.
+* Account é composta por Transaction: Demonstra que uma conta pode realizar várias transações, mas que casa transação está associada a apenas uma conta.
 
 ### 5.3. Visão Geral: Banco de dados
 
-O banco de dados permite com que os dados sejam persistidos para possibilitar a realização das funções do sistema, como por exemplo, permitir que o usuário solicite crédito. Esse banco de dados é composto pelas 6 a seguir:
+O banco de dados permite com que os dados sejam persistidos para possibilitar a realização das funções da aplicação. A figura a seguir mostra o esquemático das tabelas do banco de dados do sistema:
 
 ![Banco de Dados](/images/logic_diagram.png)
 
@@ -324,8 +298,7 @@ O banco de dados permite com que os dados sejam persistidos para possibilitar a 
 O desempempenho do sistema está relacionado ao aparelho utilizado para rodar a aplicação, entretanto a conexão com a internet é o fator que pode causar os maiores problemas de desempenho.
 
 ## 7. Qualidade
-Como objetivo de qualidade a aplicação deseja ter um bom sistema de segurança, visto que existem importantes informações pessoais de usuários que serão acessadas pela aplicação e que não podem ser visualizados por todos.
+
+A utilização da arquitetura Cliente/Servidor tem como objetivo a modularização e divisão da aplicação em camadas com responsabilidades diferentes e bem definidas. O sistema deve, então, apresentar componentes bem estruturados e testados de forma independente, a fim de garantir a qualidade dos serviços entregues ao usuário final da aplicação.
 
 O código deverá ser bem estruturado, seguindo as normas de Boas Práticas de programação para que terceiros, responsáveis por suas eventuais manutenções, consigam trabalhar sem a necessidade consultar os desenvolvedores originais.
-
-<!-- O primeiro parágrafo tá todo errado. Creio que o foco principal do sistema será a experiência do usuário, teremos que oferecer um sistema amigável para os possíveis usuários finais, visto que é um MVP sendo desenvolvido para testar uma funcionalidade em específico. O segundo parágrafo tá de boa. -->

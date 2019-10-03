@@ -19,6 +19,7 @@
 | 13/09/2019 | 1.3 | João Paulo e Gabriel | Refatoração da Visão Lógica |
 | 24/09/2019 | 1.4 | Natália | Refatoração do diagrama de classes e do diagrama lógico |
 | 01/10/1029 | 1.5 | Isabella Carneiro | Refatoração do Documento de Arquitetura |
+| 02/10/2019 | 1.6 | Natália Rodrigues | Modificando diagrama e descrição dos casos de uso |
 
 - [1. Introdução](#_1-introdução)
   * [1.1. Objetivos](#_11-objetivos)
@@ -108,166 +109,176 @@ Além disso, a intenção é que o pagamento seja diferenciado dos bancos que j�
 
 ### 4.2. Descrição dos Casos de Uso
 
-#### UC01 - Realizar Login
-
+#### UC01 - Colocar dinheiro na conta
 |||
-|--|--|
-| Descrição | Esta funcionalidade é responsável por realizar login no aplicativo |
-| Atores | Usuário |
-| Pré-condições | Usuário deve estar conectado à internet |
-| Pós-condições | Usuário estará logado na aplicação e Usuário terá acesso às funcionalidades da aplicação |
-| Fluxo principal | [FP01] Este fluxo se inicia quando o usuário deseja realizar login na aplicação: <br>1. Usuário deve inserir o seu e-mail <br> 2. Usuário deve inserir sua senha <br>3. Usuário deve clicar “Entrar” [FE01] |
-|Fluxo de exceção | [FE01] Verificação de conexão à internet <br> No passo 3 do fluxo principal a aplicação verificará se o usuário está conectado a internet, se não, o sistema não permitirá o login|
+|-|-|
+**Descrição** | Este caso de uso se refere à funcionalidade que tem como objetivo a inserção de dinheiro na conta do usuário
+**Atores** | Usuário
+**Pré-condições** | O usuário deve ter acesso à página web com a interface de _cash-in/cash-out_
+**Pós-condições** | O usuário deverá ter inserido dinheiro em sua conta
+**Fluxo principal** | 1. Usuário acessa interface de cash-in/cash-out <br> 2. Usuário preenche os campos e escolhe a opção "Entrada" <br> 3. Usuário clica em "Criar" [FE01] <br> 4. Dinheiro entra na conta preenchida pelo usuário
+**Fluxo de exceção** | **FE01 - Conexão** <br> Se houver algum problema de conexão, a operação pode não ser concluída com sucesso
 
-#### UC02 - Cadastrar
 
+#### UC02 - Retirar dinheiro da conta
 |||
-|--|--|
-| Descrição | Esta funcionalidade é responsável por realizar cadastro. |
-| Atores | Usuário| 
-| Pré-condições | Usuário deve estar conectado à internet| 
-| Pós-condições | Aplicação permitirá que o usuário possua um cadastro e dará como resposta de sucesso no cadastro ao usuário o acesso às funcionalidades.| 
-| Fluxo principal | [FP01] Este fluxo se inicia quando o usuário deseja realizar cadastro na aplicação: <br> 1. Usuário insere seu e-mail ou telefone <br> 2. Usuário insere seu nome completo <br> 3. Usuário insere seu nome de usuário (username) <br> 4. Usuário insere sua senha <br>5. Usuário clica “Cadastre-se”"[FE01] 
-| Fluxo de exceção | [FE01] Verificação de conexão à internet <br> No passo 5 do fluxo principal a aplicação verifica se o usuário está conectado a internet, se não, o sistema não permitirá o cadastro na aplicação. |
+|-|-|
+**Descrição** | Este caso de uso se refere à funcionalidade que tem como objetivo a retirada de dinheiro da conta do usuário
+**Atores** | Usuário
+**Pré-condições** | O usuário deve ter acesso à página web com a interface de _cash-in/cash-out_
+**Pós-condições** | O usuário deverá ter retirado dinheiro de sua conta
+**Fluxo principal** | 1. Usuário acessa interface de cash-in/cash-out <br> 2. Usuário preenche os campos e escolhe a opção "Saída" <br> 3. Usuário clica em "Criar" [FE01] <br> 4. Dinheiro é retirado da conta preenchida pelo usuário
+**Fluxo de exceção** | **FE01 - Conexão** <br> Se houver algum problema de conexão, a operação pode não ser concluída com sucesso
 
-#### UC03 - Solicitar Crédito
+#### UC03 - Visualizar saldo da conta
 |||
- ----- | ----- 
-Descrição | Esta função solicita a liberação da funcionalidade de crédito para o sistema 
-Atores | Usuário 
-Pré-condições | O usuário deverá estar logado no aplicativo 
-Pós-condições | A solicitação deverá ter sido enviada para o sistema para análise 
-Fluxo principal | [FP01] Este fluxo se inicia quando o usuário deseja solicitar o acesso à funcionalidade de crédito:<br>1. O usuário clica em "Solicitar Crédito"<br>2. O usuário lê os termos de uso da funcionalidade [UC04]<br>3. O usuário clica em "Aceitar Termos de Uso" [FE01]<br>4. O usuário clica em "Confirmar Solicitação" [FE02]
-Fluxo de exceção | [FE01] Se o usuário prosseguir para o passo 4 antes de realizar o passo 3 o sistema retornará uma mensagem de erro<br>[FE02] O usuário poderá decidir não realizar a solicitação e clicar em "Cancelar" 
+----- | ----- 
+**Descrição** | Este caso de uso se refere à  funcionalidade que tem como objetivo mostar o saldo da conta do usuário
+**Atores** | Usuário
+**Pré-condições** | O usuário deverá ter realizado login na aplicação [UC15]
+**Pós-condições** | O usuário deverá ter visualizado o saldo 
+**Fluxo principal** | 1. O usuário abre a aplicação <br> 2. O usuário visualiza o saldo da sua conta na tela inicial [FE01]
+**Fluxo de exceção** | **FE01 - Conexão** <br>Se houver algum problema de conexão, a operação pode não ser concluída com sucesso
 
-#### UC04 - Visualizar Regras de Contratação de Crédito
+
+
+#### UC04 - Visualizar extrato da conta
+|||
+----- | ----- 
+**Descrição** | Este caso de uso se refere à funcionalidade que tem como objetivo apresentar as transações realizadas pelo usuário.
+**Atores** | Usuário
+**Pré-condições** | O usuário deverá ter realizado login na aplicação [UC15]
+**Pós-condições** | O extrato completo deverá ter sido apresentado
+**Fluxo principal** | 1. O usuário clica em "Extrato da Conta" [FE01] <br> 2. O extrato é mostrado na tela
+**Fluxo de exceção** | **FE01 - Conexão** <br>Se houver algum problema de conexão, a operação pode não ser concluída com sucesso
+
+
+#### UC05 - Checar elegibilidade para uso do cheque especial
+|||
+----- | ----- 
+**Descrição** | Este caso de uso se refere à funcionalidade que tem como objetivo checar a elegibilidade do usuário para usar o cheque especial.
+**Atores** | Usuário
+**Pré-condições** | O usuário deverá ter realizado login na aplicação [UC15]
+**Pós-condições** | O usuário deve ter conseguido checar sua elegibilidade para uso do cheque especial
+**Fluxo principal** | 1. O usuário entra na tela de cheque especial <br> 2. O usuário clica em "Avaliar Cheque Especial" [FE01] <br> 3. O usuário recebe o feedback da avaliação [UC06]
+**Fluxo de exceção** | **FE01 - Conexão** <br>Se houver algum problema de conexão, a operação pode não ser concluída com sucesso
+
+#### UC06 - Fornecer feedback sobre elegibilidade
 |||
 ----- | -----
-Descrição | A aplicação mostra ao usuário uma tela com as regras de contratação de crédito
-Atores | Usuário 
-Pré-condições | O usuário deverá ter clicado em "Solicitar Crédito" 
-Pós-condições | Deverá ter sido aberta uma tela com as regras de contratação de crédito 
-Fluxo principal | Este fluxo se inicia quando o usuário clica no botão de "Solicitar Crédito" [UC01];<br>[FP01] O usuário lê as regras de contratação e decide aceitar ou não os termos de uso, podendo ir para o passo 3 em [UC03] ou para [FE02] em [UC03] 
+**Descrição** | O sistema fornece ao usuário o retorno sobre sua solicitação de avaliação da elegibilidade de uso do cheque especial [UC05] |
+**Atores** | Sistema |
+**Pré-condições** | O usuário deverá ter solicitado checagem da elegibilidade para uso do cheque especial |
+**Pós-condições** | O usuário deverá ter recebido o retorno de sua solicitação |
+**Fluxo principal** | 1. O sistema redireciona o usuário para a página com o feedback [FA01] [FA02] [FE01]|
+**Fluxos alternativos** | **FA01 - Usuário elegível** <br> Se o usuário for elegível, o sistema deve redirecioná-lo para a tela de ativação do cheque especial <br> **FA02 - Usuário não elegível** <br> Se o usuário não for elegível, o sistema deve redirecioná-lo para uma tela com a mensagem de inelegibilidade.
+**Fluxo de exceção** | **FE01 - Conexão** <br>Se houver algum problema de conexão, a operação pode não ser concluída com sucesso
 
-#### UC05 - Fornecer Feedback da Solicitação de Crédito
-|||
------ | -----
-| Descrição | O sistema fornece ao usuário o retorno sobre sua solicitação de crédito [UC03] |
-| Atores | Sistema |
-|Pré-condições | O usuário deverá ter solicitado a funcionalidade de crédito e O sistema deverá ter analisado o perfil do usuário [UC06] |
-| Pós-condições | O usuário deverá ter recebido o retorno de sua solicitação |
-|Fluxo principal | [FP01] O sistema envia ao usuário a mensagem sinalizando a aprovação do crédito|
-|Fluxo alternativo | [FA01] O sistema envia ao usuário a mensagem sinalizando que seu crédito não foi aprovado e a lista de possíveis motivos para o retorno negativo | 
 
-#### UC06 - Analisar Perfil do Usuário
+#### UC07 - Ativar cheque especial
 |||
 ----- | ----- 
-Descrição | O sistema envia a solicitação para que o servidor do banco analise o perfil do usuário com base nos dados que tem disponível 
-Atores | Sistema 
-Pré-condições | O usuário deverá ter solicitado a funcionalidade de crédito [UC03] 
-Pós-condições | O sistema deverá aprovar ou recusar o crédito 
-Fluxo principal | [FP01] O sistema envia a solicitação de análise para o servidor com os dados do usuário [FE01] 
-Fluxo de exceção | A aplicação verifica se o usuário está conectado a internet, se não, o sistema não enviará a solicitação de análise para o servidor 
+**Descrição** | Este caso de uso se refere à funcionalidade que permite que o usuário ative o o cheque especial na sua conta |
+**Atores** | Usuário |
+**Pré-condições** | O usuário deverá ter realizado login na aplicação [UC15], deve ter solicitado a análise de elegibilidade e deve ser elegível para uso do cheque especial |
+**Pós-condições** | O limite de cheque especial deverá estar disponível para o uso do usuário |
+**Fluxo principal** | 1. O usuário marca o _checkbox_ concordando com os termos de uso do cheque especial <br> 2. O usuário clica em "Ativar Cheque Especial" [FE01] <br> 3. O cheque especial é ativado e fica disponível para uso 
+**Fluxo de exceção** | **FE01 - Conexão** <br>Se houver algum problema de conexão, a operação pode não ser concluída com sucesso
 
-#### UC07 - Ativar Limite de Crédito
+
+#### UC08 - Desativar cheque especial
+
 |||
 ----- | ----- 
-| Descrição | Essa funcionalidade permite que o usuário ative o crédito que deseja usar |
-| Atores | Usuário |
-| Pré-condições | O usuário deverá ter acesso a funcionalidade de crédito |
-| Pós-condições | O crédito deverá estar disponível para o uso pelo usuário |
-| Fluxo principal | [FP01] Esse fluxo occore quando o usuário deseja ativar o crédito: <br>1. O usuário seleciona o valor que deseja ativar em [UC08] [FA01]<br> 2. O usário clica em ativar crédito<br> 3. Aparecem as regras e condições de uso <br> 4. O usuário clica em "Confirmar Operação" [FE01] 
-| Fluxo alternativo | [FA01] O usuário necessita de um valor de crédito maior do que ele tem disponível no sistema e clica em "Solicitar Aumento de Limite" [UC10] |
-| Fluxo de exceção | [FE01] O usuário decide não realizar a operação e clica em "Cancelar" |
+**Descrição** | Este caso de uso se refere à funcionalidade que permite que o usuário desative o o cheque especial em sua conta |
+**Atores** | Usuário |
+**Pré-condições** | O usuário deverá ter realizado login na aplicação [UC15] e deve ter ativado o cheque especial [UC07] |
+**Pós-condições** | O cheque especial deverá ter sido desativado |
+**Fluxo principal** | 1. O usuário entra na tela de acompanhar limite do cheque especial [UC09] <br> 2. O usuário clica em "Desativar Cheque Especial" [FE01] <br> 3. O cheque especial é desativado e fica indisponível para uso 
+**Fluxo de exceção** | **FE01 - Conexão** <br>Se houver algum problema de conexão, a operação pode não ser concluída com sucesso
 
-#### UC08 - Ajustar Limite
+
+#### UC09 - Acompanhar limite
 |||
 ----- | ----- 
-Descrição | Essa função permite que o usuário ajuste o valor do crédito que deseja usar
-Atores | Usuário 
-Pré-condições | O usuário deverá ter clicado em "Ativar Crédito"
-Pós-condições | O limite deve ter sido ajustado de acordo com o valor escolhido pelo usuário
-Fluxo principal | [FP01] O usuário seleciona na barrinha o valor que deseja de crédito [FA01]
-Fluxo alternativo | [FA01] O usuário pode desejar um limite maior e clicar na opção "Aumentar Limite"
+**Descrição** | Este caso de uso se refere à funcionalidade que permite que o usuário acompanhe seu limite de cheque especial |
+**Atores** | Usuário |
+**Pré-condições** | O usuário deve realizado login na aplicação [UC15] e deve ter ativado o cheque especial [UC07] |
+**Pós-condições** | O usuário deverá ter conseguido acompanhar seu limite |
+**Fluxo principal** | 1. O usuário entra na tela de acompanhar limite do cheque especial <br> 2. O usuário visualiza quantidade do limite utilizado, limite de uso definido por ele e limite máximo que pode ser usado [FA01] [FA02] [FA03] [FA04] [FE01] <br>
+**Fluxos Alternativos** | **FA01 - Desativar cheque especial** [UC08] <br> **FA02 - Ajustar limite** [UC10] <br> **FA03 - Acompanhar período de isenção de juros** [UC11] <br> **FA04 - Parcelar a dívida após os 26 dias** [UC12]
+**Fluxo de exceção** | **FE01 - Conexão** <br>Se houver algum problema de conexão, a operação pode não ser concluída com sucesso
 
-
-#### UC09 - Acompanhar Limite
+#### UC10 - Ajustar limite
 |||
 ----- | ----- 
-Descrição | Essa funcionalidade tem como objetivo apresentar ao usuário o valor de limite que ele tem disponível 
-Atores | Usuário
-Pré-condições | O usuário deve ter ativado a funcionalidade de crédito
-Pós-condições | O usuário deve ter visualizado o limite de crédito disponível
-Fluxo principal | [FP01] O usuário clica em "Acompanhar Limite" e visualiza as informações
+**Descrição** | Este caso de uso se refere à funcionalidade que permite que o usuário ajuste o seu limite de uso de cheque especial |
+**Atores** | Usuário |
+**Pré-condições** | O usuário deve realizado login na aplicação [UC15] e deve ter entrado na tela de acompanhar limite [UC09] |
+**Pós-condições** | O usuário deverá ter conseguido ajustar seu limite de uso |
+**Fluxo principal** | 1. O usuário entra na tela de acompanhar limite do cheque especial [UC09] <br> 2. O usuário ajusta barra de limite com o valor desejado <br> 3. O usuário clica em "Salvar" <br> 4. Limite de uso do cheque especial é ajustado [FE01]
+**Fluxo de exceção** | **FE01 - Conexão** <br>Se houver algum problema de conexão, a operação pode não ser concluída com sucesso
 
+#### UC11 - Acompanhar período de isenção de juros
 
-#### UC10 - Solicitar Aumento de Limite
-|||
------ | -----
-Descrição | Essa funcionalidade tem como objetivo realizar a solicitação de aumento do limite de crédito
-Atores | Usuário
-Pré-condições | O usuário deve ter acesso a funcionalidade de crédito
-Pós-condições | A solicitação deve ter sido enviada para análise do sistema
-Fluxo principal | [FP01] Este fluxo se inicia quando o usuário deseja solicitar o acesso à funcionalidade de crédito:<br>1. O usuário clica em "Solicitar Aumento de Limite"<br>2. O usuário digita o valor que deseja de limite [FE01]<br>3. O usuário clica em "Confirmar Solicitação" [FE02]
-Fluxo de exceção | [FE01] O usuário prossegue para o passo 3 antes de realizar o passo 2 e o sistema retorna uma mensagem de erro<br>[FE02] O usuário pode decidir não aumentar o limite e clicar em "Cancelar"
-
-#### UC11 - Fornecer Feedback da Solicitação de Aumento
-|||
------ | -----
-Descrição | O sistema fornece ao usuário o retorno sobre sua solicitação de crédito [UC10] 
-Atores | Sistema 
-Pré-condições | O usuário deverá ter solicitado o aumento de limite<br>O sistema deverá ter analisado o perfil do usuário [UC06] |
-Pós-condições | O usuário deverá ter recebido o retorno de sua solicitação
-Fluxo principal | [FP01] O sistema envia ao usuário a mensagem sinalizando a aprovação do aumento de limite
-Fluxo alternativo | [FA01] O sistema envia ao usuário a mensagem sinalizando que seu aumento não foi aprovado e a lista de possíveis motivos para o retorno negativo 
-
-#### UC12 - Visualizar Saldo da Conta
 |||
 ----- | ----- 
-Descrição | Essa funcionalidade tem como objetivo mostar o saldo da conta do usuário
-Atores | Usuário
-Pré-condições | O usuário deverá estar logado na aplicação
-Pós-condições | O usuário deverá ter visualizado o saldo 
-Fluxo principal | [FP01] O usuário clica em "Saldo da Conta" e o saldo é mostrado na tela
+**Descrição** | Este caso de uso se refere à funcionalidade que permite que o usuário acompanhe o período de isenção de juros do cheque especial |
+**Atores** | Usuário |
+**Pré-condições** | O usuário deve realizado login na aplicação [UC15] e deve ter entrado na tela de acompanhar limite [UC09] |
+**Pós-condições** | O usuário deverá ter conseguido acompanhar o período de isenção de juros do cheque especial |
+**Fluxo principal** | 1. O usuário entra na tela de acompanhar limite do cheque especial [UC09] <br> 2. O usuário clica em "Acompanhar período de isenção do cheque especial" [FA01] <br> 3. O usuário visualiza qual foi o dia da sua primeira utilização do cheque especial e quantos dias faltam para acabar o período de isenção [FE01]
+**Fluxo alternativo** | **FA01 - Cheque especial ainda não utilizado** <br> Se o cheque especial ainda não foi utilizado, o sistema deve mostrar uma mensagem para usuário.
+**Fluxo de exceção** | **FE01 - Conexão** <br>Se houver algum problema de conexão, a operação pode não ser concluída com sucesso
 
 
-#### UC13 - Visualizar Extrato da Conta
+#### UC12 - Parcelar dívida após os 26 dias
 |||
 ----- | ----- 
-Descrição | Essa funcionalidade tem como objetivo apresentar as transações realizadas pelo usuário
-Atores | Usuário
-Pré-condições | O usuário deverá estar logado
-Pós-condições | O extrato completo deverá ter sido apresentado
-Fluxo principal | [FP01] O usuário deverá clicar em "Extrato da Conta" e o extrato será mostrado na tela
+**Descrição** | Este caso de uso se refere à funcionalidade que permite que o usuário parcele sua dívida após os 26 dias de isenção |
+**Atores** | Usuário |
+**Pré-condições** | O usuário deve realizado login na aplicação [UC15], deve ter entrado na tela de acompanhar limite [UC09] e deve ter usado o limite do cheque especial sem quitar a dívida dentro do período de 26 dias. |
+**Pós-condições** | O usuário deverá ter conseguido parcelar sua dívida no cheque especial |
+**Fluxo principal** | 1. O usuário entra na tela de acompanhar limite do cheque especial [UC09] <br> 2. O usuário visualiza valor da dívida <br> 3. O usuário clica em "Parcelar Dívida" <br> 4. O usuário escolhe a quantidade de parcelas <br> 5. O usuário escolhe o melhor dia de vencimento das parcelas <br> 6. O usuário clica em salvar parcelamento. <br> 7. Parcelamento da dívida é realizado com sucesso e usuário é redirecionado para a tela de visualizar dívidas [UC13] [FA01] [FE01]
+**Fluxo alternativo** | **FA01 - Usuário cancela o parcelamento** <br> Se o usuário clicar em "Cancelar" ou no botão "Voltar", o usuário deve ser redirecionado para a página de acompanhar limite [UC09]
+**Fluxo de exceção** | **FE01 - Conexão** <br>Se houver algum problema de conexão, a operação pode não ser concluída com sucesso
 
-#### UC14 - Pesquisar uma Transação
-|||
------ | -----
-Descrição | Essa funcionalidade tem como objetivo pesquisar uma transação no extrato do usuário
-Atores | Usuário
-Pré-condições | O usuário deverá ter clicado em "Extrato da Conta"
-Pós-condições | A pesquisa deverá retornar os resultados na tela
-Fluxo principal | [FP01] 1. O usuário digita a palavra chave <br>2. O usuário clica em pesquisar
-Fluxo de exceção | [FE01] A pesquisa pode não ecnontrar a palavra chave<br> [FE02] O usuário pode realizar o passo 2 antes do 1 e o sistema retorna uma mensagem de erro
+#### UC13 - Visualizar dívidas
 
-#### UC15 - Visualizar Detalhamento da Dívida
-|||
------ | -----
-Descrição | Essa funcionalidade mostra a dívida em detalhes
-Atores | Usuário 
-Pré-condições | O usuáro deverá ter utilizado uma quantidade de créditos
-Pós-condições | Os detalhes da dívida devem ter sido mostrados
-Fluxo principal | [FP01] O usuário deve clicar em "Destalhamento da Dívida"
-
-#### UC16 - Solicitar Parcelamento da Dívida
 |||
 ----- | ----- 
-Descrição | Essa função permite que o usuário parcele a sua dívida 
-Atores | Usuário
-Pré-condições | O usuário deverá ter utilizado uma quantidade de créditos
-Pós-condições | A dívida deverá ter sido parcelada
-Fluxo principal | [FP01] Esse fluxo ocorre quando o usuário deseja parcelar sua dívida:<br>1. O usuário clica em parcelar a dívida<br>2. O usuário seleciona a quantidade de parcelas<br>3. O usuário visualiza os detalhes do parcelamento<br>4. O usuário clica em "Confirmar Operação"
-Fluxo de exceção | [FE01] O usuário pode desistir de parcelar e clicar em "Cancelar"<br>[FE02] O usuário pode passar para o passo 4 sem ter realizado o passo 2 e o sistema retorna uma mensagem de erro
+**Descrição** | Este caso de uso se refere à funcionalidade que permite que o usuário visualize as suas dívidas no cheque especial (pagas e pendentes) |
+**Atores** | Usuário |
+**Pré-condições** | O usuário deve realizado login na aplicação [UC15] |
+**Pós-condições** | O usuário deverá ter conseguido visualizar sua lista de dívidas |
+**Fluxo principal** | 1. O usuário entra na tela de visualização das dívidas [FA01] <br> 2. O usuário visualiza lista de dívidas (pagas e pendentes) [FA02] [FE01]
+**Fluxo alternativo** | **FA01 - Usuário não possui dívidas** <br> Se o usuário não possuir dívidas, o sistema deve mostrar uma mensagem. <br> **FA02 - Acompanhar dívida** [UC14]
+**Fluxo de exceção** | **FE01 - Conexão** <br>Se houver algum problema de conexão, a operação pode não ser concluída com sucesso
+
+
+#### UC14 - Acompanhar dívida
+
+|||
+----- | ----- 
+**Descrição** | Este caso de uso se refere à funcionalidade que permite que o usuário acompanhe uma dívida em específico da sua lista de dívidas |
+**Atores** | Usuário |
+**Pré-condições** | O usuário deve realizado login na aplicação [UC15] e deverá ter entrado na tela de visualização de dívidas [UC13] |
+**Pós-condições** | O usuário deverá ter conseguido acompanhar dívida das lista de dívidas |
+**Fluxo principal** | 1. O usuário clica em uma das dívidas da lista apresentadas na tela de visualizar dívidas <br> 2. O usuário visualiza parcelas da dívida [FE01]
+**Fluxo de exceção** | **FE01 - Conexão** <br>Se houver algum problema de conexão, a operação pode não ser concluída com sucesso
+
+#### UC15 - Realizar Login
+
+|||
+----- | ----- 
+**Descrição** | Este caso de uso se refere à funcionalidade que permite que o usuário realize login na aplicação |
+**Atores** | Usuário |
+**Pré-condições** | O usuário deve ter acesso à aplicação |
+**Pós-condições** | O usuário deverá ter realizado login na aplicação |
+**Fluxo principal** | 1. O usuário abre a aplicação <br> 2. O usuário preenche campos de login e senha <br> 3. O login é efetuado e usuário tem acesso às funcionalidades do sistema [FA01] [FE01]
+**Fluxo Alternativo** | **FA01 - Login e/ou senha errado(s)** <br> Se o usuário preencher um dos campos de maneira errada, o sistema deve exibir uma mensagem de erro
+**Fluxo de exceção** | **FE01 - Conexão** <br>Se houver algum problema de conexão, a operação pode não ser concluída com sucesso
+
 
 ## 5. Visão Lógica
 

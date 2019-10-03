@@ -9,6 +9,7 @@ import android.view.KeyEvent
 import android.view.MotionEvent
 import android.view.View
 import kotlinx.android.synthetic.main.activity_installment.*
+import java.lang.Boolean.TRUE
 
 class Installment : AppCompatActivity() {
 
@@ -17,10 +18,9 @@ class Installment : AppCompatActivity() {
         setContentView(R.layout.activity_installment)
 
         var debt = OverdraftDebtLink()
-        //debt.create(1)
+        debt.create(1)
+        debt.get(1)
         debt.checkAmout(1, this)
-
-        
 
         //callback(debt)
 
@@ -89,7 +89,10 @@ class Installment : AppCompatActivity() {
         })
 
         button_confirm_installment.setOnClickListener(View.OnClickListener {
-            // put
+            debt.wasDivided = TRUE
+            debt.split(1)
+            val intent = Intent(this, TrackLimit::class.java)
+            startActivity(intent)
         })
 
         button_cancel_installment.setOnClickListener(View.OnClickListener {

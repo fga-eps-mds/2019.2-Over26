@@ -18,7 +18,7 @@ class OverdraftDebtLink() {
     var wasDivided: Boolean = FALSE
     //var installment: <InstallmentsLink>
     var dueDate: Int = 0
-    var quantityInstallment: Int = 0
+    var quantityInstallment: Int = 1
     var totalAmount: Float = 0F
 
     private val ip: String = "192.168.0.16"
@@ -56,6 +56,40 @@ class OverdraftDebtLink() {
             }
     }
 
+    fun get(id: Int){
+        println("----OverdraftLink.get----")
+
+        val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString()
+
+        Fuel.get(url)
+            .responseObject(OverdraftDebtLink.Deserializer()) { request, response, result ->
+                println(request)
+                println(response)
+                val (bytes, error) = result
+                if (bytes != null) {
+                    this.entryDate = bytes.entryDate
+                    this.amount = bytes.amount
+                    this.rate = bytes.rate
+                    this.wasDivided = bytes.wasDivided
+                    this.dueDate = bytes.dueDate
+                    this.quantityInstallment = bytes.quantityInstallment
+
+                }
+                println(result)
+                when (result) {
+                    is Result.Success -> {
+                        print("Sucecss")
+
+                    }
+                    is Result.Failure -> {
+                        print("Failure")
+
+                    }
+                }
+            }
+
+    }
+
     fun checkAmout(id: Int, r: Installment){
         println("----OverdraftDebtLink.checkAmout---")
         val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString() + "/check"
@@ -67,7 +101,6 @@ class OverdraftDebtLink() {
                 val (bytes, error) = result
                 if (bytes != null) {
                     this.totalAmount = bytes.totalAmount
-                    println("AAAAAA"+totalAmount)
 
                     r.callback(this)
                 }
@@ -77,6 +110,37 @@ class OverdraftDebtLink() {
 
                     }
                     is Result.Failure -> {
+
+                    }
+                }
+            }
+    }
+
+    fun split(id: Int){
+        println("----OverdraftLinkDebt.split----")
+        val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString() + "/options"
+
+        var json = JSONObject()
+        json.put("wasDivided",this.wasDivided)
+        json.put("dueDate",this.dueDate)
+        json.put("quantityInstallmentthis",this.quantityInstallment)
+
+        Fuel.put(url)
+            .jsonBody(json.toString())
+            .responseObject(OverdraftLink.Deserializer()) { request, response, result ->
+                println(request)
+                println(response)
+                val (bytes, error) = result
+                if (bytes != null) {
+
+                }
+                println(result)
+                when(result){
+                    is Result.Success -> {
+                        print("Sucecss")
+                    }
+                    is Result.Failure -> {
+                        print("Failure")
 
                     }
                 }

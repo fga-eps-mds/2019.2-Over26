@@ -21,7 +21,7 @@ class OverdraftLink(){
     var limit: Float = 0F
     var limitMax: Float = 0F
     var limitUsed: Float = 0F
-    var isBlocked: Boolean = FALSE
+    var isBlocked: Boolean = TRUE
 
     private val ip: String = "192.168.0.16"
 

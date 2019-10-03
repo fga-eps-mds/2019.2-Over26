@@ -17,14 +17,14 @@ class UserLink(){
     var phone: Int = 0
     var monthlyIncome: Float = 0F
 
-    private val ip: String = "192.168.43.224"
+    private val ip: String = "192.168.0.16"
 
     class Deserializer : ResponseDeserializable<UserLink> {
         override fun deserialize(content: String) = Gson().fromJson(content, UserLink::class.java)
     }
 
     fun get(id: Int){
-
+        println("----UserLink.get----")
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString()
 
         Fuel.get(url)

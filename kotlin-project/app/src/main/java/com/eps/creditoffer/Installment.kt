@@ -17,9 +17,20 @@ class Installment : AppCompatActivity() {
         setContentView(R.layout.activity_installment)
 
         var debt = OverdraftDebtLink()
+        //debt.create(1)
+        debt.checkAmout(1, this)
+
+        
+
+        //callback(debt)
+
+
+    }
+
+    fun callback(debt: OverdraftDebtLink) {
 
         textView_installment_quant.text = debt.quantityInstallment.toString()
-        val value = "%.2f".format(debt.amount/debt.quantityInstallment)
+        val value = "%.2f".format(debt.totalAmount/debt.quantityInstallment)
         textView_installment_value.text = "R$ " + value
 
         button_plus.setOnClickListener(View.OnClickListener {
@@ -27,7 +38,7 @@ class Installment : AppCompatActivity() {
             if (debt.quantityInstallment>=1 && debt.quantityInstallment<12) {
                 debt.quantityInstallment++
                 textView_installment_quant.text = debt.quantityInstallment.toString()
-                val value = "%.2f".format(debt.amount/debt.quantityInstallment)
+                val value = "%.2f".format(debt.totalAmount/debt.quantityInstallment)
                 textView_installment_value.text = "R$ " + value
             }
         })
@@ -36,7 +47,7 @@ class Installment : AppCompatActivity() {
             if (debt.quantityInstallment>1 && debt.quantityInstallment<=12) {
                 debt.quantityInstallment--
                 textView_installment_quant.text = debt.quantityInstallment.toString()
-                val value = "%.2f".format(debt.amount / debt.quantityInstallment)
+                val value = "%.2f".format(debt.totalAmount / debt.quantityInstallment)
                 textView_installment_value.text = "R$ " + value
             }
         })

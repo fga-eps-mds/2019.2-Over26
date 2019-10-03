@@ -16,22 +16,16 @@ class MainActivity : AppCompatActivity() {
         //user.post()
         user.get(1)
 
-        println("---------------------Main 1:")
-        println(user.cpf)
-
-        /*Botão auxiliar q será removido posteriormente*/
-        val auxiliar = findViewById(R.id.auxiliar) as Button
-
-        auxiliar.setOnClickListener{
-
-            val intent = Intent(this, eligibilidade::class.java)
-            // start your next activity
-            startActivity(intent)
-        }
+        println("----MainActivity----")
     }
 
     fun overdraftScreen(view: View) {
         intent = Intent(this, TrackLimit::class.java)
+        startActivity(intent)
+    }
+
+    fun activeOverdraft(view: View) {
+        val intent = Intent(this, eligibilidade::class.java)
         startActivity(intent)
     }
 }

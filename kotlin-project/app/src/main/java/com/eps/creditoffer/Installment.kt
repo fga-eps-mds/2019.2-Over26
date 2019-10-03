@@ -18,16 +18,9 @@ class Installment : AppCompatActivity() {
         setContentView(R.layout.activity_installment)
 
         var debt = OverdraftDebtLink()
-        debt.create(1)
+        //debt.create(1)
         debt.get(1)
-        debt.checkAmout(1, this)
-
-        //callback(debt)
-
-
-    }
-
-    fun callback(debt: OverdraftDebtLink) {
+        debt.checkAmout(1)
 
         textView_installment_quant.text = debt.quantityInstallment.toString()
         val value = "%.2f".format(debt.totalAmount/debt.quantityInstallment)
@@ -90,7 +83,7 @@ class Installment : AppCompatActivity() {
 
         button_confirm_installment.setOnClickListener(View.OnClickListener {
             debt.wasDivided = TRUE
-            debt.split(1)
+            debt.createInstallment(1)
             val intent = Intent(this, TrackLimit::class.java)
             startActivity(intent)
         })
@@ -99,6 +92,7 @@ class Installment : AppCompatActivity() {
             val intent = Intent(this, TrackLimit::class.java)
             startActivity(intent)
         })
+
     }
 
     fun cleanbuttons(){

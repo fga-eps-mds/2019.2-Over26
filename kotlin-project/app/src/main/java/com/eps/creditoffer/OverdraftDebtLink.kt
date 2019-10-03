@@ -10,7 +10,7 @@ import java.lang.Boolean.FALSE
 import java.lang.Boolean.TRUE
 import java.util.*
 
-class OverdraftDebtLink() {
+class OverdraftDebtLink {
 
     var entryDate: Date = Date()
     var amount: Float = 0F
@@ -27,123 +27,103 @@ class OverdraftDebtLink() {
         override fun deserialize(content: String) = Gson().fromJson(content, OverdraftDebtLink::class.java)
     }
 
+    fun get(id: Int){
+        println("----OverdraftDebtLink.get----")
+        val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString()
+
+        val (request, response, result) = Fuel.get(url)
+            .responseObject(OverdraftDebtLink.Deserializer())
+        println("Response:" + response)
+        val (bytes, error) = result
+        if (bytes != null) {
+            this.entryDate = bytes.entryDate
+            this.amount = bytes.amount
+            this.rate = bytes.rate
+            this.wasDivided = bytes.wasDivided
+            this.dueDate = bytes.dueDate
+            this.quantityInstallment = bytes.quantityInstallment
+        }
+        when (result) {
+            is Result.Success -> {
+                print("Success")
+            }
+            is Result.Failure -> {
+                print("Failure")
+            }
+        }
+    }
+
     fun create(id: Int){
         println("----OverdraftDebtLink.create---")
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdraftDebt"
 
-        Fuel.post(url)
-            .responseObject(OverdraftDebtLink.Deserializer()) { request, response, result ->
-                println(request)
-                println(response)
-                val (bytes, error) = result
-                if (bytes != null) {
-                    this.entryDate = bytes.entryDate
-                    this.amount = bytes.amount
-                    this.rate = bytes.rate
-                    this.wasDivided = bytes.wasDivided
-                    this.dueDate = bytes.dueDate
-                    this.quantityInstallment = bytes.quantityInstallment
-                }
-                println(result)
-                when(result){
-                    is Result.Success -> {
-
-                    }
-                    is Result.Failure -> {
-
-                    }
-                }
+        val (request, response, result) = Fuel.post(url)
+            .responseObject(OverdraftDebtLink.Deserializer())
+        println("Response:" + response)
+        val (bytes, error) = result
+        if (bytes != null) {
+            this.entryDate = bytes.entryDate
+            this.amount = bytes.amount
+            this.rate = bytes.rate
+            this.wasDivided = bytes.wasDivided
+            this.dueDate = bytes.dueDate
+            this.quantityInstallment = bytes.quantityInstallment
+        }
+        when(result){
+            is Result.Success -> {
+                print("Sucecss")
             }
+            is Result.Failure -> {
+                print("Failure")
+            }
+        }
     }
 
-    fun get(id: Int){
-        println("----OverdraftLink.get----")
-
-        val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString()
-
-        Fuel.get(url)
-            .responseObject(OverdraftDebtLink.Deserializer()) { request, response, result ->
-                println(request)
-                println(response)
-                val (bytes, error) = result
-                if (bytes != null) {
-                    this.entryDate = bytes.entryDate
-                    this.amount = bytes.amount
-                    this.rate = bytes.rate
-                    this.wasDivided = bytes.wasDivided
-                    this.dueDate = bytes.dueDate
-                    this.quantityInstallment = bytes.quantityInstallment
-
-                }
-                println(result)
-                when (result) {
-                    is Result.Success -> {
-                        print("Sucecss")
-
-                    }
-                    is Result.Failure -> {
-                        print("Failure")
-
-                    }
-                }
-            }
-
-    }
-
-    fun checkAmout(id: Int, r: Installment){
+    fun checkAmout(id: Int){
         println("----OverdraftDebtLink.checkAmout---")
         val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString() + "/check"
 
-        Fuel.get(url)
-            .responseObject(OverdraftDebtLink.Deserializer()) { request, response, result ->
-                println(request)
-                println(response)
-                val (bytes, error) = result
-                if (bytes != null) {
-                    this.totalAmount = bytes.totalAmount
-
-                    r.callback(this)
-                }
-                println(result)
-                when(result){
-                    is Result.Success -> {
-
-                    }
-                    is Result.Failure -> {
-
-                    }
-                }
+        val (request, response, result) = Fuel.get(url)
+            .responseObject(OverdraftDebtLink.Deserializer())
+        println("Response:" + response)
+        val (bytes, error) = result
+        if (bytes != null) {
+            this.totalAmount = bytes.totalAmount
+        }
+        when(result){
+            is Result.Success -> {
+                print("Sucecss")
             }
+            is Result.Failure -> {
+                print("Failure")
+            }
+        }
     }
 
-    fun split(id: Int){
-        println("----OverdraftLinkDebt.split----")
-        val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString() + "/options"
+    fun createInstallment(id: Int){
+        println("----OverdraftLinkDebt.createInstallment----")
+        val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString() + "/instalments"
 
         var json = JSONObject()
         json.put("wasDivided",this.wasDivided)
         json.put("dueDate",this.dueDate)
         json.put("quantityInstallmentthis",this.quantityInstallment)
 
-        Fuel.put(url)
+        val (request, response, result) = Fuel.post(url)
             .jsonBody(json.toString())
-            .responseObject(OverdraftLink.Deserializer()) { request, response, result ->
-                println(request)
-                println(response)
-                val (bytes, error) = result
-                if (bytes != null) {
-
-                }
-                println(result)
-                when(result){
-                    is Result.Success -> {
-                        print("Sucecss")
-                    }
-                    is Result.Failure -> {
-                        print("Failure")
-
-                    }
-                }
+            .responseObject(OverdraftLink.Deserializer())
+        println("Response:" + response)
+        val (bytes, error) = result
+        if (bytes != null) {
+        }
+        when(result){
+            is Result.Success -> {
+                print("Sucecss")
             }
+            is Result.Failure -> {
+                print("Failure")
+
+            }
+        }
     }
 }

@@ -9,7 +9,7 @@ import com.google.gson.Gson
 import org.json.JSONArray
 import org.json.JSONObject
 
-class UserLink(){
+class UserLink {
 
     var cpf: Int = 0
     var name: String = ""
@@ -27,77 +27,75 @@ class UserLink(){
         println("----UserLink.get----")
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString()
 
-        Fuel.get(url)
-            .responseObject(UserLink.Deserializer()){ request, response, result ->
-                println(request)
-                println(response)
-                val (bytes, error) = result
-                if (bytes != null) {
-                    println("[response bytes.cpf]" + bytes.cpf)
-                }
-                println(result)
-                when(result){
-                    is Result.Success -> {
-                        print("Sucecss")
-
-                    }
-                    is Result.Failure -> {
-                        print("Failure")
-
-                    }
-                }
+        val (request, response, result) = Fuel.get(url)
+            .responseObject(UserLink.Deserializer())
+        println("Response:" + response)
+        val (bytes, error) = result
+        if (bytes != null) {
+            this.cpf = bytes.cpf
+            this.name = bytes.name
+            this.email = bytes.email
+            this.phone = bytes.phone
+            this.monthlyIncome = bytes.monthlyIncome
+        }
+        when(result){
+            is Result.Success -> {
+                print("Sucecss")
             }
+            is Result.Failure -> {
+                print("Failure")
+            }
+        }
     }
 
-    fun post(){
+    fun create(){
+        println("----UserLink.create----")
         val url: String = "http://" + ip + ":3000/api/users"
 
-        Fuel.post(url)
-            .jsonBody("{ \"cpf\" : 1 }")
-            .response { request, response, result ->
-                println(request)
-                println(response)
-                val (bytes, error) = result
-                if (bytes != null) {
-                    println("[response bytes] ${String(bytes)}")
-                    //data.getJSONArray(bytes.toString())
-                    //parsedata()
-                }
-                println(result)
-                when(result){
-                    is Result.Success -> {
+        var json = JSONObject()
+        json.put("cpf", this.cpf)
 
-                    }
-                    is Result.Failure -> {
-
-                    }
-                }
+        val (request, response, result) = Fuel.post(url)
+            .jsonBody(json.toString())
+            .response()
+        println("Response:" + response)
+        val (bytes, error) = result
+        if (bytes != null) {
+        }
+        println(result)
+        when(result) {
+            is Result.Success -> {
+                print("Sucecss")
             }
+            is Result.Failure -> {
+                print("Failure")
+            }
+        }
     }
 
-    fun put(id: Int){
-
+    fun update(id: Int){
+        println("----UserLink.update----")
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString()
 
-        Fuel.get(url)
-            .body("")
-            .response { request, response, result ->
-                println(request)
-                println(response)
-                val (bytes, error) = result
-                if (bytes != null) {
-                    println("[response bytes] ${String(bytes)}")
-                }
-                println(result)
-                when(result){
-                    is Result.Success -> {
-                        print("Sucecss")
-                    }
-                    is Result.Failure -> {
-                        print("Failure")
+        var json = JSONObject()
+        //json.put("", this.)
 
-                    }
-                }
+        val (request, response, result) = Fuel.get(url)
+            .jsonBody(json.toString())
+            .response()
+        println("Response:" + response)
+        val (bytes, error) = result
+        if (bytes != null) {
+        }
+        println(result)
+        when(result){
+            is Result.Success -> {
+                print("Sucecss")
             }
+            is Result.Failure -> {
+                print("Failure")
+
+            }
+        }
     }
 }

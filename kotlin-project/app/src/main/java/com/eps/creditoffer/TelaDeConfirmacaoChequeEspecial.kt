@@ -1,5 +1,6 @@
 package com.eps.creditoffer
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.CheckBox
@@ -27,7 +28,10 @@ class TelaDeConfirmacaoChequeEspecial : AppCompatActivity() {
                 }
 
             activateOverdraft.setOnClickListener {
-                overdraft.activate(1, this)
+                if(overdraft.activate(1)){
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                }
             }
         }
     }

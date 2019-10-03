@@ -18,7 +18,11 @@ class eligibilidade : AppCompatActivity() {
         val overdraft = OverdraftLink()
 
         eligibility_button.setOnClickListener(View.OnClickListener {
-            overdraft.checkUsability(1, this)
+            if(overdraft.checkUsability(1)){
+                val intent = Intent(this, TelaDeConfirmacaoChequeEspecial::class.java)
+                startActivity(intent)
+            }
+
         })
     }
 }

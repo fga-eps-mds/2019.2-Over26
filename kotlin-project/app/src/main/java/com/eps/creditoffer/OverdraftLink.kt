@@ -14,7 +14,7 @@ import java.util.*
 
 class OverdraftLink(){
 
-    var user: Int = 0
+    var userCPF: Int = 0
     var firstUseDate: Date? = null
     var status: Boolean = TRUE
     var isActive: Boolean = TRUE
@@ -29,92 +29,84 @@ class OverdraftLink(){
         override fun deserialize(content: String) = Gson().fromJson(content, OverdraftLink::class.java)
     }
 
-    fun get(id: Int, r: TrackLimit){
+    fun get(id: Int){
         println("----OverdraftLink.get----")
-
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts"
 
-        Fuel.get(url)
-            .responseObject(OverdraftLink.Deserializer()) { request, response, result ->
-                println(request)
-                println(response)
-                val (bytes, error) = result
-                if (bytes != null) {
-                    this.isActive = bytes.status
-                    this.limit = bytes.limit
-                    this.limitMax = bytes.limitMax
-                    this.limitUsed = bytes.limitUsed
-                    this.isBlocked = bytes.isBlocked
-
-                    r.initSeekBar(this)
-                }
-                println(result)
-                when (result) {
-                    is Result.Success -> {
-                        print("Sucecss")
-
-                    }
-                    is Result.Failure -> {
-                        print("Failure")
-
-                    }
-                }
+        val (request, response, result) = Fuel.get(url)
+            .responseObject(OverdraftLink.Deserializer())
+        println("Response:" + response)
+        val (bytes, error) = result
+        if (bytes != null) {
+            this.firstUseDate = bytes.firstUseDate
+            this.isActive = bytes.status
+            this.limit = bytes.limit
+            this.limitMax = bytes.limitMax
+            this.limitUsed = bytes.limitUsed
+            this.isBlocked = bytes.isBlocked
+            this.userCPF = bytes.userCPF
+        }
+        when (result) {
+            is Result.Success -> {
+                println("Success")
             }
-
+            is Result.Failure -> {
+                println("Failure")
+            }
+        }
     }
 
     fun create(id: Int){
+        println("----OverdraftLink.create----")
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts"
 
         var json = JSONObject()
         //json.put("limit", this.limit)
 
-        Fuel.post(url)
+        val (request, response, result) =  Fuel.post(url)
             .jsonBody(json.toString())
-            .response { request, response, result ->
-                println(request)
-                println(response)
-                val (bytes, error) = result
-                if (bytes != null) {
-                    println("[response bytes] ${String(bytes)}")
-                    //data.getJSONArray(bytes.toString())
-                    //parsedata()
-                }
-                println(result)
-                when(result){
-                    is Result.Success -> {
-
-                    }
-                    is Result.Failure -> {
-
-                    }
-                }
+            .responseObject(OverdraftLink.Deserializer())
+        println("Response:" + response)
+        val (bytes, error) = result
+        if (bytes != null) {
+            this.firstUseDate = bytes.firstUseDate
+            this.isActive = bytes.status
+            this.limit = bytes.limit
+            this.limitMax = bytes.limitMax
+            this.limitUsed = bytes.limitUsed
+            this.isBlocked = bytes.isBlocked
+            this.userCPF = bytes.userCPF
+        }
+        when(result){
+            is Result.Success -> {
+                println("Success")
             }
+            is Result.Failure -> {
+                println("Failure")
+            }
+        }
     }
 
     fun cancel(id: Int){
         println("----OverdraftLink.cancel----")
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts/cancel"
 
-        Fuel.put(url)
-            .responseObject(OverdraftLink.Deserializer()) { request, response, result ->
-                println(request)
-                println(response)
-                val (bytes, error) = result
-                if (bytes != null) {
-                    this.isActive = bytes.status //
-                }
-                println(result)
-                when(result){
-                    is Result.Success -> {
-                        print("Sucecss")
-                    }
-                    is Result.Failure -> {
-                        print("Failure")
-
-                    }
-                }
+        val (request, response, result) =  Fuel.put(url)
+            .responseObject(OverdraftLink.Deserializer())
+        println("Response:" + response)
+        val (bytes, error) = result
+        if (bytes != null) {
+            this.isActive = bytes.status //
+        }
+        when(result){
+            is Result.Success -> {
+                println("Sucecss")
             }
+            is Result.Failure -> {
+                println("Failure")
+
+            }
+        }
     }
 
     fun save(id: Int){
@@ -124,77 +116,66 @@ class OverdraftLink(){
         var json = JSONObject()
         json.put("limit", this.limit)
 
-        Fuel.put(url)
+        val (request, response, result) =  Fuel.put(url)
             .jsonBody(json.toString())
-            .responseObject(OverdraftLink.Deserializer()) { request, response, result ->
-                println(request)
-                println(response)
-                val (bytes, error) = result
-                if (bytes != null) {
-                    println("Save")
-                    this.limit = bytes.limit
-                    println(limit)
-                }
-                println(result)
-                when(result){
-                    is Result.Success -> {
-                        print("Sucecss")
-                    }
-                    is Result.Failure -> {
-                        print("Failure")
-
-                    }
-                }
+            .responseObject(OverdraftLink.Deserializer())
+        println("Response:" + response)
+        val (bytes, error) = result
+        if (bytes != null) {
+            println("Save")
+            this.limit = bytes.limit
+            println(limit)
+        }
+        println(result)
+        when(result){
+            is Result.Success -> {
+                println("Success")
             }
+            is Result.Failure -> {
+                println("Failure")
+            }
+        }
     }
 
-    fun checkUsability(id: Int, r: eligibilidade){
+    fun checkUsability(id: Int) : Boolean{
         println("----OverdraftLink.checkUsability----")
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts/usability"
 
-        Fuel.get(url)
-            .response() { request, response, result ->
-                println(request)
-                println(response)
-                println(result)
-                when(result){
-                    is Result.Success -> {
-                        print("Sucecss")
-                        val intent = Intent(r, TelaDeConfirmacaoChequeEspecial::class.java)
-                        startActivity(r, intent, null)
-                    }
-                    is Result.Failure -> {
-                        print("Failure")
-
-                    }
-                }
+        val (request, response, result) =  Fuel.get(url)
+            .response()
+        println("Response:" + response)
+        when(result){
+            is Result.Success -> {
+                println("Success")
+                return true
             }
+            is Result.Failure -> {
+                println("Failure")
+                return false
+            }
+        }
     }
 
-    fun activate(id: Int, r: TelaDeConfirmacaoChequeEspecial){
+    fun activate(id: Int) : Boolean {
         println("----OverdraftLink.activate----")
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts/activate"
 
-        Fuel.put(url)
-            .responseObject(OverdraftLink.Deserializer()) { request, response, result ->
-                println(request)
-                println(response)
-                val (bytes, error) = result
-                if (bytes != null) {
-                    this.isActive = bytes.status //
-                }
-                println(result)
-                when(result){
-                    is Result.Success -> {
-                        print("Sucecss")
-                        val intent = Intent(r, TrackLimit::class.java)
-                        startActivity(r, intent, null)
-                    }
-                    is Result.Failure -> {
-                        print("Failure")
-
-                    }
-                }
+        val (request, response, result) =  Fuel.put(url)
+            .responseObject(OverdraftLink.Deserializer())
+        println("Response:" + response)
+        val (bytes, error) = result
+        if (bytes != null) {
+            this.isActive = bytes.status
+        }
+        when(result){
+            is Result.Success -> {
+                println("Success")
+                return true
             }
+            is Result.Failure -> {
+                println("Failure")
+                return false
+            }
+        }
     }
 }

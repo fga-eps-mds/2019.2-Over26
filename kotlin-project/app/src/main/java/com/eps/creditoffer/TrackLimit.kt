@@ -21,7 +21,9 @@ class TrackLimit : AppCompatActivity() {
         val overdraft = OverdraftLink()
         //overdraft.create(1)
 
-        overdraft.get(1, this)
+        overdraft.get(1)
+
+        initSeekBar(overdraft)
 
         println("----TrackLimit[depois get]----")
 

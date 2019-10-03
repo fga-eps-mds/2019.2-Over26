@@ -8,7 +8,9 @@ import android.view.ActionMode
 import android.view.KeyEvent
 import android.view.MotionEvent
 import android.view.View
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_installment.*
+import java.lang.Boolean.FALSE
 import java.lang.Boolean.TRUE
 
 class Installment : AppCompatActivity() {
@@ -17,10 +19,13 @@ class Installment : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_installment)
 
-        var debt = OverdraftDebtLink()
+        val debt = OverdraftDebtLink()
         //debt.create(1)
         debt.get(1)
         debt.checkAmout(1)
+
+        val overdraft = OverdraftLink()
+        overdraft.get(1)
 
         textView_installment_quant.text = debt.quantityInstallment.toString()
         val value = "%.2f".format(debt.totalAmount/debt.quantityInstallment)
@@ -84,13 +89,13 @@ class Installment : AppCompatActivity() {
         button_confirm_installment.setOnClickListener(View.OnClickListener {
             debt.wasDivided = TRUE
             debt.createInstallment(1)
-            val intent = Intent(this, TrackLimit::class.java)
-            startActivity(intent)
+            overdraft.isBlocked = FALSE
+            Toast.makeText(this, "Cheque especial liberado!", Toast.LENGTH_LONG).show()
+            finish()
         })
 
         button_cancel_installment.setOnClickListener(View.OnClickListener {
-            val intent = Intent(this, TrackLimit::class.java)
-            startActivity(intent)
+            finish()
         })
 
     }

@@ -35,14 +35,12 @@ class TrackLimit : AppCompatActivity() {
         cancelCredit.setOnClickListener(View.OnClickListener {
             overdraft.cancel(1)
             println(overdraft.isActive)
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            finish()
         })
 
         save.setOnClickListener(View.OnClickListener {
             overdraft.save(1)
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            finish()
         })
 
     }

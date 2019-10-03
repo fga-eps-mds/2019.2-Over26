@@ -23,7 +23,7 @@ class UserLink {
         override fun deserialize(content: String) = Gson().fromJson(content, UserLink::class.java)
     }
 
-    fun get(id: Int){
+    fun get(id: Int) : Boolean{
         println("----UserLink.get----")
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString()
 
@@ -40,10 +40,12 @@ class UserLink {
         }
         when(result){
             is Result.Success -> {
-                print("Sucecss")
+                print("Success")
+                return true
             }
             is Result.Failure -> {
                 print("Failure")
+                return false
             }
         }
     }

@@ -39,7 +39,7 @@ class TrackLimit : AppCompatActivity() {
 
         cancelCredit.setOnClickListener(View.OnClickListener {
             println("----cancelCreditButton----")
-            if(overdraft.isBlocked){
+            if(overdraft.isBlocked || (overdraft.checkUsability(1) == FALSE)){ // dependendo de isBlocked no banco
                 Toast.makeText(this,
                     "Parcele a dívida antes de fazer alterações no cheque especial",
                     Toast.LENGTH_LONG).show()
@@ -81,6 +81,9 @@ class TrackLimit : AppCompatActivity() {
             // Hide installment button
             button_installment.visibility = View.INVISIBLE
 
+            // Hide warning text
+            textView_warning.visibility = View.INVISIBLE
+
             // SeekBar
             textView_currentUsage.text = "Uso Atual"
             textView_usage.setTextColor(Color.BLACK)
@@ -111,7 +114,10 @@ class TrackLimit : AppCompatActivity() {
             // Show installment button
             button_installment.visibility = View.VISIBLE
 
-            // Save button
+            // Shown warning text
+            textView_warning.visibility = View.VISIBLE
+
+            // Hide save button
             save.visibility = View.INVISIBLE
 
             //Stop seekBar

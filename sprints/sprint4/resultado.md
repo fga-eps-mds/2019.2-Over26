@@ -50,9 +50,11 @@
 # 2. Visão do Tech Leader
 Essa sprint foi planejada com 47 pontos, porém somente 13 pontos foram entregues. 
 
-Essa semana teve a semana universitária, onde os estudantes não teriam aulas e a expectativa era que pudessémos fazer mais pontos e ter mais disponibilidade para trabalhar no projeto. Porém, houve falha no planejamento, pois as histórias ficaram muito grande e, por isso, não foram concluídas a tempo. Este fato, foi refletido diretamente no Velocity, pois teve uma leve queda. Outro fator crítico nessa sprint foi devido a viagem de um dos membros de MDS, Gabriel.  
+Foi planejado muitas histórias para essa sprint, devido a semana universitária, onde os estudantes não teriam aulas e a expectativa era que pudessémos fazer mais pontos e ter mais disponibilidade para trabalhar no projeto. Porém, houve falha no planejamento, pois as histórias ficaram muito grande e, por isso, não foram concluídas a tempo. Este fato, foi refletido diretamente no Velocity. Outro fator crítico nessa sprint foi devido a viagem de um dos membros de MDS, Gabriel e problemas saúde de outros membros.  
 
-Com a dificuldade de realizar as tarefas, devido a tecnologia e ao tamanho das histórias, os testes unitários continuaram comprometidos, nessa sprint. O que causa problema na qualidade do código e produto entregues.
+A dificuldade de realizar as tarefas, devido a tecnologia e ao tamanho das histórias, os testes unitários continuaram comprometidos, nessa sprint. O que causa problema na qualidade do código e produto entregues. 
+
+Para resolver este problema, será feita uma adaptação no escopo e replanejamendo das atividades que serão entregue na R1. Restringindo o escopo da R1 em: ativar cheque especial, ajustar limite de crédito e parecalamento da dívida.
 
 A comunicação tem melhorado a cada sprint e a colaboração do grupo também, apesar das dificuldades com a tecnologia e os imprevistos pessoais de cada membro. 
 

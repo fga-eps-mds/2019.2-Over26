@@ -13,6 +13,7 @@
 * [Plano de Qualidade](/documentation/quality.md)
 
 * **Produto**
+* [Plano de Elicitação](/elicitation-plan.md)
 * [Backlog](/product-backlog.md)
 * [Estrutura de Branches e Padrões](/branches-structure.md)
 * [Folha de Estilo](/style-sheet.md)

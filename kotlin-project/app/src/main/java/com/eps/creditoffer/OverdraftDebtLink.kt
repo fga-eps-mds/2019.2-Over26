@@ -45,10 +45,10 @@ class OverdraftDebtLink {
         }
         when (result) {
             is Result.Success -> {
-                print("Success")
+                println("Success")
             }
             is Result.Failure -> {
-                print("Failure")
+                println("Failure")
             }
         }
     }
@@ -71,10 +71,10 @@ class OverdraftDebtLink {
         }
         when(result){
             is Result.Success -> {
-                print("Sucecss")
+                println("Success")
             }
             is Result.Failure -> {
-                print("Failure")
+                println("Failure")
             }
         }
     }
@@ -92,10 +92,10 @@ class OverdraftDebtLink {
         }
         when(result){
             is Result.Success -> {
-                print("Sucecss")
+                println("Success")
             }
             is Result.Failure -> {
-                print("Failure")
+                println("Failure")
             }
         }
     }
@@ -104,10 +104,10 @@ class OverdraftDebtLink {
         println("----OverdraftLinkDebt.createInstallment----")
         val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString() + "/instalments"
 
-        var json = JSONObject()
+        val json = JSONObject()
         json.put("wasDivided",this.wasDivided)
-        json.put("dueDate",this.dueDate)
-        json.put("quantityInstallmentthis",this.quantityInstallment)
+        json.put("day",this.dueDate)
+        json.put("quantityInstalment",this.quantityInstallment)
 
         val (request, response, result) = Fuel.post(url)
             .jsonBody(json.toString())
@@ -118,10 +118,10 @@ class OverdraftDebtLink {
         }
         when(result){
             is Result.Success -> {
-                print("Sucecss")
+                println("Success")
             }
             is Result.Failure -> {
-                print("Failure")
+                println("Failure")
 
             }
         }

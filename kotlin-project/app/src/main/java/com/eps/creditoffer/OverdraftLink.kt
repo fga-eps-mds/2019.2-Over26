@@ -1,7 +1,5 @@
 package com.eps.creditoffer
 
-import android.content.Intent
-import androidx.core.content.ContextCompat.startActivity
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.ResponseDeserializable
 import com.github.kittinunf.fuel.core.extensions.jsonBody
@@ -12,7 +10,7 @@ import java.lang.Boolean.FALSE
 import java.lang.Boolean.TRUE
 import java.util.*
 
-class OverdraftLink(){
+class OverdraftLink {
 
     var userCPF: Int = 0
     var firstUseDate: Date? = null
@@ -60,7 +58,7 @@ class OverdraftLink(){
         println("----OverdraftLink.create----")
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts"
 
-        var json = JSONObject()
+        val json = JSONObject()
         //json.put("limit", this.limit)
 
         val (request, response, result) =  Fuel.post(url)
@@ -100,7 +98,7 @@ class OverdraftLink(){
         }
         when(result){
             is Result.Success -> {
-                println("Sucecss")
+                println("Success")
             }
             is Result.Failure -> {
                 println("Failure")
@@ -113,7 +111,7 @@ class OverdraftLink(){
         println("----OverdraftLink.save----")
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts"
 
-        var json = JSONObject()
+        val json = JSONObject()
         json.put("limit", this.limit)
 
         val (request, response, result) =  Fuel.put(url)

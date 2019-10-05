@@ -24,7 +24,8 @@ class TrackLimit : AppCompatActivity() {
         setContentView(R.layout.track_limit)
 
         overdraft.get(1)
-        debt.create(1)
+        //debt.create(1)
+        debt.get(1)
         debt.checkAmout(1)
 
         initSeekBar(overdraft, debt)

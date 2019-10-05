@@ -6,7 +6,6 @@ import com.github.kittinunf.fuel.core.ResponseDeserializable
 import com.github.kittinunf.fuel.core.extensions.jsonBody
 import com.github.kittinunf.result.Result
 import com.google.gson.Gson
-import org.json.JSONArray
 import org.json.JSONObject
 
 class UserLink {
@@ -40,11 +39,11 @@ class UserLink {
         }
         when(result){
             is Result.Success -> {
-                print("Success")
+                println("Success")
                 return true
             }
             is Result.Failure -> {
-                print("Failure")
+                println("Failure")
                 return false
             }
         }
@@ -54,7 +53,7 @@ class UserLink {
         println("----UserLink.create----")
         val url: String = "http://" + ip + ":3000/api/users"
 
-        var json = JSONObject()
+        val json = JSONObject()
         json.put("cpf", this.cpf)
 
         val (request, response, result) = Fuel.post(url)
@@ -67,10 +66,10 @@ class UserLink {
         println(result)
         when(result) {
             is Result.Success -> {
-                print("Sucecss")
+                println("Success")
             }
             is Result.Failure -> {
-                print("Failure")
+                println("Failure")
             }
         }
     }
@@ -92,10 +91,10 @@ class UserLink {
         println(result)
         when(result){
             is Result.Success -> {
-                print("Sucecss")
+                println("Success")
             }
             is Result.Failure -> {
-                print("Failure")
+                println("Failure")
 
             }
         }

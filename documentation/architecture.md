@@ -21,6 +21,7 @@
 | 01/10/1029 | 1.5 | Isabella Carneiro | Refatoração do Documento de Arquitetura |
 | 02/10/2019 | 1.6 | Natália Rodrigues | Modificando diagrama e descrição dos casos de uso |
 | 02/10/2019 | 1.7 | Natália Rodrigues | Atualizando diagramas de classe e lógico e adicionando diagrama de pacotes | 
+| 07/10/2019 | 1.8 | Maria Luiza | Ajustando imagens do documento | 
 
 - [1. Introdução](#_1-introdução)
   * [1.1. Objetivos](#_11-objetivos)

@@ -36,4 +36,10 @@
 
     - Sprint 5
 
-      - [Planejamento](/sprints/sprint5/planejamento.md) 
+      - [Planejamento](/sprints/sprint5/planejamento.md)
+
+      - [Resultado](/sprints/sprint5/resultado.md)
+
+    - Sprint 6
+
+      - [Planejamento](/sprints/sprint6/planejamento.md)

@@ -28,3 +28,4 @@ A Estrutura Analítica do Projeto consiste num documento que comporta pacotes de
 | - | - | - | - |
 | 12/09/2019 | 0.1 | Adrianne Alves | Elaboração da Estrutura analítica do Projeto |
 | 13/09/2019 | 0.2 | Adrianne Alves | Atualização da Estrutura analítica do Projeto com considerações da Maria Luiza |
+| 25/09/2019 | 0.3 | Adrianne Alves | Atualização da EAP versão 3 |

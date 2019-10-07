@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     tools:context=".TelaDeConfirmacaoChequeEspecial">
 
 
@@ -28,11 +29,9 @@
         android:text="@string/parabens_voce_recebeu_aprova_o_para_at_r_250"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintTop_toBottomOf="@+id/moneysack" />
 
 
     <CheckBox
@@ -62,16 +61,19 @@
         app:layout_constraintVertical_bias="0.991" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/moneysack"
         android:layout_width="293dp"
         android:layout_height="232dp"
+        android:contentDescription="TODO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.207"
-        app:srcCompat="@mipmap/ic_launcher_foreground"
-        android:contentDescription="TODO" />
+        app:srcCompat="@mipmap/ic_money_sack_foreground" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

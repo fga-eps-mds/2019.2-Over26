@@ -59,7 +59,7 @@ A arquitetura utilizada no projeto é a arquitetura Cliente/Servidor, que se bas
 
 No caso deste projeto, o papel de cliente será desempenhado pelo frontend da aplicação, que está sendo implementado em Kotlin, e o de servidor pela API, implementada em Node.js, que faz toda a comunicação com a camada de persistência dos dados.
 
-![Arquitetura](/images/architecture.png)
+![Arquitetura](../images/architecture.png)
 
 ## 3. Restrições e Metas Arquiteturais
 
@@ -75,7 +75,7 @@ O sistema deve garantir uma boa experiência do usuário durante sua utilizaçã
 
 ### 4.1. Diagrama de Casos de Uso
 
-![Diagrama de Casos de Uso](/images/use_cases_diagram.png)
+![Diagrama de Casos de Uso](../images/use_cases_diagram.png)
 
 ### 4.2. Descrição dos Casos de Uso
 
@@ -252,15 +252,13 @@ O sistema deve garantir uma boa experiência do usuário durante sua utilizaçã
 
 ## 5. Visão Lógica
 
-### 5.1. Visão Geral
-
 ### 5.1. Visão Geral: Pacotes e Camadas
 
 A arquitetura Cliente/Servidor se baseia em dois módulos principais, que farão a comunicação entre si para fornecer ao usuário os serviços necessários. No caso deste projeto, o cliente será a aplicação Kotlin, organizada em pacote(s) interno(s), e o servidor a API REST desenvolvida em Node.js, que utiliza o modelo MVC por padrão e possui módulos internos bem definidos (models, views, controllers, database, etc.). É válido ressaltar que como se trata de uma API REST, o servidor da aplicação não fará uso das views do modelo MVC utilizado pelo Node.
 
 A figura a seguir mostra a estrutura de pacotes do sistema:
 
-![Packages Diagram](/images/packages_diagram.png)
+![Packages Diagram](../images/packages_diagram.png)
 
 ### 5.2. Visão Geral: Classes
 
@@ -268,7 +266,7 @@ O diagrama de classes a seguir tem como finalidade demonstrar todas classes, atr
 
 Segue o diagrama de classes:
 
-![Classes Diagram](/images/classes_diagram.png)
+![Classes Diagram](../images/classes_diagram.png)
 
 #### Classes
 
@@ -291,7 +289,7 @@ Segue o diagrama de classes:
 
 O banco de dados permite com que os dados sejam persistidos para possibilitar a realização das funções da aplicação. A figura a seguir mostra o esquemático das tabelas do banco de dados do sistema:
 
-![Banco de Dados](/images/logic_diagram.png)
+![Banco de Dados](../images/logic_diagram.png)
 
 ## 6. Desempenho
 

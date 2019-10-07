@@ -40,11 +40,11 @@ Fazer funcionalidades que agreguem valor ao projeto priorizadas pela Product Own
 | [Documentar sprint 4](https://github.com/fga-eps-mds/2019.2-Over26/issues/63) | Maria Luiza |
 | [Documentar sprint 5](https://github.com/fga-eps-mds/2019.2-Over26/issues/77) | Maria Luiza |
 | [Definir métricas de produtividade](https://github.com/fga-eps-mds/2019.2-Over26/issues/70) | Maria Luiza |
-| [Deploy do Backend]() | Andrew |
-| [Documentar a parte do Devops]() | Andrew |
-| [Gerar Realease]() | Andrew |
-| [Refatorar EAP ]() | Adrianne |
-| [Documentar Elicitação de requisitos]() | Adrianne |
+| Deploy do Backend | Andrew |
+| Documentar a parte do Devops | Andrew |
+| Gerar Release | Andrew |
+| Refatorar EAP | Adrianne |
+| Documentar Elicitação de requisitos | Adrianne |
 
 
 ## 4. Pareamento

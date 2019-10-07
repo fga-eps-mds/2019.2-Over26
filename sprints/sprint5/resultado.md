@@ -14,22 +14,22 @@
 |[Revisar e refatorar documento de arquitetura](https://github.com/fga-eps-mds/2019.2-Over26/issues/78)|Concluída|
 |[Testes unitários](https://github.com/fga-eps-mds/2019.2-Over26/issues/81)|Concluída|
 |[Revisar e refatorar Documento de Visão](https://github.com/fga-eps-mds/2019.2-Over26/issues/79)|Concluída|
-|[Fazer a apresentação](https://github.com/fga-eps-mds/2019.2-Over26/issues/80)||
+|[Fazer a apresentação](https://github.com/fga-eps-mds/2019.2-Over26/issues/80)| Concluída|
 
 ### EPS
 | Atividade | Situação |
 | -------- | :----: |
-| [Plano de Qualidade]() |  Dívida Técnica |
 | [Fazer Burndown de Riscos](https://github.com/fga-eps-mds/2019.2-Over26/issues/72)  | Concluída |
 | [Criar documento de Gerenciamento de Riscos](https://github.com/fga-eps-mds/2019.2-Over26/issues/65) | Concluída |
 | [Documentar sprint 4](https://github.com/fga-eps-mds/2019.2-Over26/issues/63) | Concluída |
 | [Documentar sprint 5](https://github.com/fga-eps-mds/2019.2-Over26/issues/77) | Concluída |
 | [Definir métricas de produtividade](https://github.com/fga-eps-mds/2019.2-Over26/issues/70) | Concluída |
-| [Deploy do Backend]() | Dívida Técnica |
-| [Documentar a parte do Devops]() | Dívida Técnica |
-| [Gerar Realease]() | Dívida Técnica |
-| [Refatorar EAP ]() | Concluída |
-| [Documentar Elicitação de requisitos]() | Dívida Técnica |
+| Refatorar EAP | Concluída |
+| Deploy do Backend | Dívida Técnica |
+| Documentar a parte do Devops | Dívida Técnica |
+| Gerar Realease | Dívida Técnica |
+| Documentar Elicitação de requisitos | Dívida Técnica |
+| Plano de Qualidade |  Dívida Técnica |
 
 ## 1.2 Burndown
 
@@ -58,4 +58,15 @@
 
 
 # 2. Visão do Tech Leader
+A duração dessa sprint teve que ser adaptada devido a data da Release 1, sendo de 5 dias.
+Foram planejados 49 pontos e todas as atividades foram entregues pelo time. Houve uma melhora significativa da produtividade da equipe, como se pode visualizar no Velocity. Além de uma melhora nas entregas das atividades durante a sprint, como se pode visualizar no Burndown. 
 
+Nesta sprint foram resolvidas algumas dívidas técnicas da sprint 4, devido às histórias estarem muito grandes, o que dificultou a entrega. 
+
+A equipe tem se mostrado bastante produtiva, além de ter evoluído bastante com relação ao conhecimento das tecnologias utilizadas.
+
+As atividades de EPS começaram a ser planejadas, juntamente com as atividades de MDS, porém sem pontuação. A decisão da equipe foi de não pontuar para que os gráficos mantenham as métricas somente da equipe de desenvolvimento do produto.
+
+O erro da sprint se encontrou novamente em histórias muito longas, se repetindo devido às dívidas técnicas. Além do prazo curto para realizar muitas tarefas. O pareamento entre MDS não tem se demonstrado muito eficaz, devido à indisponibilidade da equipe de parear. O que demonstra a necessidade de um melhor monitoramento dos pareamentos.
+
+As práticas ágeis foram aplicadas, com reuniões diárias via Telegram e reuniões semanais de planejamento ocorrida no início da sprint. Além das reuniões de retrospectiva e revisão ocorridas no final da sprint.  Excepcionalmente, essas reuniões ocorreram durante a semana (via Hangouts), devido ao adiamento da Release 1. Então houve retrospectiva, revisão e planejamento da sprint 6.

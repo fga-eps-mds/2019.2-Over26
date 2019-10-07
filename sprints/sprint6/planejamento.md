@@ -36,12 +36,12 @@ Refatorar documentos e funcionalidades feitas e refinar apresentação da Releas
 ### EPS
 | Atividade | Responsável |
 | -------- | :----: |
-| [Plano de Qualidade]() |   |
-| [Deploy do Backend]() |  |
-| [Documentar a parte do Devops]() |  |
-| [Gerar Realease]() |  |
-| [Documentar Elicitação de requisitos]() |  |
-
+| Plano de Qualidade | Natália  |
+| Deploy do Backend | Andrew |
+| Documentar a parte do Devops | Andrew |
+| Gerar Realease | Andrew |
+| Documentar Elicitação de requisitos | Adrianne |
+| Documentar Sprint 6 | Maria Luiza |
 
 ## 4. Pareamento
-![](../../images/metrics_agile/pareamento_sprint5.png)
+![](../../images/metrics_agile/pareamento_sprint6.png)

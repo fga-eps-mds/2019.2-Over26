@@ -54,7 +54,7 @@ Foi planejado muitas histórias para essa sprint, devido a semana universitária
 
 A dificuldade de realizar as tarefas, devido a tecnologia e ao tamanho das histórias, os testes unitários continuaram comprometidos, nessa sprint. O que causa problema na qualidade do código e produto entregues. 
 
-Para resolver este problema, será feita uma adaptação no escopo e replanejamendo das atividades que serão entregue na R1. Restringindo o escopo da R1 em: ativar cheque especial, ajustar limite de crédito e parecalamento da dívida.
+Para resolver este problema, será feita uma adaptação no escopo e replanejamendo das atividades que serão entregue na R1. Restringindo o escopo da R1 em: ativar cheque especial, ajustar limite de crédito e parcelamento da dívida.
 
 Para resolver este problema, foi feita uma adaptação no escopo que será entregue na R1.
 

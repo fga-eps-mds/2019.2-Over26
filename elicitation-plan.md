@@ -13,5 +13,5 @@ O próximo passo a ser concretizado consiste na priorização dos requisitos obt
 * [Mapa de Empatia](./elicitacao/empathy-map.md)
 * [Brainstorming](./elicitacao/brainstorm.md)
 * [Observação por Instrospecção](./elicitacao/introspection.md)
-* [Priorização](./elicitacao/prioritization.md)
+* [Priorização](/product-backlog.md)
 

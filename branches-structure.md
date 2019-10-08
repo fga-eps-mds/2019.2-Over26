@@ -1,11 +1,3 @@
-# Histórico de Versões
-
-| Data | Versão | Autor(a) | Descrição |
-| - | - | - | - |
-| 30/08/2019 | 0.1 |Natália Rodrigues | Documentação da política de branches e demais definições a respeito do Git Flow. |
-|03/09/2019 | 0.2 | Natália Rodrigues | Fluxo de adição de documentos. |
-| 18/09/2019 | 0.3 | Natália Rodrigues | Alterando fluxo de adição de documentos e adicionando algumas orientações. |
-
 
 # Índice
 
@@ -127,3 +119,12 @@ ou
 
 * https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
 * https://fjorgemota.com/git-flow-uma-forma-legal-de-organizar-repositorios-git/
+
+
+# Histórico de Versões
+
+| Data | Versão | Autor(a) | Descrição |
+| - | - | - | - |
+| 30/08/2019 | 0.1 |Natália Rodrigues | Documentação da política de branches e demais definições a respeito do Git Flow. |
+|03/09/2019 | 0.2 | Natália Rodrigues | Fluxo de adição de documentos. |
+| 18/09/2019 | 0.3 | Natália Rodrigues | Alterando fluxo de adição de documentos e adicionando algumas orientações. |

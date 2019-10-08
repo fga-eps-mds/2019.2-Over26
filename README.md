@@ -23,40 +23,4 @@
 
 Para visualizar a licença, acesse [Licence](https://github.com/fga-eps-mds/2019.2-Grupo2/blob/master/LICENSE)
 
-### Começando
-
-O projeto Over26 utiliza o docker para isolar os ambientes de desenvolvimento e produção, sendo o primeiro deles utilizado também para o teste de novas features ou correção de bugs. Assim, em conjunto com o docker compose os ambientes poderão ser utilizados mais facilmente e em poucos comandos no terminal, desde que você possua o docker e o docker compose instalados na sua máquina.
-
-### Configuração usando Docker
-
-**O docker ainda não está configurado para o frontend da aplicação**
-
-* Install Docker
-
-  - [Download docker](https://docs.docker.com/engine/installation/)
-
-* Install Docker Compose
-
-  - [Download docker-compose](https://docs.docker.com/compose/install/)
-
-* Construir a imagem do conteiner 
-
-  * Ambiente de Desenvolvimento
-        
-        $ docker-compose build 
-
-  * Ambiente de Produção (Não está disponível)
-        
-        $ docker-compose -f docker-compose-prod.yml build
-
-* Rodar o conteiner
-
-  * Ambiente de Desenvolvimento
-        
-        $ docker-compose up 
-    
-  * Ambiente de Produção
-  
-        $ docker-compose up 
-
-* Após subir o ambiente, abra http://localhost:3000/ no browser
+Caso queira contribuir, visualize o nosso [contributing](https://github.com/fga-eps-mds/2019.2-Over26/blob/master/.github/CONTRIBUTING.md)

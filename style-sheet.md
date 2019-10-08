@@ -1,14 +1,4 @@
-﻿# Histórico de Versões
-
-| Data | Versão | Autor(a) | Descrição |
-| - | - | - | - |
-| 18/09/2019 | 0.1 |Natália Rodrigues | Criação da estrutura do documento, adicionando introdução e objetivos. |
-| 23/09/2019 | 0.2 | Natália Rodrigues | Adicionando padrões de formatação do código |
-| 24/09/2019 | 0.3 | Natália Rodrigues | Completando guia de estilo para o projeto Kotlin |
-| 25/09/2019 | 0.4 | Natália Rodrigues | Adicionando o guia de estilo para o projeto Node |
-| 26/09/2019 | 0.5 | Natália Rodrigues | Finalizando o guia de estilo para o projeto Node e fazendo algumas alterações no documento. |
-
-# Índice
+﻿# Índice
 
 * [1. Introdução](#_1-introdução)
 * [2. Objetivos](#_2-objetivos)
@@ -768,3 +758,13 @@ Use trailing commas and put short declarations on a single line.
 * https://kotlinlang.org/docs/reference/coding-conventions.html
 * https://ktlint.github.io/#rules
 * https://medium.com/swlh/node-js-coding-style-guidelines-74a20d00c40b
+
+# Histórico de Versões
+
+| Data | Versão | Autor(a) | Descrição |
+| - | - | - | - |
+| 18/09/2019 | 0.1 |Natália Rodrigues | Criação da estrutura do documento, adicionando introdução e objetivos. |
+| 23/09/2019 | 0.2 | Natália Rodrigues | Adicionando padrões de formatação do código |
+| 24/09/2019 | 0.3 | Natália Rodrigues | Completando guia de estilo para o projeto Kotlin |
+| 25/09/2019 | 0.4 | Natália Rodrigues | Adicionando o guia de estilo para o projeto Node |
+| 26/09/2019 | 0.5 | Natália Rodrigues | Finalizando o guia de estilo para o projeto Node e fazendo algumas alterações no documento. |

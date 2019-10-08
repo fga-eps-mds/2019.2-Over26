@@ -1,28 +1,5 @@
 # Documento de Arquitetura
 
-## Histórico de Versões
-
-| Data | Versão | Autor(a) | Descrição |
-| - | - | - | - |
-| 05/09/2019 | 0.1 | João Gabriel | Criação do índice e adição da introdução|
-| 05/09/2019 | 0.2 | Gabriel e João Paulo | Adição da visão lógica e desempenho|
-| 06/09/2019 | 0.3 | Isabella | Adição de Restrições do projeto|
-| 06/09/2019 | 0.4 | Isabella e João Gabriel | Adição de Qualidade|
-| 06/09/2019 | 0.5 | Luiza | Adição de Visão de Casos de Uso|
-| 09/09/2019 | 0.6 | Erick | Adição de Representação da Arquitetura e correção de índice|
-| 10/09/2019 | 0.7 | Natália, Luiza, João Paulo, Erick, Maria Luiza | Adição do Diagrama de Casos de Uso |
-| 11/09/2019 | 0.8 | Luiza | Refatoração da Visão de Casos de Uso|
-| 11/09/2019 | 0.9 | Erick | Corrigindo índice|
-| 11/09/2019 | 1.0 | Erick | Refatorando desempenho e realocando restrições|
-| 11/09/2019 | 1.1 | João Gabriel| Refatoração da introdução|
-| 11/09/2019 | 1.2 | Natália | Adição do diagrama de classes e do diagrama lógico |
-| 13/09/2019 | 1.3 | João Paulo e Gabriel | Refatoração da Visão Lógica |
-| 24/09/2019 | 1.4 | Natália | Refatoração do diagrama de classes e do diagrama lógico |
-| 01/10/1029 | 1.5 | Isabella Carneiro | Refatoração do Documento de Arquitetura |
-| 02/10/2019 | 1.6 | Natália Rodrigues | Modificando diagrama e descrição dos casos de uso |
-| 02/10/2019 | 1.7 | Natália Rodrigues | Atualizando diagramas de classe e lógico e adicionando diagrama de pacotes | 
-| 07/10/2019 | 1.8 | Maria Luiza | Ajustando imagens do documento | 
-
 - [1. Introdução](#_1-introdução)
   * [1.1. Objetivos](#_11-objetivos)
   * [1.2. Escopo do documento](#_12-escopo-do-documento)
@@ -301,3 +278,26 @@ O desempempenho do sistema está relacionado ao aparelho utilizado para rodar a 
 A utilização da arquitetura Cliente/Servidor tem como objetivo a modularização e divisão da aplicação em camadas com responsabilidades diferentes e bem definidas. O sistema deve, então, apresentar componentes bem estruturados e testados de forma independente, a fim de garantir a qualidade dos serviços entregues ao usuário final da aplicação.
 
 O código deverá ser bem estruturado, seguindo as normas de Boas Práticas de programação para que terceiros, responsáveis por suas eventuais manutenções, consigam trabalhar sem a necessidade consultar os desenvolvedores originais.
+
+## Histórico de Versões
+
+| Data | Versão | Autor(a) | Descrição |
+| - | - | - | - |
+| 05/09/2019 | 0.1 | João Gabriel | Criação do índice e adição da introdução|
+| 05/09/2019 | 0.2 | Gabriel e João Paulo | Adição da visão lógica e desempenho|
+| 06/09/2019 | 0.3 | Isabella | Adição de Restrições do projeto|
+| 06/09/2019 | 0.4 | Isabella e João Gabriel | Adição de Qualidade|
+| 06/09/2019 | 0.5 | Luiza | Adição de Visão de Casos de Uso|
+| 09/09/2019 | 0.6 | Erick | Adição de Representação da Arquitetura e correção de índice|
+| 10/09/2019 | 0.7 | Natália, Luiza, João Paulo, Erick, Maria Luiza | Adição do Diagrama de Casos de Uso |
+| 11/09/2019 | 0.8 | Luiza | Refatoração da Visão de Casos de Uso|
+| 11/09/2019 | 0.9 | Erick | Corrigindo índice|
+| 11/09/2019 | 1.0 | Erick | Refatorando desempenho e realocando restrições|
+| 11/09/2019 | 1.1 | João Gabriel| Refatoração da introdução|
+| 11/09/2019 | 1.2 | Natália | Adição do diagrama de classes e do diagrama lógico |
+| 13/09/2019 | 1.3 | João Paulo e Gabriel | Refatoração da Visão Lógica |
+| 24/09/2019 | 1.4 | Natália | Refatoração do diagrama de classes e do diagrama lógico |
+| 01/10/1029 | 1.5 | Isabella Carneiro | Refatoração do Documento de Arquitetura |
+| 02/10/2019 | 1.6 | Natália Rodrigues | Modificando diagrama e descrição dos casos de uso |
+| 02/10/2019 | 1.7 | Natália Rodrigues | Atualizando diagramas de classe e lógico e adicionando diagrama de pacotes | 
+| 07/10/2019 | 1.8 | Maria Luiza | Ajustando imagens do documento | 

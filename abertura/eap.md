@@ -2,7 +2,8 @@
 
 * [1. Sobre](#_1-Sobre)
 * [2. Versão 1](#_2-Versão-1)
-* [3. Versão 1](#_3-Versão-2)
+* [3. Versão 2](#_3-Versão-2)
+* [4. Versão 3](#_4-Versão-3)
 
 # 1. Sobre
 

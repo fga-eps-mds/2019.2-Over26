@@ -54,7 +54,7 @@
         android:id="@+id/eligibility_button"
         android:layout_width="198dp"
         android:layout_height="43dp"
-        android:background="@android:color/holo_green_dark"
+        android:background="#55b6a6"
         android:text="Checar eligibilidade"
         android:textColor="@android:color/white"
         android:textSize="18sp"
@@ -148,38 +148,38 @@
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.288"
-        app:srcCompat="@mipmap/ic_launcher_flexivel" />
+        app:srcCompat="@drawable/ic_flexibility" />
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.52"
-        app:srcCompat="@mipmap/ic_launcher_transparente" />
+        app:srcCompat="@drawable/ic_transparency" />
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.765"
-        app:srcCompat="@mipmap/ic_launcher_facil" />
+        app:srcCompat="@drawable/ic_sliders" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

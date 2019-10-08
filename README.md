@@ -11,7 +11,7 @@
 <h3 align="center">Tenha 26 dias sem juros para pagar a sua dívida. Você não vai ficar fora dessa, né?</h3>
 
 <p align="center">
-    Fique por dentro do que estamos aprontando!<a href="https://fga-eps-mds.github.io/2019.2-Grupo2/"><strong> Visite a nossa página!</strong></a>
+    Fique por dentro do que estamos aprontando!<a href="https://fga-eps-mds.github.io/2019.2-Over26/#/"><strong> Visite a nossa página!</strong></a>
 </p>
  
  <br><br>

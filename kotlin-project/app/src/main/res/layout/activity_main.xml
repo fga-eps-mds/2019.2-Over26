@@ -18,8 +18,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/calculadora_foreground"
-        tools:srcCompat="@mipmap/calculadora" />
+        app:srcCompat="@mipmap/ic_calculadoracalendario_foreground" />
 
     <TextView
         android:id="@+id/textView"
@@ -30,6 +29,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bt1"
@@ -49,7 +49,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/iconeconsumercredit" />
+            app:srcCompat="@drawable/ic_spinner" />
 
         <TextView
             android:id="@+id/textView2"
@@ -74,15 +74,16 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/addicon"
+            app:srcCompat="@drawable/ic_plus_solid"
             android:clickable="true"
             android:onClick="overdraftScreen"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bt2"
@@ -98,24 +99,24 @@
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/iconedeacesso" />
+            app:srcCompat="@drawable/ic_tachometer_alt_solid" />
 
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:clickable="true"
             android:onClick="activeOverdraft"
-            app:srcCompat="@mipmap/addicon" />
+            app:srcCompat="@drawable/ic_plus_solid"/>
 
-        <TextView
+ <TextView
             android:id="@+id/textView4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -141,51 +142,47 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="#fff"
-            app:srcCompat="@drawable/ic_add_black_24dp" />
 
-        <ImageButton
-            android:id="@+id/imageButton2"
+        <ImageView
+            android:id="@+id/bar_icon"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#fff"
-            app:srcCompat="@drawable/ic_add_black_24dp" />
+            app:srcCompat="@drawable/ic_bar_solid" />
 
-        <ImageButton
-            android:id="@+id/imageButton3"
+        <ImageView
+            android:id="@+id/four_squares_icon"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#fff"
-            app:srcCompat="@drawable/ic_add_black_24dp" />
+            app:srcCompat="@drawable/ic_four_squares_button" />
 
-        <ImageButton
-            android:id="@+id/imageButton4"
+        <ImageView
+            android:id="@+id/plus_black_icon"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#fff"
-            app:srcCompat="@drawable/ic_add_black_24dp" />
+            app:srcCompat="@drawable/ic_plus_black_solid" />
 
-        <ImageButton
-            android:id="@+id/imageButton5"
+        <ImageView
+            android:id="@+id/gift_icon"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#fff"
-            app:srcCompat="@drawable/ic_add_black_24dp" />
+            app:srcCompat="@drawable/ic_gift_solid" />
+
+        <ImageView
+            android:id="@+id/user_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_user_solid" />
     </LinearLayout>
 
     <LinearLayout

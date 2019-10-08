@@ -1,42 +1,136 @@
 package com.eps.creditoffer
 
+import android.graphics.Color
+import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import kotlinx.android.synthetic.main.track_limit.*
 import android.widget.SeekBar
+import java.lang.Boolean.FALSE
+import android.content.Intent
+import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_main.*
+import java.lang.Boolean.TRUE
+
 
 class TrackLimit : AppCompatActivity() {
 
-    var curLimit: Float = 0F
-    var maxLimit: Float = 200F
-    var curUsage: Float = 50F
+    val overdraft = OverdraftLink()
+    val debt = OverdraftDebtLink()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.track_limit)
 
-        text_view_usage.setText("R$ " + curUsage.toInt().toString())
-        text_view_usage2.setText("R$0,00")
-        text_view_cur.setText("R$ " + curLimit.toInt().toString())
-        text_view_max.setText("R$ " + maxLimit.toInt().toString())
-        seek_bar.max = maxLimit.toInt()
+        overdraft.get(1)
+//        debt.create(1)
+          debt.get(1)
+      debt.checkAmout(1)
 
-        // Set a SeekBar change listener
-        seek_bar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+        initSeekBar(overdraft, debt)
 
-            override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
-                // Display the current progress of SeekBar
+        println("----TrackLimit.onCreate----")
 
-                text_view_cur.text = "R$"+i.toString()
+        button_installment.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this, Installment::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+            startActivityIfNeeded(intent, 0)
+        })
+
+        cancelCredit.setOnClickListener(View.OnClickListener {
+            println("----cancelCreditButton----")
+            if(overdraft.isBlocked || (overdraft.checkUsability(1) == FALSE)){ // dependendo de isBlocked no banco
+                Toast.makeText(this,
+                    "Parcele a dívida antes de fazer alterações no cheque especial",
+                    Toast.LENGTH_LONG).show()
             }
-
-            override fun onStartTrackingTouch(seekBar: SeekBar) {
-                // Do something
-            }
-
-            override fun onStopTrackingTouch(seekBar: SeekBar) {
-                // Do something
+            else {
+                Toast.makeText(this, "Cheque especial Cancelado!", Toast.LENGTH_LONG).show()
+                overdraft.cancel(1)
+                finish()
             }
         })
+
+        save.setOnClickListener(View.OnClickListener {
+            println("----saveButton----")
+            overdraft.save(1)
+            finish()
+        })
+
     }
+
+    override fun onResume() {
+        super.onResume()
+        println("----TrackLimit.onResume----")
+        initSeekBar(overdraft, debt)
+
+    }
+
+    fun initSeekBar( overdraft: OverdraftLink, debt: OverdraftDebtLink){
+        println("----initSeekBar----")
+        println("----"+overdraft.limit+"----")
+        textView_usage.text = "R$ " + overdraft.limitUsed
+        textView_cur.text = "R$ "+ overdraft.limit
+        textView_max.text = "R$ " + overdraft.limitMax
+        seek_bar.max = overdraft.limitMax.toInt()
+        seek_bar.progress = overdraft.limit.toInt()
+        seek_bar.isEnabled = TRUE
+
+        if(overdraft.isBlocked == FALSE){
+
+            // Hide installment button
+            button_installment.visibility = View.INVISIBLE
+
+            // Hide warning text
+            textView_warning.visibility = View.INVISIBLE
+
+            // SeekBar
+            textView_currentUsage.text = "Uso Atual"
+            textView_usage.setTextColor(Color.BLACK)
+            textView_usage.setTypeface(Typeface.DEFAULT)
+
+            // Save button
+            save.visibility = View.INVISIBLE
+
+            // Set a SeekBar change listener
+            seek_bar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+
+                override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
+                    // Display the current progress of SeekBar
+                    textView_cur.text = "R$"+i.toString()
+                    overdraft.limit = i.toFloat()
+                }
+
+                override fun onStartTrackingTouch(seekBar: SeekBar) {
+
+                }
+
+                override fun onStopTrackingTouch(seekBar: SeekBar) {
+                    save.visibility = View.VISIBLE
+                }
+            })
+        }
+        else{
+            // Show installment button
+            button_installment.visibility = View.VISIBLE
+
+            // Shown warning text
+            textView_warning.visibility = View.VISIBLE
+
+            // Hide save button
+            save.visibility = View.INVISIBLE
+
+            //Stop seekBar
+            seek_bar.isEnabled = FALSE
+            seek_bar.progress = 0
+
+            textView_usage.text = "%.2f".format(debt.totalAmount)
+
+            textView_currentUsage.text = "TOTAL A SER PAGO"
+            textView_cur.text = "-"
+            textView_usage.setTextColor(Color.RED)
+        }
+    }
+
 }

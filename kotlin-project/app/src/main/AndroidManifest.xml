@@ -14,9 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".TrackLimit"></activity>
-        <activity android:name=".eligibilidade"></activity>
+        <activity android:name=".Eligibility"></activity>
         <activity android:name=".Installment"></activity>
-        <activity android:name=".TelaDeConfirmacaoChequeEspecial"></activity>
+        <activity android:name=".OverdraftConfirmation"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

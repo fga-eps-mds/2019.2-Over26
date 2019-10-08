@@ -24,9 +24,9 @@ class TrackLimit : AppCompatActivity() {
         setContentView(R.layout.track_limit)
 
         overdraft.get(1)
-        //debt.create(1)
-        debt.get(1)
-        debt.checkAmout(1)
+//        debt.create(1)
+          debt.get(1)
+      debt.checkAmout(1)
 
         initSeekBar(overdraft, debt)
 
@@ -69,10 +69,10 @@ class TrackLimit : AppCompatActivity() {
 
     fun initSeekBar( overdraft: OverdraftLink, debt: OverdraftDebtLink){
         println("----initSeekBar----")
-
-        textView_usage.text = "R$ " + overdraft.limitUsed.toInt()
-        textView_cur.text = "R$ "+ overdraft.limit.toInt()
-        textView_max.text = "R$ " + overdraft.limitMax.toInt()
+        println("----"+overdraft.limit+"----")
+        textView_usage.text = "R$ " + overdraft.limitUsed
+        textView_cur.text = "R$ "+ overdraft.limit
+        textView_max.text = "R$ " + overdraft.limitMax
         seek_bar.max = overdraft.limitMax.toInt()
         seek_bar.progress = overdraft.limit.toInt()
         seek_bar.isEnabled = TRUE

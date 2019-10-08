@@ -15,13 +15,13 @@ class OverdraftLink {
     var userCPF: Int = 0
     var firstUseDate: Date? = null
     var status: Boolean = TRUE
-    var isActive: Boolean = TRUE
+    var isActive: Boolean = FALSE
     var limit: Float = 0F
     var limitMax: Float = 0F
     var limitUsed: Float = 0F
-    var isBlocked: Boolean = TRUE
+    var isBlocked: Boolean = FALSE
 
-    private val ip: String = "192.168.0.16"
+    private val ip: String = "10.0.2.2"
 
     class Deserializer : ResponseDeserializable<OverdraftLink> {
         override fun deserialize(content: String) = Gson().fromJson(content, OverdraftLink::class.java)
@@ -54,7 +54,7 @@ class OverdraftLink {
         }
     }
 
-    fun create(id: Int){
+    fun create(id: Int) : Boolean{
         println("----OverdraftLink.create----")
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts"
 
@@ -77,9 +77,11 @@ class OverdraftLink {
         }
         when(result){
             is Result.Success -> {
+                return true
                 println("Success")
             }
             is Result.Failure -> {
+                return false
                 println("Failure")
             }
         }

@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Overdraft Ativo!", Toast.LENGTH_LONG).show()
         }
         else {
-            val intent = Intent(this, eligibilidade::class.java)
+            val intent = Intent(this, Eligibility::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
             startActivityIfNeeded(intent, 0)
         }

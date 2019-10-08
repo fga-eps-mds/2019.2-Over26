@@ -79,4 +79,6 @@ O projeto Over26 utiliza o docker para isolar os ambientes de desenvolvimento e 
 
 ### Rodando os testes
 
+Basta rodar o comando : docker-compose run --rm api npm run test:watch
+
 ### Usando a aplicação

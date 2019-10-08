@@ -60,7 +60,7 @@ Essa sprint foi de refatoração e ajuste de algumas funcionalidades planejadas 
 
 Os testes ficaram de dívida técnica, pois não deu para testar todas as novas controllers. Além da rafatoração das models e controllers no backend, devido a grande quantidade de conflitos nessas atividades, pois estavam mexendo em locais comuns. 
 
-Essa sprint foi de grande valia para o projeto, pois foi necessário refatorar muitas coisas para que o projeto desse uma continuidade melhor, em relação ao código. Além de termos quebrado melhor as histórias no planejamento, o que deu mais fluidez  à sprint. 
+Essa sprint foi de grande valia para o projeto, pois foi necessário refatorar muitas coisas para que o projeto desse uma continuidade melhor, em relação ao código. Apesar de não ter sido entregue todas as histórias planejadas, devido a grande quantidade de conflitos existente e sem tempo para resolvê-los com cuidado. Além de termos quebrado melhor as histórias no planejamento, o que deu mais fluidez  à sprint. 
 
 Porém, não houve muita disponibilidade dos membros da equipe para realizar as tarefas durante a sprint, acumulando muito trabalho para o final. A comunicação voltou a ser um gargalo nessa sprint.
 

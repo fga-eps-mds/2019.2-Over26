@@ -32,6 +32,7 @@
 | Plano de Qualidade |  Dívida Técnica |
 
 ## 1.2 Burndown
+![](../../images/metrics_agile/burndown_sprint5.png)
 
 ## 1.3 Velocity   
 ![](../../images/metrics_agile/velocity_sprint5.png)

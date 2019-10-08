@@ -43,3 +43,5 @@
     - Sprint 6
 
       - [Planejamento](/sprints/sprint6/planejamento.md)
+
+      - [Resultado](/sprints/sprint6/resultado.md)

@@ -1,7 +1,7 @@
 # Planejamento SPRINT 6
 
 **Data de início**: 03/10/2019 <br/>
-**Data de fim**: 04/10/2019 <br/>
+**Data de fim**: 07/10/2019 <br/>
 **Duração**: 5 dias <br/>
 **Pontuação**: 29 pontos 
 

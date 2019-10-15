@@ -7,7 +7,7 @@
     tools:context=".CashIn">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/DepositarButton"
         android:layout_width="336dp"
         android:layout_height="66dp"
         android:background="#55b6a6"
@@ -16,31 +16,31 @@
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.921" />
+        app:layout_constraintVertical_bias="0.876" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/CashInLabel"
         android:layout_width="188dp"
         android:layout_height="69dp"
         android:text="Cash In"
-        android:textColor="@android:color/black"
+        android:textColor="#060505"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.06" />
+        app:layout_constraintVertical_bias="0.024" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/ValorLabel"
         android:layout_width="116dp"
         android:layout_height="54dp"
         android:text="Valor:"
-        android:textColor="@android:color/black"
+        android:textColor="#645C5C"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,23 +50,23 @@
         app:layout_constraintVertical_bias="0.342" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/tipoDeTransaçãoLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tipo de Transação:"
-        android:textColor="@android:color/black"
+        android:textColor="#645C5C"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.168"
+        app:layout_constraintHorizontal_bias="0.304"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.534" />
+        app:layout_constraintVertical_bias="0.62" />
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="383dp"
-        android:layout_height="68dp"
+        android:layout_width="227dp"
+        android:layout_height="69dp"
         android:ems="20"
         android:inputType="textPersonName"
         android:text="R$ 0.00"
@@ -74,10 +74,10 @@
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.201"
+        app:layout_constraintHorizontal_bias="0.146"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.438" />
+        app:layout_constraintVertical_bias="0.432" />
 
     <TextView
         android:id="@+id/textView11"
@@ -88,21 +88,21 @@
         android:textSize="110sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.176" />
+        app:layout_constraintVertical_bias="0.142" />
 
     <Spinner
-        android:id="@+id/chash-in-spinner"
-        android:layout_width="368dp"
-        android:layout_height="58dp"
+        android:id="@+id/chashInSpinner"
+        android:layout_width="263dp"
+        android:layout_height="59dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.194"
+        app:layout_constraintHorizontal_bias="0.141"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.629" />
+        app:layout_constraintVertical_bias="0.705" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

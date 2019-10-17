@@ -11,12 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CashIn"></activity>
-        <activity android:name=".TrackLimit" />
-        <activity android:name=".Eligibility" />
-        <activity android:name=".Installment" />
-        <activity android:name=".OverdraftConfirmation" />
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".CashIn"/>
+        <activity android:name=".TrackLimit"/>
+        <activity android:name=".Eligibility"/>
+        <activity android:name=".Installment"/>
+        <activity android:name=".OverdraftConfirmation"/>
+        <activity android:name=".Start">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

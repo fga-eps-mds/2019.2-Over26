@@ -53,7 +53,7 @@
 
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/valor"
         android:layout_width="227dp"
         android:layout_height="69dp"
         android:ems="20"

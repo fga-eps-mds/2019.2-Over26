@@ -14,23 +14,21 @@ class StartLink {
 
     private val ip: String = "192.168.0.16"
 
-    class Deserializer : ResponseDeserializable<StartLink> {
-        override fun deserialize(content: String) = Gson().fromJson(content, StartLink::class.java)
-    }
-
     fun start(nome: String) : Boolean{
         println("----StartLink.create----")
         val url: String = "http://" + ip + ":3000/api/start"
 
         val json = JSONObject()
-        json.put("nome", nome)
+        json.put("name", nome)
+        println("json: " + json.toString())
 
         val (request, response, result) =  Fuel.post(url)
             .jsonBody(json.toString())
-            .responseObject(StartLink.Deserializer())
+            .response()
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {
+            println(bytes)
         }
         when(result){
             is Result.Success -> {

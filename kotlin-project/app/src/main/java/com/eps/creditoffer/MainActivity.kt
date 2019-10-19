@@ -22,6 +22,13 @@ class MainActivity : AppCompatActivity() {
             user.cpf = 1
             user.create()
         }
+        val account=AccountLink()
+        if(!account.get(1))
+        {
+            account.agency = 1
+            account.number=1
+            account.create(1)
+        }
 
         println("----MainActivity.onCreate----")
     }

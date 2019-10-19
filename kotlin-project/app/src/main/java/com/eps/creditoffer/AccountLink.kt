@@ -12,19 +12,20 @@ import java.util.*
 
 class AccountLink {
 
+    var userId: Int = 1
     var id: Int = 0
     var agency: Int = 0
-    var number: Boolean = TRUE
-    var balance: Boolean = FALSE
-    var userId: Int = 0
+    var number: Int = 0
+    var balance: Float = 0F
 
-    private val ip: String = "192.168.0.16"
+    //private val ip: String = "192.168.0.16"
+    private val ip: String ="10.0.2.2"
 
     class Deserializer : ResponseDeserializable<AccountLink> {
         override fun deserialize(content: String) = Gson().fromJson(content, AccountLink::class.java)
     }
 
-    fun get(id: Int){
+    fun get(id: Int) : Boolean{
         println("----AccountLink.get----")
         val url: String = "http://" + ip + ":3000/api/account/" + id.toString()
 
@@ -42,22 +43,28 @@ class AccountLink {
         when (result) {
             is Result.Success -> {
                 println("Success")
+                return true
+
             }
             is Result.Failure -> {
                 println("Failure")
+                return false
+
             }
         }
     }
 
-    fun create() : Boolean{
+    fun create(userId:Int) : Boolean{
+        val  idOfUser = userId
         println("----AccountLink.create----")
         val url: String = "http://" + ip + ":3000/api/accounts"
 
         val json = JSONObject()
-        json.put("userId", this.userId)
+        json.put("userId", idOfUser)
         json.put("agency", this.agency)
         json.put("number", this.number)
-        json.put("userId", this.userId)
+        json.put("balance", this.balance)
+
 
         val (request, response, result) =  Fuel.post(url)
             .jsonBody(json.toString())

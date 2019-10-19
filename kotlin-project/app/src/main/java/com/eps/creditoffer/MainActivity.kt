@@ -17,8 +17,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val user = UserLink()
-        if(!user.get(1))
-        {
+        println(user.get(1))
+        if(!user.get(1)) {
+
             user.cpf = 1
             user.create()
         }
@@ -36,6 +37,22 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         println("----MainActivity.onResume----")
+    }
+
+    fun cashIn(view: View){
+
+        val account=AccountLink()
+        if(account.get(1)){
+            val intent = Intent(this, CashIn::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+            startActivityIfNeeded(intent, 0)
+
+
+        }else{
+            Toast.makeText(this, "Conta não encontrada!", Toast.LENGTH_LONG).show()
+
+        }
+
     }
 
     fun overdraftScreen(view: View) {

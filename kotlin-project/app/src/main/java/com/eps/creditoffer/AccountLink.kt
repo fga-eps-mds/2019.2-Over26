@@ -27,7 +27,7 @@ class AccountLink {
 
     fun get(id: Int) : Boolean{
         println("----AccountLink.get----")
-        val url: String = "http://" + ip + ":3000/api/account/" + id.toString()
+        val url: String = "http://" + ip + ":3000/api/accounts/" + id.toString()
 
         val (request, response, result) = Fuel.get(url)
             .responseObject(AccountLink.Deserializer())

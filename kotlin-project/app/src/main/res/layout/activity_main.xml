@@ -189,11 +189,12 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginTop="24dp"
-        android:orientation="vertical"
         android:background="#fff"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -203,21 +204,33 @@
             android:id="@+id/saldo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/background_dark"
-            android:textSize="22sp"
-            android:text="R$0,00"
             android:gravity="center"
-            />
+            android:text="R$0,00"
+            android:textColor="@android:color/background_dark"
+            android:textSize="22sp" />
 
         <TextView
             android:id="@+id/botao_credito"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Crédito"
             android:gravity="center"
-            />
+            android:text="Crédito" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonToCashIn"
+        android:layout_width="87dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="516dp"
+        android:text="CashIn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="cashIn"
+
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

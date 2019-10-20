@@ -5,13 +5,16 @@ import com.github.kittinunf.fuel.core.extensions.jsonBody
 import com.github.kittinunf.result.Result
 import com.google.gson.Gson
 import org.json.JSONObject
+import java.util.*
 
 class TransactionLink {
 
     var accountId: Int = 1
     var name: String = ""
     var type: String = ""
-    var description : String= ""
+    var value: Float = 0F
+    var description : String = "Boleto"
+    var date :Date = Date()
 
     private val ip: String ="10.0.2.2"
 
@@ -29,6 +32,8 @@ class TransactionLink {
         json.put("name", this.name)
         json.put("type", this.type)
         json.put("description", this.description)
+        json.put("date", this.date)
+        json.put("value", this.value)
 
 
         val (request, response, result) =  Fuel.post(url)
@@ -41,6 +46,8 @@ class TransactionLink {
             this.name = bytes.name
             this.type = bytes.type
             this.description = bytes.description
+            this.date = bytes.date
+            this.value = bytes.value
         }
         when(result){
             is Result.Success -> {

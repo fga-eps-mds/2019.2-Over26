@@ -64,7 +64,7 @@
         app:layout_constraintVertical_bias="0.62" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/textValue"
         android:layout_width="227dp"
         android:layout_height="69dp"
         android:ems="20"
@@ -92,7 +92,7 @@
         app:layout_constraintVertical_bias="0.142" />
 
     <Spinner
-        android:id="@+id/chashInSpinner"
+        android:id="@+id/cashInSpinner"
         android:layout_width="263dp"
         android:layout_height="59dp"
 
@@ -115,6 +115,6 @@
         app:layout_constraintHorizontal_bias="0.127"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.447" />
+        app:layout_constraintVertical_bias="0.458" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

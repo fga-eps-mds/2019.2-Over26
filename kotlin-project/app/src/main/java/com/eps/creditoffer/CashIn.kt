@@ -2,14 +2,14 @@ package com.eps.creditoffer
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import android.content.Intent
 import android.os.StrictMode
 import android.view.View
-import android.widget.AdapterView
-import android.widget.Button
-import android.widget.Toast
+import android.widget.*
+import com.eps.creditoffer.R.id.textValue
 import kotlinx.android.synthetic.main.activity_cash_in.*
+import java.text.NumberFormat
+
 
 class CashIn : AppCompatActivity() {
 
@@ -22,10 +22,16 @@ class CashIn : AppCompatActivity() {
         transaction.type="in"
 
 
-        val optionsString= arrayOf("Boleto","Transferencia");
-        chashInSpinner.adapter=ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,optionsString)
 
-        chashInSpinner.onItemSelectedListener= object : AdapterView.OnItemSelectedListener {
+        var textValue= findViewById(R.id.textValue) as EditText
+
+
+
+
+        val optionsString= arrayOf("Boleto","Transferencia");
+        cashInSpinner.adapter=ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,optionsString)
+
+        cashInSpinner.onItemSelectedListener= object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {
 
             }
@@ -44,6 +50,12 @@ class CashIn : AppCompatActivity() {
         val depositButton = findViewById(R.id.DepositButton) as Button
 
         depositButton.setOnClickListener{
+
+            var stringOfValue = textValue.text.toString()
+
+            transaction.value = stringOfValue.toFloat()
+
+
             if (transaction.value <= 0F  || transaction.description == null) {
 
                 if(transaction.description == null){
@@ -55,10 +67,16 @@ class CashIn : AppCompatActivity() {
                 }
 
 
-
-
             } else {
-                transaction.create()
+                if(transaction.create()){
+
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    
+                }else{
+
+                }
+
             }
 
         }
@@ -90,3 +108,4 @@ class CashIn : AppCompatActivity() {
     }*/
 
 }
+

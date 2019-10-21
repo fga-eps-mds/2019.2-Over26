@@ -56,11 +56,11 @@
 ![](../../images/metrics_agile/quadro_conhecimento_sprint6.png)
 
 # 2. Visão do Tech Leader
-Essa sprint foi de refatoração e ajuste de algumas funcionalidades planejadas para a Release 1, ela ficou com duração de 5 dias, devido a data da R1. Além dos testes unitários no backend. Foram planejados 29 pontos, porém foi cancelada a [TS02 - Criar método de update no OverdraftDebt - Backend](https://github.com/fga-eps-mds/2019.2-Over26/issues/93), pois não há a necessidade de ter um método para atualizar a dívida.  
+Essa sprint foi de refatoração e ajuste de algumas funcionalidades planejadas para a Release 1, ela ficou com duração de 5 dias, devido a data da R1 ter sido alterada. Foram planejados 29 pontos, porém foi cancelada a [TS02 - Criar método de update no OverdraftDebt - Backend](https://github.com/fga-eps-mds/2019.2-Over26/issues/93), pois não há a necessidade de ter um método para atualizar a dívida.  
 
 Os testes ficaram de dívida técnica, pois não deu para testar todas as novas controllers. Além da rafatoração das models e controllers no backend, devido a grande quantidade de conflitos nessas atividades, pois estavam mexendo em locais comuns. 
 
-Essa sprint foi de grande valia para o projeto, pois foi necessário refatorar muitas coisas para que o projeto desse uma continuidade melhor, em relação ao código. Além de termos quebrado melhor as histórias no planejamento, o que deu mais fluidez  à sprint. 
+Essa sprint foi de grande valia para o projeto, pois foi necessário refatorar muitas coisas para que o projeto desse uma continuidade melhor, em relação ao código. Apesar de não ter sido entregue todas as histórias planejadas, devido a grande quantidade de conflitos existente e sem tempo para resolvê-los com cuidado. Foram quebradas melhor as histórias no planejamento, o que deu mais fluidez  à sprint. 
 
 Porém, não houve muita disponibilidade dos membros da equipe para realizar as tarefas durante a sprint, acumulando muito trabalho para o final. A comunicação voltou a ser um gargalo nessa sprint.
 

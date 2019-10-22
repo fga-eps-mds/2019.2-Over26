@@ -17,11 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val user = UserLink()
-        if(!user.get(1))
-        {
-            user.cpf = 1
-            user.create()
-        }
+        user.get(2)
 
         println("----MainActivity.onCreate----")
     }

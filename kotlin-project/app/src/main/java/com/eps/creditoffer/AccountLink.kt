@@ -18,7 +18,7 @@ class AccountLink {
     var balance: Boolean = FALSE
     var userId: Int = 0
 
-    private val ip: String = "192.168.0.16"
+    private val ip: String = "10.0.2.2"
 
     class Deserializer : ResponseDeserializable<AccountLink> {
         override fun deserialize(content: String) = Gson().fromJson(content, AccountLink::class.java)

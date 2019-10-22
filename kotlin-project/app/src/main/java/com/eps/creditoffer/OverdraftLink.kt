@@ -21,7 +21,7 @@ class OverdraftLink {
     var limitUsed: Float = 0F
     var isBlocked: Boolean = FALSE
 
-    private val ip: String = "192.168.0.16"
+    private val ip: String = "10.0.2.2"
 
     class Deserializer : ResponseDeserializable<OverdraftLink> {
         override fun deserialize(content: String) = Gson().fromJson(content, OverdraftLink::class.java)

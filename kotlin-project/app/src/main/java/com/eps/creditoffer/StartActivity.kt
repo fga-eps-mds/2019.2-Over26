@@ -20,7 +20,6 @@ class StartActivity : AppCompatActivity() {
 
         button_start.setOnClickListener(View.OnClickListener {
             val name = editText_startName.text.toString()
-            println("ButtonStart:   "+name)
 
             if(name == ""){
                 Toast.makeText(this, "Digite um nome!", Toast.LENGTH_LONG).show()

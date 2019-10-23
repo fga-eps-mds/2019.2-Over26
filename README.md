@@ -27,7 +27,7 @@
 
 #### [Backend](https://github.com/fga-eps-mds/2019.2-Over26-Backend)
 
-[![TesTest Coveragets](https://codecov.io/gh/fga-eps-mds/2019.2-Over26-Backend/branch/master/graph/badge.svg)](https://codecov.io/gh/fga-eps-mds/2019.2-Over26-Backend/branch/master/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![TesTest Coveragets](https://codecov.io/gh/fga-eps-mds/2019.2-Over26-Backend/branch/master/graph/badge.svg)](https://codecov.io/gh/fga-eps-mds/2019.2-Over26-Backend/branch/master/) [![Maintainability](https://api.codeclimate.com/v1/badges/c851dcabaf95d246afd4/maintainability)](https://codeclimate.com/github/fga-eps-mds/2019.2-Grupo2-Backend/maintainability) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ### Licença
 

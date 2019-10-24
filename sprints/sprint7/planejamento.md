@@ -1,4 +1,4 @@
-# Planejamento SPRINT 6
+# Planejamento SPRINT 7
 
 **Data de início**: 12/10/2019 <br/>
 **Data de fim**: 21/10/2019 <br/>

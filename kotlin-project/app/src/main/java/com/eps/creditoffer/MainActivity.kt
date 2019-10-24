@@ -14,18 +14,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
-        StrictMode.setThreadPolicy(policy)
-
         setContentView(R.layout.activity_main)
 
         val user = UserLink()
-        if(!user.get(1))
-        {
-            user.cpf = 1
-            user.create()
-        }
+        user.get(2)
 
         println("----MainActivity.onCreate----")
     }
@@ -33,6 +25,12 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         println("----MainActivity.onResume----")
+    }
+
+    fun cashOut(view: View){
+        val intent = Intent(this, CashOut::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+        startActivityIfNeeded(intent, 0)
     }
 
     fun overdraftScreen(view: View) {

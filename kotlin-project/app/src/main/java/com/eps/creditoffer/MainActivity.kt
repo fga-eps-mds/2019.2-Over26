@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.StrictMode
 import android.view.View
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.Boolean.FALSE
 import java.lang.Boolean.TRUE
 
@@ -29,6 +30,8 @@ class MainActivity : AppCompatActivity() {
             account.agency = 1
             account.number=1
             account.create(1)
+        }else{
+            saldo.setText("R$"+account.balance.toString())
         }
 
         println("----MainActivity.onCreate----")
@@ -37,6 +40,12 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         println("----MainActivity.onResume----")
+    }
+
+    fun cashOut(view: View) {
+        val intent = Intent(this, CashOut::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+        startActivityIfNeeded(intent, 0)
     }
 
     fun cashIn(view: View){

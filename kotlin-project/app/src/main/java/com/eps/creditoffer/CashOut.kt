@@ -18,7 +18,6 @@ class CashOut : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cash_out)
 
-
         var transaction = TransactionLink()
         transaction.type="out"
 
@@ -82,29 +81,5 @@ class CashOut : AppCompatActivity() {
         }
 
     }
-
-    /* fun makeTransaction(view: View){
-
-         var transaction = TransactionLink()
-         transaction.type="in"
-
-         if (transaction.value <= 0F  || transaction.description == null) {
-
-             if(transaction.description == null){
-                 Toast.makeText(this, "Escolher forma de retirada.", Toast.LENGTH_LONG).show()
-             }
-
-             if(transaction.value <= 0F){
-             Toast.makeText(this, "Valor da retirada precisa ser positivo.", Toast.LENGTH_LONG).show()
-             }
-
-
-
-
-         } else {
-             transaction.create()
-         }
-
-     }*/
 
 }

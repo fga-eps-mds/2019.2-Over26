@@ -22,7 +22,7 @@ class OverdraftDebtLink {
     var totalAmount: Float = 0F
 
     //private val ip: String = "192.168.0.16"
-    private val ip: String ="10.0.2.2"
+    private val ip: String = "10.0.2.2"
 
     class Deserializer : ResponseDeserializable<OverdraftDebtLink> {
         override fun deserialize(content: String) = Gson().fromJson(content, OverdraftDebtLink::class.java)

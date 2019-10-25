@@ -23,7 +23,7 @@ class CashOut : AppCompatActivity() {
 
 
 
-        var textValue= findViewById(R.id.textValue) as EditText
+        var textValue= findViewById(R.id.valor) as EditText
 
 
         val optionsString= arrayOf("Compra com cartão", "Pagamento de boleto", "Transferência");

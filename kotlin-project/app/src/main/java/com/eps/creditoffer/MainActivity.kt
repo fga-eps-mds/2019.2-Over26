@@ -43,9 +43,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun cashOut(view: View) {
-        val intent = Intent(this, CashOut::class.java)
-        intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
-        startActivityIfNeeded(intent, 0)
+
+        val account=AccountLink()
+        if(account.get(1)){
+            val intent = Intent(this, CashOut::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+            startActivityIfNeeded(intent, 0)
+
+
+        }else{
+            Toast.makeText(this, "Conta não encontrada!", Toast.LENGTH_LONG).show()
+
+        }
     }
 
     fun cashIn(view: View){

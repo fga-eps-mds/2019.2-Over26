@@ -1,4 +1,0 @@
-#Fri Oct 25 23:21:58 BRT 2019
-base.0=/home/gabriel/2019.2-Over26/kotlin-project/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

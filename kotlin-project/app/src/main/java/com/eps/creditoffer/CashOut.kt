@@ -50,32 +50,106 @@ class CashOut : AppCompatActivity() {
         retirarButton.setOnClickListener{
 
             var stringOfValue = textValue.text.toString()
-
             transaction.value = stringOfValue.toFloat()
 
+            val account = AccountLink()
+            account.get(1)
 
-            if (transaction.value <= 0F  || transaction.description == null) {
+            val overdraft = OverdraftLink()
+            overdraft.get(1)
 
-                if(transaction.description == null){
-                    Toast.makeText(this, "Escolher forma de retirada.", Toast.LENGTH_LONG).show()
+
+            if (transaction.value > account.balance && overdraft.isActive && transaction.description == "Compra com cartão"){
+
+                if (transaction.value <= 0F  || transaction.description == null) {
+
+                    if(transaction.description == null){
+                        Toast.makeText(this, "Escolher forma de retirada.", Toast.LENGTH_LONG).show()
+                    }
+
+                    if(transaction.value <= 0F){
+                        Toast.makeText(this, "Valor da retirada precisa ser positivo.", Toast.LENGTH_LONG).show()
+                    }
+
+
                 }
+                else {
+                    if(transaction.create()){
 
-                if(transaction.value <= 0F){
-                    Toast.makeText(this, "Valor da retirada precisa ser positivo.", Toast.LENGTH_LONG).show()
+                        val intent = Intent(this, MainActivity::class.java)
+                        startActivity(intent)
+
+                    }else{
+
+                    }
+
                 }
-
-
             }
-            else {
-                if(transaction.create()){
 
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
+            else if(transaction.value > account.balance && overdraft.isActive && transaction.description != "Compra com cartão"){
 
-                }else{
+                if (transaction.value <= 0F  || transaction.description == null) {
 
+                    if(transaction.description == null){
+                        Toast.makeText(this, "Escolher forma de retirada.", Toast.LENGTH_LONG).show()
+                    }
+
+                    if(transaction.value <= 0F){
+                        Toast.makeText(this, "Valor da retirada precisa ser positivo.", Toast.LENGTH_LONG).show()
+                    }
                 }
 
+                else{
+
+                    Toast.makeText(this, "Cheque especial disponível apenas para compra com cartão.", Toast.LENGTH_LONG).show()
+
+                    }
+            }
+
+            else if(transaction.value > account.balance && !overdraft.isActive){
+
+                if (transaction.value <= 0F  || transaction.description == null) {
+
+                    if(transaction.description == null){
+                        Toast.makeText(this, "Escolher forma de retirada.", Toast.LENGTH_LONG).show()
+                    }
+
+                    if(transaction.value <= 0F){
+                        Toast.makeText(this, "Valor da retirada precisa ser positivo.", Toast.LENGTH_LONG).show()
+                    }
+                }
+
+                else{
+
+                    Toast.makeText(this, "Cheque especial desativado.", Toast.LENGTH_LONG).show()
+
+                }
+            }
+
+            else{
+                if (transaction.value <= 0F  || transaction.description == null) {
+
+                    if(transaction.description == null){
+                        Toast.makeText(this, "Escolher forma de retirada.", Toast.LENGTH_LONG).show()
+                    }
+
+                    if(transaction.value <= 0F){
+                        Toast.makeText(this, "Valor da retirada precisa ser positivo.", Toast.LENGTH_LONG).show()
+                    }
+
+
+                }
+                else {
+                    if(transaction.create()){
+
+                        val intent = Intent(this, MainActivity::class.java)
+                        startActivity(intent)
+
+                    }
+                    else{
+
+                    }
+                }
             }
 
         }

@@ -35,7 +35,11 @@ class TrackLimit : AppCompatActivity() {
         button_installment.setOnClickListener(View.OnClickListener {
             val intent = Intent(this, Installment::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
-            startActivityIfNeeded(intent, 0)
+            startActivity(getIntent())
+            finish()
+            startActivity(intent)
+
+//            startActivityIfNeeded(intent, 0)
         })
 
         cancelCredit.setOnClickListener(View.OnClickListener {

@@ -19,4 +19,5 @@ A fim de validar e orientar o desenvolvimento da nova funcionalidade, referente 
     <img src="./images/prototipo-alta-fidelidade/Acompanhar limite-2.png" width="250" hspace="2">
     <img src="./images/prototipo-alta-fidelidade/Parcelas.png" width="250" hspace="2">
     <img src="./images/prototipo-alta-fidelidade/Extrato cheque.png" width="250" hspace="2">
+    <img src="./images/prototipo-alta-fidelidade/Cash out.png" width="250" hspace="2">
 </div>

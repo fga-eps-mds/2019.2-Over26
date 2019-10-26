@@ -54,21 +54,34 @@
         app:layout_constraintVertical_bias="0.342" />
 
 
+    <TextView
+        android:id="@+id/real"
+        android:layout_width="67dp"
+        android:layout_height="74dp"
+        android:text="R$"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.432" />
+
     <EditText
         android:id="@+id/valor"
         android:layout_width="227dp"
         android:layout_height="69dp"
         android:ems="20"
         android:inputType="textPersonName"
-        android:text="R$ 0.00"
         android:textColor="@android:color/darker_gray"
         android:textSize="40sp"
+        android:hint="0.00"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.146"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.432" />
+        app:layout_constraintVertical_bias="0.418" />
 
     <TextView
         android:id="@+id/descrição"

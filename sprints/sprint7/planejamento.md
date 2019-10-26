@@ -7,7 +7,7 @@
 
 ## 1. Objetivo
 
-Refatorar documentos e funcionalidades feitas e refinar apresentação da Release 1 com a equipe toda. **A pontuação utilizada será baseada na escala Fibonacci ( 1, 2, 3, 5, 8, 13)**
+Fazer funcionalidades priorizadas pela product owner em conjunto com o a scrum master. **A pontuação utilizada será baseada na escala Fibonacci ( 1, 2, 3, 5, 8, 13)**
 
 
 ## 2. Papéis 

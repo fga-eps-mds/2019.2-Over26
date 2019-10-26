@@ -7,7 +7,7 @@
 
 ## 1. Objetivo
 
-Refatorar documentos e funcionalidades feitas e refinar apresentação da Release 1 com a equipe toda. **A pontuação utilizada será baseada na escala Fibonacci ( 1, 2, 3, 5, 8, 13)**
+Fazer funcionalidades priorizadas pela product owner em conjunto com o a scrum master.. **A pontuação utilizada será baseada na escala Fibonacci ( 1, 2, 3, 5, 8, 13)**
 
 
 ## 2. Papéis 
@@ -25,7 +25,7 @@ Refatorar documentos e funcionalidades feitas e refinar apresentação da Releas
 | -------- | :----: | :----: | :----: |
 |[TS09 - Refatorar Confirmação de Parcelamento](https://github.com/fga-eps-mds/2019.2-over26/issues/114) | 3 | Andrew e João Gabriel  | Sim |
 |[US01 - Interface Cash Out - Integração](https://github.com/fga-eps-mds/2019.2-over26/issues/112) | 3 | Isabela e Gabriel | Sim |
-| [Estudar notificações]() | 5 | Erick e Luiza | Não |
+| [Estudar notificações](https://github.com/fga-eps-mds/2019.2-Over26/issues/123) | 5 | Erick e Luiza | Não |
 | [TS06 - Testes das novas controllers - Backend](https://github.com/fga-eps-mds/2019.2-Over26/issues/99) | 5 | João Paulo, João Gabriel e Gabriel | Não |
 
 

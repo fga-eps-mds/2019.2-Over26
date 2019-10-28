@@ -3,7 +3,7 @@
 **Data de início**: 27/10/2019 <br/>
 **Data de fim**: 02/11/2019 <br/>
 **Duração**: 7 dias <br/>
-**Pontuação**:  pontos 
+**Pontuação**: 22 pontos 
 
 ## 1. Objetivo
 
@@ -23,18 +23,21 @@ Fazer funcionalidades priorizadas pela product owner em conjunto com o a scrum m
 ### Overview
 | Atividade | Pontuação | Responsável | Dívida |
 | -------- | :----: | :----: | :----: |
-|[US14 - Acompanhar dívida - Front](https://github.com/fga-eps-mds/2019.2-Over26/issues/46) |  |   |  |
-|[US14 - Acompanhar dívida - Back](https://github.com/fga-eps-mds/2019.2-Over26/issues/45) |  |   |  |
-|[US08 - Acompanhar período de insenção de juros - Backend](https://github.com/fga-eps-mds/2019.2-Over26/issues/128) |  |   |  |
-|[US08 - Acompanhar período de insenção de juros - Integração](https://github.com/fga-eps-mds/2019.2-Over26/issues/127) |  |   |  |
-|[US08 - Acompanhar período de insenção de juros - Design](https://github.com/fga-eps-mds/2019.2-Over26/issues/126) |  |   |  |
-|[US10 - Oferecer o serviço de cheque especial quando o usuário tiver com um saldo negativo](https://github.com/fga-eps-mds/2019.2-Over26/issues/131) |  |   |  |
+|[US14 - Acompanhar dívida - Design](https://github.com/fga-eps-mds/2019.2-Over26/issues/46) | 5 |  João Gabriel, Erick e João Paulo | Não |
+|[US14 - Acompanhar dívida - Integração]() | 3 | João Gabriel, Erick e João Paulo | Não |
+|[US14 - Acompanhar dívida - Back](https://github.com/fga-eps-mds/2019.2-Over26/issues/45) | 2 | João Gabriel, Erick e João Paulo  | Não |
+|[US08 - Acompanhar período de insenção de juros - Backend](https://github.com/fga-eps-mds/2019.2-Over26/issues/128) | 3 | Luiza e Gabriel  | Não |
+|[US08 - Acompanhar período de insenção de juros - Integração](https://github.com/fga-eps-mds/2019.2-Over26/issues/127) | 3 | Luiza e Gabriel  | Não |
+|[Pagar Parcela - Back](https://github.com/fga-eps-mds/2019.2-Over26/issues/135) | 1 | Isabela e Andrew | Não |
+|[Refatorar protótipo](https://github.com/fga-eps-mds/2019.2-Over26/issues/137) | 5 | Isabela  | Não |
 
 
 ### EPS
 | Atividade | Responsável |
 | -------- | :----: |
 | Deploy do Backend | Andrew |
+| Testes Frontend | Andrew e Natália |
+| Qualidade de Código | Andrew e Natália |
 | Documentar Sprint 9 | Maria Luiza |
 
 ## 4. Pareamento

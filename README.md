@@ -1,25 +1,9 @@
-<!-- Build Status - Maintainability --> 
-[![Test Coverage](https://api.codeclimate.com/v1/badges/c851dcabaf95d246afd4/test_coverage)](https://codeclimate.com/github/fga-eps-mds/2019.2-Grupo2/test_coverage)  [![Maintainability](https://api.codeclimate.com/v1/badges/c851dcabaf95d246afd4/maintainability)](https://codeclimate.com/github/fga-eps-mds/2019.2-Grupo2/maintainability) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-<br/><br/>
-
-<p align="center">
-  <img src="https://i.ibb.co/TcRs6mJ/2e4fe184-7bdd-4498-ae84-d88d4c00fc71.jpg" alt="Logo">
-</p>
-
-<h1 align="center"> Over26 - Uma nova experiência de cheque especial </h1> 
-<h3 align="center">Tenha 26 dias sem juros para pagar a sua dívida. Você não vai ficar fora dessa, né?</h3>
-
-<p align="center">
-    Fique por dentro do que estamos aprontando!<a href="https://fga-eps-mds.github.io/2019.2-Over26/#/"><strong> Visite a nossa página!</strong></a>
-</p>
- 
- <br><br>
+<br><br>
  
  ### Sobre o projeto
 
 <p align="justify"> &emsp;&emsp;
-  O Over26 consiste em um Mínimo Produto viável (MVP) para o teste de uma nova experiência de crédito por meio do cheque especial em uma conta de pagamento. O objetivo deste produto consiste em estabelecer um melhor resultado em termos de experiência de usuário e usabilidade para a oferta do serviço no Brasil. Caso você deseje embarcar nessa aventura conosco e contribuir com o nosso projeto, você pode obter mais informações no nosso <a href="https://github.com/fga-eps-mds/2019.2-Grupo2/blob/master/.github/CONTRIBUTING.md">Contributing </a> e <a href="https://github.com/fga-eps-mds/2019.2-Grupo2/blob/master/.github/CODE_OF_CONDUCT.md">Code of Conduct </a>
+  O Over26 consiste em um Mínimo Produto viável (MVP) para o teste de uma nova experiência de crédito por meio do cheque especial em uma conta de pagamento. O objetivo deste produto consiste em estabelecer um melhor resultado em termos de experiência de usuário e usabilidade para a oferta do serviço no Brasil.
 </p>
 
 ### Principais funcionalidades
@@ -35,6 +19,7 @@
   * Acompanhamento das dívidas;
 </p>
 
+<<<<<<< HEAD
 ### Licença
 
 Para visualizar a licença, acesse [Licence](https://github.com/fga-eps-mds/2019.2-Grupo2/blob/master/LICENSE)
@@ -80,3 +65,20 @@ O projeto Over26 utiliza o docker para isolar os ambientes de desenvolvimento e 
 ### Rodando os testes
 
 ### Usando a aplicação
+=======
+
+
+#### [Frontend](https://github.com/fga-eps-mds/2019.2-Over26)
+
+[![Test Coverage](https://api.codeclimate.com/v1/badges/c851dcabaf95d246afd4/test_coverage)](https://codeclimate.com/github/fga-eps-mds/2019.2-Grupo2/test_coverage)  [![Maintainability](https://api.codeclimate.com/v1/badges/c851dcabaf95d246afd4/maintainability)](https://codeclimate.com/github/fga-eps-mds/2019.2-Grupo2/maintainability) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+#### [Backend](https://github.com/fga-eps-mds/2019.2-Over26-Backend)
+
+[![TesTest Coveragets](https://codecov.io/gh/fga-eps-mds/2019.2-Over26-Backend/branch/master/graph/badge.svg)](https://codecov.io/gh/fga-eps-mds/2019.2-Over26-Backend/branch/master/) [![Maintainability](https://api.codeclimate.com/v1/badges/c851dcabaf95d246afd4/maintainability)](https://codeclimate.com/github/fga-eps-mds/2019.2-Grupo2-Backend/maintainability) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+### Licença
+
+Para visualizar a licença, acesse [Licence](https://github.com/fga-eps-mds/2019.2-Grupo2/blob/master/LICENSE)
+
+Caso queira contribuir, visualize o nosso [contributing](https://github.com/fga-eps-mds/2019.2-Over26/blob/master/.github/CONTRIBUTING.md)
+>>>>>>> 3e79b6eb774371d06846ee909d24bd7c68160482

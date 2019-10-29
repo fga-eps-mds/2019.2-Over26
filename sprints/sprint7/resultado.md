@@ -29,13 +29,16 @@
 | Documentar Sprint 7 |  Concluída |
 
 ## 1.2 Burndown
-<!-- ![](../../images/metrics_agile/burndown_sprint6.png) -->
+![](../../images/metrics_agile/burndown_sprint7.png)
 
 ## 1.3 Velocity 
-<!-- ![](../../images/metrics_agile/velocity_sprint6.png) -->
+![](../../images/metrics_agile/velocity_sprint7.png)
+
+## 1.4 Burndown de Riscos 
+<!-- ![](../../images/metrics_agile/velocity_sprint7.png) -->
 
 
-## 1.4 Retrospectiva 
+## 1.5 Retrospectiva 
 | Membro | Pontos Positivos | Pontos Negativos | Sugestão de Melhoria | Pontuação das Histórias |
 | --------  | :----:   | :----:   | :----:   | :----:   |
 | Adrianne | Tivemos um bom feedback do que desenvolvemos até agora na R1, MDS está conseguindo ser mais independente | A comunicação piorou consideravelmente devido ao cansaço trazido pela R1,leve desorganizada de toda equipe, baixa produtividade do time em geral  | Reorganizar a equipe, reunião de feedback seria uma boa, enfatizar pareamentos | Ok | |
@@ -50,6 +53,6 @@
 | João Paulo | Histórias mais curtas o que facilita o trabalho, bom feedback da R1 | Cansaço pós R1 atrapalhou um pouco o trabalho, um pouco de dificuldade nos testes | Mais comunicação, mais treino com testes | Ok | |
 
 ## 1.6 Quadro de conhecimento
-<!-- ![](../../images/metrics_agile/quadro_conhecimento_sprint6.png) -->
+![](../../images/metrics_agile/quadro_conhecimento_sprint7.png)
 
 # 2. Visão do Tech Leader

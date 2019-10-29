@@ -33,6 +33,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bt1"
         android:layout_width="match_parent"
@@ -51,17 +52,17 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/iconeconsumercredit" />
+            app:srcCompat="@drawable/ic_spinner" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="NOVO! Crédito ao Consumidor"
+            android:text = "Usar Cheque Especial"
             android:textColor="@android:color/background_dark"
             android:textSize="16sp"
             app:layout_constraintEnd_toStartOf="@id/imageView2"
-
+            android:layout_marginLeft="10dp"
             app:layout_constraintStart_toEndOf="@+id/imageView3"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -70,19 +71,23 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Receba ofertas de empréstimos a partir de R$ 1000 com apenas alguns toques."
+            android:layout_marginLeft="10dp"
             app:layout_constraintEnd_toStartOf="@id/imageView2"
             app:layout_constraintStart_toEndOf="@id/imageView3"
             app:layout_constraintTop_toBottomOf="@id/textView2" />
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/addicon" />
+            app:srcCompat="@drawable/ic_plus_solid"
+            android:clickable="true"
+            android:onClick="overdraftScreen"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bt2"
@@ -98,20 +103,22 @@
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/iconedeacesso" />
+            app:srcCompat="@drawable/ic_tachometer_alt_solid" />
 
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/addicon" />
+            android:clickable="true"
+            android:onClick="activeOverdraft"
+            app:srcCompat="@drawable/ic_plus_solid"/>
 
         <TextView
             android:id="@+id/textView4"
@@ -120,6 +127,7 @@
             android:text="Ativar Cheque Especial"
             android:textColor="@android:color/background_dark"
             android:textSize="16sp"
+            android:layout_marginLeft="10dp"
             app:layout_constraintEnd_toStartOf="@id/imageView5"
             app:layout_constraintStart_toEndOf="@+id/imageView4"
             app:layout_constraintTop_toTopOf="parent"
@@ -131,67 +139,66 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Precisa de um pouco mais de dinheiro no final do mês? "
+            android:layout_marginLeft="10dp"
             app:layout_constraintEnd_toStartOf="@id/imageView5"
             app:layout_constraintStart_toEndOf="@id/imageView4"
             app:layout_constraintTop_toBottomOf="@id/textView4" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="0dp"
+        android:layout_height="40dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <ImageButton
-            android:id="@+id/imageButton"
+
+        <ImageView
+            android:id="@+id/bar_icon"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#fff"
             app:srcCompat="@drawable/ic_add_black_24dp"/>
 
-        <ImageButton
-            android:id="@+id/imageButton2"
+        <ImageView
+            android:id="@+id/four_squares_icon"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#fff"
-            app:srcCompat="@drawable/ic_add_black_24dp" />
+            app:srcCompat="@drawable/ic_four_squares_button" />
 
-        <ImageButton
-            android:id="@+id/imageButton3"
+        <ImageView
+            android:id="@+id/plus_black_icon"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#fff"
-            app:srcCompat="@drawable/ic_add_black_24dp" />
+            app:srcCompat="@drawable/ic_plus_black_solid" />
 
-        <ImageButton
-            android:id="@+id/imageButton4"
+        <ImageView
+            android:id="@+id/gift_icon"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#fff"
-            app:srcCompat="@drawable/ic_add_black_24dp" />
+            app:srcCompat="@drawable/ic_gift_solid" />
 
-        <ImageButton
-            android:id="@+id/imageButton5"
+        <ImageView
+            android:id="@+id/user_icon"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#fff"
-            app:srcCompat="@drawable/ic_add_black_24dp" />
+            app:srcCompat="@drawable/ic_user_solid" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginTop="24dp"
-        android:orientation="vertical"
         android:background="#fff"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -201,22 +208,46 @@
             android:id="@+id/saldo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/background_dark"
-            android:textSize="22sp"
-            android:text="R$0,00"
             android:gravity="center"
-            />
+            android:text="R$0,00"
+            android:textColor="@android:color/background_dark"
+            android:textSize="22sp" />
 
         <TextView
             android:id="@+id/botao_credito"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Crédito"
             android:gravity="center"
-            />
+            android:text="Crédito" />
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/buttonToCashOut"
+        android:layout_width="90dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="516dp"
+        android:onClick="cashOut"
+        android:text="CashOut"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.657"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.502" />
+
+    <Button
+        android:id="@+id/buttonToCashIn"
+        android:layout_width="87dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="516dp"
+        android:text="CashIn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="cashIn"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

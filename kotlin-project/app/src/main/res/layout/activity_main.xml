@@ -157,8 +157,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#fff"
-            app:srcCompat="@drawable/ic_add_black_24dp"/>
+            app:srcCompat="@drawable/ic_bar_solid" />
 
         <ImageView
             android:id="@+id/four_squares_icon"

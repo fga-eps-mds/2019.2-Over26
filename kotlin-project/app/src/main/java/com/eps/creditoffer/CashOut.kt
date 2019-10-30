@@ -86,7 +86,7 @@ class CashOut : AppCompatActivity() {
                 }
             }
 
-            else if(transaction.value > account.balance && overdraft.isActive && transaction.description != "Compra com cartão"){
+            else if(transaction.value > account.balance && overdraft.isActive && (transaction.description == "Pagamento de boleto" || transaction.description == "Transferência")){
 
                 if (transaction.value <= 0F  || transaction.description == null) {
 

@@ -19,8 +19,6 @@
   * Acompanhamento das dívidas;
 </p>
 
-
-
 #### [Frontend](https://github.com/fga-eps-mds/2019.2-Over26)
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/c851dcabaf95d246afd4/test_coverage)](https://codeclimate.com/github/fga-eps-mds/2019.2-Grupo2/test_coverage)  [![Maintainability](https://api.codeclimate.com/v1/badges/c851dcabaf95d246afd4/maintainability)](https://codeclimate.com/github/fga-eps-mds/2019.2-Grupo2/maintainability) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

@@ -18,10 +18,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/calculadora_foreground"
-        tools:srcCompat="@mipmap/calculadora"
-        android:clickable="true"
-        android:onClick="mudarTela"/>
+        app:srcCompat="@mipmap/ic_calculadoracalendario_foreground"/>
 
     <TextView
         android:id="@+id/textView"

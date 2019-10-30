@@ -10,36 +10,48 @@ import android.widget.SeekBar
 import java.lang.Boolean.FALSE
 import android.content.Intent
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.Boolean.TRUE
-
 
 class TrackLimit : AppCompatActivity() {
 
-    val overdraft = OverdraftLink()
-    val debt = OverdraftDebtLink()
+    private val overdraft = OverdraftLink()
+    private val debt = OverdraftDebtLink()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.track_limit)
 
         overdraft.get(1)
-//        debt.create(1)
-          debt.get(1)
-      debt.checkAmout(1)
+        debt.get(1)
+        debt.checkAmout(1)
 
         initSeekBar(overdraft, debt)
 
         println("----TrackLimit.onCreate----")
 
         button_installment.setOnClickListener(View.OnClickListener {
-            val intent = Intent(this, Installment::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
-            startActivity(getIntent())
-            finish()
-            startActivity(intent)
+            if(true) {
+                val intent = Intent(this, Installment::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+                startActivity(getIntent())
+                finish()
+                startActivity(intent)
+            }
+            else {      // Condição para mostrar ou não as dívidas
+                setContentView(R.layout.fragment_main)
 
-//            startActivityIfNeeded(intent, 0)
+                val fm = supportFragmentManager
+                var fragment = fm.findFragmentById(R.id.fragment_container)
+
+                // ensures fragments already created will not be created
+                if (fragment == null) {
+                    fragment = MainFragment.newInstance()
+                    // create and commit a fragment transaction
+                    fm.beginTransaction()
+                        .add(R.id.fragment_container, fragment)
+                        .commit()
+                }
+            }
         })
 
         cancelCredit.setOnClickListener(View.OnClickListener {
@@ -61,14 +73,12 @@ class TrackLimit : AppCompatActivity() {
             overdraft.save(1)
             finish()
         })
-
     }
 
     override fun onResume() {
         super.onResume()
         println("----TrackLimit.onResume----")
         initSeekBar(overdraft, debt)
-
     }
 
     fun initSeekBar( overdraft: OverdraftLink, debt: OverdraftDebtLink){
@@ -115,7 +125,7 @@ class TrackLimit : AppCompatActivity() {
                 }
             })
         }
-        else{
+        else {
             // Show installment button
             button_installment.visibility = View.VISIBLE
 
@@ -136,5 +146,4 @@ class TrackLimit : AppCompatActivity() {
             textView_usage.setTextColor(Color.RED)
         }
     }
-
 }

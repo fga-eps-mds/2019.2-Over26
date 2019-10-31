@@ -6,21 +6,24 @@ EPS
 
 ### 1.1 Fechamento da Sprint 
 
-**Pontos concluídos:**
+**Pontos concluídos: 13 pontos**
+<br/>
+**Dívida Técnica: 3 pontos**
 
 | Atividade | Situação |
 | --------  | :----:   |
 |[TS09 - Refatorar Confirmação de Parcelamento](https://github.com/fga-eps-mds/2019.2-over26/issues/114) | Concluída | 
-|[US01 - Interface Cash Out - Integração](https://github.com/fga-eps-mds/2019.2-over26/issues/112) | |
+|[US01 - Interface Cash Out - Integração](https://github.com/fga-eps-mds/2019.2-over26/issues/112) | Dívida Técnica |
 | [Estudar notificações](https://github.com/fga-eps-mds/2019.2-Over26/issues/123)|Concluída |
 | [TS06 - Testes das novas controllers - Backend](https://github.com/fga-eps-mds/2019.2-Over26/issues/99)| Concluída|
-| | |
+
 
 
 ## 1.2 Burndown
+![](../../images/metrics_agile/burndown_sprint8.png)
 
-## 1.3 Velocity  
-
+## 1.3 Velocity 
+![](../../images/metrics_agile/velocity_sprint8.png)
 
 ## 1.4 Burndown de Riscos 
 <!-- ![](../../images/metrics_agile/velocity_sprint7.png) -->
@@ -42,7 +45,7 @@ EPS
 
 
 ## 1.6 Quadro de conhecimento
-
+![](../../images/metrics_agile/quadro_conhecimento_sprint8.png)
 
 
 # 2. Visão do Tech Leader

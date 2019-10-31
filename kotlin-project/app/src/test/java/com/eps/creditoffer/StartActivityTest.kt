@@ -18,7 +18,7 @@ import org.junit.jupiter.api.extension.ExtendWith
 
 
 @ExtendWith(MockKExtension::class)
-class StartActivityAndroidTest {
+class StartActivityTest {
 
     @RelaxedMockK
     lateinit var startLink: StartLink

@@ -39,6 +39,8 @@ class StartActivityAndroidTest {
         onView(withId(R.id.button_start))
             .perform(click())
 
+        onView(withId(R.layout.activity_main)).check(matches(isDisplayed()))
+
     }
 
 }

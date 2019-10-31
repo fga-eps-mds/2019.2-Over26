@@ -9,12 +9,12 @@
 
     <TextView
         android:id="@+id/list_month"
-        android:layout_width="102dp"
-        android:layout_height="46dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="left"
         android:paddingLeft="16dp"
-        android:text="title"
-        android:textSize="32dp"
+        android:text="month"
+        android:textSize="42dp"
         android:textStyle="bold" />
 
     <TextView
@@ -23,8 +23,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:paddingRight="16dp"
-        android:textSize="20dp"
-        android:text="description" />
+        android:text="value"
+        android:textColor="#AE009688"
+        android:textSize="28dp" />
 
     <TextView
         android:id="@+id/list_date"
@@ -32,8 +33,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="left"
         android:paddingLeft="16dp"
-        android:textSize="20dp"
-        android:text="description"/>
+        android:text="date"
+        android:textSize="20dp" />
 
     <TextView
         android:layout_width="match_parent"

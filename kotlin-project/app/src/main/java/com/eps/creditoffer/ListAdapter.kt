@@ -5,37 +5,45 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ListAdapter(private val list: List<Movie>)
-    : RecyclerView.Adapter<MovieViewHolder>() {
+class ListAdapter(private val list: List<Instalment>)
+    : RecyclerView.Adapter<InstalmentViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): InstalmentViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        return MovieViewHolder(inflater, parent)
+        return InstalmentViewHolder(inflater, parent)
     }
 
-    override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
-        val movie: Movie = list[position]
-        holder.bind(movie)
+    override fun onBindViewHolder(holder: InstalmentViewHolder, position: Int) {
+        val instalment: Instalment = list[position]
+        holder.bind(instalment)
     }
 
     override fun getItemCount(): Int = list.size
 
 }
 
-class MovieViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
+class InstalmentViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
     RecyclerView.ViewHolder(inflater.inflate(R.layout.list_item, parent, false)) {
-    private var mTitleView: TextView? = null
-    private var mYearView: TextView? = null
+    private var iMonthView: TextView? = null
+    private var iDateView: TextView? = null
+    private var iValueView: TextView? = null
+
+
 
 
     init {
-        mTitleView = itemView.findViewById(R.id.list_title)
-        mYearView = itemView.findViewById(R.id.list_description)
+        iMonthView = itemView.findViewById(R.id.list_month)
+        iDateView = itemView.findViewById(R.id.list_date)
+        iValueView = itemView.findViewById(R.id.list_value)
+
     }
 
-    fun bind(movie: Movie) {
-        mTitleView?.text = movie.title
-        mYearView?.text = movie.year.toString()
+    fun bind(instalment: Instalment) {
+        iMonthView?.text = instalment.month
+        iDateView?.text = instalment.date
+        iValueView?.text = instalment.value
+
+
     }
 
 }

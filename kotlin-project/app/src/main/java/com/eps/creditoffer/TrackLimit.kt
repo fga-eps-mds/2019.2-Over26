@@ -29,6 +29,23 @@ class TrackLimit : AppCompatActivity() {
 
         println("----TrackLimit.onCreate----")
 
+        button_view_installments.setOnClickListener(View.OnClickListener {
+            setContentView(R.layout.fragment_main)
+
+            val fm = supportFragmentManager
+            var fragment = fm.findFragmentById(R.id.fragment_container)
+
+            // ensures fragments already created will not be created
+            if (fragment == null) {
+                fragment = MainFragment.newInstance()
+                // create and commit a fragment transaction
+                fm.beginTransaction()
+                    .add(R.id.fragment_container, fragment)
+                    .commit()
+            }
+        })
+
+
         button_installment.setOnClickListener(View.OnClickListener {
             if(true) {
                 val intent = Intent(this, Installment::class.java)
@@ -36,21 +53,6 @@ class TrackLimit : AppCompatActivity() {
                 startActivity(getIntent())
                 finish()
                 startActivity(intent)
-            }
-            else {      // Condição para mostrar ou não as dívidas
-                setContentView(R.layout.fragment_main)
-
-                val fm = supportFragmentManager
-                var fragment = fm.findFragmentById(R.id.fragment_container)
-
-                // ensures fragments already created will not be created
-                if (fragment == null) {
-                    fragment = MainFragment.newInstance()
-                    // create and commit a fragment transaction
-                    fm.beginTransaction()
-                        .add(R.id.fragment_container, fragment)
-                        .commit()
-                }
             }
         })
 

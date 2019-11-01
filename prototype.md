@@ -8,20 +8,24 @@ A fim de validar e orientar o desenvolvimento da nova funcionalidade, referente 
 #### 2. Protótipo de Alta Fidelidade
 
 
-| Tipo | Fonte | Tamanho| Cor|
+| Tipo | Fonte | Tamanho | Cor|
 | - | - | - | - |
-| Título| Roboto Slab| 30| Preto (000000) |
-| Texto com ênfase| Radley | 18| Preto (000000) |
-| Texto sem ênfase| Radley| 16| Preto (000000)|
-| Botões | Radley | 14 | Preto (000000)|
-| Números | Quando | 14 | Preto (000000) |
-| Texto de caixas de texto, vencimento e juros | Radley | 16 | Cinza (9E9E9E) |
+| Título| Roboto Slab| 30 px| Preto (000000) |
+| Texto com ênfase| Radley | 18 px| Preto (000000) |
+| Texto sem ênfase| Radley| 16 px | Preto (000000)|
+| Botões | Radley | 14 px | Preto (000000)|
+| Números | Quando | 14 px | Preto (000000) |
+| Texto de caixas de texto, vencimento e juros | Radley | 16 px | Cinza (9E9E9E) |
 
 | Fundo | Cor | Código |
 | - | - | - |
 | Geral | Branco | FFFFFF |
 | Faixa superior | Azul | 5CE1E6 |
 
+| Tipo de Botão | Medidas (em px) |
+| - | - |
+| Pequeno (apenas uma palavra) | 120x33 |
+| Grande (Mais de uma palavra) | 205x29 |
 
 <div style="display:inline-block;">
     <img src="./images/prototipo-alta-fidelidade/Prototipos_Versao2/Tela_Ativacao.png" width="250" hspace="2">

@@ -7,7 +7,6 @@ import com.github.kittinunf.result.Result
 import com.google.gson.Gson
 import org.json.JSONObject
 import java.lang.Boolean.FALSE
-import java.lang.Boolean.TRUE
 import java.util.*
 
 class OverdraftDebtLink {
@@ -16,7 +15,7 @@ class OverdraftDebtLink {
     var amount: Float = 0F
     var rate: Float = 0F
     var wasDivided: Boolean = FALSE
-    //var installment: <InstallmentsLink>
+    var instalment: List<InstalmentModel> = emptyList()
     var dueDate: Int = 0
     var quantityInstallment: Int = 1
     var totalAmount: Float = 0F
@@ -43,6 +42,7 @@ class OverdraftDebtLink {
             this.wasDivided = bytes.wasDivided
             this.dueDate = bytes.dueDate
             this.quantityInstallment = bytes.quantityInstallment
+            this.instalment = bytes.instalment
         }
         when (result) {
             is Result.Success -> {

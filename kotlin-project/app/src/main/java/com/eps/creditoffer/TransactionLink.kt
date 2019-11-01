@@ -60,4 +60,34 @@ class TransactionLink {
             }
         }
     }
+
+
+    fun get(id: Int) : Boolean{
+        println("----TransactionLink.get----")
+        val url: String = "http://" + ip + ":3000/api/transactions/" + id.toString()
+
+        val (request, response, result) = Fuel.get(url)
+            .responseObject(TransactionLink.Deserializer())
+        println("Response:" + response)
+        val (bytes, error) = result
+        if (bytes != null) {
+            this.accountId = bytes.accountId
+            this.name = bytes.name
+            this.type = bytes.type
+            this.description = bytes.description
+            this.date = bytes.date
+            this.value = bytes.value
+        }
+        when(result){
+            is Result.Success -> {
+                println("Success")
+                return true
+            }
+            is Result.Failure -> {
+                println("Failure")
+                return false
+            }
+        }
+    }
+
 }

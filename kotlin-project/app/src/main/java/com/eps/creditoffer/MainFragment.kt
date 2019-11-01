@@ -6,22 +6,17 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_main.*
-import java.util.*
-
-data class Instalment(val month: String, val date: String, val value: String)
 
 class MainFragment : Fragment() {
 
     private val instalments = listOf(
-       Instalment("Out","Vencimento dia 15/10","R$100,00"),
-        Instalment("Nov","Vencimento dia 15/11","R$100,00"),
-        Instalment("Dez","Vencimento dia 15/12","R$100,00"),
-        Instalment("Jan","Vencimento dia 15/01","R$100,00"),
-        Instalment("Fev","Vencimento dia 15/02","R$100,00"),
-        Instalment("Mar","Vencimento dia 15/03","R$100,00"),
-        Instalment("Abr","Vencimento dia 15/04","R$100,00")
-
-
+        InstalmentModel("Out","Vencimento dia 15/10","R$100,00"),
+        InstalmentModel("Nov","Vencimento dia 15/11","R$100,00"),
+        InstalmentModel("Dez","Vencimento dia 15/12","R$100,00"),
+        InstalmentModel("Jan","Vencimento dia 15/01","R$100,00"),
+        InstalmentModel("Fev","Vencimento dia 15/02","R$100,00"),
+        InstalmentModel("Mar","Vencimento dia 15/03","R$100,00"),
+        InstalmentModel("Abr","Vencimento dia 15/04","R$100,00")
         )
 
     override fun onCreate(savedInstanceState: Bundle?) {

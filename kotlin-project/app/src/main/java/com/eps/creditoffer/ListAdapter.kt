@@ -1,11 +1,12 @@
 package com.eps.creditoffer
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ListAdapter(private val list: List<Instalment>)
+class ListAdapter(private val list: List<InstalmentModel>)
     : RecyclerView.Adapter<InstalmentViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): InstalmentViewHolder {
@@ -14,7 +15,7 @@ class ListAdapter(private val list: List<Instalment>)
     }
 
     override fun onBindViewHolder(holder: InstalmentViewHolder, position: Int) {
-        val instalment: Instalment = list[position]
+        val instalment: InstalmentModel = list[position]
         holder.bind(instalment)
     }
 
@@ -24,26 +25,19 @@ class ListAdapter(private val list: List<Instalment>)
 
 class InstalmentViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
     RecyclerView.ViewHolder(inflater.inflate(R.layout.list_item, parent, false)) {
-    private var iMonthView: TextView? = null
-    private var iDateView: TextView? = null
-    private var iValueView: TextView? = null
+    private var iMonthView: TextView = itemView.findViewById(R.id.list_month)
+    private var iDateView: TextView = itemView.findViewById(R.id.list_date)
+    private var iValueView: TextView = itemView.findViewById(R.id.list_value)
+
+    fun bind(instalment: InstalmentModel) {
+        iMonthView.text = instalment.month
+        iDateView.text = instalment.date
+        iValueView.text = instalment.value
 
 
-
-
-    init {
-        iMonthView = itemView.findViewById(R.id.list_month)
-        iDateView = itemView.findViewById(R.id.list_date)
-        iValueView = itemView.findViewById(R.id.list_value)
-
+        // change color test
+        if(instalment.month == "Nov") {
+            iValueView.setTextColor(Color.RED)
+        }
     }
-
-    fun bind(instalment: Instalment) {
-        iMonthView?.text = instalment.month
-        iDateView?.text = instalment.date
-        iValueView?.text = instalment.value
-
-
-    }
-
 }

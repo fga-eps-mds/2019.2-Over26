@@ -49,10 +49,10 @@ class InstalmentViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
             else -> monthString = "Invalid month"
         }
 
-        val date: String = "Vencimento dia " +
-                           instalment.dueDate.day.toString() + "/" +
-                           month.toString() + "/" +
-                           (instalment.dueDate.year - 100).toString()
+        val date: String =  "Vencimento dia " +
+                            (instalment.dueDate.toString().substring(8,10)) + "/" +
+                            month.toString().padStart(2, '0') + "/" +
+                            (instalment.dueDate.toString().substring(32))
 
         iMonthView.text = monthString
         iDateView.text = date

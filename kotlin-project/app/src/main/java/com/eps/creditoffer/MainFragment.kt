@@ -6,17 +6,20 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_main.*
+import java.lang.Boolean.FALSE
+import java.lang.Boolean.TRUE
+import java.time.LocalDate
+import java.util.*
 
 class MainFragment : Fragment() {
 
     private val instalments = listOf(
-        InstalmentModel("Out","Vencimento dia 15/10","R$100,00"),
-        InstalmentModel("Nov","Vencimento dia 15/11","R$100,00"),
-        InstalmentModel("Dez","Vencimento dia 15/12","R$100,00"),
-        InstalmentModel("Jan","Vencimento dia 15/01","R$100,00"),
-        InstalmentModel("Fev","Vencimento dia 15/02","R$100,00"),
-        InstalmentModel("Mar","Vencimento dia 15/03","R$100,00"),
-        InstalmentModel("Abr","Vencimento dia 15/04","R$100,00")
+        InstalmentLink(TRUE, 100F, Date(119, 9, 1)),
+        InstalmentLink(FALSE, 100F, Date(119, 10, 1)),
+        InstalmentLink(FALSE, 100F, Date(119, 11, 1)),
+        InstalmentLink(FALSE, 100F, Date(120, 0, 1)),
+        InstalmentLink(FALSE, 100F, Date(120, 1, 1)),
+        InstalmentLink(FALSE, 100F, Date(120, 2, 1))
         )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,6 +33,7 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        println(instalments)
         list_recycler_view.apply {
             layoutManager = LinearLayoutManager(activity)
             adapter = ListAdapter(instalments)

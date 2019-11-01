@@ -15,7 +15,7 @@ class OverdraftDebtLink {
     var amount: Float = 0F
     var rate: Float = 0F
     var wasDivided: Boolean = FALSE
-    var instalment: List<InstalmentModel> = emptyList()
+    var instalment: List<InstalmentLink> = emptyList()
     var dueDate: Int = 0
     var quantityInstallment: Int = 1
     var totalAmount: Float = 0F

@@ -24,17 +24,17 @@ A fim de validar e orientar o desenvolvimento da nova funcionalidade, referente 
 
 
 <div style="display:inline-block;">
-    <img src="./images/prototipo-alta-fidelidade/Prototipos-Versao2/Tela_Ativacao.png" width="250" hspace="2">
-    <img src="./images/prototipo-alta-fidelidade/Prototipos-Versao2/Tela_Cash_In.png" width="250" hspace="2">
-    <img src="./images/prototipo-alta-fidelidade/Prototipos-Versao2/Tela_Cash_Out.png" width="250" hspace="2">
-    <img src="./images/prototipo-alta-fidelidade/Prototipos-Versao2/Tela_Dividas.png" width="250" hspace="2">
-    <img src="./images/prototipo-alta-fidelidade/Prototipos-Versao2/Tela_Elegibilidade.png" width="250" hspace="2">
-    <img src="./images/prototipo-alta-fidelidade/Prototipos-Versao2/Tela_Extrato_Cheque.png" width="250" hspace="2">
-    <img src="./images/prototipo-alta-fidelidade/Prototipos-Versao2/Tela_Extrato_Conta.png" width="250" hspace="2">
-    <img src="./images/prototipo-alta-fidelidade/Prototipos-Versao2/Tela_Inicializacao.png" width="250" hspace="2">
-    <img src="./images/prototipo-alta-fidelidade/Prototipos-Versao2/Tela_Limite_C_Divida.png" width="250" hspace="2">
-    <img src="./images/prototipo-alta-fidelidade/Prototipos-Versao2/Tela_Limite_S_Divida.png" width="250" hspace="2">
-    <img src="./images/prototipo-alta-fidelidade/Prototipos-Versao2/Tela_Main.png" width="250" hspace="2">
-    <img src="./images/prototipo-alta-fidelidade/Prototipos-Versao2/Tela_Parcelamento.png" width="250" hspace="2">
-    <img src="./images/prototipo-alta-fidelidade/Prototipos-Versao2/Tela_Parcelas.png" width="250" hspace="2">
+    <img src="./images/prototipo-alta-fidelidade/Prototipos_Versao2/Tela_Ativacao.png" width="250" hspace="2">
+    <img src="./images/prototipo-alta-fidelidade/Prototipos_Versao2/Tela_Cash_In.png" width="250" hspace="2">
+    <img src="./images/prototipo-alta-fidelidade/Prototipos_Versao2/Tela_Cash_Out.png" width="250" hspace="2">
+    <img src="./images/prototipo-alta-fidelidade/Prototipos_Versao2/Tela_Dividas.png" width="250" hspace="2">
+    <img src="./images/prototipo-alta-fidelidade/Prototipos_Versao2/Tela_Elegibilidade.png" width="250" hspace="2">
+    <img src="./images/prototipo-alta-fidelidade/Prototipos_Versao2/Tela_Extrato_Cheque.png" width="250" hspace="2">
+    <img src="./images/prototipo-alta-fidelidade/Prototipos_Versao2/Tela_Extrato_Conta.png" width="250" hspace="2">
+    <img src="./images/prototipo-alta-fidelidade/Prototipos_Versao2/Tela_Inicializacao.png" width="250" hspace="2">
+    <img src="./images/prototipo-alta-fidelidade/Prototipos_Versao2/Tela_Limite_C_Divida.png" width="250" hspace="2">
+    <img src="./images/prototipo-alta-fidelidade/Prototipos_Versao2/Tela_Limite_S_Divida.png" width="250" hspace="2">
+    <img src="./images/prototipo-alta-fidelidade/Prototipos_Versao2/Tela_Main.png" width="250" hspace="2">
+    <img src="./images/prototipo-alta-fidelidade/Prototipos_Versao2/Tela_Parcelamento.png" width="250" hspace="2">
+    <img src="./images/prototipo-alta-fidelidade/Prototipos_Versao2/Tela_Parcelas.png" width="250" hspace="2">
 </div>

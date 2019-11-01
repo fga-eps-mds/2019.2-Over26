@@ -14,12 +14,12 @@ import java.util.*
 class MainFragment : Fragment() {
 
     private val instalments = listOf(
-        InstalmentLink(TRUE, 100F, Date(119, 9, 1)),
+        InstalmentLink(TRUE, 100F, Date(119, 9, 4)),
         InstalmentLink(FALSE, 100F, Date(119, 10, 1)),
-        InstalmentLink(FALSE, 100F, Date(119, 11, 1)),
-        InstalmentLink(FALSE, 100F, Date(120, 0, 1)),
-        InstalmentLink(FALSE, 100F, Date(120, 1, 1)),
-        InstalmentLink(FALSE, 100F, Date(120, 2, 1))
+        InstalmentLink(FALSE, 100F, Date(119, 11, 6)),
+        InstalmentLink(FALSE, 100F, Date(120, 0, 3)),
+        InstalmentLink(FALSE, 100F, Date(120, 2, -1)),
+        InstalmentLink(FALSE, 100F, Date(120, 2, 6))
         )
 
     override fun onCreate(savedInstanceState: Bundle?) {

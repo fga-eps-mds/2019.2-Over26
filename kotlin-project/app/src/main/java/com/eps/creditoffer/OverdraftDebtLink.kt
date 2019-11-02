@@ -14,10 +14,10 @@ class OverdraftDebtLink {
     var entryDate: Date = Date()
     var amount: Float = 0F
     var rate: Float = 0F
-    var wasDivided: Boolean = FALSE
+    var isDivided: Boolean = FALSE
     var instalment: List<InstalmentLink> = emptyList()
     var dueDate: Int = 0
-    var quantityInstallment: Int = 1
+    var quantityInstallment: Int = 0
     var totalAmount: Float = 0F
 
     private val ip: String = "10.0.2.2"
@@ -26,7 +26,7 @@ class OverdraftDebtLink {
         override fun deserialize(content: String) = Gson().fromJson(content, OverdraftDebtLink::class.java)
     }
 
-    fun get(id: Int){
+    fun get(id: Int) : Boolean{
         println("----OverdraftDebtLink.get----")
         val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString()
 
@@ -38,7 +38,7 @@ class OverdraftDebtLink {
             this.entryDate = bytes.entryDate
             this.amount = bytes.amount
             this.rate = bytes.rate
-            this.wasDivided = bytes.wasDivided
+            this.isDivided = bytes.isDivided
             this.dueDate = bytes.dueDate
             this.quantityInstallment = bytes.quantityInstallment
             this.instalment = bytes.instalment
@@ -46,9 +46,11 @@ class OverdraftDebtLink {
         when (result) {
             is Result.Success -> {
                 println("Success")
+                return true
             }
             is Result.Failure -> {
                 println("Failure")
+                return false
             }
         }
     }
@@ -65,7 +67,7 @@ class OverdraftDebtLink {
             this.entryDate = bytes.entryDate
             this.amount = bytes.amount
             this.rate = bytes.rate
-            this.wasDivided = bytes.wasDivided
+            this.isDivided = bytes.isDivided
             this.dueDate = bytes.dueDate
             this.quantityInstallment = bytes.quantityInstallment
         }
@@ -105,7 +107,7 @@ class OverdraftDebtLink {
         val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString() + "/instalments"
 
         val json = JSONObject()
-        json.put("wasDivided",this.wasDivided)
+        json.put("isDivided",this.isDivided)
         json.put("day",this.dueDate)
         json.put("quantityInstalment",this.quantityInstallment)
 

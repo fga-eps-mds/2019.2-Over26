@@ -21,7 +21,6 @@ class ListAdapter(private val list: List<InstalmentLink>)
     }
 
     override fun getItemCount(): Int = list.size
-
 }
 
 class InstalmentViewHolder(inflater: LayoutInflater, parent: ViewGroup) :

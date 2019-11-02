@@ -50,16 +50,14 @@ class InstalmentViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
         }
 
         val date: String =  "Vencimento dia " +
-                            (instalment.dueDate.toString().substring(8,10)) + "/" +
+                            instalment.dueDate.toString().substring(8,10) + "/" +
                             month.toString().padStart(2, '0') + "/" +
-                            (instalment.dueDate.toString().substring(32))
+                            instalment.dueDate.toString().substring(32)
 
         iMonthView.text = monthString
         iDateView.text = date
         iValueView.text = "R$ " + "%.2f".format(instalment.value)
 
-
-        // change color test
         if(!instalment.isPaid) {
             iValueView.setTextColor(Color.DKGRAY)
         }

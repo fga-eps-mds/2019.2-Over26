@@ -13,17 +13,11 @@ import java.util.*
 
 class MainFragment : Fragment() {
 
-    private val instalments = listOf(
-        InstalmentLink(TRUE, 100F, Date(119, 9, 1)),
-        InstalmentLink(FALSE, 100F, Date(119, 10, 1)),
-        InstalmentLink(FALSE, 100F, Date(119, 11, 1)),
-        InstalmentLink(FALSE, 100F, Date(120, 0, 1)),
-        InstalmentLink(FALSE, 100F, Date(120, 2, 1)),
-        InstalmentLink(FALSE, 100F, Date(120, 2, 1))
-        )
+    val debt = OverdraftDebtLink()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        println("----MainFragment.onCreate----")
         retainInstance = true
     }
 
@@ -33,7 +27,12 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        println(instalments)
+        println("----MainActivity.onViewCreated----")
+
+        debt.listInstalments(1)
+        val instalments = debt.instalment
+        println(instalments[1].dueDate.toString())
+
         list_recycler_view.apply {
             layoutManager = LinearLayoutManager(activity)
             adapter = ListAdapter(instalments)

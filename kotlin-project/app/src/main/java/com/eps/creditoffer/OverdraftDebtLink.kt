@@ -20,7 +20,6 @@ class OverdraftDebtLink {
     var quantityInstallment: Int = 1
     var totalAmount: Float = 0F
 
-    //private val ip: String = "192.168.0.16"
     private val ip: String = "10.0.2.2"
 
     class Deserializer : ResponseDeserializable<OverdraftDebtLink> {
@@ -124,6 +123,29 @@ class OverdraftDebtLink {
             is Result.Failure -> {
                 println("Failure")
 
+            }
+        }
+    }
+
+    fun listInstalments(id: Int){
+        println("----OverdraftDebtLink.listInstalments---")
+        val url: String = "http://" + ip + ":3000/api/overdraftDebt/" + id.toString() + "/listInstalments"
+
+        val (request, response, result) = Fuel.get(url)
+            .responseObject(InstalmentLink.ListDeserializer())
+        println("Response:" + response)
+        val (bytes, error) = result
+        print("Bytes: " + bytes)
+
+        if (bytes != null) {
+            this.instalment = bytes
+        }
+        when(result){
+            is Result.Success -> {
+                println("Success")
+            }
+            is Result.Failure -> {
+                println("Failure")
             }
         }
     }

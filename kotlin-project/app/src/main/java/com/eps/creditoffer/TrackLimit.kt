@@ -26,8 +26,9 @@ class TrackLimit : AppCompatActivity() {
         debt.get(1)
         debt.checkAmout(1)
 
-        if(debt.wasDivided) {
-            button_installment.visibility = View.VISIBLE
+        if(!debt.isDivided) {
+            button_view_installments.visibility = View.INVISIBLE
+
         }
 
         initSeekBar(overdraft, debt)

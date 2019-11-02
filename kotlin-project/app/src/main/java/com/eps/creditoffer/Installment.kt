@@ -87,7 +87,7 @@ class Installment : AppCompatActivity() {
         })
 
         button_confirm_installment.setOnClickListener(View.OnClickListener {
-            debt.wasDivided = TRUE
+            debt.isDivided = TRUE
             debt.createInstallment(1)
             overdraft.isBlocked = FALSE
             Toast.makeText(this, "Cheque especial liberado!", Toast.LENGTH_LONG).show()

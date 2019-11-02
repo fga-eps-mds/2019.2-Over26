@@ -17,7 +17,7 @@ class OverdraftDebtLink {
     var isDivided: Boolean = FALSE
     var instalment: List<InstalmentLink> = emptyList()
     var dueDate: Int = 0
-    var quantityInstallment: Int = 0
+    var quantityInstallment: Int = 1
     var totalAmount: Float = 0F
 
     private val ip: String = "10.0.2.2"

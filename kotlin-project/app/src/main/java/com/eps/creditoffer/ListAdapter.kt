@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import java.util.*
 
-class ListAdapter(private val list: List<InstalmentLink>)
+class ListInstalmentAdapter(private val list: List<InstalmentLink>)
     : RecyclerView.Adapter<InstalmentViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): InstalmentViewHolder {
@@ -25,7 +25,7 @@ class ListAdapter(private val list: List<InstalmentLink>)
 }
 
 class InstalmentViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
-    RecyclerView.ViewHolder(inflater.inflate(R.layout.list_item, parent, false)) {
+    RecyclerView.ViewHolder(inflater.inflate(R.layout.list_item_instalment, parent, false)) {
     private var iMonthView: TextView = itemView.findViewById(R.id.list_month)
     private var iDateView: TextView = itemView.findViewById(R.id.list_date)
     private var iValueView: TextView = itemView.findViewById(R.id.list_value)

@@ -30,14 +30,14 @@ class TrackLimit : AppCompatActivity() {
         println("----TrackLimit.onCreate----")
 
         button_view_installments.setOnClickListener(View.OnClickListener {
-            setContentView(R.layout.fragment_main)
+            setContentView(R.layout.fragment_instalment)
 
             val fm = supportFragmentManager
             var fragment = fm.findFragmentById(R.id.fragment_container)
 
             // ensures fragments already created will not be created
             if (fragment == null) {
-                fragment = MainFragment.newInstance()
+                fragment = InstalmentFragment.newInstance()
                 // create and commit a fragment transaction
                 fm.beginTransaction()
                     .add(R.id.fragment_container, fragment)

@@ -5,13 +5,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.fragment_main.*
+import kotlinx.android.synthetic.main.fragment_instalment.*
 import java.lang.Boolean.FALSE
 import java.lang.Boolean.TRUE
 import java.time.LocalDate
 import java.util.*
 
-class MainFragment : Fragment() {
+class InstalmentFragment : Fragment() {
 
     private val instalments = listOf(
         InstalmentLink(TRUE, 100F, Date(119, 9, 4)),
@@ -28,7 +28,7 @@ class MainFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
-        inflater.inflate(R.layout.fragment_main, container, false)
+        inflater.inflate(R.layout.fragment_instalment, container, false)
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -36,11 +36,11 @@ class MainFragment : Fragment() {
         println(instalments)
         list_recycler_view.apply {
             layoutManager = LinearLayoutManager(activity)
-            adapter = ListAdapter(instalments)
+            adapter = ListInstalmentAdapter(instalments)
         }
     }
 
     companion object {
-        fun newInstance(): MainFragment = MainFragment()
+        fun newInstance(): InstalmentFragment = InstalmentFragment()
     }
 }

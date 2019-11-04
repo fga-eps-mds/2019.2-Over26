@@ -78,38 +78,46 @@ class MainActivity : AppCompatActivity() {
         popupMenu.setOnMenuItemClickListener {
             when(it.itemId) {
                 R.id.cashInMenu -> {
-
                     val account=AccountLink()
                     if(account.get(1)){
                         val intent = Intent(this, CashIn::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                         startActivityIfNeeded(intent, 0)
-
-
-                    }else{
-                        Toast.makeText(this, "Conta não encontrada!", Toast.LENGTH_LONG).show()
-
                     }
-
+                    else{
+                        Toast.makeText(this, "Conta não encontrada!", Toast.LENGTH_LONG).show()
+                    }
                 }
-                R.id.cashOutMenu -> {
 
+                R.id.cashOutMenu -> {
                     val account=AccountLink()
                     if(account.get(1)){
                         val intent = Intent(this, CashOut::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                         startActivityIfNeeded(intent, 0)
-
-
-                    }else{
+                    }
+                    else{
                         Toast.makeText(this, "Conta não encontrada!", Toast.LENGTH_LONG).show()
 
                     }
 
                 }
-                R.id.attDataMenu -> {
 
-                    Toast.makeText(this, "Funcao ainda nao implementada!", Toast.LENGTH_LONG).show()
+                R.id.attDataMenu -> {
+                    val overdraft = OverdraftLink()
+                    overdraft.get(1)
+                    if(overdraft.isActive && overdraft.limitUsed != 0F) {
+                        overdraft.createDebt(1)
+
+                        Toast.makeText(this, "Data atualizada e divida criada!", Toast.LENGTH_LONG).show()
+
+                        val intent = Intent(this, TrackLimit::class.java)
+                        intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+                        startActivityIfNeeded(intent, 0)
+                    }
+                    else {
+                        Toast.makeText(this, "Overdraft não encontrado!", Toast.LENGTH_LONG).show()
+                    }
 
                 }
             }

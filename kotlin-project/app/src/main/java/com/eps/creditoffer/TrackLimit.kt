@@ -20,14 +20,18 @@ class TrackLimit : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.track_limit)
+        println("----TrackLimit.onCreate----")
 
         overdraft.get(1)
         debt.get(1)
         debt.checkAmout(1)
 
-        initSeekBar(overdraft, debt)
+        if(!debt.isDivided) {
+            button_view_installments.visibility = View.INVISIBLE
 
-        println("----TrackLimit.onCreate----")
+        }
+
+        initSeekBar(overdraft, debt)
 
         button_view_installments.setOnClickListener(View.OnClickListener {
             setContentView(R.layout.fragment_main)

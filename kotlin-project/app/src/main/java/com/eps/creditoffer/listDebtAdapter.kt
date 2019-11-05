@@ -16,7 +16,6 @@ class ListDebtAdapter(private val list: List<OverdraftDebtLink>)
     }
 
     override fun onBindViewHolder(holder: DebtViewHolder, position: Int) {
-        print("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
 
         val debt: OverdraftDebtLink = list[position]
         holder.bind(debt)
@@ -28,17 +27,16 @@ class ListDebtAdapter(private val list: List<OverdraftDebtLink>)
 
 class DebtViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
     RecyclerView.ViewHolder(inflater.inflate(R.layout.fragment_list_debt_adapter, parent, false)) {
-    private var iDebtView: TextView = itemView.findViewById(R.id.overdraft_debt)
-    private var iDateView: TextView = itemView.findViewById(R.id.list_date)
+    private var iDateView: TextView = itemView.findViewById(R.id.invoice_due)
     private var iValueView: TextView = itemView.findViewById(R.id.list_value)
 
     fun bind(debt: OverdraftDebtLink) {
-     print("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb")
+     print("")
         var day: String=""
         if(debt.wasDivided) {
             day = "Vencimento dia "+debt.dueDate.toString()
         }else{
-             day= "Por definir."
+             day= "Data por definir."
         }
 
         iDateView.text = day
@@ -47,10 +45,7 @@ class DebtViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
         // change color test
 
         if(!debt.wasDivided) {
-            iDebtView.setTextColor(Color.RED)
-        }else{
-            iDebtView.setTextColor(Color.DKGRAY)
-
+            iValueView.setTextColor(Color.RED)
         }
     }
 }

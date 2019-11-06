@@ -26,7 +26,7 @@ EPS
 ![](../../images/metrics_agile/velocity_sprint8.png)
 
 ## 1.4 Burndown de Riscos 
-<!-- ![](../../images/metrics_agile/velocity_sprint7.png) -->
+![](../../images/metrics_agile/burndown_riscos_sprint8.png)
 
 ## 1.5 Retrospectiva 
 | Membro | Pontos Positivos | Pontos Negativos | Sugestão de Melhoria | Pontuação das Histórias |
@@ -49,4 +49,12 @@ EPS
 
 
 # 2. Visão do Tech Leader
+Essa sprint foi menor que as outras, devido a indisponibilidade da maioria da equipe em participar da reunião presencial de sábado. Este fato fez com que EPS tomasse a decisão de fazer uma sprint mais curta, com uma reunião de planejamento online. 
 
+Devido ao fato da sprint ser menor, foi planejado menos pontos, a fim de que fosse concluídas todas as tarefas. Porém, não foi o que aconteceu, uma história de 3 pontos ficou como dívida, devido a indisponibilidade e má organização de tempo do pareamento responsável.
+
+A demora para iniciar as histórias por parte da equipe de desenvolvimento tem atrapalhado bastante e comprometido as entregas da sprint. 
+
+Uma melhoria que conseguimos aplicar desde a última sprint foi a de planejar histórias menores e concisas, o que tem facilitado as entregas e o desenvolvimento das mesmas. 
+
+As práticas ágeis foram aplicadas, com reuniões diárias via Telegram e reuniões semanais de planejamento ocorrida no início da sprint (essa sprint foi feita online). Além das reuniões de retrospectiva e revisão ocorridas no final da sprint. Essas reuniões ocorrem todos os sábados presencialmente.

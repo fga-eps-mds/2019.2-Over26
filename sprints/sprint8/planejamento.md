@@ -37,4 +37,4 @@ Fazer funcionalidades priorizadas pela product owner em conjunto com o a scrum m
 | Documentar Sprint 8 | Maria Luiza |
 
 ## 4. Pareamento
-<!-- ![](../../images/metrics_agile/pareamento_sprint7.png) -->
+![](../../images/metrics_agile/pareamento_sprint8.png)

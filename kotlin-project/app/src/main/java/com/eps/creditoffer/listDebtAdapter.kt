@@ -33,7 +33,7 @@ class DebtViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
     fun bind(debt: OverdraftDebtLink) {
      print("")
         var day: String=""
-        if(debt.wasDivided) {
+        if(debt.isDivided) {
             day = "Vencimento dia "+debt.dueDate.toString()
         }else{
              day= "Data por definir."
@@ -44,7 +44,7 @@ class DebtViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
 
         // change color test
 
-        if(!debt.wasDivided) {
+        if(!debt.isDivided) {
             iValueView.setTextColor(Color.RED)
         }
     }

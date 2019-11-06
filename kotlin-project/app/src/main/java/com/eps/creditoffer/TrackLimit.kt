@@ -20,14 +20,20 @@ class TrackLimit : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.track_limit)
+        println("----TrackLimit.onCreate----")
 
         overdraft.get(1)
         debt.get(1)
         debt.checkAmout(1)
 
+        if(!debt.isDivided) {
+            button_view_installments.visibility = View.INVISIBLE
+            }
+
         initSeekBar(overdraft, debt)
 
         println("----TrackLimit.onCreate----")
+
         button_view_debts.setOnClickListener(View.OnClickListener {
             setContentView(R.layout.fragment_debt)
 
@@ -43,6 +49,7 @@ class TrackLimit : AppCompatActivity() {
                     .commit()
             }
         })
+        
 
         button_view_installments.setOnClickListener(View.OnClickListener {
             setContentView(R.layout.fragment_instalment)
@@ -73,12 +80,11 @@ class TrackLimit : AppCompatActivity() {
 
         cancelCredit.setOnClickListener(View.OnClickListener {
             println("----cancelCreditButton----")
-            if(overdraft.isBlocked || (overdraft.checkUsability(1) == FALSE)){ // dependendo de isBlocked no banco
+            if(overdraft.isBlocked){
                 Toast.makeText(this,
                     "Parcele a dívida antes de fazer alterações no cheque especial",
                     Toast.LENGTH_LONG).show()
-            }
-            else {
+            } else {
                 Toast.makeText(this, "Cheque especial Cancelado!", Toast.LENGTH_LONG).show()
                 overdraft.cancel(1)
                 finish()
@@ -100,7 +106,6 @@ class TrackLimit : AppCompatActivity() {
 
     fun initSeekBar( overdraft: OverdraftLink, debt: OverdraftDebtLink){
         println("----initSeekBar----")
-        println("----"+overdraft.limit+"----")
         textView_usage.text = "R$ " + overdraft.limitUsed
         textView_cur.text = "R$ "+ overdraft.limit
         textView_max.text = "R$ " + overdraft.limitMax
@@ -108,7 +113,7 @@ class TrackLimit : AppCompatActivity() {
         seek_bar.progress = overdraft.limit.toInt()
         seek_bar.isEnabled = TRUE
 
-        if(overdraft.isBlocked == FALSE){
+        if(!overdraft.isBlocked){
 
             // Hide installment button
             button_installment.visibility = View.INVISIBLE

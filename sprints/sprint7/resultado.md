@@ -35,7 +35,7 @@
 ![](../../images/metrics_agile/velocity_sprint7.png)
 
 ## 1.4 Burndown de Riscos 
-<!-- ![](../../images/metrics_agile/velocity_sprint7.png) -->
+![](../../images/metrics_agile/burndown_riscos_sprint7.png)
 
 
 ## 1.5 Retrospectiva 
@@ -56,3 +56,8 @@
 ![](../../images/metrics_agile/quadro_conhecimento_sprint7.png)
 
 # 2. Visão do Tech Leader
+Essa sprint foi bem atípica, pois com a Release 1 todos os membros da equipe, tanto de MDS quanto de EPS deram uma relaxada com o projeto. A causa foi todo o estresse e cansaço acumulado até a Release 1. Isso resultou na péssima comunicação entre a equipe o que mostrou uma desorganização. Outro fator crítico, que é necessário ser combatido nas próximas sprints foi o fato de demorar para analisar os PRs feitos, o que atrasou bastante o time de desenvolvimento. Este fato se encontra na dificuldade de alguns membros em utilizar o Android Studio em seus computadores, o que tem aumentado bastante o risco do projeto. 
+
+ Porém, um ponto positivo foi que a equipe de EPS conseguiu planejar histórias mais concisas, o que resultou na maioria das entregas (apesar de duas histórias terem ficado como dívida técnica, devido a má comunicação e desorganização da equipe).
+
+As práticas ágeis ficaram um pouco comprometidas também, principalmente as reuniões diárias via Telegram (nem todos os membros responderam a daily, mesmo insistindo que respondessem). Porém as reuniões de revisão e retrospectiva foram feitas com sucesso, onde os membros puderam expor os pontos positivos e negativos, assim como melhoria para que a equipe alcançasse a produtividade máxima. 

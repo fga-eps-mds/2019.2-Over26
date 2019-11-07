@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk
+FROM openjdk:9
 
 # Just matched `app/build.gradle`
 ENV ANDROID_COMPILE_SDK "26"
@@ -27,6 +27,5 @@ RUN echo y | android-sdk-linux/tools/android --silent update sdk --no-ui --all -
 # install Fastlane
 COPY ./kotlin-project/Gemfile.lock .
 COPY ./kotlin-project/Gemfile .
-
 RUN gem install bundle
 RUN bundle install

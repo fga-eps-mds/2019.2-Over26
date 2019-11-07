@@ -43,8 +43,6 @@ class InstalmentFragment : Fragment() {
         fun newInstance(): InstalmentFragment = InstalmentFragment()
     }
 
-    /*fun close(view: View) {
-print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-    }*/
+
 
     }

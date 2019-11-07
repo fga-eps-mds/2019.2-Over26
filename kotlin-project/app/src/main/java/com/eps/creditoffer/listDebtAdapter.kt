@@ -29,6 +29,7 @@ class DebtViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
     RecyclerView.ViewHolder(inflater.inflate(R.layout.fragment_list_debt_adapter, parent, false)) {
     private var iDateView: TextView = itemView.findViewById(R.id.invoice_due)
     private var iValueView: TextView = itemView.findViewById(R.id.list_value)
+    private var iNumberView: TextView = itemView.findViewById(R.id.amount_of_instalments)
 
     fun bind(debt: OverdraftDebtLink) {
      print("")
@@ -46,6 +47,12 @@ class DebtViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
 
         if(!debt.isDivided) {
             iValueView.setTextColor(Color.RED)
+            iNumberView.text="Não parcelado"
+
+        }else{
+            iNumberView.text="Total de parcelas:" + debt.quantityInstallment.toString()
+
+
         }
     }
 }

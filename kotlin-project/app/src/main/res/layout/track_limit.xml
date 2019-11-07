@@ -11,8 +11,8 @@
         android:id="@+id/button_view_installments"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="540dp"
         android:layout_alignParentTop="true"
+        android:layout_marginTop="569dp"
         android:background="#00FCFCFC"
         android:fontFamily="@font/antic"
         android:gravity="center_vertical"
@@ -190,6 +190,21 @@
         android:textAllCaps="false"
         android:textColor="#AE009688"
         android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/button_view_debts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="371dp"
+        android:background="#00FCFCFC"
+        android:fontFamily="@font/antic"
+        android:gravity="center_vertical"
+        android:text="Ver dividas"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#AE009688"
+        android:textSize="16sp" />
 
 
 </RelativeLayout>

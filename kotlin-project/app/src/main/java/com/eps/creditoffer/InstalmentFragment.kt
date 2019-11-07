@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.fragment_main.*
+import kotlinx.android.synthetic.main.fragment_instalment.*
 import java.lang.Boolean.FALSE
 import java.lang.Boolean.TRUE
 import java.time.LocalDate
 import java.util.*
 
-class MainFragment : Fragment() {
+class InstalmentFragment : Fragment() {
 
     val debt = OverdraftDebtLink()
 
@@ -24,7 +24,7 @@ class MainFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
-        inflater.inflate(R.layout.fragment_main, container, false)
+        inflater.inflate(R.layout.fragment_instalment, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -35,16 +35,14 @@ class MainFragment : Fragment() {
 
         list_recycler_view.apply {
             layoutManager = LinearLayoutManager(activity)
-            adapter = ListAdapter(instalments)
+            adapter = ListInstalmentAdapter(instalments)
         }
     }
 
     companion object {
-        fun newInstance(): MainFragment = MainFragment()
+        fun newInstance(): InstalmentFragment = InstalmentFragment()
     }
 
-    /*fun close(view: View) {
-print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-    }*/
+
 
     }

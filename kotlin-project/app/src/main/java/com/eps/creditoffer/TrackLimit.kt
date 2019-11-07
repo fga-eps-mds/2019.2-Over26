@@ -28,23 +28,41 @@ class TrackLimit : AppCompatActivity() {
 
         if(!debt.isDivided) {
             button_view_installments.visibility = View.INVISIBLE
-
-        }
+            }
 
         initSeekBar(overdraft, debt)
 
-        button_view_installments.setOnClickListener(View.OnClickListener {
-            setContentView(R.layout.fragment_main)
+        println("----TrackLimit.onCreate----")
+
+        button_view_debts.setOnClickListener(View.OnClickListener {
+            setContentView(R.layout.fragment_debt)
 
             val fm = supportFragmentManager
-            var fragment = fm.findFragmentById(R.id.fragment_container)
+            var fragment = fm.findFragmentById(R.id.fragment_container_debt)
 
             // ensures fragments already created will not be created
             if (fragment == null) {
-                fragment = MainFragment.newInstance()
+                fragment = DebtFragment.newInstance()
                 // create and commit a fragment transaction
                 fm.beginTransaction()
-                    .add(R.id.fragment_container, fragment)
+                    .add(R.id.fragment_container_debt, fragment)
+                    .commit()
+            }
+        })
+        
+
+        button_view_installments.setOnClickListener(View.OnClickListener {
+            setContentView(R.layout.fragment_instalment)
+
+            val fm = supportFragmentManager
+            var fragmentInstelment = fm.findFragmentById(R.id.fragment_container)
+
+            // ensures fragments already created will not be created
+            if (fragmentInstelment == null) {
+                fragmentInstelment = InstalmentFragment.newInstance()
+                // create and commit a fragment transaction
+                fm.beginTransaction()
+                    .add(R.id.fragment_container, fragmentInstelment)
                     .commit()
             }
         })

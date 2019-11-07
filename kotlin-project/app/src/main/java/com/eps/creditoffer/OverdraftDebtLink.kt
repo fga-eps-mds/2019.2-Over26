@@ -9,15 +9,12 @@ import org.json.JSONObject
 import java.lang.Boolean.FALSE
 import java.util.*
 
-class OverdraftDebtLink {
+class OverdraftDebtLink( var entryDate: Date = Date(),var amount: Float = 0F,var quantityInstallment: Int = 1,var dueDate: Int = 0 ,    var isDivided: Boolean = FALSE
 
-    var entryDate: Date = Date()
-    var amount: Float = 0F
+){
+
     var rate: Float = 0F
-    var isDivided: Boolean = FALSE
     var instalment: List<InstalmentLink> = emptyList()
-    var dueDate: Int = 0
-    var quantityInstallment: Int = 1
     var totalAmount: Float = 0F
 
     private val ip: String = "10.0.2.2"

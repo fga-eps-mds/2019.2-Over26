@@ -27,7 +27,6 @@ class OverdraftConfirmationActivityAndroidTest {
 
     private lateinit var result: String
 
-
     @get:Rule
     var overdraftConfirmationActivity: ActivityTestRule<OverdraftConfirmation> =
         ActivityTestRule(OverdraftConfirmation::class.java)
@@ -39,6 +38,7 @@ class OverdraftConfirmationActivityAndroidTest {
 
     @Test
     fun confirmationOverdraf(){
+
 
         onView(withId(R.id.checkBox2))
             .check(matches(isNotChecked()))

@@ -7,6 +7,23 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: "org.jlleitschuh.gradle.ktlint"
 
 
+def secretsPropertiesFile = rootProject.file("secrets.properties")
+def secretProperties = new Properties()
+
+if (secretsPropertiesFile.exists()) {
+    secretProperties.load(new FileInputStream(secretsPropertiesFile))
+}
+// Otherwise read from environment variables, this happens in CI
+else {
+    secretProperties.setProperty("oauth_client_id", "\"${System.getenv('oauth_client_id')}\"")
+    secretProperties.setProperty("oauth_client_secret", "\"${System.getenv('oauth_client_secret')}\"")
+    secretProperties.setProperty("oauth_redirect_uri", "\"${System.getenv('oauth_redirect_uri')}\"")
+    secretProperties.setProperty("google_project_id", "\"${System.getenv('google_project_id') ?: "null"}\"")
+    secretProperties.setProperty("signing_keystore_password", "${System.getenv('signing_keystore_password')}")
+    secretProperties.setProperty("signing_key_password", "${System.getenv('signing_key_password')}")
+    secretProperties.setProperty("signing_key_alias", "${System.getenv('signing_key_alias')}")
+}
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -18,10 +35,21 @@ android {
         applicationId "com.eps.creditoffer"
         minSdkVersion 19
         targetSdkVersion 24
-        versionCode 1
-        versionName "1.0"
+        versionCode Integer.valueOf(System.env.VERSION_CODE ?: 0)
+        // Manually bump the semver version part of the string as necessary
+        versionName "1.0-${System.env.VERSION_SHA}"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
+    }
+    signingConfigs {
+        release {
+            // You need to specify either an absolute path or include the
+            // keystore file in the same directory as the build.gradle file.
+            storeFile file("../android-signing-keystore.jks")
+            storePassword "${secretProperties['signing_keystore_password']}"
+            keyAlias "${secretProperties['signing_key_alias']}"
+            keyPassword "${secretProperties['signing_key_password']}"
+        }
     }
     buildTypes {
         release {

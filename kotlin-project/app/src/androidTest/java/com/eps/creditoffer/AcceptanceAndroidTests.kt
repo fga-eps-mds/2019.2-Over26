@@ -79,6 +79,9 @@ class AcceptanceAndroidTests {
             .perform(click())
 
         onView(withId(R.id.seek_bar))
+            .perform(SetProgressViewAction(100))
+
+        onView(withId(R.id.seek_bar))
             .perform(SetProgressViewAction(10))
 
         onView(withId(R.id.textView_cur))

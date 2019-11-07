@@ -13,8 +13,8 @@ import java.util.*
 
 class OverdraftDebtLink {
     var isDivided: Boolean = FALSE
-    var dueDate: Int = 0
-    var quantityInstallment: Int = 1
+    var dueDay: Int = 0
+    var quantityInstalment: Int = 1
     var amount: Float = 0F
     var entryDate: Date = Date()
     var rate: Float = 0F
@@ -46,8 +46,8 @@ class OverdraftDebtLink {
             this.amount = bytes.amount
             this.rate = bytes.rate
             this.isDivided = bytes.isDivided
-            this.dueDate = bytes.dueDate
-            this.quantityInstallment = bytes.quantityInstallment
+            this.dueDay = bytes.dueDay
+            this.quantityInstalment = bytes.quantityInstalment
             this.instalment = bytes.instalment
         }
         when (result) {
@@ -75,8 +75,8 @@ class OverdraftDebtLink {
             this.amount = bytes.amount
             this.rate = bytes.rate
             this.isDivided = bytes.isDivided
-            this.dueDate = bytes.dueDate
-            this.quantityInstallment = bytes.quantityInstallment
+            this.dueDay = bytes.dueDay
+            this.quantityInstalment = bytes.quantityInstalment
         }
         when (result) {
             is Result.Success -> {
@@ -115,8 +115,8 @@ class OverdraftDebtLink {
 
         val json = JSONObject()
         json.put("isDivided", this.isDivided)
-        json.put("day", this.dueDate)
-        json.put("quantityInstalment", this.quantityInstallment)
+        json.put("day", this.dueDay)
+        json.put("quantityInstalment", this.quantityInstalment)
 
         val (request, response, result) = Fuel.post(url)
             .jsonBody(json.toString())

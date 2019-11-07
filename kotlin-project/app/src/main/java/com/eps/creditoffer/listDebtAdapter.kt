@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import java.util.*
 
 class ListDebtAdapter(private val list: List<OverdraftDebtLink>) :
     RecyclerView.Adapter<DebtViewHolder>() {
@@ -33,14 +32,14 @@ class DebtViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
     fun bind(debt: OverdraftDebtLink) {
         iValueView.text = "R$ " + "%.2f".format(debt.amount)
 
-        println(debt.quantityInstallment)
+        println(debt.quantityInstalment)
         if (!debt.isDivided) {
             iValueView.setTextColor(Color.RED)
             iNumberView.text = "Não parcelado"
-            iDateView.text = "Data por definir."
+            iDateView.text = "Data à definir"
         } else {
-            iNumberView.text = "Total de parcelas:" + debt.quantityInstallment.toString()
-            iDateView.text = "Vencimento dia " + debt.dueDate.toString()
+            iNumberView.text = "Total de parcelas: " + debt.quantityInstalment.toString()
+            iDateView.text = "Vencimento dia " + debt.dueDay.toString()
         }
     }
 }

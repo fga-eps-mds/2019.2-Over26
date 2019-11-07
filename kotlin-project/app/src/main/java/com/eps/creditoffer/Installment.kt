@@ -23,25 +23,25 @@ class Installment : AppCompatActivity() {
         val overdraft = OverdraftLink()
         overdraft.get(1)
 
-        textView_installment_quant.text = debt.quantityInstallment.toString()
-        val value = "%.2f".format(debt.totalAmount / debt.quantityInstallment)
+        textView_installment_quant.text = debt.quantityInstalment.toString()
+        val value = "%.2f".format(debt.totalAmount / debt.quantityInstalment)
         textView_installment_value.text = "R$ " + value
 
         button_plus.setOnClickListener(View.OnClickListener {
 
-            if (debt.quantityInstallment >= 1 && debt.quantityInstallment <12) {
-                debt.quantityInstallment++
-                textView_installment_quant.text = debt.quantityInstallment.toString()
-                val value = "%.2f".format(debt.totalAmount / debt.quantityInstallment)
+            if (debt.quantityInstalment >= 1 && debt.quantityInstalment <12) {
+                debt.quantityInstalment++
+                textView_installment_quant.text = debt.quantityInstalment.toString()
+                val value = "%.2f".format(debt.totalAmount / debt.quantityInstalment)
                 textView_installment_value.text = "R$ " + value
             }
         })
 
         button_minus.setOnClickListener(View.OnClickListener {
-            if (debt.quantityInstallment> 1 && debt.quantityInstallment <= 12) {
-                debt.quantityInstallment--
-                textView_installment_quant.text = debt.quantityInstallment.toString()
-                val value = "%.2f".format(debt.totalAmount / debt.quantityInstallment)
+            if (debt.quantityInstalment> 1 && debt.quantityInstalment <= 12) {
+                debt.quantityInstalment--
+                textView_installment_quant.text = debt.quantityInstalment.toString()
+                val value = "%.2f".format(debt.totalAmount / debt.quantityInstalment)
                 textView_installment_value.text = "R$ " + value
             }
         })
@@ -49,37 +49,37 @@ class Installment : AppCompatActivity() {
         button_day1.setOnClickListener(View.OnClickListener {
             cleanbuttons()
             button_day1.setBackgroundResource(R.drawable.btn_background)
-            debt.dueDate = 1
+            debt.dueDay = 1
         })
 
         button_day5.setOnClickListener(View.OnClickListener {
             cleanbuttons()
             button_day5.setBackgroundResource(R.drawable.btn_background)
-            debt.dueDate = 5
+            debt.dueDay = 5
         })
 
         button_day10.setOnClickListener(View.OnClickListener {
             cleanbuttons()
             button_day10.setBackgroundResource(R.drawable.btn_background)
-            debt.dueDate = 10
+            debt.dueDay = 10
         })
 
         button_day15.setOnClickListener(View.OnClickListener {
             cleanbuttons()
             button_day15.setBackgroundResource(R.drawable.btn_background)
-            debt.dueDate = 15
+            debt.dueDay = 15
         })
 
         button_day20.setOnClickListener(View.OnClickListener {
             cleanbuttons()
             button_day20.setBackgroundResource(R.drawable.btn_background)
-            debt.dueDate = 20
+            debt.dueDay = 20
         })
 
         button_day25.setOnClickListener(View.OnClickListener {
             cleanbuttons()
             button_day25.setBackgroundResource(R.drawable.btn_background)
-            debt.dueDate = 25
+            debt.dueDay = 25
         })
 
         button_confirm_installment.setOnClickListener(View.OnClickListener {

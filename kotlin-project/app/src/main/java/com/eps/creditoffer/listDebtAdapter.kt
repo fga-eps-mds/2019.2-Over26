@@ -7,8 +7,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import java.util.*
 
-class ListDebtAdapter(private val list: List<OverdraftDebtLink>)
-    : RecyclerView.Adapter<DebtViewHolder>() {
+class ListDebtAdapter(private val list: List<OverdraftDebtLink>) :
+    RecyclerView.Adapter<DebtViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DebtViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -22,7 +22,6 @@ class ListDebtAdapter(private val list: List<OverdraftDebtLink>)
     }
 
     override fun getItemCount(): Int = list.size
-
 }
 
 class DebtViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
@@ -32,24 +31,16 @@ class DebtViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
     private var iNumberView: TextView = itemView.findViewById(R.id.amount_of_instalments)
 
     fun bind(debt: OverdraftDebtLink) {
-     print("")
-
-
         iValueView.text = "R$ " + "%.2f".format(debt.amount)
 
-        // change color test
-println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
         println(debt.quantityInstallment)
-        if(!debt.isDivided) {
+        if (!debt.isDivided) {
             iValueView.setTextColor(Color.RED)
-            iNumberView.text="Não parcelado"
-            iDateView.text= "Data por definir."
-
-        }else{
-            iNumberView.text="Total de parcelas:" + debt.quantityInstallment.toString()
-            iDateView.text = "Vencimento dia "+debt.dueDate.toString()
-
-
+            iNumberView.text = "Não parcelado"
+            iDateView.text = "Data por definir."
+        } else {
+            iNumberView.text = "Total de parcelas:" + debt.quantityInstallment.toString()
+            iDateView.text = "Vencimento dia " + debt.dueDate.toString()
         }
     }
 }

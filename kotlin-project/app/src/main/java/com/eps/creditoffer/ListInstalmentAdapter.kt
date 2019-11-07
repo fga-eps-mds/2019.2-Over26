@@ -7,8 +7,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import java.util.*
 
-class ListInstalmentAdapter(private val list: List<InstalmentLink>)
-    : RecyclerView.Adapter<InstalmentViewHolder>() {
+class ListInstalmentAdapter(private val list: List<InstalmentLink>) :
+    RecyclerView.Adapter<InstalmentViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): InstalmentViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -48,8 +48,8 @@ class InstalmentViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
             else -> monthString = "Invalid month"
         }
 
-        val date: String =  "Vencimento dia " +
-                            instalment.dueDate.toString().substring(8,10) + "/" +
+        val date: String = "Vencimento dia " +
+                            instalment.dueDate.toString().substring(8, 10) + "/" +
                             month.toString().padStart(2, '0') + "/" +
                             instalment.dueDate.toString().substring(32)
 
@@ -57,10 +57,10 @@ class InstalmentViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
         iDateView.text = date
         iValueView.text = "R$ " + "%.2f".format(instalment.value)
 
-        if(!instalment.isPaid) {
+        if (!instalment.isPaid) {
             iValueView.setTextColor(Color.DKGRAY)
         }
-        if(!instalment.isPaid && instalment.dueDate.month == Date().month) {
+        if (!instalment.isPaid && instalment.dueDate.month == Date().month) {
             iValueView.setTextColor(Color.RED)
         }
     }

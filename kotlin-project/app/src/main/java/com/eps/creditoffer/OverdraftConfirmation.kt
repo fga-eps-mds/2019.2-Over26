@@ -18,17 +18,16 @@ class OverdraftConfirmation : AppCompatActivity() {
         activateOverdraft.setClickable(false)
         val checkBox = findViewById<CheckBox>(R.id.checkBox2)
             checkBox?.setOnCheckedChangeListener { buttonView, isChecked ->
-                if(isChecked){
+                if (isChecked) {
                     activateOverdraft.setEnabled(true)
                     activateOverdraft.setClickable(true)
-                }
-                else {
+                } else {
                     activateOverdraft.setEnabled(false)
                     activateOverdraft.setClickable(false)
                 }
 
             activateOverdraft.setOnClickListener {
-                if(overdraft.activate(1)){
+                if (overdraft.activate(1)) {
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                 }

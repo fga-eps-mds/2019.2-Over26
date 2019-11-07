@@ -1,6 +1,5 @@
 package com.eps.creditoffer
 
-
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.ResponseDeserializable
 import com.github.kittinunf.fuel.core.extensions.jsonBody
@@ -17,15 +16,14 @@ class UserLink {
     var monthlyIncome: Float = 0F
     var Debt: List<OverdraftDebtLink> = emptyList()
 
-
-    //private val ip: String = "192.168.0.16"
+    // private val ip: String = "192.168.0.16"
     private val ip: String = "10.0.2.2"
 
     class Deserializer : ResponseDeserializable<UserLink> {
         override fun deserialize(content: String) = Gson().fromJson(content, UserLink::class.java)
     }
 
-    fun get(id: Int) : Boolean{
+    fun get(id: Int): Boolean {
         println("----UserLink.get----")
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString()
 
@@ -40,7 +38,7 @@ class UserLink {
             this.phone = bytes.phone
             this.monthlyIncome = bytes.monthlyIncome
         }
-        when(result){
+        when (result) {
             is Result.Success -> {
                 println("Success")
                 return true
@@ -52,7 +50,7 @@ class UserLink {
         }
     }
 
-    fun create(){
+    fun create() {
         println("----UserLink.create----")
         val url: String = "http://" + ip + ":3000/api/users"
 
@@ -67,7 +65,7 @@ class UserLink {
         if (bytes != null) {
         }
         println(result)
-        when(result) {
+        when (result) {
             is Result.Success -> {
                 println("Success")
             }
@@ -77,33 +75,7 @@ class UserLink {
         }
     }
 
-    fun update(id: Int){
-        println("----UserLink.update----")
-        val url: String = "http://" + ip + ":3000/api/users/" + id.toString()
-
-        var json = JSONObject()
-        //json.put("", this.)
-
-        val (request, response, result) = Fuel.get(url)
-            .jsonBody(json.toString())
-            .response()
-        println("Response:" + response)
-        val (bytes, error) = result
-        if (bytes != null) {
-        }
-        println(result)
-        when(result){
-            is Result.Success -> {
-                println("Success")
-            }
-            is Result.Failure -> {
-                println("Failure")
-
-            }
-        }
-    }
-
-    fun listDebt(id: Int){
+    fun listDebt(id: Int) {
         println("----User.listDebt---")
 
         val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString() + "/listDebt"
@@ -116,7 +88,7 @@ class UserLink {
         if (bytes != null) {
             this.Debt = bytes
         }
-        when(result){
+        when (result) {
             is Result.Success -> {
                 println("Success")
             }

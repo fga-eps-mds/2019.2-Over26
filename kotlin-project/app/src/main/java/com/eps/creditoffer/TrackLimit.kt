@@ -26,50 +26,28 @@ class TrackLimit : AppCompatActivity() {
         debt.get(1)
         debt.checkAmout(1)
 
-        if(!debt.isDivided) {
-            button_view_installments.visibility = View.INVISIBLE
-            }
-
         initSeekBar(overdraft, debt)
 
         println("----TrackLimit.onCreate----")
 
-        button_view_debts.setOnClickListener(View.OnClickListener {
-            setContentView(R.layout.fragment_debt)
-
-            val fm = supportFragmentManager
-            var fragment = fm.findFragmentById(R.id.fragment_container_debt)
-
-            // ensures fragments already created will not be created
-            if (fragment == null) {
-                fragment = DebtFragment.newInstance()
-                // create and commit a fragment transaction
-                fm.beginTransaction()
-                    .add(R.id.fragment_container_debt, fragment)
-                    .commit()
-            }
-        })
-        
-
-        button_view_installments.setOnClickListener(View.OnClickListener {
-            setContentView(R.layout.fragment_instalment)
-
-            val fm = supportFragmentManager
-            var fragmentInstelment = fm.findFragmentById(R.id.fragment_container)
-
-            // ensures fragments already created will not be created
-            if (fragmentInstelment == null) {
-                fragmentInstelment = InstalmentFragment.newInstance()
-                // create and commit a fragment transaction
-                fm.beginTransaction()
-                    .add(R.id.fragment_container, fragmentInstelment)
-                    .commit()
-            }
-        })
-
+//        button_view_installments.setOnClickListener(View.OnClickListener {
+//            setContentView(R.layout.fragment_instalment)
+//
+//            val fm = supportFragmentManager
+//            var fragmentInstelment = fm.findFragmentById(R.id.fragment_container)
+//
+//            // ensures fragments already created will not be created
+//            if (fragmentInstelment == null) {
+//                fragmentInstelment = InstalmentFragment.newInstance()
+//                // create and commit a fragment transaction
+//                fm.beginTransaction()
+//                    .add(R.id.fragment_container, fragmentInstelment)
+//                    .commit()
+//            }
+//        })
 
         button_installment.setOnClickListener(View.OnClickListener {
-            if(true) {
+            if (true) {
                 val intent = Intent(this, Installment::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                 startActivity(getIntent())
@@ -80,7 +58,7 @@ class TrackLimit : AppCompatActivity() {
 
         cancelCredit.setOnClickListener(View.OnClickListener {
             println("----cancelCreditButton----")
-            if(overdraft.isBlocked){
+            if (overdraft.isBlocked) {
                 Toast.makeText(this,
                     "Parcele a dívida antes de fazer alterações no cheque especial",
                     Toast.LENGTH_LONG).show()
@@ -104,16 +82,16 @@ class TrackLimit : AppCompatActivity() {
         initSeekBar(overdraft, debt)
     }
 
-    fun initSeekBar( overdraft: OverdraftLink, debt: OverdraftDebtLink){
+    fun initSeekBar(overdraft: OverdraftLink, debt: OverdraftDebtLink) {
         println("----initSeekBar----")
         textView_usage.text = "R$ " + overdraft.limitUsed
-        textView_cur.text = "R$ "+ overdraft.limit
+        textView_cur.text = "R$ " + overdraft.limit
         textView_max.text = "R$ " + overdraft.limitMax
         seek_bar.max = overdraft.limitMax.toInt()
         seek_bar.progress = overdraft.limit.toInt()
         seek_bar.isEnabled = TRUE
 
-        if(!overdraft.isBlocked){
+        if (!overdraft.isBlocked) {
 
             // Hide installment button
             button_installment.visibility = View.INVISIBLE
@@ -134,20 +112,18 @@ class TrackLimit : AppCompatActivity() {
 
                 override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
                     // Display the current progress of SeekBar
-                    textView_cur.text = "R$"+i.toString()
+                    textView_cur.text = "R$" + i.toString()
                     overdraft.limit = i.toFloat()
                 }
 
                 override fun onStartTrackingTouch(seekBar: SeekBar) {
-
                 }
 
                 override fun onStopTrackingTouch(seekBar: SeekBar) {
                     save.visibility = View.VISIBLE
                 }
             })
-        }
-        else {
+        } else {
             // Show installment button
             button_installment.visibility = View.VISIBLE
 
@@ -157,7 +133,7 @@ class TrackLimit : AppCompatActivity() {
             // Hide save button
             save.visibility = View.INVISIBLE
 
-            //Stop seekBar
+            // Stop seekBar
             seek_bar.isEnabled = FALSE
             seek_bar.progress = 0
 

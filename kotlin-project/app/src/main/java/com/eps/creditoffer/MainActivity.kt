@@ -21,27 +21,23 @@ class MainActivity : AppCompatActivity() {
 
     fun cashOut(view: View) {
 
-        val account=AccountLink()
-        if(account.get(1)){
+        val account = AccountLink()
+        if (account.get(1)) {
             val intent = Intent(this, CashOut::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
             startActivityIfNeeded(intent, 0)
-
-
-        }else{
+        } else {
             Toast.makeText(this, "Conta não encontrada!", Toast.LENGTH_LONG).show()
-
         }
     }
 
-    fun cashIn(view: View){
-        val account=AccountLink()
-        if(account.get(1)){
+    fun cashIn(view: View) {
+        val account = AccountLink()
+        if (account.get(1)) {
             val intent = Intent(this, CashIn::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
             startActivityIfNeeded(intent, 0)
-        }
-        else{
+        } else {
             Toast.makeText(this, "Conta não encontrada!", Toast.LENGTH_LONG).show()
         }
     }
@@ -49,12 +45,11 @@ class MainActivity : AppCompatActivity() {
     fun overdraftScreen(view: View) {
         val overdraft = OverdraftLink()
         overdraft.get(1)
-        if(overdraft.isActive) {
+        if (overdraft.isActive) {
             val intent = Intent(this, TrackLimit::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
             startActivityIfNeeded(intent, 0)
-        }
-        else {
+        } else {
             Toast.makeText(this, "Overdraft Desativado!", Toast.LENGTH_LONG).show()
         }
     }
@@ -62,13 +57,28 @@ class MainActivity : AppCompatActivity() {
     fun activeOverdraft(view: View) {
         val overdraft = OverdraftLink()
         overdraft.get(1)
-        if(overdraft.isActive) {
+        if (overdraft.isActive) {
             Toast.makeText(this, "Overdraft Ativo!", Toast.LENGTH_LONG).show()
-        }
-        else {
+        } else {
             val intent = Intent(this, Eligibility::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
             startActivityIfNeeded(intent, 0)
+        }
+    }
+
+    fun viewDebts(view: View) {
+        setContentView(R.layout.fragment_debt)
+
+        val fm = supportFragmentManager
+        var fragment = fm.findFragmentById(R.id.fragment_container_debt)
+
+        // ensures fragments already created will not be created
+        if (fragment == null) {
+            fragment = DebtFragment.newInstance()
+            // create and commit a fragment transaction
+            fm.beginTransaction()
+                .add(R.id.fragment_container_debt, fragment)
+                .commit()
         }
     }
 }

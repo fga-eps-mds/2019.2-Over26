@@ -13,17 +13,16 @@ class TransactionLink {
     var name: String = ""
     var type: String = ""
     var value: Float = 0F
-    var description : String = "Boleto"
-    var date :Date = Date()
+    var description: String = "Boleto"
+    var date: Date = Date()
 
-    private val ip: String ="10.0.2.2"
+    private val ip: String = "10.0.2.2"
 
     class Deserializer : ResponseDeserializable<TransactionLink> {
         override fun deserialize(content: String) = Gson().fromJson(content, TransactionLink::class.java)
     }
 
-
-    fun create() : Boolean{
+    fun create(): Boolean {
         println("----TrasactionLink.create----")
         val url: String = "http://" + ip + ":3000/api/transactions/"
 
@@ -35,8 +34,7 @@ class TransactionLink {
         json.put("date", this.date)
         json.put("value", this.value)
 
-
-        val (request, response, result) =  Fuel.post(url)
+        val (request, response, result) = Fuel.post(url)
             .jsonBody(json.toString())
             .responseObject(TransactionLink.Deserializer())
         println("Response:" + response)
@@ -49,7 +47,7 @@ class TransactionLink {
             this.date = bytes.date
             this.value = bytes.value
         }
-        when(result){
+        when (result) {
             is Result.Success -> {
                 return true
                 println("Success")
@@ -61,8 +59,7 @@ class TransactionLink {
         }
     }
 
-
-    fun get(id: Int) : Boolean{
+    fun get(id: Int): Boolean {
         println("----TransactionLink.get----")
         val url: String = "http://" + ip + ":3000/api/transactions/" + id.toString()
 
@@ -78,7 +75,7 @@ class TransactionLink {
             this.date = bytes.date
             this.value = bytes.value
         }
-        when(result){
+        when (result) {
             is Result.Success -> {
                 println("Success")
                 return true
@@ -89,5 +86,4 @@ class TransactionLink {
             }
         }
     }
-
 }

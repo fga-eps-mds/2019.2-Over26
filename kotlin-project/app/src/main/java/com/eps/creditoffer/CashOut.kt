@@ -24,11 +24,11 @@ class CashOut : AppCompatActivity() {
                                                 android.R.layout.simple_spinner_dropdown_item,
                                                 optionsString)
 
-        cash_out_Spinner.onItemSelectedListener= object : AdapterView.OnItemSelectedListener {
+        cash_out_Spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) { }
 
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                transaction.description=optionsString[position]
+                transaction.description = optionsString[position]
             }
         }
 
@@ -43,53 +43,51 @@ class CashOut : AppCompatActivity() {
             overdraft.get(1)
 
             if (transaction.value > account.balance && overdraft.isActive && transaction.description == "Compra com cartão") {
-                if (transaction.value <= 0F  || transaction.description == null) {
-                    if(transaction.description == null) {
+                if (transaction.value <= 0F || transaction.description == null) {
+                    if (transaction.description == null) {
                         Toast.makeText(this, "Escolher forma de retirada.", Toast.LENGTH_LONG).show()
                     }
-                    if(transaction.value <= 0F){
+                    if (transaction.value <= 0F) {
                         Toast.makeText(this, "Valor da retirada precisa ser positivo.", Toast.LENGTH_LONG).show()
                     }
                 } else {
-                    if(transaction.create()) {
+                    if (transaction.create()) {
                         val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
                     }
                 }
-            }
-
-            else if(transaction.value > account.balance && overdraft.isActive && (transaction.description == "Pagamento de boleto" || transaction.description == "Transferência")) {
-                if (transaction.value <= 0F  || transaction.description == null) {
-                    if(transaction.description == null) {
+            } else if (transaction.value > account.balance && overdraft.isActive && (transaction.description == "Pagamento de boleto" || transaction.description == "Transferência")) {
+                if (transaction.value <= 0F || transaction.description == null) {
+                    if (transaction.description == null) {
                         Toast.makeText(this, "Escolher forma de retirada.", Toast.LENGTH_LONG).show()
                     }
-                    if(transaction.value <= 0F) {
+                    if (transaction.value <= 0F) {
                         Toast.makeText(this, "Valor da retirada precisa ser positivo.", Toast.LENGTH_LONG).show()
                     }
                 } else {
                     Toast.makeText(this, "Cheque especial disponível apenas para compra com cartão.", Toast.LENGTH_LONG).show()
                 }
-            } else if(transaction.value > account.balance && !overdraft.isActive) {
-                if (transaction.value <= 0F  || transaction.description == null) {
-                    if(transaction.description == null){
+            } else if (transaction.value > account.balance && !overdraft.isActive) {
+                if (transaction.value <= 0F || transaction.description == null) {
+                    if (transaction.description == null) {
                         Toast.makeText(this, "Escolher forma de retirada.", Toast.LENGTH_LONG).show()
                     }
-                    if(transaction.value <= 0F) {
+                    if (transaction.value <= 0F) {
                         Toast.makeText(this, "Valor da retirada precisa ser positivo.", Toast.LENGTH_LONG).show()
                     }
                 } else {
                     Toast.makeText(this, "Cheque especial desativado.", Toast.LENGTH_LONG).show()
                 }
-            } else{
-                if (transaction.value <= 0F  || transaction.description == null) {
-                    if(transaction.description == null) {
+            } else {
+                if (transaction.value <= 0F || transaction.description == null) {
+                    if (transaction.description == null) {
                         Toast.makeText(this, "Escolher forma de retirada.", Toast.LENGTH_LONG).show()
                     }
-                    if(transaction.value <= 0F) {
+                    if (transaction.value <= 0F) {
                         Toast.makeText(this, "Valor da retirada precisa ser positivo.", Toast.LENGTH_LONG).show()
                     }
                 } else {
-                    if(transaction.create()) {
+                    if (transaction.create()) {
                         val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
                     }

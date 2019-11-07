@@ -1,12 +1,8 @@
 package com.eps.creditoffer
 
-import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.ActionMode
-import android.view.KeyEvent
-import android.view.MotionEvent
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_installment.*
@@ -20,7 +16,7 @@ class Installment : AppCompatActivity() {
         setContentView(R.layout.activity_installment)
 
         val debt = OverdraftDebtLink()
-        //debt.create(1)
+        // debt.create(1)
         debt.get(1)
         debt.checkAmout(1)
 
@@ -28,21 +24,21 @@ class Installment : AppCompatActivity() {
         overdraft.get(1)
 
         textView_installment_quant.text = debt.quantityInstallment.toString()
-        val value = "%.2f".format(debt.totalAmount/debt.quantityInstallment)
+        val value = "%.2f".format(debt.totalAmount / debt.quantityInstallment)
         textView_installment_value.text = "R$ " + value
 
         button_plus.setOnClickListener(View.OnClickListener {
 
-            if (debt.quantityInstallment>=1 && debt.quantityInstallment<12) {
+            if (debt.quantityInstallment >= 1 && debt.quantityInstallment <12) {
                 debt.quantityInstallment++
                 textView_installment_quant.text = debt.quantityInstallment.toString()
-                val value = "%.2f".format(debt.totalAmount/debt.quantityInstallment)
+                val value = "%.2f".format(debt.totalAmount / debt.quantityInstallment)
                 textView_installment_value.text = "R$ " + value
             }
         })
 
         button_minus.setOnClickListener(View.OnClickListener {
-            if (debt.quantityInstallment>1 && debt.quantityInstallment<=12) {
+            if (debt.quantityInstallment> 1 && debt.quantityInstallment <= 12) {
                 debt.quantityInstallment--
                 textView_installment_quant.text = debt.quantityInstallment.toString()
                 val value = "%.2f".format(debt.totalAmount / debt.quantityInstallment)
@@ -97,10 +93,9 @@ class Installment : AppCompatActivity() {
         button_cancel_installment.setOnClickListener(View.OnClickListener {
             finish()
         })
-
     }
 
-    fun cleanbuttons(){
+    fun cleanbuttons() {
         button_day1.setBackgroundColor(Color.TRANSPARENT)
         button_day5.setBackgroundColor(Color.TRANSPARENT)
         button_day10.setBackgroundColor(Color.TRANSPARENT)
@@ -108,5 +103,4 @@ class Installment : AppCompatActivity() {
         button_day20.setBackgroundColor(Color.TRANSPARENT)
         button_day25.setBackgroundColor(Color.TRANSPARENT)
     }
-
 }

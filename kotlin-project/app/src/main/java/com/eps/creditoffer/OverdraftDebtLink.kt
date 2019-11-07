@@ -5,14 +5,19 @@ import com.github.kittinunf.fuel.core.ResponseDeserializable
 import com.github.kittinunf.fuel.core.extensions.jsonBody
 import com.github.kittinunf.result.Result
 import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import org.json.JSONObject
+import java.io.Reader
 import java.lang.Boolean.FALSE
 import java.util.*
 
-class OverdraftDebtLink( var entryDate: Date = Date(),var amount: Float = 0F,var quantityInstallment: Int = 1,var dueDate: Int = 0 ,    var isDivided: Boolean = FALSE
+class OverdraftDebtLink(
 
-){
-
+){   var isDivided: Boolean = FALSE
+    var dueDate: Int = 0
+    var quantityInstallment: Int = 1
+    var amount: Float = 0F
+    var entryDate: Date = Date()
     var rate: Float = 0F
     var instalment: List<InstalmentLink> = emptyList()
     var totalAmount: Float = 0F
@@ -21,6 +26,12 @@ class OverdraftDebtLink( var entryDate: Date = Date(),var amount: Float = 0F,var
 
     class Deserializer : ResponseDeserializable<OverdraftDebtLink> {
         override fun deserialize(content: String) = Gson().fromJson(content, OverdraftDebtLink::class.java)
+    }
+    class ListDeserializer : ResponseDeserializable<List<OverdraftDebtLink>> {
+        override fun deserialize(reader: Reader): List<OverdraftDebtLink> {
+            val type = object : TypeToken<List<OverdraftDebtLink>>() {}.type
+            return Gson().fromJson(reader, type)
+        }
     }
 
     fun get(id: Int) : Boolean{

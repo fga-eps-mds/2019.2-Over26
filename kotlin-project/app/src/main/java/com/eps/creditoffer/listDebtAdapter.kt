@@ -33,24 +33,21 @@ class DebtViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
 
     fun bind(debt: OverdraftDebtLink) {
      print("")
-        var day: String=""
-        if(debt.isDivided) {
-            day = "Vencimento dia "+debt.dueDate.toString()
-        }else{
-             day= "Data por definir."
-        }
 
-        iDateView.text = day
+
         iValueView.text = "R$ " + "%.2f".format(debt.amount)
 
         // change color test
-
+println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+        println(debt.quantityInstallment)
         if(!debt.isDivided) {
             iValueView.setTextColor(Color.RED)
             iNumberView.text="Não parcelado"
+            iDateView.text= "Data por definir."
 
         }else{
             iNumberView.text="Total de parcelas:" + debt.quantityInstallment.toString()
+            iDateView.text = "Vencimento dia "+debt.dueDate.toString()
 
 
         }

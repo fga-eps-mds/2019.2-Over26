@@ -15,6 +15,8 @@ class UserLink {
     var email: String = ""
     var phone: Int = 0
     var monthlyIncome: Float = 0F
+    var Debt: List<OverdraftDebtLink> = emptyList()
+
 
     //private val ip: String = "192.168.0.16"
     private val ip: String = "10.0.2.2"
@@ -97,6 +99,29 @@ class UserLink {
             is Result.Failure -> {
                 println("Failure")
 
+            }
+        }
+    }
+
+    fun listDebt(id: Int){
+        println("----User.listDebt---")
+
+        val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString() + "/listDebt"
+        val (request, response, result) = Fuel.get(url)
+            .responseObject(OverdraftDebtLink.ListDeserializer())
+        println("Response:" + response)
+        val (bytes, error) = result
+        print("Bytes: " + bytes)
+
+        if (bytes != null) {
+            this.Debt = bytes
+        }
+        when(result){
+            is Result.Success -> {
+                println("Success")
+            }
+            is Result.Failure -> {
+                println("Failure")
             }
         }
     }

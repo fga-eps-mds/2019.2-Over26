@@ -5,8 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), OnItemClickListener {
+
+    private lateinit var debtAdapter: ListDebtAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,15 +73,28 @@ class MainActivity : AppCompatActivity() {
     fun viewDebts(view: View) {
         setContentView(R.layout.fragment_debt)
 
-        val fm = supportFragmentManager
-        var fragment = fm.findFragmentById(R.id.fragment_container_debt)
+        val user = UserLink()
+        user.listDebt(1)
+        val debts = user.debt
 
+        val debtList = findViewById<RecyclerView>(R.id.list_recycler_view_debt)
+        debtList.layoutManager = LinearLayoutManager(this)
+        debtAdapter = ListDebtAdapter(debts,this)
+        debtList.adapter = debtAdapter
+        }
+
+    override fun onItemClicked(debts: OverdraftDebtLink) {
+        setContentView(R.layout.fragment_instalment)
+
+        val fm = supportFragmentManager
+        var fragmentInstalment = fm.findFragmentById(R.id.fragment_container)
         // ensures fragments already created will not be created
-        if (fragment == null) {
-            fragment = DebtFragment.newInstance()
+        if (fragmentInstalment == null) {
+            fragmentInstalment = InstalmentFragment.newInstance(debts.id)
             // create and commit a fragment transaction
             fm.beginTransaction()
-                .add(R.id.fragment_container_debt, fragment)
+                .addToBackStack(null)
+                .add(R.id.fragment_container, fragmentInstalment)
                 .commit()
         }
     }

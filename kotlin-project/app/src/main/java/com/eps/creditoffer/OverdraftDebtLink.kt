@@ -12,6 +12,7 @@ import java.lang.Boolean.FALSE
 import java.util.*
 
 class OverdraftDebtLink {
+    var id: Int = 0
     var isDivided: Boolean = FALSE
     var dueDay: Int = 0
     var quantityInstalment: Int = 1

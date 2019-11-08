@@ -1,5 +1,6 @@
 package com.eps.creditoffer
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -29,7 +30,7 @@ class InstalmentFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         println("----MainActivity.onViewCreated----")
 
-        debt.listInstalments(1)
+        debt.listInstalments(arguments!!.getInt("REPLACE WITH A STRING CONSTANT"))
         val instalments = debt.instalment
 
         list_recycler_view.apply {
@@ -38,7 +39,18 @@ class InstalmentFragment : Fragment() {
         }
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        val intent = Intent(context, Eligibility::class.java)
+        startActivity(intent)
+    }
+
     companion object {
-        fun newInstance(): InstalmentFragment = InstalmentFragment()
+        @JvmStatic
+        fun newInstance(isMyInt: Int) = InstalmentFragment().apply {
+            arguments = Bundle().apply {
+                putInt("REPLACE WITH A STRING CONSTANT", isMyInt)
+            }
+        }
     }
 }

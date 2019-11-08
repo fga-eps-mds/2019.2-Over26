@@ -34,7 +34,7 @@ platform :android do
 
   desc "Submit a new Internal Build to Play Store"
   lane :internal do
-    upload_to_play_store(track: 'internal', apk: 'app/build/release/app-release.apk')
+    upload_to_play_store(track: 'internal', apk: 'app/release/app-release.apk')
   end
 
   desc "Promote Internal to Alpha"

@@ -54,7 +54,7 @@ ensureContainer:
 
   artifacts:
     paths:
-    - app/release
+    - app/release/
 
 buildDebug:
   extends: .build_job

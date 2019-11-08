@@ -31,8 +31,6 @@ ensureContainer:
   before_script:
     - "mkdir -p ~/.docker && echo '{\"experimental\": \"enabled\"}' > ~/.docker/config.json"
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
-    # Skip update container `script` if the container already exists
-    # via https://gitlab.com/gitlab-org/gitlab-ce/issues/26866#note_97609397 -> https://stackoverflow.com/a/52077071/796832
     - docker manifest inspect $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG > /dev/null && exit || true
   except:
     changes:
@@ -80,7 +78,6 @@ testDebug:
 
 .promote_job:
   image: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
-  when: manual
   dependencies: []
   before_script:
     - cd kotlin-project/
@@ -98,18 +95,24 @@ publishInternal:
   when: manual
   script:
     - bundle exec fastlane internal
+  except:
+    - ['devel', 'master', '/^release-.*$/']
 
 promoteAlpha:
   extends: .promote_job
   stage: alpha
   script:
     - bundle exec fastlane promote_internal_to_alpha
+  only:
+    - devel
 
 promoteBeta:
   extends: .promote_job
   stage: beta
   script:
     - bundle exec fastlane promote_alpha_to_beta
+  only:
+    - master
 
 promoteProduction:
   extends: .promote_job
@@ -117,6 +120,6 @@ promoteProduction:
   # We only allow production promotion on master because
   # in this way you can protect production scoped secret variables
   only:
-   - continuous-deployment
+   - /^release-.*$/
   script:
     - bundle exec fastlane promote_beta_to_production

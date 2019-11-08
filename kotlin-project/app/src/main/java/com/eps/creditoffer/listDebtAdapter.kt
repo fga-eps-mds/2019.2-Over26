@@ -33,8 +33,8 @@ class DebtViewHolder(inflater: LayoutInflater, val parent: ViewGroup) :
         itemView.setOnClickListener{
             clickListener.onItemClicked(debt)
         }
-
-        iValueView.text = "R$ " + "%.2f".format(debt.amount)
+println()
+        iValueView.text = "R$ " + "%.2f".format(debt.checkAmout(debt.id))
 
         println(debt.quantityInstalment)
         if (!debt.isDivided) {

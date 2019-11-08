@@ -43,6 +43,7 @@ class OverdraftDebtLink {
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {
+            this.id = bytes.id
             this.entryDate = bytes.entryDate
             this.amount = bytes.amount
             this.rate = bytes.rate
@@ -89,7 +90,7 @@ class OverdraftDebtLink {
         }
     }
 
-    fun checkAmout(id: Int) {
+    fun checkAmout(id: Int) : Float {
         println("----OverdraftDebtLink.checkAmout---")
         val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString() + "/check"
 
@@ -103,9 +104,11 @@ class OverdraftDebtLink {
         when (result) {
             is Result.Success -> {
                 println("Success")
+                return totalAmount;
             }
             is Result.Failure -> {
                 println("Failure")
+                return 0f;
             }
         }
     }

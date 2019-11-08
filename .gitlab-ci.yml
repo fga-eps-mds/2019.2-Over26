@@ -54,7 +54,7 @@ ensureContainer:
 
   artifacts:
     paths:
-    - app/release/
+    - app/build/outputs
 
 buildDebug:
   extends: .build_job
@@ -65,6 +65,10 @@ buildRelease:
   extends: .build_job
   script:
     - bundle exec fastlane buildRelease
+    - ls app/release/ || true
+    - ls app/ || true
+    - ls app/build/outputs/apk/release || true
+    - ls app/build/outputs || true
   environment:
     name: production
 

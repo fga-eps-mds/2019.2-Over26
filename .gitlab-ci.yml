@@ -96,7 +96,9 @@ publishInternal:
   script:
     - bundle exec fastlane internal
   except:
-    - ['devel', 'master', '/^release-.*$/']
+    - devel
+    - master
+    - /^release-.*$/
 
 promoteAlpha:
   extends: .promote_job

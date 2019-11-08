@@ -60,7 +60,9 @@ class InstalmentViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
         if (!instalment.isPaid) {
             iValueView.setTextColor(Color.DKGRAY)
         }
-        if (!instalment.isPaid && instalment.dueDate.month == Date().month) {
+        if (!instalment.isPaid &&
+            instalment.dueDate.month == Date().month &&
+            instalment.dueDate.year == Date().year) {
             iValueView.setTextColor(Color.RED)
         }
     }

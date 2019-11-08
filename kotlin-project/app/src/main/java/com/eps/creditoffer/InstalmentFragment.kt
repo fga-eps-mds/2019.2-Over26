@@ -41,8 +41,7 @@ class InstalmentFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        val intent = Intent(context, Eligibility::class.java)
-        startActivity(intent)
+        startActivity(Intent(context, MainActivity::class.java))
     }
 
     companion object {

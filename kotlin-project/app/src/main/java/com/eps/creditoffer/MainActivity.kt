@@ -44,7 +44,6 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
             Handler().postDelayed(Runnable { doubleBackToExitPressedOnce = false }, 2000)
         }
-
     }
 
     fun cashOut(view: View) {
@@ -95,17 +94,19 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     }
 
     fun viewDebts(view: View) {
-        setContentView(R.layout.fragment_debt)
-        inDebts = TRUE
-
         val user = UserLink()
-        user.listDebt(1)
-        val debts = user.debt
+        if(user.listDebt(1)){
+            setContentView(R.layout.fragment_debt)
+            inDebts = TRUE
 
-        val debtList = findViewById<RecyclerView>(R.id.list_recycler_view_debt)
-        debtList.layoutManager = LinearLayoutManager(this)
-        debtAdapter = ListDebtAdapter(debts,this)
-        debtList.adapter = debtAdapter
+            val debts = user.debt
+            val debtList = findViewById<RecyclerView>(R.id.list_recycler_view_debt)
+            debtList.layoutManager = LinearLayoutManager(this)
+            debtAdapter = ListDebtAdapter(debts,this)
+            debtList.adapter = debtAdapter
+        } else {
+            Toast.makeText(this, "Nenhuma dívida encontrada!", Toast.LENGTH_LONG).show()
+        }
     }
 
     override fun onItemClicked(debts: OverdraftDebtLink) {

@@ -75,7 +75,7 @@ class UserLink {
         }
     }
 
-    fun listDebt(id: Int) {
+    fun listDebt(id: Int): Boolean {
         println("----User.listDebt---")
 
         val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString() + "/listDebt"
@@ -91,9 +91,11 @@ class UserLink {
         when (result) {
             is Result.Success -> {
                 println("Success")
+                return true
             }
             is Result.Failure -> {
                 println("Failure")
+                return false
             }
         }
     }

@@ -7,10 +7,16 @@ import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import java.lang.Boolean.FALSE
+import android.os.Handler
+import java.lang.Boolean.TRUE
+
 
 class MainActivity : AppCompatActivity(), OnItemClickListener {
 
     private lateinit var debtAdapter: ListDebtAdapter
+    private var inDebts: Boolean = FALSE
+    private var doubleBackToExitPressedOnce = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +27,24 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     override fun onResume() {
         super.onResume()
         println("----MainActivity.onResume----")
+    }
+
+    override fun onBackPressed(){
+        if(inDebts){
+            setContentView(R.layout.activity_main)
+            inDebts = FALSE
+        } else {
+            if (doubleBackToExitPressedOnce) {
+                super.onBackPressed()
+                return
+            }
+
+            this.doubleBackToExitPressedOnce = true
+            Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show()
+
+            Handler().postDelayed(Runnable { doubleBackToExitPressedOnce = false }, 2000)
+        }
+
     }
 
     fun cashOut(view: View) {
@@ -72,6 +96,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
     fun viewDebts(view: View) {
         setContentView(R.layout.fragment_debt)
+        inDebts = TRUE
 
         val user = UserLink()
         user.listDebt(1)
@@ -81,7 +106,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         debtList.layoutManager = LinearLayoutManager(this)
         debtAdapter = ListDebtAdapter(debts,this)
         debtList.adapter = debtAdapter
-        }
+    }
 
     override fun onItemClicked(debts: OverdraftDebtLink) {
         setContentView(R.layout.fragment_instalment)

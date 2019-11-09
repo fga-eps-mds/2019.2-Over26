@@ -180,4 +180,31 @@ class OverdraftLink {
             }
         }
     }
+
+    fun createDebt(id: Int) {
+        println("----OverdraftLink.createDebt----")
+        val url: String =
+            "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts/createDebt"
+
+        val json = JSONObject()
+        json.put("firstUseDate", this.firstUseDate)
+
+        val (request, response, result) = Fuel.post(url)
+            .jsonBody(json.toString())
+            .responseObject(OverdraftLink.Deserializer())
+        println("Response:" + response)
+        val (bytes, error) = result
+        if (bytes != null) {
+            this.userCPF = bytes.userCPF
+        }
+        when (result) {
+            is Result.Success -> {
+                println("Success")
+            }
+            is Result.Failure -> {
+                println("Failure")
+
+            }
+        }
+    }
 }

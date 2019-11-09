@@ -5,6 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import android.widget.PopupMenu
+import kotlinx.android.synthetic.main.activity_main.*
+import java.lang.Boolean.FALSE
+import java.lang.Boolean.TRUE
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,33 +22,6 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         println("----MainActivity.onResume----")
-    }
-
-    fun cashOut(view: View) {
-
-        val account=AccountLink()
-        if(account.get(1)){
-            val intent = Intent(this, CashOut::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
-            startActivityIfNeeded(intent, 0)
-
-
-        }else{
-            Toast.makeText(this, "Conta não encontrada!", Toast.LENGTH_LONG).show()
-
-        }
-    }
-
-    fun cashIn(view: View){
-        val account=AccountLink()
-        if(account.get(1)){
-            val intent = Intent(this, CashIn::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
-            startActivityIfNeeded(intent, 0)
-        }
-        else{
-            Toast.makeText(this, "Conta não encontrada!", Toast.LENGTH_LONG).show()
-        }
     }
 
     fun overdraftScreen(view: View) {
@@ -71,4 +49,61 @@ class MainActivity : AppCompatActivity() {
             startActivityIfNeeded(intent, 0)
         }
     }
+
+    fun showPopUp(view: View) {
+        val popupMenu = PopupMenu(this, view)
+        val inflater = popupMenu.menuInflater
+        inflater.inflate(R.menu.popup_menu, popupMenu.menu)
+        popupMenu.show()
+
+        popupMenu.setOnMenuItemClickListener {
+            when(it.itemId) {
+                R.id.cashInMenu -> {
+                    val account=AccountLink()
+                    if(account.get(1)){
+                        val intent = Intent(this, CashIn::class.java)
+                        intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+                        startActivityIfNeeded(intent, 0)
+                    }
+                    else{
+                        Toast.makeText(this, "Conta não encontrada!", Toast.LENGTH_LONG).show()
+                    }
+                }
+
+                R.id.cashOutMenu -> {
+                    val account=AccountLink()
+                    if(account.get(1)){
+                        val intent = Intent(this, CashOut::class.java)
+                        intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+                        startActivityIfNeeded(intent, 0)
+                    }
+                    else{
+                        Toast.makeText(this, "Conta não encontrada!", Toast.LENGTH_LONG).show()
+
+                    }
+
+                }
+
+                R.id.attDataMenu -> {
+                    val overdraft = OverdraftLink()
+                    overdraft.get(1)
+                    if(overdraft.isActive && overdraft.limitUsed != 0F) {
+                        overdraft.createDebt(1)
+
+                        Toast.makeText(this, "Data atualizada e divida criada!", Toast.LENGTH_LONG).show()
+
+                        val intent = Intent(this, TrackLimit::class.java)
+                        intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+                        startActivityIfNeeded(intent, 0)
+                    }
+                    else {
+                        Toast.makeText(this, "Overdraft não encontrado ou não utilizado!", Toast.LENGTH_LONG).show()
+                    }
+
+                }
+            }
+            true
+        }
+    }
+
 }

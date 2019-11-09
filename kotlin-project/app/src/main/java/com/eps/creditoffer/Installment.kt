@@ -18,7 +18,7 @@ class Installment : AppCompatActivity() {
         val debt = OverdraftDebtLink()
         // debt.create(1)
         debt.get(1)
-        debt.checkAmout(1)
+        debt.checkAmout(debt.id)
 
         val overdraft = OverdraftLink()
         overdraft.get(1)

@@ -24,7 +24,7 @@ class TrackLimit : AppCompatActivity() {
 
         overdraft.get(1)
         debt.get(1)
-        debt.checkAmout(1)
+        debt.checkAmout(debt.id)
 
 //        if(!debt.isDivided) {
 //            button_view_installments.visibility = View.INVISIBLE

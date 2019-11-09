@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
     private lateinit var debtAdapter: ListDebtAdapter
     private var inDebts: Boolean = FALSE
+    private var inInstalment: Boolean = FALSE
     private var doubleBackToExitPressedOnce = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,6 +31,12 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     }
 
     override fun onBackPressed(){
+        if(inInstalment) {
+            inInstalment = FALSE
+            viewDebts(null)
+            super.onBackPressed()
+            return
+        }
         if(inDebts){
             setContentView(R.layout.activity_main)
             inDebts = FALSE
@@ -47,7 +54,6 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     }
 
     fun cashOut(view: View) {
-
         val account = AccountLink()
         if (account.get(1)) {
             val intent = Intent(this, CashOut::class.java)
@@ -93,7 +99,8 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         }
     }
 
-    fun viewDebts(view: View) {
+    fun viewDebts(view: View?) {
+        println("----MainActivity.viewDebts----")
         val user = UserLink()
         if(user.listDebt(1)){
             setContentView(R.layout.fragment_debt)
@@ -110,18 +117,24 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     }
 
     override fun onItemClicked(debts: OverdraftDebtLink) {
-        setContentView(R.layout.fragment_instalment)
+        println("----MainActivity.onItem----")
+        if(debts.isDivided) {
+            inInstalment = TRUE
+            setContentView(R.layout.fragment_instalment)
 
-        val fm = supportFragmentManager
-        var fragmentInstalment = fm.findFragmentById(R.id.fragment_container)
-        // ensures fragments already created will not be created
-        if (fragmentInstalment == null) {
-            fragmentInstalment = InstalmentFragment.newInstance(debts.id)
-            // create and commit a fragment transaction
-            fm.beginTransaction()
-                .addToBackStack(null)
-                .add(R.id.fragment_container, fragmentInstalment)
-                .commit()
+            val fm = supportFragmentManager
+            var fragmentInstalment = fm.findFragmentById(R.id.fragment_container)
+            // ensures fragments already created will not be created
+            if (fragmentInstalment == null) {
+                fragmentInstalment = InstalmentFragment.newInstance(debts.id)
+                // create and commit a fragment transaction
+                fm.beginTransaction()
+                    .addToBackStack(null)
+                    .add(R.id.fragment_container, fragmentInstalment)
+                    .commit()
+            }
+        } else {
+            Toast.makeText(this, "Dívida não parcelada!", Toast.LENGTH_LONG).show()
         }
     }
 }

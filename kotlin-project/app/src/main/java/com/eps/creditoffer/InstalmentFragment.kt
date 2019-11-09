@@ -15,7 +15,7 @@ class InstalmentFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        println("----MainFragment.onCreate----")
+        println("----InstalmentFragment.onCreate----")
         retainInstance = true
     }
 
@@ -23,14 +23,16 @@ class InstalmentFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? =
-        inflater.inflate(R.layout.fragment_instalment, container, false)
+    ): View? {
+        println("----InstalmentFragment.onCreatedView----")
+        return inflater.inflate(R.layout.fragment_instalment, container, false)
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        println("----MainActivity.onViewCreated----")
+        println("----InstalmentFragment.onViewCreated----")
 
-        debt.listInstalments(arguments!!.getInt("REPLACE WITH A STRING CONSTANT"))
+        debt.listInstalments(arguments!!.getInt("DebtId"))
         val instalments = debt.instalment
 
         list_recycler_view.apply {
@@ -39,16 +41,11 @@ class InstalmentFragment : Fragment() {
         }
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        startActivity(Intent(context, MainActivity::class.java))
-    }
-
     companion object {
         @JvmStatic
         fun newInstance(isMyInt: Int) = InstalmentFragment().apply {
             arguments = Bundle().apply {
-                putInt("REPLACE WITH A STRING CONSTANT", isMyInt)
+                putInt("DebtId", isMyInt)
             }
         }
     }

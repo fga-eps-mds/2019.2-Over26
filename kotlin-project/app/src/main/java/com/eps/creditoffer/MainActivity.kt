@@ -116,7 +116,7 @@ class MainActivity : AppCompatActivity() {
                         startActivityIfNeeded(intent, 0)
                     }
                     else {
-                        Toast.makeText(this, "Overdraft não encontrado!", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "Overdraft não encontrado ou não utilizado!", Toast.LENGTH_LONG).show()
                     }
 
                 }

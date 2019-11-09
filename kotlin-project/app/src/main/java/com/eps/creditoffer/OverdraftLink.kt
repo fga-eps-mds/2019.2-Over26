@@ -194,6 +194,7 @@ class OverdraftLink {
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {
+            this.userCPF = bytes.userCPF
         }
         when (result) {
             is Result.Success -> {

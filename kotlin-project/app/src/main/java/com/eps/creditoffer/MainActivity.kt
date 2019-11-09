@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import android.os.Handler
 import android.widget.PopupMenu
+import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.Boolean.FALSE
 import java.lang.Boolean.TRUE
 
@@ -22,6 +23,18 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val account=AccountLink()
+
+        if(!account.get(1)) {
+            account.agency = 1
+            account.number=1
+            account.create(1)
+        }
+        else{
+            saldo.setText("R$"+account.balance.toString())
+        }
+
         println("----MainActivity.onCreate----")
     }
 

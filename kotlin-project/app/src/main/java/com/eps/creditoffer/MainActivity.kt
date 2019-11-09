@@ -7,10 +7,10 @@ import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import java.lang.Boolean.FALSE
 import android.os.Handler
+import android.widget.PopupMenu
+import java.lang.Boolean.FALSE
 import java.lang.Boolean.TRUE
-
 
 class MainActivity : AppCompatActivity(), OnItemClickListener {
 
@@ -30,14 +30,14 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         println("----MainActivity.onResume----")
     }
 
-    override fun onBackPressed(){
-        if(inInstalment) {
+    override fun onBackPressed() {
+        if (inInstalment) {
             inInstalment = FALSE
             viewDebts(null)
             super.onBackPressed()
             return
         }
-        if(inDebts){
+        if (inDebts) {
             setContentView(R.layout.activity_main)
             inDebts = FALSE
         } else {
@@ -50,28 +50,6 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
             Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show()
 
             Handler().postDelayed(Runnable { doubleBackToExitPressedOnce = false }, 2000)
-        }
-    }
-
-    fun cashOut(view: View) {
-        val account = AccountLink()
-        if (account.get(1)) {
-            val intent = Intent(this, CashOut::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
-            startActivityIfNeeded(intent, 0)
-        } else {
-            Toast.makeText(this, "Conta não encontrada!", Toast.LENGTH_LONG).show()
-        }
-    }
-
-    fun cashIn(view: View) {
-        val account = AccountLink()
-        if (account.get(1)) {
-            val intent = Intent(this, CashIn::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
-            startActivityIfNeeded(intent, 0)
-        } else {
-            Toast.makeText(this, "Conta não encontrada!", Toast.LENGTH_LONG).show()
         }
     }
 
@@ -102,14 +80,14 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     fun viewDebts(view: View?) {
         println("----MainActivity.viewDebts----")
         val user = UserLink()
-        if(user.listDebt(1)){
+        if (user.listDebt(1)) {
             setContentView(R.layout.fragment_debt)
             inDebts = TRUE
 
             val debts = user.debt
             val debtList = findViewById<RecyclerView>(R.id.list_recycler_view_debt)
             debtList.layoutManager = LinearLayoutManager(this)
-            debtAdapter = ListDebtAdapter(debts,this)
+            debtAdapter = ListDebtAdapter(debts, this)
             debtList.adapter = debtAdapter
         } else {
             Toast.makeText(this, "Nenhuma dívida encontrada!", Toast.LENGTH_LONG).show()
@@ -118,7 +96,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
     override fun onItemClicked(debts: OverdraftDebtLink) {
         println("----MainActivity.onItem----")
-        if(debts.isDivided) {
+        if (debts.isDivided) {
             inInstalment = TRUE
             setContentView(R.layout.fragment_instalment)
 
@@ -135,6 +113,61 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
             }
         } else {
             Toast.makeText(this, "Dívida não parcelada!", Toast.LENGTH_LONG).show()
+        }
+    }
+
+    fun showPopUp(view: View) {
+        val popupMenu = PopupMenu(this, view)
+        val inflater = popupMenu.menuInflater
+        inflater.inflate(R.menu.popup_menu, popupMenu.menu)
+        popupMenu.show()
+
+        popupMenu.setOnMenuItemClickListener {
+            when (it.itemId) {
+                R.id.cashInMenu -> {
+                    val account = AccountLink()
+                    if (account.get(1)) {
+                        val intent = Intent(this, CashIn::class.java)
+                        intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+                        startActivityIfNeeded(intent, 0)
+                    } else {
+                        Toast.makeText(this, "Conta não encontrada!", Toast.LENGTH_LONG).show()
+                    }
+                }
+
+                R.id.cashOutMenu -> {
+                    val account = AccountLink()
+                    if (account.get(1)) {
+                        val intent = Intent(this, CashOut::class.java)
+                        intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+                        startActivityIfNeeded(intent, 0)
+                    } else {
+                        Toast.makeText(this, "Conta não encontrada!", Toast.LENGTH_LONG).show()
+                    }
+                }
+
+                R.id.attDataMenu -> {
+                    val overdraft = OverdraftLink()
+                    overdraft.get(1)
+                    if (overdraft.isActive && overdraft.limitUsed != 0F) {
+                        overdraft.createDebt(1)
+
+                        Toast.makeText(this, "Data atualizada e divida criada!", Toast.LENGTH_LONG)
+                            .show()
+
+                        val intent = Intent(this, TrackLimit::class.java)
+                        intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+                        startActivityIfNeeded(intent, 0)
+                    } else {
+                        Toast.makeText(
+                            this,
+                            "Overdraft não encontrado ou não utilizado!",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+                }
+            }
+            true
         }
     }
 }

@@ -26,30 +26,9 @@ class TrackLimit : AppCompatActivity() {
         debt.get(1)
         debt.checkAmout(debt.id)
 
-//        if(!debt.isDivided) {
-//            button_view_installments.visibility = View.INVISIBLE
-//            }
-
         initSeekBar(overdraft, debt)
 
         println("----TrackLimit.onCreate----")
-
-//        button_view_installments.setOnClickListener(View.OnClickListener {
-//            setContentView(R.layout.fragment_instalment)
-//
-//            val fm = supportFragmentManager
-//            var fragmentInstelment = fm.findFragmentById(R.id.fragment_container)
-//
-//            // ensures fragments already created will not be created
-//            if (fragmentInstelment == null) {
-//                fragmentInstelment = InstalmentFragment.newInstance()
-//                // create and commit a fragment transaction
-//                fm.beginTransaction()
-//                    .add(R.id.fragment_container, fragmentInstelment)
-//                    .commit()
-//            }
-//        })
-
 
         button_installment.setOnClickListener(View.OnClickListener {
             if(true) {

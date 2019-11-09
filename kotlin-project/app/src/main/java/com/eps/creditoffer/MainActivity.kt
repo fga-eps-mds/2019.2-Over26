@@ -16,6 +16,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val account=AccountLink()
+
+        if(!account.get(1)) {
+            account.agency = 1
+            account.number=1
+            account.create(1)
+        }
+        else{
+            saldo.setText("R$"+account.balance.toString())
+        }
+
         println("----MainActivity.onCreate----")
     }
 

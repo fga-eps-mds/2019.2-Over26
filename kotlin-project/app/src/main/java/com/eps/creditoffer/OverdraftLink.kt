@@ -14,7 +14,6 @@ class OverdraftLink {
 
     var userCPF: Int = 0
     var firstUseDate: Date? = null
-    var status: Boolean = TRUE
     var isActive: Boolean = FALSE
     var limit: Float = 0F
     var limitMax: Float = 0F
@@ -28,7 +27,7 @@ class OverdraftLink {
         override fun deserialize(content: String) = Gson().fromJson(content, OverdraftLink::class.java)
     }
 
-    fun get(id: Int){
+    fun get(id: Int) : Boolean {
         println("----OverdraftLink.get----")
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts"
 
@@ -38,7 +37,7 @@ class OverdraftLink {
         val (bytes, error) = result
         if (bytes != null) {
             this.firstUseDate = bytes.firstUseDate
-            this.isActive = bytes.status
+            this.isActive = bytes.isActive
             this.limit = bytes.limit
             this.limitMax = bytes.limitMax
             this.limitUsed = bytes.limitUsed
@@ -48,9 +47,11 @@ class OverdraftLink {
         when (result) {
             is Result.Success -> {
                 println("Success")
+                return true
             }
             is Result.Failure -> {
                 println("Failure")
+                return false
             }
         }
     }
@@ -69,7 +70,7 @@ class OverdraftLink {
         val (bytes, error) = result
         if (bytes != null) {
             this.firstUseDate = bytes.firstUseDate
-            this.isActive = bytes.status
+            this.isActive = bytes.isActive
             this.limit = bytes.limit
             this.limitMax = bytes.limitMax
             this.limitUsed = bytes.limitUsed
@@ -97,7 +98,7 @@ class OverdraftLink {
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {
-            this.isActive = bytes.status //
+            this.isActive = bytes.isActive
         }
         when(result){
             is Result.Success -> {
@@ -166,7 +167,7 @@ class OverdraftLink {
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {
-            this.isActive = bytes.status
+            this.isActive = bytes.isActive
         }
         when(result){
             is Result.Success -> {

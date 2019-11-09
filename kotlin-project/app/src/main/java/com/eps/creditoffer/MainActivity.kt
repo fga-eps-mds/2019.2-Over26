@@ -3,7 +3,6 @@ package com.eps.creditoffer
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.StrictMode
 import android.view.View
 import android.widget.Toast
 import android.widget.PopupMenu
@@ -17,24 +16,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        val user = UserLink()
-        println(user.get(1))
-        if(!user.get(1)) {
-
-            user.cpf = 1
-            user.create()
-        }
-        val account=AccountLink()
-        if(!account.get(1))
-        {
-            account.agency = 1
-            account.number=1
-            account.create(1)
-        }else{
-            saldo.setText("R$"+account.balance.toString())
-        }
-
         println("----MainActivity.onCreate----")
     }
 

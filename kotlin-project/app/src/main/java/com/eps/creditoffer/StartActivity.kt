@@ -21,17 +21,15 @@ class StartActivity : AppCompatActivity() {
         button_start.setOnClickListener(View.OnClickListener {
             val name = editText_startName.text.toString()
 
-            if(name == ""){
+            if (name == "") {
                 Toast.makeText(this, "Digite um nome!", Toast.LENGTH_LONG).show()
-            }
-            else{
-                if(st.start(name)){
+            } else {
+                if (st.start(name)) {
                     val intent = Intent(this, MainActivity::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                     startActivityIfNeeded(intent, 0)
                     finish()
-                }
-                else{
+                } else {
                     Toast.makeText(this, "Erro ao iniciar aplicação!", Toast.LENGTH_LONG).show()
                 }
             }

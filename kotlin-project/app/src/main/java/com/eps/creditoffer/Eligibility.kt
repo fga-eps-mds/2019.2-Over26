@@ -16,7 +16,7 @@ class Eligibility : AppCompatActivity() {
         val overdraft = OverdraftLink()
 
         eligibility_button.setOnClickListener(View.OnClickListener {
-            if(!overdraft.get(1)) {
+            if (!overdraft.get(1)) {
                 overdraft.create(1)
             }
             val intent = Intent(this, OverdraftConfirmation::class.java)
@@ -24,4 +24,3 @@ class Eligibility : AppCompatActivity() {
         })
     }
 }
-

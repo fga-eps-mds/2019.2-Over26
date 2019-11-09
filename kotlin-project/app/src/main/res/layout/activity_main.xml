@@ -143,6 +143,60 @@
             app:layout_constraintTop_toBottomOf="@id/textView4" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/debt_component"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#fff"
+        android:padding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt2">
+
+        <ImageView
+            android:id="@+id/icon_debt_component"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_bar_solid" />
+
+        <ImageView
+            android:id="@+id/plus_signal_debt"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:clickable="true"
+            android:onClick="viewDebts"
+            app:srcCompat="@drawable/ic_plus_solid"/>
+
+        <TextView
+            android:id="@+id/textView_debt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Consultar dívidas"
+            android:textColor="@android:color/background_dark"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintEnd_toStartOf="@id/plus_signal_debt"
+            app:layout_constraintStart_toEndOf="@+id/icon_debt_component"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/textView_info_debt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Precisa de um pouco mais de dinheiro no final do mês? "
+            android:layout_marginLeft="10dp"
+            app:layout_constraintEnd_toStartOf="@id/plus_signal_debt"
+            app:layout_constraintStart_toEndOf="@id/icon_debt_component"
+            app:layout_constraintTop_toBottomOf="@id/textView_debt" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"

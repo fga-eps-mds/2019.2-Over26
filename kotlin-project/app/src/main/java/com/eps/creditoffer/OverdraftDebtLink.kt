@@ -5,14 +5,19 @@ import com.github.kittinunf.fuel.core.ResponseDeserializable
 import com.github.kittinunf.fuel.core.extensions.jsonBody
 import com.github.kittinunf.result.Result
 import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import org.json.JSONObject
+import java.io.Reader
 import java.lang.Boolean.FALSE
 import java.util.*
 
-class OverdraftDebtLink( var entryDate: Date = Date(),var amount: Float = 0F,var quantityInstallment: Int = 1,var dueDate: Int = 0 ,    var isDivided: Boolean = FALSE
-
-){
-
+class OverdraftDebtLink {
+    var id: Int = 0
+    var isDivided: Boolean = FALSE
+    var dueDay: Int = 0
+    var quantityInstalment: Int = 1
+    var amount: Float = 0F
+    var entryDate: Date = Date()
     var rate: Float = 0F
     var instalment: List<InstalmentLink> = emptyList()
     var totalAmount: Float = 0F
@@ -22,8 +27,14 @@ class OverdraftDebtLink( var entryDate: Date = Date(),var amount: Float = 0F,var
     class Deserializer : ResponseDeserializable<OverdraftDebtLink> {
         override fun deserialize(content: String) = Gson().fromJson(content, OverdraftDebtLink::class.java)
     }
+    class ListDeserializer : ResponseDeserializable<List<OverdraftDebtLink>> {
+        override fun deserialize(reader: Reader): List<OverdraftDebtLink> {
+            val type = object : TypeToken<List<OverdraftDebtLink>>() {}.type
+            return Gson().fromJson(reader, type)
+        }
+    }
 
-    fun get(id: Int) : Boolean{
+    fun get(id: Int): Boolean {
         println("----OverdraftDebtLink.get----")
         val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString()
 
@@ -32,12 +43,13 @@ class OverdraftDebtLink( var entryDate: Date = Date(),var amount: Float = 0F,var
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {
+            this.id = bytes.id
             this.entryDate = bytes.entryDate
             this.amount = bytes.amount
             this.rate = bytes.rate
             this.isDivided = bytes.isDivided
-            this.dueDate = bytes.dueDate
-            this.quantityInstallment = bytes.quantityInstallment
+            this.dueDay = bytes.dueDay
+            this.quantityInstalment = bytes.quantityInstalment
             this.instalment = bytes.instalment
         }
         when (result) {
@@ -52,7 +64,7 @@ class OverdraftDebtLink( var entryDate: Date = Date(),var amount: Float = 0F,var
         }
     }
 
-    fun create(id: Int){
+    fun create(id: Int) {
         println("----OverdraftDebtLink.create---")
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdraftDebt"
 
@@ -65,10 +77,10 @@ class OverdraftDebtLink( var entryDate: Date = Date(),var amount: Float = 0F,var
             this.amount = bytes.amount
             this.rate = bytes.rate
             this.isDivided = bytes.isDivided
-            this.dueDate = bytes.dueDate
-            this.quantityInstallment = bytes.quantityInstallment
+            this.dueDay = bytes.dueDay
+            this.quantityInstalment = bytes.quantityInstalment
         }
-        when(result){
+        when (result) {
             is Result.Success -> {
                 println("Success")
             }
@@ -78,7 +90,7 @@ class OverdraftDebtLink( var entryDate: Date = Date(),var amount: Float = 0F,var
         }
     }
 
-    fun checkAmout(id: Int){
+    fun checkAmout(id: Int) : Float {
         println("----OverdraftDebtLink.checkAmout---")
         val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString() + "/check"
 
@@ -89,24 +101,26 @@ class OverdraftDebtLink( var entryDate: Date = Date(),var amount: Float = 0F,var
         if (bytes != null) {
             this.totalAmount = bytes.totalAmount
         }
-        when(result){
+        when (result) {
             is Result.Success -> {
                 println("Success")
+                return totalAmount;
             }
             is Result.Failure -> {
                 println("Failure")
+                return 0f;
             }
         }
     }
 
-    fun createInstallment(id: Int){
+    fun createInstallment(id: Int) {
         println("----OverdraftLinkDebt.createInstallment----")
         val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString() + "/instalments"
 
         val json = JSONObject()
-        json.put("isDivided",this.isDivided)
-        json.put("day",this.dueDate)
-        json.put("quantityInstalment",this.quantityInstallment)
+        json.put("isDivided", this.isDivided)
+        json.put("day", this.dueDay)
+        json.put("quantityInstalment", this.quantityInstalment)
 
         val (request, response, result) = Fuel.post(url)
             .jsonBody(json.toString())
@@ -115,18 +129,17 @@ class OverdraftDebtLink( var entryDate: Date = Date(),var amount: Float = 0F,var
         val (bytes, error) = result
         if (bytes != null) {
         }
-        when(result){
+        when (result) {
             is Result.Success -> {
                 println("Success")
             }
             is Result.Failure -> {
                 println("Failure")
-
             }
         }
     }
 
-    fun listInstalments(id: Int){
+    fun listInstalments(id: Int) {
         println("----OverdraftDebtLink.listInstalments---")
         val url: String = "http://" + ip + ":3000/api/overdraftDebt/" + id.toString() + "/listInstalments"
 
@@ -139,7 +152,7 @@ class OverdraftDebtLink( var entryDate: Date = Date(),var amount: Float = 0F,var
         if (bytes != null) {
             this.instalment = bytes
         }
-        when(result){
+        when (result) {
             is Result.Success -> {
                 println("Success")
             }

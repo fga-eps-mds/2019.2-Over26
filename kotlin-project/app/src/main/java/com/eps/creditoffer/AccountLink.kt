@@ -6,8 +6,6 @@ import com.github.kittinunf.fuel.core.extensions.jsonBody
 import com.github.kittinunf.result.Result
 import com.google.gson.Gson
 import org.json.JSONObject
-import java.lang.Boolean.FALSE
-import java.lang.Boolean.TRUE
 import java.util.*
 
 class AccountLink {
@@ -18,14 +16,14 @@ class AccountLink {
     var number: Int = 0
     var balance: Float = 0F
 
-    //private val ip: String = "192.168.0.16"
+    // private val ip: String = "192.168.0.16"
     private val ip: String = "10.0.2.2"
 
     class Deserializer : ResponseDeserializable<AccountLink> {
         override fun deserialize(content: String) = Gson().fromJson(content, AccountLink::class.java)
     }
 
-    fun get(id: Int) : Boolean{
+    fun get(id: Int): Boolean {
         println("----AccountLink.get----")
         val url: String = "http://" + ip + ":3000/api/accounts/" + id.toString()
 
@@ -44,18 +42,16 @@ class AccountLink {
             is Result.Success -> {
                 println("Success")
                 return true
-
             }
             is Result.Failure -> {
                 println("Failure")
                 return false
-
             }
         }
     }
 
-    fun create(userId:Int) : Boolean{
-        val  idOfUser = userId
+    fun create(userId: Int): Boolean {
+        val idOfUser = userId
         println("----AccountLink.create----")
         val url: String = "http://" + ip + ":3000/api/accounts"
 
@@ -65,8 +61,7 @@ class AccountLink {
         json.put("number", this.number)
         json.put("balance", this.balance)
 
-
-        val (request, response, result) =  Fuel.post(url)
+        val (request, response, result) = Fuel.post(url)
             .jsonBody(json.toString())
             .responseObject(AccountLink.Deserializer())
         println("Response:" + response)
@@ -78,7 +73,7 @@ class AccountLink {
             this.balance = bytes.balance
             this.userId = bytes.userId
         }
-        when(result){
+        when (result) {
             is Result.Success -> {
                 return true
                 println("Success")
@@ -90,7 +85,7 @@ class AccountLink {
         }
     }
 
-    fun put(id: Int) : Boolean{
+    fun put(id: Int): Boolean {
         println("----AccountLink.create----")
         val url: String = "http://" + ip + ":3000/api/accounts" + id.toString()
 
@@ -100,7 +95,7 @@ class AccountLink {
         json.put("number", this.number)
         json.put("userId", this.userId)
 
-        val (request, response, result) =  Fuel.post(url)
+        val (request, response, result) = Fuel.post(url)
             .jsonBody(json.toString())
             .responseObject(AccountLink.Deserializer())
         println("Response:" + response)
@@ -112,7 +107,7 @@ class AccountLink {
             this.balance = bytes.balance
             this.userId = bytes.userId
         }
-        when(result){
+        when (result) {
             is Result.Success -> {
                 return true
                 println("Success")
@@ -123,5 +118,4 @@ class AccountLink {
             }
         }
     }
-
 }

@@ -7,7 +7,6 @@ import com.github.kittinunf.result.Result
 import com.google.gson.Gson
 import org.json.JSONObject
 import java.lang.Boolean.FALSE
-import java.lang.Boolean.TRUE
 import java.util.*
 
 class OverdraftLink {
@@ -20,14 +19,14 @@ class OverdraftLink {
     var limitUsed: Float = 0F
     var isBlocked: Boolean = FALSE
 
-    //private val ip: String = "192.168.0.16"
+    // private val ip: String = "192.168.0.16"
     private val ip: String = "10.0.2.2"
 
     class Deserializer : ResponseDeserializable<OverdraftLink> {
         override fun deserialize(content: String) = Gson().fromJson(content, OverdraftLink::class.java)
     }
 
-    fun get(id: Int) : Boolean {
+    fun get(id: Int): Boolean {
         println("----OverdraftLink.get----")
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts"
 
@@ -56,14 +55,14 @@ class OverdraftLink {
         }
     }
 
-    fun create(id: Int) : Boolean{
+    fun create(id: Int): Boolean {
         println("----OverdraftLink.create----")
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts"
 
         val json = JSONObject()
-        //json.put("limit", this.limit)
+        // json.put("limit", this.limit)
 
-        val (request, response, result) =  Fuel.post(url)
+        val (request, response, result) = Fuel.post(url)
             .jsonBody(json.toString())
             .responseObject(OverdraftLink.Deserializer())
         println("Response:" + response)
@@ -77,7 +76,7 @@ class OverdraftLink {
             this.isBlocked = bytes.isBlocked
             this.userCPF = bytes.userCPF
         }
-        when(result){
+        when (result) {
             is Result.Success -> {
                 return true
                 println("Success")
@@ -89,36 +88,35 @@ class OverdraftLink {
         }
     }
 
-    fun cancel(id: Int){
+    fun cancel(id: Int) {
         println("----OverdraftLink.cancel----")
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts/cancel"
 
-        val (request, response, result) =  Fuel.put(url)
+        val (request, response, result) = Fuel.put(url)
             .responseObject(OverdraftLink.Deserializer())
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {
             this.isActive = bytes.isActive
         }
-        when(result){
+        when (result) {
             is Result.Success -> {
                 println("Success")
             }
             is Result.Failure -> {
                 println("Failure")
-
             }
         }
     }
 
-    fun save(id: Int){
+    fun save(id: Int) {
         println("----OverdraftLink.save----")
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts"
 
         val json = JSONObject()
         json.put("limit", this.limit)
 
-        val (request, response, result) =  Fuel.put(url)
+        val (request, response, result) = Fuel.put(url)
             .jsonBody(json.toString())
             .responseObject(OverdraftLink.Deserializer())
         println("Response:" + response)
@@ -129,7 +127,7 @@ class OverdraftLink {
             println(limit)
         }
         println(result)
-        when(result){
+        when (result) {
             is Result.Success -> {
                 println("Success")
             }
@@ -139,14 +137,14 @@ class OverdraftLink {
         }
     }
 
-    fun checkUsability(id: Int) : Boolean{
+    fun checkUsability(id: Int): Boolean {
         println("----OverdraftLink.checkUsability----")
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts/usability"
 
-        val (request, response, result) =  Fuel.get(url)
+        val (request, response, result) = Fuel.get(url)
             .response()
         println("Response:" + response)
-        when(result){
+        when (result) {
             is Result.Success -> {
                 println("Success")
                 return true
@@ -158,18 +156,18 @@ class OverdraftLink {
         }
     }
 
-    fun activate(id: Int) : Boolean {
+    fun activate(id: Int): Boolean {
         println("----OverdraftLink.activate----")
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts/activate"
 
-        val (request, response, result) =  Fuel.put(url)
+        val (request, response, result) = Fuel.put(url)
             .responseObject(OverdraftLink.Deserializer())
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {
             this.isActive = bytes.isActive
         }
-        when(result){
+        when (result) {
             is Result.Success -> {
                 println("Success")
                 return true

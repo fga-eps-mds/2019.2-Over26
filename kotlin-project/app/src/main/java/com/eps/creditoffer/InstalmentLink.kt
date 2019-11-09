@@ -7,7 +7,7 @@ import java.io.Reader
 import java.lang.Boolean.FALSE
 import java.util.*
 
-class InstalmentLink{
+class InstalmentLink {
 
     val isPaid: Boolean = FALSE
     val value: Float = 0F

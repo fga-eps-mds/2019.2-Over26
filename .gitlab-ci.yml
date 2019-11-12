@@ -18,6 +18,8 @@ stages:
     - docker pull $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG || true
     - docker build --cache-from $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG .
     - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
+  except:
+    - gh-pages
 
 updateContainer:
   extends: .updateContainerJob
@@ -53,6 +55,8 @@ ensureContainer:
   artifacts:
     paths:
     - kotlin-project/app/build/outputs
+  except:
+    - gh-pages
 
 buildDebug:
   extends: .build_job
@@ -75,6 +79,8 @@ testDebug:
     - cd kotlin-project/
     - chmod +x gradlew  
     - bundle exec fastlane test
+  except:
+    - gh-pages
 
 .promote_job:
   image: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
@@ -85,6 +91,8 @@ testDebug:
     - chmod +x gradlew    
   after_script:
     - rm -f ~/google_play_api_key.json
+  except:
+    - gh-pages
 
 publishInternal:
   extends: .promote_job

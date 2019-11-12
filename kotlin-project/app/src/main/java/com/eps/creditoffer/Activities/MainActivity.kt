@@ -101,7 +101,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
     fun viewDebts(view: View?) {
         println("----MainActivity.viewDebts----")
-        if (User.id != 0) {
+        if (UserLink.listDebt(User.id)) {
             setContentView(R.layout.fragment_debt)
             inDebts = TRUE
 

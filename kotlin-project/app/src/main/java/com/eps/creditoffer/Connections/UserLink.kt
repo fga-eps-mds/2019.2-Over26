@@ -41,27 +41,35 @@ class UserLink {
             }
         }
 
-        fun create() {
+        fun create(name: String): Boolean {
             println("----UserLink.create----")
             val url: String = "http://" + ip + ":3000/api/users"
 
             val json = JSONObject()
-            json.put("cpf", User.cpf)
+            json.put("name", name)
 
             val (request, response, result) = Fuel.post(url)
                 .jsonBody(json.toString())
-                .response()
+                .responseObject(User.Deserializer())
             println("Response:" + response)
             val (bytes, error) = result
             if (bytes != null) {
+                User.id = bytes.id
+                User.cpf = bytes.cpf
+                User.name = bytes.name
+                User.email = bytes.email
+                User.phone = bytes.phone
+                User.monthlyIncome = bytes.monthlyIncome
             }
             println(result)
             when (result) {
                 is Result.Success -> {
                     println("Success")
+                    return true
                 }
                 is Result.Failure -> {
                     println("Failure")
+                    return false
                 }
             }
         }

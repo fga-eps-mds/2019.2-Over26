@@ -19,17 +19,13 @@ class StartActivity : AppCompatActivity() {
         StrictMode.setThreadPolicy(policy)
         setContentView(R.layout.activity_start)
 
-        val st = StartLink()
-
         button_start.setOnClickListener(View.OnClickListener {
             val name = editText_startName.text.toString()
 
             if (name == "") {
                 Toast.makeText(this, "Digite um nome!", Toast.LENGTH_LONG).show()
             } else {
-                if (st.start(name)) {
-                    UserLink.get(1)
-
+                if (UserLink.create(name)) {
                     val intent = Intent(this, MainActivity::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                     startActivityIfNeeded(intent, 0)

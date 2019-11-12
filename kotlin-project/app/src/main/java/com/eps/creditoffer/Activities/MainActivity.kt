@@ -13,6 +13,7 @@ import com.eps.creditoffer.Connections.AccountLink
 import com.eps.creditoffer.Connections.OverdraftDebtLink
 import com.eps.creditoffer.Connections.OverdraftLink
 import com.eps.creditoffer.Connections.UserLink
+import com.eps.creditoffer.Models.User
 import com.eps.creditoffer.Utils.InstalmentFragment
 import com.eps.creditoffer.Utils.ListDebtAdapter
 import com.eps.creditoffer.Utils.OnItemClickListener
@@ -100,12 +101,11 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
     fun viewDebts(view: View?) {
         println("----MainActivity.viewDebts----")
-        val user = UserLink()
-        if (user.listDebt(1)) {
+        if (User.id != 0) {
             setContentView(R.layout.fragment_debt)
             inDebts = TRUE
 
-            val debts = user.debt
+            val debts = User.debt
             val debtList = findViewById<RecyclerView>(R.id.list_recycler_view_debt)
             debtList.layoutManager = LinearLayoutManager(this)
             debtAdapter = ListDebtAdapter(debts, this)

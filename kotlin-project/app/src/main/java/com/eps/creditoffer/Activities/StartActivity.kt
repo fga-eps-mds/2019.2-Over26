@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.eps.creditoffer.Connections.StartLink
+import com.eps.creditoffer.Connections.UserLink
 import com.eps.creditoffer.R
 import kotlinx.android.synthetic.main.activity_start.*
 
@@ -27,6 +28,8 @@ class StartActivity : AppCompatActivity() {
                 Toast.makeText(this, "Digite um nome!", Toast.LENGTH_LONG).show()
             } else {
                 if (st.start(name)) {
+                    UserLink.get(1)
+
                     val intent = Intent(this, MainActivity::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                     startActivityIfNeeded(intent, 0)

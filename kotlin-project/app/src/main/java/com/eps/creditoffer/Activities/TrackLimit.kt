@@ -1,4 +1,4 @@
-package com.eps.creditoffer
+package com.eps.creditoffer.Activities
 
 import android.graphics.Color
 import android.graphics.Typeface
@@ -10,6 +10,9 @@ import android.widget.SeekBar
 import java.lang.Boolean.FALSE
 import android.content.Intent
 import android.widget.Toast
+import com.eps.creditoffer.Connections.OverdraftDebtLink
+import com.eps.creditoffer.Connections.OverdraftLink
+import com.eps.creditoffer.R
 import java.lang.Boolean.TRUE
 
 class TrackLimit : AppCompatActivity() {
@@ -66,7 +69,7 @@ class TrackLimit : AppCompatActivity() {
         initSeekBar(overdraft, debt)
     }
 
-    fun initSeekBar( overdraft: OverdraftLink, debt: OverdraftDebtLink){
+    fun initSeekBar(overdraft: OverdraftLink, debt: OverdraftDebtLink){
         println("----initSeekBar----")
         textView_usage.text = "R$ " + overdraft.limitUsed
         textView_cur.text = "R$ "+ overdraft.limit

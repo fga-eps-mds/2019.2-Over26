@@ -1,4 +1,4 @@
-package com.eps.creditoffer
+package com.eps.creditoffer.Connections
 
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.ResponseDeserializable
@@ -31,7 +31,7 @@ class OverdraftLink {
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts"
 
         val (request, response, result) = Fuel.get(url)
-            .responseObject(OverdraftLink.Deserializer())
+            .responseObject(Deserializer())
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {
@@ -64,7 +64,7 @@ class OverdraftLink {
 
         val (request, response, result) = Fuel.post(url)
             .jsonBody(json.toString())
-            .responseObject(OverdraftLink.Deserializer())
+            .responseObject(Deserializer())
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {
@@ -93,7 +93,7 @@ class OverdraftLink {
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts/cancel"
 
         val (request, response, result) = Fuel.put(url)
-            .responseObject(OverdraftLink.Deserializer())
+            .responseObject(Deserializer())
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {
@@ -118,7 +118,7 @@ class OverdraftLink {
 
         val (request, response, result) = Fuel.put(url)
             .jsonBody(json.toString())
-            .responseObject(OverdraftLink.Deserializer())
+            .responseObject(Deserializer())
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {
@@ -161,7 +161,7 @@ class OverdraftLink {
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts/activate"
 
         val (request, response, result) = Fuel.put(url)
-            .responseObject(OverdraftLink.Deserializer())
+            .responseObject(Deserializer())
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {
@@ -189,7 +189,7 @@ class OverdraftLink {
 
         val (request, response, result) = Fuel.post(url)
             .jsonBody(json.toString())
-            .responseObject(OverdraftLink.Deserializer())
+            .responseObject(Deserializer())
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {

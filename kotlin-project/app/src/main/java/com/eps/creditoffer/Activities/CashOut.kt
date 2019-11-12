@@ -1,10 +1,14 @@
-package com.eps.creditoffer
+package com.eps.creditoffer.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
 import android.view.View
 import android.widget.*
+import com.eps.creditoffer.Connections.AccountLink
+import com.eps.creditoffer.Connections.OverdraftLink
+import com.eps.creditoffer.Connections.TransactionLink
+import com.eps.creditoffer.R
 import kotlinx.android.synthetic.main.activity_cash_out.*
 
 class CashOut : AppCompatActivity() {

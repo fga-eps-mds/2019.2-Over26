@@ -1,9 +1,11 @@
-package com.eps.creditoffer
+package com.eps.creditoffer.Activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.eps.creditoffer.Connections.OverdraftLink
+import com.eps.creditoffer.R
 import kotlinx.android.synthetic.main.activity_eligibility.*
 
 class Eligibility : AppCompatActivity() {

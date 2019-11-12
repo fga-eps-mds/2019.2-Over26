@@ -1,4 +1,4 @@
-package com.eps.creditoffer
+package com.eps.creditoffer.Activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,8 @@ import android.os.StrictMode
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.eps.creditoffer.Connections.StartLink
+import com.eps.creditoffer.R
 import kotlinx.android.synthetic.main.activity_start.*
 
 class StartActivity : AppCompatActivity() {

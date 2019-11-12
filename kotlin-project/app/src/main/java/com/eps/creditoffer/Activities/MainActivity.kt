@@ -1,4 +1,4 @@
-package com.eps.creditoffer
+package com.eps.creditoffer.Activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +9,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import android.os.Handler
 import android.widget.PopupMenu
+import com.eps.creditoffer.Connections.AccountLink
+import com.eps.creditoffer.Connections.OverdraftDebtLink
+import com.eps.creditoffer.Connections.OverdraftLink
+import com.eps.creditoffer.Connections.UserLink
+import com.eps.creditoffer.Utils.InstalmentFragment
+import com.eps.creditoffer.Utils.ListDebtAdapter
+import com.eps.creditoffer.Utils.OnItemClickListener
+import com.eps.creditoffer.R
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.Boolean.FALSE
 import java.lang.Boolean.TRUE
@@ -24,7 +32,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val account=AccountLink()
+        val account= AccountLink()
 
         if(!account.get(1)) {
             account.agency = 1
@@ -117,7 +125,8 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
             var fragmentInstalment = fm.findFragmentById(R.id.fragment_container)
             // ensures fragments already created will not be created
             if (fragmentInstalment == null) {
-                fragmentInstalment = InstalmentFragment.newInstance(debts.id)
+                fragmentInstalment =
+                    InstalmentFragment.newInstance(debts.id)
                 // create and commit a fragment transaction
                 fm.beginTransaction()
                     .addToBackStack(null)

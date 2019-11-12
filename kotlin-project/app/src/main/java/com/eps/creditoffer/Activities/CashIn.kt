@@ -1,11 +1,12 @@
-package com.eps.creditoffer
+package com.eps.creditoffer.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
 import android.view.View
 import android.widget.*
-import com.eps.creditoffer.R.id.textValue
+import com.eps.creditoffer.Connections.TransactionLink
+import com.eps.creditoffer.R
 import kotlinx.android.synthetic.main.activity_cash_in.*
 
 class CashIn : AppCompatActivity() {

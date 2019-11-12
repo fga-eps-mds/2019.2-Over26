@@ -1,4 +1,4 @@
-package com.eps.creditoffer
+package com.eps.creditoffer.Connections
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.ResponseDeserializable
 import com.github.kittinunf.fuel.core.extensions.jsonBody
@@ -36,7 +36,7 @@ class TransactionLink {
 
         val (request, response, result) = Fuel.post(url)
             .jsonBody(json.toString())
-            .responseObject(TransactionLink.Deserializer())
+            .responseObject(Deserializer())
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {
@@ -64,7 +64,7 @@ class TransactionLink {
         val url: String = "http://" + ip + ":3000/api/transactions/" + id.toString()
 
         val (request, response, result) = Fuel.get(url)
-            .responseObject(TransactionLink.Deserializer())
+            .responseObject(Deserializer())
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {

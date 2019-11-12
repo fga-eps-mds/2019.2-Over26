@@ -1,13 +1,16 @@
-package com.eps.creditoffer
+package com.eps.creditoffer.Utils
 
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.eps.creditoffer.Connections.OverdraftDebtLink
+import com.eps.creditoffer.R
 
 class ListDebtAdapter(private val list: List<OverdraftDebtLink>,
-                      private val itemClickListener: OnItemClickListener) :
+                      private val itemClickListener: OnItemClickListener
+) :
     RecyclerView.Adapter<DebtViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DebtViewHolder {

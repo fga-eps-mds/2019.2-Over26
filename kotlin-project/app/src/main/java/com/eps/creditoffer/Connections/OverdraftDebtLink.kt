@@ -1,4 +1,4 @@
-package com.eps.creditoffer
+package com.eps.creditoffer.Connections
 
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.ResponseDeserializable
@@ -39,7 +39,7 @@ class OverdraftDebtLink {
         val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString()
 
         val (request, response, result) = Fuel.get(url)
-            .responseObject(OverdraftDebtLink.Deserializer())
+            .responseObject(Deserializer())
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {
@@ -69,7 +69,7 @@ class OverdraftDebtLink {
         val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdraftDebt"
 
         val (request, response, result) = Fuel.post(url)
-            .responseObject(OverdraftDebtLink.Deserializer())
+            .responseObject(Deserializer())
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {
@@ -95,7 +95,7 @@ class OverdraftDebtLink {
         val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString() + "/check"
 
         val (request, response, result) = Fuel.get(url)
-            .responseObject(OverdraftDebtLink.Deserializer())
+            .responseObject(Deserializer())
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {

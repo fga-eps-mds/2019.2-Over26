@@ -1,4 +1,4 @@
-package com.eps.creditoffer
+package com.eps.creditoffer.Connections
 
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.ResponseDeserializable
@@ -6,7 +6,6 @@ import com.github.kittinunf.fuel.core.extensions.jsonBody
 import com.github.kittinunf.result.Result
 import com.google.gson.Gson
 import org.json.JSONObject
-import java.util.*
 
 class AccountLink {
 
@@ -28,7 +27,7 @@ class AccountLink {
         val url: String = "http://" + ip + ":3000/api/accounts/" + id.toString()
 
         val (request, response, result) = Fuel.get(url)
-            .responseObject(AccountLink.Deserializer())
+            .responseObject(Deserializer())
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {
@@ -63,7 +62,7 @@ class AccountLink {
 
         val (request, response, result) = Fuel.post(url)
             .jsonBody(json.toString())
-            .responseObject(AccountLink.Deserializer())
+            .responseObject(Deserializer())
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {
@@ -97,7 +96,7 @@ class AccountLink {
 
         val (request, response, result) = Fuel.post(url)
             .jsonBody(json.toString())
-            .responseObject(AccountLink.Deserializer())
+            .responseObject(Deserializer())
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {

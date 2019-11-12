@@ -1,10 +1,13 @@
-package com.eps.creditoffer
+package com.eps.creditoffer.Activities
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.eps.creditoffer.Connections.OverdraftDebtLink
+import com.eps.creditoffer.Connections.OverdraftLink
+import com.eps.creditoffer.R
 import kotlinx.android.synthetic.main.activity_installment.*
 import java.lang.Boolean.FALSE
 import java.lang.Boolean.TRUE

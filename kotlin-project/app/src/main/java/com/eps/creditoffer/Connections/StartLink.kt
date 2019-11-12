@@ -1,4 +1,4 @@
-package com.eps.creditoffer
+package com.eps.creditoffer.Connections
 
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.extensions.jsonBody

@@ -80,9 +80,14 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
     fun activeOverdraft(view: View) {
         val overdraft = OverdraftLink()
-        overdraft.get(1)
-        if (overdraft.isActive) {
-            Toast.makeText(this, "Overdraft Ativo!", Toast.LENGTH_LONG).show()
+
+        if (overdraft.get(1)) {
+            if(overdraft.isActive){
+                Toast.makeText(this, "Overdraft Ativo!", Toast.LENGTH_LONG).show()
+            } else {
+                val intent = Intent(this, OverdraftConfirmation::class.java)
+                startActivity(intent)
+            }
         } else {
             val intent = Intent(this, Eligibility::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT

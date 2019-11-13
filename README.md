@@ -15,6 +15,10 @@
 
 <p align="center">
     Fique por dentro do que estamos aprontando!<a href="https://fga-eps-mds.github.io/2019.2-Over26/#/"><strong> Visite a nossa página!</strong></a>
+  </p>
+
+  <p align="center">
+ <a href="https://github.com/fga-eps-mds/2019.2-Over26-Backend/#/"><strong> Visite o repositório da nossa API</strong></a>
 </p>
   
 ## Sobre o projeto

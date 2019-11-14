@@ -8,6 +8,7 @@ import android.widget.Toast
 import com.eps.creditoffer.connections.OverdraftDebtLink
 import com.eps.creditoffer.connections.OverdraftLink
 import com.eps.creditoffer.R
+import com.eps.creditoffer.utils.currentUser
 import kotlinx.android.synthetic.main.activity_installment.*
 import java.lang.Boolean.FALSE
 import java.lang.Boolean.TRUE
@@ -20,11 +21,11 @@ class Installment : AppCompatActivity() {
 
         val debt = OverdraftDebtLink()
         // debt.create(1)
-        debt.get(1)
+        debt.get(currentUser.id)
         debt.checkAmout(debt.id)
 
         val overdraft = OverdraftLink()
-        overdraft.get(1)
+        overdraft.get(currentUser.id)
 
         textView_installment_quant.text = debt.quantityInstalment.toString()
         val value = "%.2f".format(debt.totalAmount / debt.quantityInstalment)

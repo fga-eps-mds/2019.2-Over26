@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.eps.creditoffer.connections.AccountLink
 import com.eps.creditoffer.connections.UserLink
 import com.eps.creditoffer.R
-import com.eps.creditoffer.utils.mainUser
+import com.eps.creditoffer.utils.currentUser
 import kotlinx.android.synthetic.main.activity_start.*
 
 class StartActivity : AppCompatActivity() {
@@ -29,7 +29,7 @@ class StartActivity : AppCompatActivity() {
                 Toast.makeText(this, "Digite um nome!", Toast.LENGTH_LONG).show()
             } else {
                 if (UserLink.create(name)) {
-                    if(AccountLink.create(mainUser.id)){
+                    if(AccountLink.create(currentUser.id)){
                         val intent = Intent(this, MainActivity::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                         startActivityIfNeeded(intent, 0)

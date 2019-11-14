@@ -1,7 +1,7 @@
 package com.eps.creditoffer.connections
 
 import com.eps.creditoffer.models.Account
-import com.eps.creditoffer.utils.mainAccount
+import com.eps.creditoffer.utils.currentAccount
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.extensions.jsonBody
 import com.github.kittinunf.result.Result
@@ -20,11 +20,11 @@ class AccountLink {
                 .responseObject(Account.Deserializer())
             val (bytes, _) = result
             if (bytes != null) {
-                mainAccount.id = bytes.id
-                mainAccount.agency = bytes.agency
-                mainAccount.number = bytes.number
-                mainAccount.balance = bytes.balance
-                mainAccount.userId = bytes.userId
+                currentAccount.id = bytes.id
+                currentAccount.agency = bytes.agency
+                currentAccount.number = bytes.number
+                currentAccount.balance = bytes.balance
+                currentAccount.userId = bytes.userId
             }
             when (result) {
                 is Result.Success -> {
@@ -50,11 +50,11 @@ class AccountLink {
                 .responseObject(Account.Deserializer())
             val (bytes, error) = result
             if (bytes != null) {
-                mainAccount.id = bytes.id
-                mainAccount.agency = bytes.agency
-                mainAccount.number = bytes.number
-                mainAccount.balance = bytes.balance
-                mainAccount.userId = bytes.userId
+                currentAccount.id = bytes.id
+                currentAccount.agency = bytes.agency
+                currentAccount.number = bytes.number
+                currentAccount.balance = bytes.balance
+                currentAccount.userId = bytes.userId
             }
             when (result) {
                 is Result.Success -> {

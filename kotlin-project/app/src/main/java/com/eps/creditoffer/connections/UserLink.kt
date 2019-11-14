@@ -1,7 +1,7 @@
 package com.eps.creditoffer.connections
 
 import com.eps.creditoffer.models.User
-import com.eps.creditoffer.utils.mainUser
+import com.eps.creditoffer.utils.currentUser
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.extensions.jsonBody
 import com.github.kittinunf.result.Result
@@ -19,12 +19,12 @@ class UserLink {
                 .responseObject(User.Deserializer())
             val (bytes, _) = result
             if (bytes != null) {
-                mainUser.id = bytes.id
-                mainUser.cpf = bytes.cpf
-                mainUser.name = bytes.name
-                mainUser.email = bytes.email
-                mainUser.phone = bytes.phone
-                mainUser.monthlyIncome = bytes.monthlyIncome
+                currentUser.id = bytes.id
+                currentUser.cpf = bytes.cpf
+                currentUser.name = bytes.name
+                currentUser.email = bytes.email
+                currentUser.phone = bytes.phone
+                currentUser.monthlyIncome = bytes.monthlyIncome
             }
             when (result) {
                 is Result.Success -> {
@@ -50,14 +50,14 @@ class UserLink {
                 .responseObject(User.Deserializer())
             val (bytes, _) = result
             if (bytes != null) {
-                mainUser.id = bytes.id
-                mainUser.cpf = bytes.cpf
-                mainUser.name = bytes.name
-                mainUser.email = bytes.email
-                mainUser.phone = bytes.phone
-                mainUser.monthlyIncome = bytes.monthlyIncome
+                currentUser.id = bytes.id
+                currentUser.cpf = bytes.cpf
+                currentUser.name = bytes.name
+                currentUser.email = bytes.email
+                currentUser.phone = bytes.phone
+                currentUser.monthlyIncome = bytes.monthlyIncome
 
-                println("User.name: "+ mainUser.name)
+                println("User.name: "+ currentUser.name)
                 println("bytes.name: "+ bytes.name)
             }
             println(result)
@@ -81,7 +81,7 @@ class UserLink {
                 .responseObject(OverdraftDebtLink.ListDeserializer())
             val (bytes, _) = result
             if (bytes != null) {
-                mainUser.debt = bytes
+                currentUser.debt = bytes
             }
             when (result) {
                 is Result.Success -> {

@@ -31,8 +31,8 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         setContentView(R.layout.activity_main)
         println("----MainActivity.onCreate----")
 
-        AccountLink.get(mainAccount.id)
-        saldo.text = "R$ ${mainAccount.balance}"
+        AccountLink.get(currentAccount.id)
+        saldo.text = "R$ ${currentAccount.balance}"
     }
 
     override fun onResume() {
@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
     fun overdraftScreen(view: View) {
         val overdraft = OverdraftLink()
-        overdraft.get(1)
+        overdraft.get(currentUser.id)
         if (overdraft.isActive) {
             val intent = Intent(this, TrackLimit::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
     fun activeOverdraft(view: View) {
         val overdraft = OverdraftLink()
-        overdraft.get(1)
+        overdraft.get(currentUser.id)
         if (overdraft.isActive) {
             Toast.makeText(this, "Overdraft Ativo!", Toast.LENGTH_LONG).show()
         } else {
@@ -89,11 +89,11 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
     fun viewDebts(view: View?) {
         println("----MainActivity.viewDebts----")
-        if (UserLink.listDebt(mainUser.id)) {
+        if (UserLink.listDebt(currentUser.id)) {
             setContentView(R.layout.fragment_debt)
             inDebtsFlag = TRUE
 
-            val debts = mainUser.debt
+            val debts = currentUser.debt
             val debtList = findViewById<RecyclerView>(R.id.list_recycler_view_debt)
             debtList.layoutManager = LinearLayoutManager(this)
             debtAdapter = ListDebtAdapter(debts, this)
@@ -135,7 +135,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         popupMenu.setOnMenuItemClickListener {
             when (it.itemId) {
                 R.id.cashInMenu -> {
-                    if (AccountLink.get(mainUser.id)) {
+                    if (AccountLink.get(currentUser.id)) {
                         val intent = Intent(this, CashIn::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                         startActivityIfNeeded(intent, 0)
@@ -145,7 +145,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
                 }
 
                 R.id.cashOutMenu -> {
-                    if (AccountLink.get(mainUser.id)) {
+                    if (AccountLink.get(currentUser.id)) {
                         val intent = Intent(this, CashOut::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                         startActivityIfNeeded(intent, 0)
@@ -156,7 +156,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
                 R.id.attDataMenu -> {
                     val overdraft = OverdraftLink()
-                    overdraft.get(1)
+                    overdraft.get(currentUser.id)
                     if (overdraft.isActive && overdraft.limitUsed != 0F) {
                         overdraft.createDebt(1)
 

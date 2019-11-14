@@ -8,18 +8,16 @@ import com.github.kittinunf.result.Result
 import org.json.JSONObject
 
 class UserLink {
-
     companion object {
-        private val ip: String = "10.0.2.2"
+        private const val ip: String = "10.0.2.2"
 
         fun get(id: Int): Boolean {
             println("----UserLink.get----")
-            val url: String = "http://" + ip + ":3000/api/users/" + id.toString()
+            val url = "http://$ip:3000/api/users/$id"
 
-            val (request, response, result) = Fuel.get(url)
+            val (_, _, result) = Fuel.get(url)
                 .responseObject(User.Deserializer())
-            println("Response:" + response)
-            val (bytes, error) = result
+            val (bytes, _) = result
             if (bytes != null) {
                 mainUser.id = bytes.id
                 mainUser.cpf = bytes.cpf
@@ -42,18 +40,15 @@ class UserLink {
 
         fun create(name: String): Boolean {
             println("----UserLink.create----")
-            val url: String = "http://" + ip + ":3000/api/users"
+            val url = "http://$ip:3000/api/users"
 
             val json = JSONObject()
             json.put("name", name)
 
-            println("Name: "+ name)
-
-            val (_, response, result) = Fuel.post(url)
+            val (_, _, result) = Fuel.post(url)
                 .jsonBody(json.toString())
                 .responseObject(User.Deserializer())
-            println("Response:" + response)
-            val (bytes, error) = result
+            val (bytes, _) = result
             if (bytes != null) {
                 mainUser.id = bytes.id
                 mainUser.cpf = bytes.cpf
@@ -81,13 +76,10 @@ class UserLink {
         fun listDebt(id: Int): Boolean {
             println("----User.listDebt---")
 
-            val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString() + "/listDebt"
-            val (request, response, result) = Fuel.get(url)
+            val url = "http://$ip:3000/api/overdraftDebts/$id/listDebt"
+            val (_, _, result) = Fuel.get(url)
                 .responseObject(OverdraftDebtLink.ListDeserializer())
-            println("Response:" + response)
-            val (bytes, error) = result
-            print("Bytes: " + bytes)
-
+            val (bytes, _) = result
             if (bytes != null) {
                 mainUser.debt = bytes
             }
@@ -103,5 +95,4 @@ class UserLink {
             }
         }
     }
-
 }

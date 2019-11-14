@@ -13,7 +13,6 @@ import com.eps.creditoffer.connections.AccountLink
 import com.eps.creditoffer.connections.OverdraftDebtLink
 import com.eps.creditoffer.connections.OverdraftLink
 import com.eps.creditoffer.connections.UserLink
-import com.eps.creditoffer.models.Account
 import com.eps.creditoffer.R
 import com.eps.creditoffer.utils.*
 import kotlinx.android.synthetic.main.activity_main.*
@@ -23,19 +22,17 @@ import java.lang.Boolean.TRUE
 class MainActivity : AppCompatActivity(), OnItemClickListener {
 
     private lateinit var debtAdapter: ListDebtAdapter
-    private var inDebts: Boolean = FALSE
-    private var inInstalment: Boolean = FALSE
+    private var inDebtsFlag: Boolean = FALSE
+    private var inInstalmentFlag: Boolean = FALSE
     private var doubleBackToExitPressedOnce = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        println("----MainActivity.onCreate----")
 
         AccountLink.get(mainAccount.id)
-
-        saldo.setText("R$" + mainAccount.balance.toString())
-
-        println("----MainActivity.onCreate----")
+        saldo.text = "R$ ${mainAccount.balance}"
     }
 
     override fun onResume() {
@@ -44,15 +41,15 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     }
 
     override fun onBackPressed() {
-        if (inInstalment) {
-            inInstalment = FALSE
+        if (inInstalmentFlag) {
+            inInstalmentFlag = FALSE
             viewDebts(null)
             super.onBackPressed()
             return
         }
-        if (inDebts) {
+        if (inDebtsFlag) {
             setContentView(R.layout.activity_main)
-            inDebts = FALSE
+            inDebtsFlag = FALSE
         } else {
             if (doubleBackToExitPressedOnce) {
                 super.onBackPressed()
@@ -62,7 +59,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
             this.doubleBackToExitPressedOnce = true
             Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show()
 
-            Handler().postDelayed(Runnable { doubleBackToExitPressedOnce = false }, 2000)
+            Handler().postDelayed({ doubleBackToExitPressedOnce = false }, 2000)
         }
     }
 
@@ -74,7 +71,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
             intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
             startActivityIfNeeded(intent, 0)
         } else {
-            Toast.makeText(this, "Overdraft Desativado!", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Overdraft desativado!", Toast.LENGTH_LONG).show()
         }
     }
 
@@ -94,7 +91,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         println("----MainActivity.viewDebts----")
         if (UserLink.listDebt(mainUser.id)) {
             setContentView(R.layout.fragment_debt)
-            inDebts = TRUE
+            inDebtsFlag = TRUE
 
             val debts = mainUser.debt
             val debtList = findViewById<RecyclerView>(R.id.list_recycler_view_debt)
@@ -109,7 +106,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     override fun onItemClicked(debts: OverdraftDebtLink) {
         println("----MainActivity.onItem----")
         if (debts.isDivided) {
-            inInstalment = TRUE
+            inInstalmentFlag = TRUE
             setContentView(R.layout.fragment_instalment)
 
             val fm = supportFragmentManager

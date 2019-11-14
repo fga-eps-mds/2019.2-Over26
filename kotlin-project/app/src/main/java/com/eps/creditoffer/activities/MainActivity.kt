@@ -31,13 +31,14 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         setContentView(R.layout.activity_main)
         println("----MainActivity.onCreate----")
 
-        AccountLink.get(currentAccount.id)
         saldo.text = "R$ ${currentAccount.balance}"
     }
 
     override fun onResume() {
         super.onResume()
         println("----MainActivity.onResume----")
+        AccountLink.get(currentAccount.id)
+        saldo.text = "R$ ${currentAccount.balance}"
     }
 
     override fun onBackPressed() {
@@ -135,7 +136,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         popupMenu.setOnMenuItemClickListener {
             when (it.itemId) {
                 R.id.cashInMenu -> {
-                    if (AccountLink.get(currentUser.id)) {
+                    if (AccountLink.get(currentAccount.id)) {
                         val intent = Intent(this, CashIn::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                         startActivityIfNeeded(intent, 0)
@@ -145,7 +146,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
                 }
 
                 R.id.cashOutMenu -> {
-                    if (AccountLink.get(currentUser.id)) {
+                    if (AccountLink.get(currentAccount.id)) {
                         val intent = Intent(this, CashOut::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                         startActivityIfNeeded(intent, 0)

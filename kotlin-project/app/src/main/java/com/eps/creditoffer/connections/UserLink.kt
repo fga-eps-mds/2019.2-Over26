@@ -56,9 +56,6 @@ class UserLink {
                 currentUser.email = bytes.email
                 currentUser.phone = bytes.phone
                 currentUser.monthlyIncome = bytes.monthlyIncome
-
-                println("User.name: "+ currentUser.name)
-                println("bytes.name: "+ bytes.name)
             }
             println(result)
             when (result) {

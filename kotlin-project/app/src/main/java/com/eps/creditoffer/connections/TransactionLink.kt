@@ -1,4 +1,5 @@
 package com.eps.creditoffer.connections
+import com.eps.creditoffer.utils.currentAccount
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.ResponseDeserializable
 import com.github.kittinunf.fuel.core.extensions.jsonBody
@@ -27,7 +28,7 @@ class TransactionLink {
         val url: String = "http://" + ip + ":3000/api/transactions/"
 
         val json = JSONObject()
-        json.put("accountId", accountId)
+        json.put("accountId", currentAccount.id)
         json.put("name", this.name)
         json.put("type", this.type)
         json.put("description", this.description)

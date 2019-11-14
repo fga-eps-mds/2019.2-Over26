@@ -1,11 +1,11 @@
-package com.eps.creditoffer.Utils
+package com.eps.creditoffer.utils
 
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.eps.creditoffer.Connections.OverdraftDebtLink
+import com.eps.creditoffer.connections.OverdraftDebtLink
 import com.eps.creditoffer.R
 
 class ListDebtAdapter(private val list: List<OverdraftDebtLink>,

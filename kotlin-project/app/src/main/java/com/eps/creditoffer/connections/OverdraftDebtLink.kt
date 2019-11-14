@@ -1,4 +1,4 @@
-package com.eps.creditoffer.Connections
+package com.eps.creditoffer.connections
 
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.ResponseDeserializable

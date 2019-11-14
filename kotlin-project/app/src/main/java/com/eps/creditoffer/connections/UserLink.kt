@@ -1,11 +1,10 @@
-package com.eps.creditoffer.Connections
+package com.eps.creditoffer.connections
 
-import com.eps.creditoffer.Models.User
+import com.eps.creditoffer.models.User
+import com.eps.creditoffer.utils.mainUser
 import com.github.kittinunf.fuel.Fuel
-import com.github.kittinunf.fuel.core.ResponseDeserializable
 import com.github.kittinunf.fuel.core.extensions.jsonBody
 import com.github.kittinunf.result.Result
-import com.google.gson.Gson
 import org.json.JSONObject
 
 class UserLink {
@@ -22,12 +21,12 @@ class UserLink {
             println("Response:" + response)
             val (bytes, error) = result
             if (bytes != null) {
-                User.id = bytes.id
-                User.cpf = bytes.cpf
-                User.name = bytes.name
-                User.email = bytes.email
-                User.phone = bytes.phone
-                User.monthlyIncome = bytes.monthlyIncome
+                mainUser.id = bytes.id
+                mainUser.cpf = bytes.cpf
+                mainUser.name = bytes.name
+                mainUser.email = bytes.email
+                mainUser.phone = bytes.phone
+                mainUser.monthlyIncome = bytes.monthlyIncome
             }
             when (result) {
                 is Result.Success -> {
@@ -48,18 +47,23 @@ class UserLink {
             val json = JSONObject()
             json.put("name", name)
 
-            val (request, response, result) = Fuel.post(url)
+            println("Name: "+ name)
+
+            val (_, response, result) = Fuel.post(url)
                 .jsonBody(json.toString())
                 .responseObject(User.Deserializer())
             println("Response:" + response)
             val (bytes, error) = result
             if (bytes != null) {
-                User.id = bytes.id
-                User.cpf = bytes.cpf
-                User.name = bytes.name
-                User.email = bytes.email
-                User.phone = bytes.phone
-                User.monthlyIncome = bytes.monthlyIncome
+                mainUser.id = bytes.id
+                mainUser.cpf = bytes.cpf
+                mainUser.name = bytes.name
+                mainUser.email = bytes.email
+                mainUser.phone = bytes.phone
+                mainUser.monthlyIncome = bytes.monthlyIncome
+
+                println("User.name: "+ mainUser.name)
+                println("bytes.name: "+ bytes.name)
             }
             println(result)
             when (result) {
@@ -85,7 +89,7 @@ class UserLink {
             print("Bytes: " + bytes)
 
             if (bytes != null) {
-                User.debt = bytes
+                mainUser.debt = bytes
             }
             when (result) {
                 is Result.Success -> {

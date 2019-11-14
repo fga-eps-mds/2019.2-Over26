@@ -1,14 +1,15 @@
-package com.eps.creditoffer.Activities
+package com.eps.creditoffer.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
 import android.view.View
 import android.widget.*
-import com.eps.creditoffer.Connections.AccountLink
-import com.eps.creditoffer.Connections.OverdraftLink
-import com.eps.creditoffer.Connections.TransactionLink
+import com.eps.creditoffer.connections.OverdraftLink
+import com.eps.creditoffer.connections.TransactionLink
+import com.eps.creditoffer.models.Account
 import com.eps.creditoffer.R
+import com.eps.creditoffer.utils.mainAccount
 import kotlinx.android.synthetic.main.activity_cash_out.*
 
 class CashOut : AppCompatActivity() {
@@ -40,13 +41,10 @@ class CashOut : AppCompatActivity() {
             val stringOfValue = valor.text.toString()
             transaction.value = stringOfValue.toFloat()
 
-            val account = AccountLink()
-            account.get(1)
-
             val overdraft = OverdraftLink()
             overdraft.get(1)
 
-            if (transaction.value > account.balance && overdraft.isActive && transaction.description == "Compra com cartão") {
+            if (transaction.value > mainAccount.balance && overdraft.isActive && transaction.description == "Compra com cartão") {
                 if (transaction.value <= 0F || transaction.description == null) {
                     if (transaction.description == null) {
                         Toast.makeText(this, "Escolher forma de retirada.", Toast.LENGTH_LONG).show()
@@ -60,7 +58,7 @@ class CashOut : AppCompatActivity() {
                         startActivity(intent)
                     }
                 }
-            } else if (transaction.value > account.balance && overdraft.isActive && (transaction.description == "Pagamento de boleto" || transaction.description == "Transferência")) {
+            } else if (transaction.value > mainAccount.balance && overdraft.isActive && (transaction.description == "Pagamento de boleto" || transaction.description == "Transferência")) {
                 if (transaction.value <= 0F || transaction.description == null) {
                     if (transaction.description == null) {
                         Toast.makeText(this, "Escolher forma de retirada.", Toast.LENGTH_LONG).show()
@@ -71,7 +69,7 @@ class CashOut : AppCompatActivity() {
                 } else {
                     Toast.makeText(this, "Cheque especial disponível apenas para compra com cartão.", Toast.LENGTH_LONG).show()
                 }
-            } else if (transaction.value > account.balance && !overdraft.isActive) {
+            } else if (transaction.value > mainAccount.balance && !overdraft.isActive) {
                 if (transaction.value <= 0F || transaction.description == null) {
                     if (transaction.description == null) {
                         Toast.makeText(this, "Escolher forma de retirada.", Toast.LENGTH_LONG).show()

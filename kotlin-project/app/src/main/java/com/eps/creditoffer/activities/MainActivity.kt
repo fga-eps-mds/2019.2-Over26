@@ -1,4 +1,4 @@
-package com.eps.creditoffer.Activities
+package com.eps.creditoffer.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,15 +9,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import android.os.Handler
 import android.widget.PopupMenu
-import com.eps.creditoffer.Connections.AccountLink
-import com.eps.creditoffer.Connections.OverdraftDebtLink
-import com.eps.creditoffer.Connections.OverdraftLink
-import com.eps.creditoffer.Connections.UserLink
-import com.eps.creditoffer.Models.User
-import com.eps.creditoffer.Utils.InstalmentFragment
-import com.eps.creditoffer.Utils.ListDebtAdapter
-import com.eps.creditoffer.Utils.OnItemClickListener
+import com.eps.creditoffer.connections.AccountLink
+import com.eps.creditoffer.connections.OverdraftDebtLink
+import com.eps.creditoffer.connections.OverdraftLink
+import com.eps.creditoffer.connections.UserLink
+import com.eps.creditoffer.models.Account
 import com.eps.creditoffer.R
+import com.eps.creditoffer.utils.*
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.Boolean.FALSE
 import java.lang.Boolean.TRUE
@@ -33,16 +31,9 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val account= AccountLink()
+        AccountLink.get(mainAccount.id)
 
-        if(!account.get(1)) {
-            account.agency = 1
-            account.number=1
-            account.create(1)
-        }
-        else{
-            saldo.setText("R$"+account.balance.toString())
-        }
+        saldo.setText("R$" + mainAccount.balance.toString())
 
         println("----MainActivity.onCreate----")
     }
@@ -101,11 +92,11 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
     fun viewDebts(view: View?) {
         println("----MainActivity.viewDebts----")
-        if (UserLink.listDebt(User.id)) {
+        if (UserLink.listDebt(mainUser.id)) {
             setContentView(R.layout.fragment_debt)
             inDebts = TRUE
 
-            val debts = User.debt
+            val debts = mainUser.debt
             val debtList = findViewById<RecyclerView>(R.id.list_recycler_view_debt)
             debtList.layoutManager = LinearLayoutManager(this)
             debtAdapter = ListDebtAdapter(debts, this)
@@ -147,8 +138,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         popupMenu.setOnMenuItemClickListener {
             when (it.itemId) {
                 R.id.cashInMenu -> {
-                    val account = AccountLink()
-                    if (account.get(1)) {
+                    if (AccountLink.get(mainUser.id)) {
                         val intent = Intent(this, CashIn::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                         startActivityIfNeeded(intent, 0)
@@ -158,8 +148,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
                 }
 
                 R.id.cashOutMenu -> {
-                    val account = AccountLink()
-                    if (account.get(1)) {
+                    if (AccountLink.get(mainUser.id)) {
                         val intent = Intent(this, CashOut::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                         startActivityIfNeeded(intent, 0)

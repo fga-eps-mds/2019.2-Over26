@@ -1,10 +1,10 @@
-package com.eps.creditoffer.Activities
+package com.eps.creditoffer.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.CheckBox
-import com.eps.creditoffer.Connections.OverdraftLink
+import com.eps.creditoffer.connections.OverdraftLink
 import com.eps.creditoffer.R
 import kotlinx.android.synthetic.main.activity_overdraft_confirmation.*
 

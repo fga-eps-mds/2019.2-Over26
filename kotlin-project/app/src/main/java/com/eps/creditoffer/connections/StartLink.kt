@@ -1,10 +1,9 @@
-package com.eps.creditoffer.Connections
+package com.eps.creditoffer.connections
 
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.extensions.jsonBody
 import com.github.kittinunf.result.Result
 import org.json.JSONObject
-import java.util.*
 
 class StartLink {
 

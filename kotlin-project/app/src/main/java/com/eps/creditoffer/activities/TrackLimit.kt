@@ -1,4 +1,4 @@
-package com.eps.creditoffer.Activities
+package com.eps.creditoffer.activities
 
 import android.graphics.Color
 import android.graphics.Typeface
@@ -10,8 +10,8 @@ import android.widget.SeekBar
 import java.lang.Boolean.FALSE
 import android.content.Intent
 import android.widget.Toast
-import com.eps.creditoffer.Connections.OverdraftDebtLink
-import com.eps.creditoffer.Connections.OverdraftLink
+import com.eps.creditoffer.connections.OverdraftDebtLink
+import com.eps.creditoffer.connections.OverdraftLink
 import com.eps.creditoffer.R
 import java.lang.Boolean.TRUE
 

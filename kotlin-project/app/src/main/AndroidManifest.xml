@@ -12,14 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".Activities.MainActivity"/>
-        <activity android:name=".Activities.CashIn"/>
-        <activity android:name=".Activities.CashOut"/>
-        <activity android:name=".Activities.TrackLimit"/>
-        <activity android:name=".Activities.Eligibility"/>
-        <activity android:name=".Activities.Installment"/>
-        <activity android:name=".Activities.OverdraftConfirmation"/>
-        <activity android:name=".Activities.StartActivity">
+        <activity android:name=".activities.MainActivity"/>
+        <activity android:name=".activities.CashIn"/>
+        <activity android:name=".activities.CashOut"/>
+        <activity android:name=".activities.TrackLimit"/>
+        <activity android:name=".activities.Eligibility"/>
+        <activity android:name=".activities.Installment"/>
+        <activity android:name=".activities.OverdraftConfirmation"/>
+        <activity android:name=".activities.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

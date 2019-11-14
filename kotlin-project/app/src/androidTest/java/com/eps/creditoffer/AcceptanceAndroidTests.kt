@@ -14,7 +14,7 @@ import androidx.test.espresso.action.ViewActions.typeText
 import androidx.test.espresso.action.ViewActions.closeSoftKeyboard
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.*
-import com.eps.creditoffer.Activities.StartActivity
+import com.eps.creditoffer.activities.StartActivity
 import org.junit.Before
 
 

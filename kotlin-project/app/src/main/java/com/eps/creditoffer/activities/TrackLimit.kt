@@ -13,6 +13,8 @@ import android.widget.Toast
 import com.eps.creditoffer.connections.OverdraftDebtLink
 import com.eps.creditoffer.connections.OverdraftLink
 import com.eps.creditoffer.R
+import com.eps.creditoffer.utils.currentOverdraft
+import com.eps.creditoffer.utils.currentUser
 import java.lang.Boolean.TRUE
 
 class TrackLimit : AppCompatActivity() {
@@ -25,7 +27,7 @@ class TrackLimit : AppCompatActivity() {
         setContentView(R.layout.track_limit)
         println("----TrackLimit.onCreate----")
 
-        overdraft.get(1)
+        OverdraftLink.get(currentUser.id)
         debt.get(1)
         debt.checkAmout(debt.id)
 
@@ -45,20 +47,20 @@ class TrackLimit : AppCompatActivity() {
 
         cancelCredit.setOnClickListener(View.OnClickListener {
             println("----cancelCreditButton----")
-            if(overdraft.isBlocked){
+            if(currentOverdraft.isBlocked){
                 Toast.makeText(this,
                     "Parcele a dívida antes de fazer alterações no cheque especial",
                     Toast.LENGTH_LONG).show()
             } else {
                 Toast.makeText(this, "Cheque especial Cancelado!", Toast.LENGTH_LONG).show()
-                overdraft.cancel(1)
+                OverdraftLink.cancel(currentUser.id)
                 finish()
             }
         })
 
         save.setOnClickListener(View.OnClickListener {
             println("----saveButton----")
-            overdraft.save(1)
+            OverdraftLink.save(currentUser.id)
             finish()
         })
     }
@@ -71,14 +73,14 @@ class TrackLimit : AppCompatActivity() {
 
     fun initSeekBar(overdraft: OverdraftLink, debt: OverdraftDebtLink){
         println("----initSeekBar----")
-        textView_usage.text = "R$ " + overdraft.limitUsed
-        textView_cur.text = "R$ "+ overdraft.limit
-        textView_max.text = "R$ " + overdraft.limitMax
-        seek_bar.max = overdraft.limitMax.toInt()
-        seek_bar.progress = overdraft.limit.toInt()
+        textView_usage.text = "R$ " + currentOverdraft.limitUsed
+        textView_cur.text = "R$ "+ currentOverdraft.limit
+        textView_max.text = "R$ " + currentOverdraft.limitMax
+        seek_bar.max = currentOverdraft.limitMax.toInt()
+        seek_bar.progress = currentOverdraft.limit.toInt()
         seek_bar.isEnabled = TRUE
 
-        if(!overdraft.isBlocked){
+        if(!currentOverdraft.isBlocked){
 
             // Hide installment button
             button_installment.visibility = View.INVISIBLE
@@ -100,7 +102,7 @@ class TrackLimit : AppCompatActivity() {
                 override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
                     // Display the current progress of SeekBar
                     textView_cur.text = "R$"+i.toString()
-                    overdraft.limit = i.toFloat()
+                    currentOverdraft.limit = i.toFloat()
                 }
 
                 override fun onStartTrackingTouch(seekBar: SeekBar) {

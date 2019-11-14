@@ -31,14 +31,14 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         setContentView(R.layout.activity_main)
         println("----MainActivity.onCreate----")
 
-        saldo.text = "R$ ${currentAccount.balance}"
+        saldo.text = "R$ " + "%.2f".format(currentAccount.balance)
     }
 
     override fun onResume() {
         super.onResume()
         println("----MainActivity.onResume----")
         AccountLink.get(currentAccount.id)
-        saldo.text = "R$ ${currentAccount.balance}"
+        saldo.text = "R$ " + "%.2f".format(currentAccount.balance)
     }
 
     override fun onBackPressed() {
@@ -65,9 +65,8 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     }
 
     fun overdraftScreen(view: View) {
-        val overdraft = OverdraftLink()
-        overdraft.get(currentUser.id)
-        if (overdraft.isActive) {
+        OverdraftLink.get(currentUser.id)
+        if (currentOverdraft.isActive) {
             val intent = Intent(this, TrackLimit::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
             startActivityIfNeeded(intent, 0)
@@ -77,9 +76,8 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     }
 
     fun activeOverdraft(view: View) {
-        val overdraft = OverdraftLink()
-        overdraft.get(currentUser.id)
-        if (overdraft.isActive) {
+        OverdraftLink.get(currentUser.id)
+        if (currentOverdraft.isActive) {
             Toast.makeText(this, "Overdraft Ativo!", Toast.LENGTH_LONG).show()
         } else {
             val intent = Intent(this, Eligibility::class.java)
@@ -156,10 +154,9 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
                 }
 
                 R.id.attDataMenu -> {
-                    val overdraft = OverdraftLink()
-                    overdraft.get(currentUser.id)
-                    if (overdraft.isActive && overdraft.limitUsed != 0F) {
-                        overdraft.createDebt(1)
+                    OverdraftLink.get(currentUser.id)
+                    if (currentOverdraft.isActive && currentOverdraft.limitUsed != 0F) {
+                        OverdraftLink.createDebt(currentUser.id)
 
                         Toast.makeText(this, "Data atualizada e divida criada!", Toast.LENGTH_LONG)
                             .show()

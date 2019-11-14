@@ -1,5 +1,6 @@
 package com.eps.creditoffer.connections
 
+import com.eps.creditoffer.models.Overdraft
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.ResponseDeserializable
 import com.github.kittinunf.fuel.core.extensions.jsonBody
@@ -124,7 +125,7 @@ class OverdraftDebtLink {
 
         val (request, response, result) = Fuel.post(url)
             .jsonBody(json.toString())
-            .responseObject(OverdraftLink.Deserializer())
+            .responseObject(Overdraft.Deserializer())
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {

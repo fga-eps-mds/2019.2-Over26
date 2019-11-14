@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.CheckBox
 import com.eps.creditoffer.connections.OverdraftLink
 import com.eps.creditoffer.R
+import com.eps.creditoffer.utils.currentUser
 import kotlinx.android.synthetic.main.activity_overdraft_confirmation.*
 
 class OverdraftConfirmation : AppCompatActivity() {
@@ -13,8 +14,6 @@ class OverdraftConfirmation : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_overdraft_confirmation)
-
-        val overdraft = OverdraftLink()
 
         activateOverdraft.setEnabled(false)
         activateOverdraft.setClickable(false)
@@ -29,9 +28,8 @@ class OverdraftConfirmation : AppCompatActivity() {
                 }
 
             activateOverdraft.setOnClickListener {
-                if (overdraft.activate(1)) {
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
+                if (OverdraftLink.activate(currentUser.id)) {
+                    finish()
                 }
             }
         }

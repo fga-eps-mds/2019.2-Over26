@@ -8,6 +8,8 @@ import com.eps.creditoffer.connections.OverdraftLink
 import com.eps.creditoffer.connections.TransactionLink
 import com.eps.creditoffer.R
 import com.eps.creditoffer.utils.currentAccount
+import com.eps.creditoffer.utils.currentOverdraft
+import com.eps.creditoffer.utils.currentUser
 import kotlinx.android.synthetic.main.activity_cash_out.*
 
 class CashOut : AppCompatActivity() {
@@ -48,10 +50,8 @@ class CashOut : AppCompatActivity() {
             val stringOfValue = valor.text.toString()
             transaction.value = stringOfValue.toFloat()
 
-            val overdraft = OverdraftLink()
-            overdraft.get(1)
-
-            if (overdraft.isActive &&
+            OverdraftLink.get(currentUser.id)
+            if (currentOverdraft.isActive &&
                 transaction.value > currentAccount.balance &&
                 transaction.description == "Compra com cartão"
             ) {
@@ -72,7 +72,7 @@ class CashOut : AppCompatActivity() {
                         finish()
                     }
                 }
-            } else if (overdraft.isActive &&
+            } else if (currentOverdraft.isActive &&
                 transaction.value > currentAccount.balance &&
                 (transaction.description == "Pagamento de boleto" || transaction.description == "Transferência")
             ) {
@@ -95,7 +95,7 @@ class CashOut : AppCompatActivity() {
                         Toast.LENGTH_LONG
                     ).show()
                 }
-            } else if (transaction.value > currentAccount.balance && !overdraft.isActive) {
+            } else if (transaction.value > currentAccount.balance && !currentOverdraft.isActive) {
                 if (transaction.value <= 0F || transaction.description == "") {
                     if (transaction.description == "") {
                         Toast.makeText(this, "Escolher forma de retirada.", Toast.LENGTH_LONG)

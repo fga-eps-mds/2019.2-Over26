@@ -40,6 +40,16 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
     override fun onResume() {
         super.onResume()
+           val account=AccountLink()
+
+        if(!account.get(1)) {
+            account.agency = 1
+            account.number=1
+            account.create(1)
+        }
+        else{
+            saldo.setText("R$"+account.balance.toString())
+        }
         println("----MainActivity.onResume----")
     }
 

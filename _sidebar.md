@@ -11,6 +11,7 @@
 * [Gerenciamento de Riscos](/risk-manegement.md)
 * [Burndown de Riscos](/risks-burndown.md)
 * [Plano de Qualidade](/documentation/quality.md)
+* [Entrega Contínua](/documentation/continuous-delivery.md)
 
 * **Produto**
 * [Plano de Elicitação](/elicitation-plan.md)

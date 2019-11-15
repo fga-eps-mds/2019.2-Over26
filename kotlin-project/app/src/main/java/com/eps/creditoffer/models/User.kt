@@ -7,7 +7,7 @@ import com.google.gson.Gson
 class User {
 
     var id: Int = 0
-    var cpf: Int = 0
+    var cpf: String = ""
     var name: String = ""
     var email: String = ""
     var phone: String = ""

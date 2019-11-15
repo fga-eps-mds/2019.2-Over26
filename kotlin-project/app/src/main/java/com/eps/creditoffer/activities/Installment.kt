@@ -21,7 +21,6 @@ class Installment : AppCompatActivity() {
         setContentView(R.layout.activity_installment)
 
         val debt = OverdraftDebtLink()
-        // debt.create(1)
         debt.get(currentUser.id)
         debt.checkAmout(debt.id)
 

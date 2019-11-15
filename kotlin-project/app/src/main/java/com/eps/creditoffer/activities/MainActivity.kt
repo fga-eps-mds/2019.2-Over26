@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     }
 
     fun overdraftScreen(view: View) {
-        OverdraftLink.get(currentUser.id)
+        OverdraftLink.get(currentOverdraft.id)
         if (currentOverdraft.isActive) {
             val intent = Intent(this, TrackLimit::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     }
 
     fun activeOverdraft(view: View) {
-        OverdraftLink.get(currentUser.id)
+        OverdraftLink.get(currentOverdraft.id)
         if (currentOverdraft.isActive) {
             Toast.makeText(this, "Overdraft Ativo!", Toast.LENGTH_LONG).show()
         } else {
@@ -154,9 +154,10 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
                 }
 
                 R.id.attDataMenu -> {
-                    OverdraftLink.get(currentUser.id)
+                    OverdraftLink.get(currentOverdraft.id)
                     if (currentOverdraft.isActive && currentOverdraft.limitUsed != 0F) {
-                        OverdraftLink.createDebt(currentUser.id)
+
+                        recentDebt.create(currentUser.id)
 
                         Toast.makeText(this, "Data atualizada e divida criada!", Toast.LENGTH_LONG)
                             .show()

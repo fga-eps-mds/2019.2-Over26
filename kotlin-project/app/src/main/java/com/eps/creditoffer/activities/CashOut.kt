@@ -10,6 +10,7 @@ import com.eps.creditoffer.R
 import com.eps.creditoffer.utils.currentAccount
 import com.eps.creditoffer.utils.currentOverdraft
 import com.eps.creditoffer.utils.currentUser
+import com.eps.creditoffer.utils.recentDebt
 import kotlinx.android.synthetic.main.activity_cash_out.*
 
 class CashOut : AppCompatActivity() {
@@ -17,7 +18,7 @@ class CashOut : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cash_out)
-
+        recentDebt.get(recentDebt.id)
         val transaction = TransactionLink()
         transaction.type = "out"
 

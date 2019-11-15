@@ -13,14 +13,14 @@ import android.widget.Toast
 import com.eps.creditoffer.connections.OverdraftDebtLink
 import com.eps.creditoffer.connections.OverdraftLink
 import com.eps.creditoffer.R
+import com.eps.creditoffer.models.Overdraft
 import com.eps.creditoffer.utils.currentOverdraft
 import com.eps.creditoffer.utils.currentUser
+import com.eps.creditoffer.utils.recentDebt
 import java.lang.Boolean.TRUE
 
 class TrackLimit : AppCompatActivity() {
 
-    private val overdraft = OverdraftLink()
-    private val debt = OverdraftDebtLink()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,10 +28,8 @@ class TrackLimit : AppCompatActivity() {
         println("----TrackLimit.onCreate----")
 
         OverdraftLink.get(currentUser.id)
-        debt.get(1)
-        debt.checkAmout(debt.id)
 
-        initSeekBar(overdraft, debt)
+        initSeekBar(currentOverdraft, recentDebt)
 
         println("----TrackLimit.onCreate----")
 
@@ -68,10 +66,11 @@ class TrackLimit : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         println("----TrackLimit.onResume----")
-        initSeekBar(overdraft, debt)
+        recentDebt.get(recentDebt.id)
+        initSeekBar(currentOverdraft, recentDebt)
     }
 
-    fun initSeekBar(overdraft: OverdraftLink, debt: OverdraftDebtLink){
+    fun initSeekBar(overdraft: Overdraft, debt: OverdraftDebtLink){
         println("----initSeekBar----")
         textView_usage.text = "R$ " + currentOverdraft.limitUsed
         textView_cur.text = "R$ "+ currentOverdraft.limit

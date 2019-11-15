@@ -5,7 +5,7 @@ import com.google.gson.Gson
 import java.util.*
 
 class Overdraft {
-
+    var id : Int =0;
     var userCPF: Int = 0
     var firstUseDate: Date? = null
     var isActive: Boolean = java.lang.Boolean.FALSE

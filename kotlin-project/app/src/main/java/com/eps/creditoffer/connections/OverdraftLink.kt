@@ -57,6 +57,7 @@ class OverdraftLink {
             println("Response:" + response)
             val (bytes, error) = result
             if (bytes != null) {
+                currentOverdraft.id = bytes.id
                 currentOverdraft.firstUseDate = bytes.firstUseDate
                 currentOverdraft.isActive = bytes.isActive
                 currentOverdraft.limit = bytes.limit
@@ -167,31 +168,5 @@ class OverdraftLink {
             }
         }
 
-        fun createDebt(id: Int) {
-            println("----OverdraftLink.createDebt----")
-            val url: String =
-                "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts/createDebt"
-
-            val json = JSONObject()
-            json.put("firstUseDate", currentOverdraft.firstUseDate)
-
-            val (request, response, result) = Fuel.post(url)
-                .jsonBody(json.toString())
-                .responseObject(Overdraft.Deserializer())
-            println("Response:" + response)
-            val (bytes, error) = result
-            if (bytes != null) {
-                currentOverdraft.userCPF = bytes.userCPF
-            }
-            when (result) {
-                is Result.Success -> {
-                    println("Success")
-                }
-                is Result.Failure -> {
-                    println("Failure")
-
-                }
-            }
-        }
     }
 }

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.CheckBox
 import com.eps.creditoffer.connections.OverdraftLink
 import com.eps.creditoffer.R
+import com.eps.creditoffer.utils.currentOverdraft
 import com.eps.creditoffer.utils.currentUser
 import kotlinx.android.synthetic.main.activity_overdraft_confirmation.*
 
@@ -28,7 +29,7 @@ class OverdraftConfirmation : AppCompatActivity() {
                 }
 
             activateOverdraft.setOnClickListener {
-                if (OverdraftLink.activate(currentUser.id)) {
+                if (OverdraftLink.activate(currentOverdraft.id)) {
                     finish()
                 }
             }

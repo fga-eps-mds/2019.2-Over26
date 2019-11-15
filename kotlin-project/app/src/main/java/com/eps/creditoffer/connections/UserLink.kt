@@ -4,6 +4,7 @@ import com.eps.creditoffer.models.Overdraft
 import com.eps.creditoffer.models.User
 import com.eps.creditoffer.utils.currentOverdraft
 import com.eps.creditoffer.utils.currentUser
+import com.eps.creditoffer.utils.recentDebt
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.extensions.jsonBody
 import com.github.kittinunf.result.Result
@@ -60,6 +61,7 @@ class UserLink {
                 currentUser.monthlyIncome = bytes.monthlyIncome
 
                currentOverdraft = Overdraft()
+                recentDebt = OverdraftDebtLink()
             }
             println(result)
             when (result) {

@@ -27,7 +27,9 @@ class TrackLimit : AppCompatActivity() {
         setContentView(R.layout.track_limit)
         println("----TrackLimit.onCreate----")
 
-        OverdraftLink.get(currentUser.id)
+        OverdraftLink.get(currentOverdraft.id)
+        recentDebt.get(recentDebt.id)
+        recentDebt.checkAmout(recentDebt.id)
 
         initSeekBar(currentOverdraft, recentDebt)
 
@@ -51,14 +53,14 @@ class TrackLimit : AppCompatActivity() {
                     Toast.LENGTH_LONG).show()
             } else {
                 Toast.makeText(this, "Cheque especial Cancelado!", Toast.LENGTH_LONG).show()
-                OverdraftLink.cancel(currentUser.id)
+                OverdraftLink.cancel(currentOverdraft.id)
                 finish()
             }
         })
 
         save.setOnClickListener(View.OnClickListener {
             println("----saveButton----")
-            OverdraftLink.save(currentUser.id)
+            OverdraftLink.save(currentOverdraft.id)
             finish()
         })
     }
@@ -66,7 +68,12 @@ class TrackLimit : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         println("----TrackLimit.onResume----")
+
         recentDebt.get(recentDebt.id)
+        OverdraftLink.get(currentOverdraft.id)
+        recentDebt.checkAmout(recentDebt.id)
+
+
         initSeekBar(currentOverdraft, recentDebt)
     }
 
@@ -127,7 +134,7 @@ class TrackLimit : AppCompatActivity() {
             seek_bar.isEnabled = FALSE
             seek_bar.progress = 0
 
-            textView_usage.text = "%.2f".format(debt.totalAmount)
+            textView_usage.text = "%.2f".format(recentDebt.totalAmount)
 
             textView_currentUsage.text = "TOTAL A SER PAGO"
             textView_cur.text = "-"

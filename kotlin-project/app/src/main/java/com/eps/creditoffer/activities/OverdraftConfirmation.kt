@@ -29,7 +29,7 @@ class OverdraftConfirmation : AppCompatActivity() {
                 }
 
             activateOverdraft.setOnClickListener {
-                if (OverdraftLink.activate(currentOverdraft.id)) {
+                if (OverdraftLink.activate(currentUser.id)) {
                     finish()
                 }
             }

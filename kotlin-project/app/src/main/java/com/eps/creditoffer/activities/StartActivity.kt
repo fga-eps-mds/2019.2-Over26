@@ -9,18 +9,32 @@ import androidx.appcompat.app.AppCompatActivity
 import com.eps.creditoffer.connections.AccountLink
 import com.eps.creditoffer.connections.UserLink
 import com.eps.creditoffer.R
+import com.eps.creditoffer.connections.OverdraftDebtLink
+import com.eps.creditoffer.models.Account
+import com.eps.creditoffer.models.Overdraft
+import com.eps.creditoffer.models.User
+import com.eps.creditoffer.utils.currentAccount
+import com.eps.creditoffer.utils.currentOverdraft
 import com.eps.creditoffer.utils.currentUser
+import com.eps.creditoffer.utils.recentDebt
 import kotlinx.android.synthetic.main.activity_start.*
 
 class StartActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
         StrictMode.setThreadPolicy(policy)
         setContentView(R.layout.activity_start)
 
         println("----StartActivity.onCreate----")
+
+        // Reset app data
+        currentUser = User()
+        currentAccount = Account()
+        currentOverdraft = Overdraft()
+        recentDebt = OverdraftDebtLink()
 
         button_start.setOnClickListener(View.OnClickListener {
             val name = editText_startName.text.toString()

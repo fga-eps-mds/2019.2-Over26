@@ -8,4 +8,4 @@ import com.eps.creditoffer.models.Overdraft
 var currentUser = User()
 var currentAccount = Account()
 var currentOverdraft = Overdraft()
-var recentDebt =OverdraftDebtLink()
+var recentDebt = OverdraftDebtLink()

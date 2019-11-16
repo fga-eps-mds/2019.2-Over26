@@ -59,9 +59,6 @@ class UserLink {
                 currentUser.email = bytes.email
                 currentUser.phone = bytes.phone
                 currentUser.monthlyIncome = bytes.monthlyIncome
-
-               currentOverdraft = Overdraft()
-                recentDebt = OverdraftDebtLink()
             }
             println(result)
             when (result) {

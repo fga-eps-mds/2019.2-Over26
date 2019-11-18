@@ -1,10 +1,12 @@
-package com.eps.creditoffer
+package com.eps.creditoffer.utils
 
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.eps.creditoffer.connections.InstalmentLink
+import com.eps.creditoffer.R
 import java.util.*
 
 class ListInstalmentAdapter(private val list: List<InstalmentLink>) :

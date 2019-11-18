@@ -1,10 +1,16 @@
-package com.eps.creditoffer
+package com.eps.creditoffer.activities
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.eps.creditoffer.connections.OverdraftDebtLink
+import com.eps.creditoffer.connections.OverdraftLink
+import com.eps.creditoffer.R
+import com.eps.creditoffer.utils.currentOverdraft
+import com.eps.creditoffer.utils.currentUser
+import com.eps.creditoffer.utils.recentDebt
 import kotlinx.android.synthetic.main.activity_installment.*
 import java.lang.Boolean.FALSE
 import java.lang.Boolean.TRUE
@@ -15,33 +21,30 @@ class Installment : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_installment)
 
-        val debt = OverdraftDebtLink()
-        // debt.create(1)
-        debt.get(1)
-        debt.checkAmout(debt.id)
+        recentDebt.get(recentDebt.id)
+        recentDebt.checkAmout(recentDebt.id)
 
-        val overdraft = OverdraftLink()
-        overdraft.get(1)
+        OverdraftLink.get(currentUser.id)
 
-        textView_installment_quant.text = debt.quantityInstalment.toString()
-        val value = "%.2f".format(debt.totalAmount / debt.quantityInstalment)
+        textView_installment_quant.text = recentDebt.quantityInstalment.toString()
+        val value = "%.2f".format(recentDebt.totalAmount / recentDebt.quantityInstalment)
         textView_installment_value.text = "R$ " + value
 
         button_plus.setOnClickListener(View.OnClickListener {
 
-            if (debt.quantityInstalment >= 1 && debt.quantityInstalment <12) {
-                debt.quantityInstalment++
-                textView_installment_quant.text = debt.quantityInstalment.toString()
-                val value = "%.2f".format(debt.totalAmount / debt.quantityInstalment)
+            if (recentDebt.quantityInstalment >= 1 && recentDebt.quantityInstalment <12) {
+                recentDebt.quantityInstalment++
+                textView_installment_quant.text = recentDebt.quantityInstalment.toString()
+                val value = "%.2f".format(recentDebt.totalAmount / recentDebt.quantityInstalment)
                 textView_installment_value.text = "R$ " + value
             }
         })
 
         button_minus.setOnClickListener(View.OnClickListener {
-            if (debt.quantityInstalment> 1 && debt.quantityInstalment <= 12) {
-                debt.quantityInstalment--
-                textView_installment_quant.text = debt.quantityInstalment.toString()
-                val value = "%.2f".format(debt.totalAmount / debt.quantityInstalment)
+            if (recentDebt.quantityInstalment> 1 && recentDebt.quantityInstalment <= 12) {
+                recentDebt.quantityInstalment--
+                textView_installment_quant.text = recentDebt.quantityInstalment.toString()
+                val value = "%.2f".format(recentDebt.totalAmount / recentDebt.quantityInstalment)
                 textView_installment_value.text = "R$ " + value
             }
         })
@@ -49,43 +52,43 @@ class Installment : AppCompatActivity() {
         button_day1.setOnClickListener(View.OnClickListener {
             cleanbuttons()
             button_day1.setBackgroundResource(R.drawable.btn_background)
-            debt.dueDay = 1
+            recentDebt.dueDay = 1
         })
 
         button_day5.setOnClickListener(View.OnClickListener {
             cleanbuttons()
             button_day5.setBackgroundResource(R.drawable.btn_background)
-            debt.dueDay = 5
+            recentDebt.dueDay = 5
         })
 
         button_day10.setOnClickListener(View.OnClickListener {
             cleanbuttons()
             button_day10.setBackgroundResource(R.drawable.btn_background)
-            debt.dueDay = 10
+            recentDebt.dueDay = 10
         })
 
         button_day15.setOnClickListener(View.OnClickListener {
             cleanbuttons()
             button_day15.setBackgroundResource(R.drawable.btn_background)
-            debt.dueDay = 15
+            recentDebt.dueDay = 15
         })
 
         button_day20.setOnClickListener(View.OnClickListener {
             cleanbuttons()
             button_day20.setBackgroundResource(R.drawable.btn_background)
-            debt.dueDay = 20
+            recentDebt.dueDay = 20
         })
 
         button_day25.setOnClickListener(View.OnClickListener {
             cleanbuttons()
             button_day25.setBackgroundResource(R.drawable.btn_background)
-            debt.dueDay = 25
+            recentDebt.dueDay = 25
         })
 
         button_confirm_installment.setOnClickListener(View.OnClickListener {
-            debt.isDivided = TRUE
-            debt.createInstallment(1)
-            overdraft.isBlocked = FALSE
+            recentDebt.isDivided = TRUE
+            recentDebt.createInstallment(currentUser.id)
+            currentOverdraft.isBlocked = FALSE
             Toast.makeText(this, "Cheque especial liberado!", Toast.LENGTH_LONG).show()
             finish()
         })

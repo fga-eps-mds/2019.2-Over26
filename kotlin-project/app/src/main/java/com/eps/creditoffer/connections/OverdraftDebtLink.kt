@@ -1,5 +1,7 @@
-package com.eps.creditoffer
+package com.eps.creditoffer.connections
 
+import com.eps.creditoffer.models.Overdraft
+import com.eps.creditoffer.utils.recentDebt
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.ResponseDeserializable
 import com.github.kittinunf.fuel.core.extensions.jsonBody
@@ -39,7 +41,7 @@ class OverdraftDebtLink {
         val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString()
 
         val (request, response, result) = Fuel.get(url)
-            .responseObject(OverdraftDebtLink.Deserializer())
+            .responseObject(Deserializer())
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {
@@ -64,28 +66,31 @@ class OverdraftDebtLink {
         }
     }
 
-    fun create(id: Int) {
+    fun create(id: Int): Boolean {//overdraft's createDebt controller
         println("----OverdraftDebtLink.create---")
-        val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdraftDebt"
+        val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts/createDebt"
 
         val (request, response, result) = Fuel.post(url)
-            .responseObject(OverdraftDebtLink.Deserializer())
+            .responseObject(Deserializer())
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {
-            this.entryDate = bytes.entryDate
-            this.amount = bytes.amount
-            this.rate = bytes.rate
-            this.isDivided = bytes.isDivided
-            this.dueDay = bytes.dueDay
-            this.quantityInstalment = bytes.quantityInstalment
+            recentDebt.id=bytes.id
+            recentDebt.entryDate = bytes.entryDate
+            recentDebt.amount = bytes.amount
+            recentDebt.rate = bytes.rate
+            recentDebt.isDivided = bytes.isDivided
+            recentDebt.dueDay = bytes.dueDay
+            recentDebt.quantityInstalment = bytes.quantityInstalment
         }
         when (result) {
             is Result.Success -> {
                 println("Success")
+                return true
             }
             is Result.Failure -> {
                 println("Failure")
+                return false
             }
         }
     }
@@ -95,7 +100,7 @@ class OverdraftDebtLink {
         val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString() + "/check"
 
         val (request, response, result) = Fuel.get(url)
-            .responseObject(OverdraftDebtLink.Deserializer())
+            .responseObject(Deserializer())
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {
@@ -124,7 +129,7 @@ class OverdraftDebtLink {
 
         val (request, response, result) = Fuel.post(url)
             .jsonBody(json.toString())
-            .responseObject(OverdraftLink.Deserializer())
+            .responseObject(Overdraft.Deserializer())
         println("Response:" + response)
         val (bytes, error) = result
         if (bytes != null) {

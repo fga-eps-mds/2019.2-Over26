@@ -1,4 +1,4 @@
-package com.eps.creditoffer
+package com.eps.creditoffer.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +9,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import android.os.Handler
 import android.widget.PopupMenu
+import com.eps.creditoffer.connections.AccountLink
+import com.eps.creditoffer.connections.OverdraftDebtLink
+import com.eps.creditoffer.connections.OverdraftLink
+import com.eps.creditoffer.connections.UserLink
+import com.eps.creditoffer.R
+import com.eps.creditoffer.utils.*
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.Boolean.FALSE
 import java.lang.Boolean.TRUE
@@ -16,43 +22,35 @@ import java.lang.Boolean.TRUE
 class MainActivity : AppCompatActivity(), OnItemClickListener {
 
     private lateinit var debtAdapter: ListDebtAdapter
-    private var inDebts: Boolean = FALSE
-    private var inInstalment: Boolean = FALSE
+    private var inDebtsFlag: Boolean = FALSE
+    private var inInstalmentFlag: Boolean = FALSE
     private var doubleBackToExitPressedOnce = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        val account=AccountLink()
-
-        if(!account.get(1)) {
-            account.agency = 1
-            account.number=1
-            account.create(1)
-        }
-        else{
-            saldo.setText("R$"+account.balance.toString())
-        }
-
         println("----MainActivity.onCreate----")
+
+        saldo.text = "R$ " + "%.2f".format(currentAccount.balance)
     }
 
     override fun onResume() {
         super.onResume()
         println("----MainActivity.onResume----")
+        AccountLink.get(currentAccount.id)
+        saldo.text = "R$ " + "%.2f".format(currentAccount.balance)
     }
 
     override fun onBackPressed() {
-        if (inInstalment) {
-            inInstalment = FALSE
+        if (inInstalmentFlag) {
+            inInstalmentFlag = FALSE
             viewDebts(null)
             super.onBackPressed()
             return
         }
-        if (inDebts) {
+        if (inDebtsFlag) {
             setContentView(R.layout.activity_main)
-            inDebts = FALSE
+            inDebtsFlag = FALSE
         } else {
             if (doubleBackToExitPressedOnce) {
                 super.onBackPressed()
@@ -62,27 +60,24 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
             this.doubleBackToExitPressedOnce = true
             Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show()
 
-            Handler().postDelayed(Runnable { doubleBackToExitPressedOnce = false }, 2000)
+            Handler().postDelayed({ doubleBackToExitPressedOnce = false }, 2000)
         }
     }
 
     fun overdraftScreen(view: View) {
-        val overdraft = OverdraftLink()
-        overdraft.get(1)
-        if (overdraft.isActive) {
+        OverdraftLink.get(currentOverdraft.id)
+        if (currentOverdraft.isActive) {
             val intent = Intent(this, TrackLimit::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
             startActivityIfNeeded(intent, 0)
         } else {
-            Toast.makeText(this, "Overdraft Desativado!", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Overdraft desativado!", Toast.LENGTH_LONG).show()
         }
     }
 
     fun activeOverdraft(view: View) {
-        val overdraft = OverdraftLink()
-
-        if (overdraft.get(1)) {
-            if(overdraft.isActive){
+        if (OverdraftLink.get(currentOverdraft.id)) {
+            if(currentOverdraft.isActive){
                 Toast.makeText(this, "Overdraft Ativo!", Toast.LENGTH_LONG).show()
             } else {
                 val intent = Intent(this, OverdraftConfirmation::class.java)
@@ -97,12 +92,11 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
     fun viewDebts(view: View?) {
         println("----MainActivity.viewDebts----")
-        val user = UserLink()
-        if (user.listDebt(1)) {
+        if (UserLink.listDebt(currentUser.id)) {
             setContentView(R.layout.fragment_debt)
-            inDebts = TRUE
+            inDebtsFlag = TRUE
 
-            val debts = user.debt
+            val debts = currentUser.debt
             val debtList = findViewById<RecyclerView>(R.id.list_recycler_view_debt)
             debtList.layoutManager = LinearLayoutManager(this)
             debtAdapter = ListDebtAdapter(debts, this)
@@ -115,14 +109,15 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     override fun onItemClicked(debts: OverdraftDebtLink) {
         println("----MainActivity.onItem----")
         if (debts.isDivided) {
-            inInstalment = TRUE
+            inInstalmentFlag = TRUE
             setContentView(R.layout.fragment_instalment)
 
             val fm = supportFragmentManager
             var fragmentInstalment = fm.findFragmentById(R.id.fragment_container)
             // ensures fragments already created will not be created
             if (fragmentInstalment == null) {
-                fragmentInstalment = InstalmentFragment.newInstance(debts.id)
+                fragmentInstalment =
+                    InstalmentFragment.newInstance(debts.id)
                 // create and commit a fragment transaction
                 fm.beginTransaction()
                     .addToBackStack(null)
@@ -143,8 +138,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         popupMenu.setOnMenuItemClickListener {
             when (it.itemId) {
                 R.id.cashInMenu -> {
-                    val account = AccountLink()
-                    if (account.get(1)) {
+                    if (AccountLink.get(currentAccount.id)) {
                         val intent = Intent(this, CashIn::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                         startActivityIfNeeded(intent, 0)
@@ -154,8 +148,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
                 }
 
                 R.id.cashOutMenu -> {
-                    val account = AccountLink()
-                    if (account.get(1)) {
+                    if (AccountLink.get(currentAccount.id)) {
                         val intent = Intent(this, CashOut::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                         startActivityIfNeeded(intent, 0)
@@ -165,10 +158,10 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
                 }
 
                 R.id.attDataMenu -> {
-                    val overdraft = OverdraftLink()
-                    overdraft.get(1)
-                    if (overdraft.isActive && overdraft.limitUsed != 0F) {
-                        overdraft.createDebt(1)
+                    OverdraftLink.get(currentOverdraft.id)
+                    if (currentOverdraft.isActive && currentOverdraft.limitUsed != 0F) {
+
+                        recentDebt.create(currentUser.id)
 
                         Toast.makeText(this, "Data atualizada e divida criada!", Toast.LENGTH_LONG)
                             .show()

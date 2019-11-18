@@ -1,4 +1,4 @@
-package com.eps.creditoffer
+package com.eps.creditoffer.activities
 
 import android.graphics.Color
 import android.graphics.Typeface
@@ -10,23 +10,28 @@ import android.widget.SeekBar
 import java.lang.Boolean.FALSE
 import android.content.Intent
 import android.widget.Toast
+import com.eps.creditoffer.connections.OverdraftDebtLink
+import com.eps.creditoffer.connections.OverdraftLink
+import com.eps.creditoffer.R
+import com.eps.creditoffer.models.Overdraft
+import com.eps.creditoffer.utils.currentOverdraft
+import com.eps.creditoffer.utils.currentUser
+import com.eps.creditoffer.utils.recentDebt
 import java.lang.Boolean.TRUE
 
 class TrackLimit : AppCompatActivity() {
 
-    private val overdraft = OverdraftLink()
-    private val debt = OverdraftDebtLink()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.track_limit)
         println("----TrackLimit.onCreate----")
 
-        overdraft.get(1)
-        debt.get(1)
-        debt.checkAmout(debt.id)
+        OverdraftLink.get(currentOverdraft.id)
+        recentDebt.get(recentDebt.id)
+        recentDebt.checkAmout(recentDebt.id)
 
-        initSeekBar(overdraft, debt)
+        initSeekBar(currentOverdraft, recentDebt)
 
         println("----TrackLimit.onCreate----")
 
@@ -42,20 +47,20 @@ class TrackLimit : AppCompatActivity() {
 
         cancelCredit.setOnClickListener(View.OnClickListener {
             println("----cancelCreditButton----")
-            if(overdraft.isBlocked){
+            if(currentOverdraft.isBlocked){
                 Toast.makeText(this,
                     "Parcele a dívida antes de fazer alterações no cheque especial",
                     Toast.LENGTH_LONG).show()
             } else {
                 Toast.makeText(this, "Cheque especial Cancelado!", Toast.LENGTH_LONG).show()
-                overdraft.cancel(1)
+                OverdraftLink.cancel(currentOverdraft.id)
                 finish()
             }
         })
 
         save.setOnClickListener(View.OnClickListener {
             println("----saveButton----")
-            overdraft.save(1)
+            OverdraftLink.save(currentOverdraft.id)
             finish()
         })
     }
@@ -63,19 +68,25 @@ class TrackLimit : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         println("----TrackLimit.onResume----")
-        initSeekBar(overdraft, debt)
+
+        recentDebt.get(recentDebt.id)
+        OverdraftLink.get(currentOverdraft.id)
+        recentDebt.checkAmout(recentDebt.id)
+
+
+        initSeekBar(currentOverdraft, recentDebt)
     }
 
-    fun initSeekBar( overdraft: OverdraftLink, debt: OverdraftDebtLink){
+    fun initSeekBar(overdraft: Overdraft, debt: OverdraftDebtLink){
         println("----initSeekBar----")
-        textView_usage.text = "R$ " + overdraft.limitUsed
-        textView_cur.text = "R$ "+ overdraft.limit
-        textView_max.text = "R$ " + overdraft.limitMax
-        seek_bar.max = overdraft.limitMax.toInt()
-        seek_bar.progress = overdraft.limit.toInt()
+        textView_usage.text = "R$ " + currentOverdraft.limitUsed
+        textView_cur.text = "R$ "+ currentOverdraft.limit
+        textView_max.text = "R$ " + currentOverdraft.limitMax
+        seek_bar.max = currentOverdraft.limitMax.toInt()
+        seek_bar.progress = currentOverdraft.limit.toInt()
         seek_bar.isEnabled = TRUE
 
-        if(!overdraft.isBlocked){
+        if(!currentOverdraft.isBlocked){
 
             // Hide installment button
             button_installment.visibility = View.INVISIBLE
@@ -97,7 +108,7 @@ class TrackLimit : AppCompatActivity() {
                 override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
                     // Display the current progress of SeekBar
                     textView_cur.text = "R$"+i.toString()
-                    overdraft.limit = i.toFloat()
+                    currentOverdraft.limit = i.toFloat()
                 }
 
                 override fun onStartTrackingTouch(seekBar: SeekBar) {
@@ -123,7 +134,7 @@ class TrackLimit : AppCompatActivity() {
             seek_bar.isEnabled = FALSE
             seek_bar.progress = 0
 
-            textView_usage.text = "%.2f".format(debt.totalAmount)
+            textView_usage.text = "%.2f".format(recentDebt.totalAmount)
 
             textView_currentUsage.text = "TOTAL A SER PAGO"
             textView_cur.text = "-"

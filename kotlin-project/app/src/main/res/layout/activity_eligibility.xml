@@ -26,7 +26,7 @@
         android:id="@+id/eligibility_button"
         android:layout_width="205dp"
         android:layout_height="40dp"
-        android:background="#FFFFFF"
+        android:background="@drawable/big_button_shape"
         android:text="Checar eligibilidade"
         android:textColor="@android:color/black"
         android:textSize="18sp"

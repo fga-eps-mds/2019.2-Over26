@@ -150,6 +150,8 @@
         android:layout_marginTop="15dp"
         android:background="#fff"
         android:padding="0dp"
+        android:clickable="true"
+        android:onClick="viewDebts"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt2">
@@ -170,9 +172,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:clickable="true"
-            android:onClick="viewDebts"
-            app:srcCompat="@drawable/ic_plus_solid"/>
+            app:srcCompat="@drawable/ic_plus_solid" />
 
         <TextView
             android:id="@+id/textView_debt"

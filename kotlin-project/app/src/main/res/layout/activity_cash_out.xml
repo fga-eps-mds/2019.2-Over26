@@ -75,7 +75,7 @@
         android:layout_height="69dp"
         android:ems="20"
         android:hint="0.00"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:textColor="@android:color/darker_gray"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -162,7 +162,6 @@
             android:fontFamily="@font/radley"
             android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/icon_debt_component"
-            app:layout_constraintEnd_toStartOf=""
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 

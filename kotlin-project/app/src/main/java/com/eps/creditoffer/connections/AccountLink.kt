@@ -2,6 +2,7 @@ package com.eps.creditoffer.connections
 
 import com.eps.creditoffer.models.Account
 import com.eps.creditoffer.utils.currentAccount
+import com.eps.creditoffer.BuildConfig
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.extensions.jsonBody
 import com.github.kittinunf.result.Result
@@ -10,7 +11,7 @@ import org.json.JSONObject
 class AccountLink {
     companion object{
 
-        private const val ip: String = "10.0.2.2"
+        private val ip: String =  BuildConfig.BASE_URL
 
         fun get(id: Int): Boolean {
             println("----AccountLink.get----")

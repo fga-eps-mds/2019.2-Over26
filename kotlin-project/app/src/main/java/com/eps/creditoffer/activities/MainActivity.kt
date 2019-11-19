@@ -32,6 +32,11 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         println("----MainActivity.onCreate----")
 
         saldo.text = "R$ " + "%.2f".format(currentAccount.balance)
+        if(recentDebt.id==0){
+            debt_component.visibility = View.INVISIBLE
+        }else{
+            debt_component.visibility = View.VISIBLE
+        }
     }
 
     override fun onResume() {
@@ -39,6 +44,14 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         println("----MainActivity.onResume----")
         AccountLink.get(currentAccount.id)
         saldo.text = "R$ " + "%.2f".format(currentAccount.balance)
+
+
+        if(recentDebt.id==0){
+            debt_component.visibility = View.INVISIBLE
+        }else{
+            debt_component.visibility = View.VISIBLE
+
+        }
     }
 
     override fun onBackPressed() {

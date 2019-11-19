@@ -51,6 +51,10 @@ class TrackLimit : AppCompatActivity() {
                 Toast.makeText(this,
                     "Parcele a dívida antes de fazer alterações no cheque especial",
                     Toast.LENGTH_LONG).show()
+            } else if (currentOverdraft.limitUsed > 0F) {
+                Toast.makeText(this,
+                    "Cheque especial em utilização!",
+                    Toast.LENGTH_LONG).show()
             } else {
                 Toast.makeText(this, "Cheque especial Cancelado!", Toast.LENGTH_LONG).show()
                 OverdraftLink.cancel(currentOverdraft.id)

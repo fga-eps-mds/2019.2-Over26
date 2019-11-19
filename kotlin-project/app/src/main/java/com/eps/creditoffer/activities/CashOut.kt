@@ -18,6 +18,8 @@ class CashOut : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cash_out)
+
+        OverdraftLink.get(currentUser.id)
         recentDebt.get(recentDebt.id)
         val transaction = TransactionLink()
         transaction.type = "out"
@@ -49,85 +51,76 @@ class CashOut : AppCompatActivity() {
 
         retirarButton.setOnClickListener {
             val stringOfValue = valor.text.toString()
-            transaction.value = stringOfValue.toFloat()
+            val valueRead: Float? = stringOfValue.toFloatOrNull()
 
-            OverdraftLink.get(currentUser.id)
-            if (currentOverdraft.isActive &&
-                transaction.value > currentAccount.balance &&
-                transaction.description == "Compra com cartão"
-            ) {
-                if (transaction.value <= 0F || transaction.description == "") {
-                    if (transaction.description == "") {
-                        Toast.makeText(this, "Escolher forma de retirada.", Toast.LENGTH_LONG)
-                            .show()
-                    }
-                    if (transaction.value <= 0F) {
-                        Toast.makeText(
-                            this,
-                            "Valor da retirada precisa ser positivo.",
-                            Toast.LENGTH_LONG
-                        ).show()
-                    }
-                } else {
-                    if (transaction.create()) {
-                        finish()
-                    }
-                }
-            } else if (currentOverdraft.isActive &&
-                transaction.value > currentAccount.balance &&
-                (transaction.description == "Pagamento de boleto" || transaction.description == "Transferência")
-            ) {
-                if (transaction.value <= 0F || transaction.description == "") {
-                    if (transaction.description == "") {
-                        Toast.makeText(this, "Escolher forma de retirada.", Toast.LENGTH_LONG)
-                            .show()
-                    }
-                    if (transaction.value <= 0F) {
-                        Toast.makeText(
-                            this,
-                            "Valor da retirada precisa ser positivo.",
-                            Toast.LENGTH_LONG
-                        ).show()
-                    }
-                } else {
+            if (valueRead == null) {
+                Toast.makeText(this, "Valor inválido.", Toast.LENGTH_LONG)
+                    .show()
+            } else {
+                transaction.value = stringOfValue.toFloat()
+                if (valueRead <= 0F) {
                     Toast.makeText(
                         this,
-                        "Cheque especial disponível apenas para compra com cartão.",
+                        "Valor da retirada precisa ser positivo.",
                         Toast.LENGTH_LONG
                     ).show()
-                }
-            } else if (transaction.value > currentAccount.balance && !currentOverdraft.isActive) {
-                if (transaction.value <= 0F || transaction.description == "") {
-                    if (transaction.description == "") {
-                        Toast.makeText(this, "Escolher forma de retirada.", Toast.LENGTH_LONG)
-                            .show()
-                    }
-                    if (transaction.value <= 0F) {
-                        Toast.makeText(
-                            this,
-                            "Valor da retirada precisa ser positivo.",
-                            Toast.LENGTH_LONG
-                        ).show()
-                    }
                 } else {
-                    Toast.makeText(this, "Cheque especial desativado.", Toast.LENGTH_LONG).show()
-                }
-            } else {
-                if (transaction.value <= 0F || transaction.description == "") {
-                    if (transaction.description == "") {
-                        Toast.makeText(this, "Escolher forma de retirada.", Toast.LENGTH_LONG)
-                            .show()
-                    }
-                    if (transaction.value <= 0F) {
-                        Toast.makeText(
-                            this,
-                            "Valor da retirada precisa ser positivo.",
-                            Toast.LENGTH_LONG
-                        ).show()
-                    }
-                } else {
-                    if (transaction.create()) {
-                        finish()
+                    if (currentAccount.balance >= valueRead) {
+                        transaction.value = valueRead
+                        if (transaction.create()) {
+                            Toast.makeText(
+                                this,
+                                "Transação realizada.",
+                                Toast.LENGTH_LONG
+                            ).show()
+                            finish()
+                        } else {
+                            Toast.makeText(
+                                this,
+                                "Erro na transação.",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
+                    } else {
+                        if (transaction.description == "Compra com cartão") {
+                            if (!currentOverdraft.isActive) {
+                                Toast.makeText(
+                                    this,
+                                    "Cheque especial desativado.",
+                                    Toast.LENGTH_LONG
+                                ).show()
+                            } else {
+                                if (currentOverdraft.limit - currentOverdraft.limitUsed >= valueRead) {
+                                    transaction.value = valueRead
+                                    if (transaction.create()) {
+                                        Toast.makeText(
+                                            this,
+                                            "Cheque especial utilizado!",
+                                            Toast.LENGTH_LONG
+                                        ).show()
+                                        finish()
+                                    } else {
+                                        Toast.makeText(
+                                            this,
+                                            "Erro na transação.",
+                                            Toast.LENGTH_LONG
+                                        ).show()
+                                    }
+                                } else {
+                                    Toast.makeText(
+                                        this,
+                                        "Valor superior ao limite disponivel para o Cheque Especial",
+                                        Toast.LENGTH_LONG
+                                    ).show()
+                                }
+                            }
+                        } else {
+                            Toast.makeText(
+                                this,
+                                "Não contém saldo! \nUtilize a opção \"Compra com cartão\"",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
                     }
                 }
             }

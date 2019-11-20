@@ -15,7 +15,7 @@ class Eligibility : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_eligibility)
-        println("----eligibilidade----")
+        println("----Eligibility.onCreate----")
 
         eligibility_button.setOnClickListener(View.OnClickListener {
             if (!OverdraftLink.get(currentOverdraft.id)) {

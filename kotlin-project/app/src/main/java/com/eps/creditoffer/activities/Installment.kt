@@ -87,10 +87,15 @@ class Installment : AppCompatActivity() {
 
         button_confirm_installment.setOnClickListener(View.OnClickListener {
             recentDebt.isDivided = TRUE
-            recentDebt.createInstallment(currentUser.id)
-            currentOverdraft.isBlocked = FALSE
-            Toast.makeText(this, "Cheque especial liberado!", Toast.LENGTH_LONG).show()
-            finish()
+            if (recentDebt.createInstallment(currentUser.id)) {
+                currentOverdraft.isBlocked = FALSE
+                Toast.makeText(this, "Cheque especial liberado!", Toast.LENGTH_LONG).show()
+                finish()
+            } else {
+                recentDebt.isDivided = FALSE
+                Toast.makeText(this, "Não foi possível realizar o parcelamento.", Toast.LENGTH_LONG).show()
+            }
+
         })
 
         button_cancel_installment.setOnClickListener(View.OnClickListener {

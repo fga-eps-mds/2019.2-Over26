@@ -16,7 +16,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
-        android:text="RESUMO DAS DIVIDAS"
+        android:text="Resumo das Dívidas"
         android:textColor="#000000"
         android:fontFamily="Roboto Slab"
         android:textSize="25dp"

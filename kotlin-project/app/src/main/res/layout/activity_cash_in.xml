@@ -23,9 +23,9 @@
 
     <TextView
         android:id="@+id/CashInLabel"
-        android:layout_width="188dp"
-        android:layout_height="69dp"
-        android:text="Cash In"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:text="Depósito"
         android:textColor="#060505"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -1,4 +1,4 @@
-# Planejamento SPRINT 9
+# Planejamento SPRINT 11
 
 **Data de início**: 10/11/2019 <br/>
 **Data de fim**: 16/11/2019 <br/>
@@ -32,4 +32,4 @@ Fazer funcionalidades priorizadas pela product owner em conjunto com o a scrum m
 |[TS13 - Implementação do suporte a multiusuário- Back](https://github.com/fga-eps-mds/2019.2-Over26/issues/184)| 2 |Erick e João Gabriel | Não |
 
 ## 4. Pareamento
-<!-- ![](../../images/metrics_agile/pareamento_sprint10.png) -->
+![](../../images/metrics_agile/pareamento_sprint11.png)

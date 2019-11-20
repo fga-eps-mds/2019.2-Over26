@@ -19,6 +19,14 @@
 | [US08 - Acompanhar período de insenção de juros - Backend](https://github.com/fga-eps-mds/2019.2-Over26/issues/128) | Concluída | 
 |[Consertar controller checkAmount - Back](https://github.com/fga-eps-mds/2019.2-Over26/issues/161)|Concluída|
 
+## EPS
+
+| Atividade | Situação |
+| -------- | :----: |
+| Deploy do Backend | Concluída |
+| Testes Frontend | Concluída |
+| Qualidade de Código | Concluída |
+| Documentar Sprint 9 | Concluída |
 
 ## 1.2 Burndown
 ![](../../images/metrics_agile/burndown_sprint10.png)
@@ -27,7 +35,7 @@
 ![](../../images/metrics_agile/velocity_sprint10.png)
 
 ## 1.4 Burndown de Riscos 
-<!-- ![](../../images/metrics_agile/burndown_riscos_sprint9.png) -->
+![](../../images/metrics_agile/burndown_riscos_sprint10.png)
 
 ## 1.5 Retrospectiva
 | Membro | Pontos Positivos | Pontos Negativos | Sugestão de Melhoria | Pontuação das Histórias |

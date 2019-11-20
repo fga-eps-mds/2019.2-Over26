@@ -4,15 +4,14 @@
 
 ### 1.1 Fechamento da Sprint 
 
-**Pontos concluídos: 19 pontos**
+**Pontos concluídos: 22 pontos**
 <br/>
 **Pontos cancelados: 7 pontos**
 <br/>
-**Dívida Técnica: 3 pontos**
 
 | Atividade | Situação |
 | --------  | :----:   |
-| [TS11 - Mostrar valor da nova dívida quando for parcelar](https://github.com/fga-eps-mds/2019.2-over26/issues/169) | Dívida Técnica | 
+| [TS11 - Mostrar valor da nova dívida quando for parcelar](https://github.com/fga-eps-mds/2019.2-over26/issues/169) | Concluída | 
 | [TS12 - Restringir a funcionalidade de checar eligibilidade](https://github.com/fga-eps-mds/2019.2-over26/issues/170) | Concluída | 
 |  [TS13 - Implementação do suporte a multiusuário](https://github.com/fga-eps-mds/2019.2-Over26/issues/171) | Concluída | 
 | [US22 - Pagar Parcelas - Design](https://github.com/fga-eps-mds/2019.2-Over26/issues/155) | Concluída | 
@@ -28,7 +27,7 @@
 ![](../../images/metrics_agile/velocity_sprint11.png)
 
 ## 1.4 Burndown de Riscos 
-<!-- ![](../../images/metrics_agile/burndown_riscos_sprint9.png) -->
+![](../../images/metrics_agile/burndown_riscos_sprint11.png)
 
 ## 1.5 Retrospectiva
 | Membro | Pontos Positivos | Pontos Negativos | Sugestão de Melhoria | Pontuação das Histórias |

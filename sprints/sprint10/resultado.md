@@ -56,3 +56,11 @@
 
 
 # 2. Visão do Tech Leader
+Essa sprint foi bem produtiva, o que é possível observar no burndown e velocity. Visto que não teve nenhuma dívida técnica e entregas contínuas ao longo da sprint. Além de conseguirmos fazer issues menores para que a entrega fosse mais fluída. A equipe de MDS se dedicou bastante para conseguir entregar todas as issues a tempo. Algo positivo é a constância do velocity que a equipe está conseguindo seguir. 
+
+
+Tudo isso tem mostrado que a equipe tem conseguido alcançar uma boa produtividade, a fim de realizar boas entregas. Porém, a comunicação foi um gargalo novamente nessa sprint, pois alguns membros sabiam fazer as tarefas e acabaram se antecipando, deixando outros membros meio perdidos no que estava acontecendo no código, o que demonstrou falhas no pareamento. Outro gargalo são as ausências de membros da equipe tanto nas reuniões presenciais, quanto nas DAILIES no Telegram.
+
+O fator mais crítico da sprint foi a quase desistência de um dos membros de MDS (trancamento do semestre), o que desestabilizou um pouco a equipe de EPS, já que o risco de desistência estava diminuindo conforme se aproxima o fim do semestre. Porém o membro disse que mesmo trancando o semestre, iria até o final com o projeto. Além do Android Studio estar dificultando o desenvolvimento e análise de PRs, o que tem dificultado a velocidade de análise dos mesmos. 
+
+As práticas ágeis foram aplicadas, com reuniões diárias via Telegram (porém, nem todos os membros estão levando a sério a DAILY, mesmo insistindo) e reuniões semanais de planejamento ocorrida no início da sprint. Além das reuniões de retrospectiva e revisão ocorridas no final da sprint. Essas reuniões ocorrem todos os sábados presencialmente.

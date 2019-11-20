@@ -1,9 +1,6 @@
 <resources>
     <string name="app_name">CreditOffer</string>
-    <string name="parabens_voce_recebeu_aprova_o_para_at_r_250">Parabens! Voce recebeu aprovação para até R$250.</string>
     <string name="button">Button</string>
-    <string name="ativa_o_de_cheque_especial">Ativação de Cheque Especial</string>
-    <string name="eu_concordo_com_as_informa_es_de_consumidor_de_credito_e_com_os_termos_e_condi_es_de_cheque_especial_e_entendo_que_serei_cobrado_8_9">Eu concordo com as informações de consumidor de credito e com os Termos e Condições de Cheque Especial e entendo que serei cobrado 8,9%</string>
     <string name="ativar_credito_em_cheque_especial">Ativar credito em Cheque Especial</string>
 
     <!-- TODO: Remove or change this placeholder text -->

@@ -67,3 +67,15 @@
     - Sprint 10
 
       - [Planejamento](/sprints/sprint10/planejamento.md)
+
+      - [Resultado](/sprints/sprint10/resultado.md)
+
+    - Sprint 11
+
+      - [Planejamento](/sprints/sprint11/planejamento.md)
+
+      - [Resultado](/sprints/sprint11/resultado.md)
+
+    - Sprint 12
+
+      - [Planejamento](/sprints/sprint12/planejamento.md)

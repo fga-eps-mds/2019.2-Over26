@@ -118,7 +118,7 @@ class OverdraftDebtLink {
         }
     }
 
-    fun createInstallment(id: Int) {
+    fun createInstallment(id: Int): Boolean{
         println("----OverdraftLinkDebt.createInstallment----")
         val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString() + "/instalments"
 
@@ -137,9 +137,11 @@ class OverdraftDebtLink {
         when (result) {
             is Result.Success -> {
                 println("Success")
+                return true
             }
             is Result.Failure -> {
                 println("Failure")
+                return false
             }
         }
     }

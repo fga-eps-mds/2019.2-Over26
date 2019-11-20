@@ -49,14 +49,14 @@ class TrackLimit : AppCompatActivity() {
             println("----cancelCreditButton----")
             if(currentOverdraft.isBlocked){
                 Toast.makeText(this,
-                    "Parcele a dívida antes de fazer alterações no cheque especial",
+                    "Parcele a dívida antes de cancelar o cheque especial.",
                     Toast.LENGTH_LONG).show()
             } else if (currentOverdraft.limitUsed > 0F) {
                 Toast.makeText(this,
                     "Cheque especial em utilização!",
                     Toast.LENGTH_LONG).show()
             } else {
-                Toast.makeText(this, "Cheque especial Cancelado!", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Cheque especial cancelado!", Toast.LENGTH_LONG).show()
                 OverdraftLink.cancel(currentOverdraft.id)
                 finish()
             }
@@ -140,7 +140,7 @@ class TrackLimit : AppCompatActivity() {
 
             textView_usage.text = "%.2f".format(recentDebt.totalAmount)
 
-            textView_currentUsage.text = "TOTAL A SER PAGO"
+            textView_currentUsage.text = "Total a ser Pago"
             textView_cur.text = "-"
             textView_usage.setTextColor(Color.RED)
         }

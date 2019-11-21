@@ -34,7 +34,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:baselineAligned="false"
-        android:fontFamily="@font/roboto_slab_thin"
+        android:fontFamily="Roboto Slab"
         android:gravity="center"
         android:shadowColor="#00D62323"
         android:text="Parcelar Dívida"

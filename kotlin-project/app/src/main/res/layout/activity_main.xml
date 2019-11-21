@@ -32,7 +32,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_slab_thin"
+        android:fontFamily="Roboto Slab"
         android:text="Crédito e Cheque Especial"
         android:textColor="#000000"
         android:textSize="30sp"

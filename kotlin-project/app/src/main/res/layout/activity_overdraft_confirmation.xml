@@ -17,7 +17,7 @@
         app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.207"
+        app:layout_constraintVertical_bias="0.35"
         app:srcCompat="@mipmap/ic_money_sack_foreground" />
 
 
@@ -26,7 +26,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/ativa_o_de_cheque_especial"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#000000"
+        android:textSize="40dp"
+        android:gravity="center"
+        android:fontFamily="Roboto Slab"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -36,12 +39,13 @@
 
     <TextView
         android:id="@+id/textView2"
-        style="@android:style/Widget.DeviceDefault.Light.TextView"
-        android:layout_width="299dp"
+        android:layout_width="350dp"
         android:layout_height="66dp"
-        android:text="@string/parabens_voce_recebeu_aprova_o_para_at_r_250"
+        android:fontFamily="@font/radley"
+        android:text="Parabéns, você recebeu a aprovação para até R$200,00!"
         android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/moneysack" />
@@ -49,12 +53,14 @@
 
     <CheckBox
         android:id="@+id/checkBox2"
-        style="@android:style/Widget.DeviceDefault.Light.TextView"
         android:layout_width="327dp"
-        android:layout_height="75dp"
-        android:buttonTint="#5DBCD2"
+        android:layout_height="85dp"
+        android:buttonTint="#5CE1E6"
         android:text="@string/eu_concordo_com_as_informa_es_de_consumidor_de_credito_e_com_os_termos_e_condi_es_de_cheque_especial_e_entendo_que_serei_cobrado_8_9"
         android:textAlignment="textStart"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:fontFamily="@font/radley"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,16 +69,26 @@
 
     <Button
         android:id="@+id/activateOverdraft"
-        android:layout_width="353dp"
-        android:layout_height="60dp"
-        android:backgroundTint="#5DBCD2"
-        android:text="@string/ativar_credito_em_cheque_especial"
+        android:layout_width="210dp"
+        android:layout_height="40dp"
+        android:background="@drawable/big_button_shape"
+        android:text="Ativar Cheque Especial"
+        android:fontFamily="@font/radley"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.991" />
+        app:layout_constraintVertical_bias="0.97" />
 
+    <ImageView
+        android:id="@+id/blue_sprit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#5CE1E6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

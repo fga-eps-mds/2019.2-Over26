@@ -5,9 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    android:padding="16dp"
     tools:context=".activities.MainActivity">
 
+
+    <ImageView
+        android:id="@+id/blue_sprit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#5CE1E6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -42,6 +50,8 @@
         android:padding="0dp"
         android:clickable="true"
         android:onClick="overdraftScreen"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
@@ -92,6 +102,8 @@
         android:padding="0dp"
         android:clickable="true"
         android:onClick="activeOverdraft"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt1">
@@ -141,6 +153,8 @@
         android:padding="0dp"
         android:clickable="true"
         android:onClick="viewDebts"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt2">
@@ -181,12 +195,11 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
+        android:layout_width="250dp"
         android:layout_height="60dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="50dp"
         android:background="#fff"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -216,12 +229,12 @@
         android:id="@+id/settings_icon"
         android:layout_width="50dp"
         android:layout_height="38dp"
+        android:layout_marginTop="50dp"
         android:layout_weight="1"
         android:clickable="true"
         android:onClick="showPopUp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.994"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/ic_config_menu" />
 

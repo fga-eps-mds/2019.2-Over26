@@ -4,7 +4,7 @@
         android:id="@android:id/background"
         android:drawable="@drawable/seekbar"/>
     <item android:id="@android:id/progress">
-        <clip android:drawable="@color/colorPrimary" />
+        <clip android:drawable="#5CE1E6" />
     </item>
 
 </layer-list>

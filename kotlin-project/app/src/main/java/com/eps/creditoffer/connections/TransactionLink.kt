@@ -1,4 +1,5 @@
 package com.eps.creditoffer.connections
+import com.eps.creditoffer.BuildConfig
 import com.eps.creditoffer.utils.currentAccount
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.ResponseDeserializable
@@ -17,7 +18,7 @@ class TransactionLink {
     var description: String = "Boleto"
     var date: Date = Date()
 
-    private val ip: String = "10.0.2.2"
+    private val ip: String =  BuildConfig.BASE_URL
 
     class Deserializer : ResponseDeserializable<TransactionLink> {
         override fun deserialize(content: String) = Gson().fromJson(content, TransactionLink::class.java)

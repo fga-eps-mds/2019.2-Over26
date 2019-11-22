@@ -33,9 +33,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="Roboto Slab"
-        android:text="Crédito e Cheque Especial"
         android:textColor="#000000"
-        android:textSize="30sp"
+        android:text="Cheque Especial"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -69,9 +69,9 @@
             android:id="@+id/textView2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:text = "Acompanhar Cheque Especial"
             android:layout_marginLeft="10dp"
             android:fontFamily="@font/radley"
-            android:text="Usar Cheque Especial"
             android:textColor="@android:color/background_dark"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -115,7 +115,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/ic_activate_overdraft" />
+            app:srcCompat="@mipmap/ic_activate_overdraft_main" />
 
         <TextView
             android:id="@+id/textView4"
@@ -212,7 +212,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="R$0,00"
+            android:text="R$0.00"
             android:textColor="@android:color/background_dark"
             android:textSize="22sp" />
 
@@ -221,7 +221,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Crédito" />
+            android:text="Saldo" />
 
     </LinearLayout>
 

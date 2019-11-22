@@ -32,7 +32,7 @@
         android:layout_centerHorizontal="true"
         android:background="@drawable/big_button_shape"
         android:fontFamily="@font/radley"
-        android:text="Cancelar Overdraft"
+        android:text="Cancelar Cheque Especial"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#000000"
@@ -45,9 +45,10 @@
         android:layout_marginTop="50dp"
         android:fontFamily="Roboto Slab"
         android:gravity="center_horizontal"
-        android:text="Overdraft"
+        android:text="Cheque Especial"
         android:textColor="#000000"
-        android:textSize="40sp" />
+        android:textSize="30sp"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/textView-interest"
@@ -86,7 +87,7 @@
         android:layout_marginRight="16dp"
         android:fontFamily="@font/radley"
         android:gravity="center_horizontal"
-        android:text="5%"
+        android:text="8,9%"
         android:textAlignment="center"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
         android:textColor="#80000000"

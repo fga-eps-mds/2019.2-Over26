@@ -1,5 +1,6 @@
 package com.eps.creditoffer.connections
 
+import com.eps.creditoffer.BuildConfig
 import com.eps.creditoffer.models.Overdraft
 import com.eps.creditoffer.utils.currentOverdraft
 import com.github.kittinunf.fuel.Fuel
@@ -13,7 +14,7 @@ import java.util.*
 
 class OverdraftLink {
     companion object{
-        private const val ip: String = "10.0.2.2"
+        private val ip: String =  BuildConfig.BASE_URL
 
         fun get(id: Int): Boolean {
             println("----OverdraftLink.get----")

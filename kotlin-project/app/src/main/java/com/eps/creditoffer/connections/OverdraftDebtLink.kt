@@ -2,6 +2,8 @@ package com.eps.creditoffer.connections
 
 import com.eps.creditoffer.models.Overdraft
 import com.eps.creditoffer.utils.recentDebt
+import com.eps.creditoffer.BuildConfig
+
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.ResponseDeserializable
 import com.github.kittinunf.fuel.core.extensions.jsonBody
@@ -24,7 +26,7 @@ class OverdraftDebtLink {
     var instalment: List<InstalmentLink> = emptyList()
     var totalAmount: Float = 0F
 
-    private val ip: String = "10.0.2.2"
+    private val ip: String =  BuildConfig.BASE_URL
 
     class Deserializer : ResponseDeserializable<OverdraftDebtLink> {
         override fun deserialize(content: String) = Gson().fromJson(content, OverdraftDebtLink::class.java)
@@ -118,7 +120,7 @@ class OverdraftDebtLink {
         }
     }
 
-    fun createInstallment(id: Int) {
+    fun createInstallment(id: Int): Boolean{
         println("----OverdraftLinkDebt.createInstallment----")
         val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString() + "/instalments"
 
@@ -137,9 +139,11 @@ class OverdraftDebtLink {
         when (result) {
             is Result.Success -> {
                 println("Success")
+                return true
             }
             is Result.Failure -> {
                 println("Failure")
+                return false
             }
         }
     }

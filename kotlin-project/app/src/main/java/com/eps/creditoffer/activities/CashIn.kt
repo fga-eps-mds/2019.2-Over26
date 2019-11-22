@@ -42,24 +42,37 @@ class CashIn : AppCompatActivity() {
 
             val stringOfValue = textValue.text.toString()
 
-            transaction.value = stringOfValue.toFloat()
+            val valueRead: Float? = stringOfValue.toFloatOrNull()
 
-            if (transaction.value <= 0F || transaction.description == "") {
-
-                if (transaction.description == "") {
-                    Toast.makeText(this, "Escolher forma de depósito.", Toast.LENGTH_LONG).show()
-                }
-
-                if (transaction.value <= 0F) {
-                    Toast.makeText(
-                        this,
-                        "Valor do depósito precisa ser positivo.",
-                        Toast.LENGTH_LONG
-                    ).show()
-                }
+            if (valueRead == null) {
+                Toast.makeText(this, "Valor inválido.", Toast.LENGTH_LONG)
+                    .show()
             } else {
-                if (transaction.create()) {
-                    finish()
+
+                transaction.value = stringOfValue.toFloat()
+
+                if (transaction.value <= 0F || transaction.description == "") {
+
+                    if (transaction.description == "") {
+                        Toast.makeText(this, "Escolher forma de depósito.", Toast.LENGTH_LONG)
+                            .show()
+                    }
+                    if (transaction.value <= 0F) {
+                        Toast.makeText(
+                            this,
+                            "Valor do depósito precisa ser positivo.",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+                } else {
+                    if (transaction.create()) {
+                        Toast.makeText(
+                            this,
+                            "Transação realizada.",
+                            Toast.LENGTH_LONG
+                        ).show()
+                        finish()
+                    }
                 }
             }
         }

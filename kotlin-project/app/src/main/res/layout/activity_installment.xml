@@ -43,7 +43,8 @@
         android:textColorHint="#050000"
         android:textColorLink="#090000"
         android:textIsSelectable="false"
-        android:textSize="40dp" />
+        android:textSize="40dp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView_info"

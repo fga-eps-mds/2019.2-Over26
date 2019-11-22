@@ -8,7 +8,7 @@ Após a primeira reunião com o cliente e discussões entre e algumas iteraçõe
 
 ![](./images/Backlog.png)
 
-## Versão Final (Geral)
+## Versão Final
 
 Ao longo do projeto foi necessária a constante atualização do backlog. Essa atualização, devido às constantes mudanças foi realizado diretamente na [planilha](https://docs.google.com/spreadsheets/d/1f1GQDp863DvVatqttrbRrIi0cP70PVSnYfms98DCM74/edit?usp=sharing) destinada para tal. 
 

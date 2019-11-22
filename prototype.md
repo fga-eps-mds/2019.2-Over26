@@ -1,6 +1,6 @@
 ## Protótipos
 
-A fim de validar e orientar o desenvolvimento da nova funcionalidade, referente à funcionalidade de cheque especial, foram realizados os protótipos de baixa e alta fidelidade. Conforme apresentado abaixo.
+A fim de validar e orientar o desenvolvimento da funcionalidade, referente ao fluxo de concessão, ativação e uso do cheque especial, foram realizados os protótipos de baixa e alta fidelidade, conforme apresentado abaixo.
 
 #### 1. Protótipo de Baixa Fidelidade
 ![](./images/prototipo_baixa_fidelidade.png)

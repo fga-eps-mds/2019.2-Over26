@@ -8,10 +8,12 @@ Além disso, pretende-se realizar o levantamento de requisitos por meio da [obse
 
 O próximo passo a ser concretizado consiste na priorização dos requisitos obtidos com a aplicação das técnicas relatadas anteriormente, para isso pretende-se, a priori, utilizar uma equivalência ao [MoSCoW](https://sitecampus.com.br/tecnica-moscow-na-priorizacao-dos-requisitos/). Entretanto, as categorias englobarão apenas 3 níveis de priorização, sendo elas: Must have, Could have e Would Have, sendo equivalentes, respectivamente, a : Prioridade Baixa, média e alta.Deve-se salientar que essa etapa é essencial para fundamentar o processo de desenvolvimento do sistema, pois orienta na escolha de quais requisitos devem ser desenvolvidos primeiro. De certa forma, nesse ponto obtém-se uma maior definição do escopo do projeto.
 
+Apesar de o [teste de usabilidade](https://www.caelum.com.br/apostila-ux-usabilidade-mobile-web/usabilidade/#preparao-prvia) não ser exatamente uma técnica para elicitação de novos requisitos, também é possível que durante o teste se consiga descobrir novos requisitos, visto que o objetivo consiste em testar o fluxo da experiência do uso de cheque especial.
+
 ### 1.1 Técnicas Utilizadas 
 
 * [Mapa de Empatia](./elicitacao/empathy-map.md)
 * [Brainstorming](./elicitacao/brainstorm.md)
 * [Observação por Instrospecção](./elicitacao/introspection.md)
 * [Priorização](/product-backlog.md)
-
+* [Teste usabilidade](./usability/5-acts-interview.md)

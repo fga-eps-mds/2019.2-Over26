@@ -123,4 +123,4 @@ O impacto foi definido da seguinte forma:
 | Demora para obter respostas do cliente | 16  | Previnir | Estar sempre em contato com o cliente e já marcar reuniões em dias específicos | Product Owner |
 | O produto não atender às expectativas do cliente | 10 | Previnir | Estar sempre recebendo feedback do cliente e mostrando o produto sempre que possível | Product Owner|
 
-**Observação**: É importante salientar que o monitoramento dos riscos será feito através do Burndown de Riscos. Assim, como a visão do Scrum Master apresentando os riscos e como serão mitigados. 
+**Observação**: É importante salientar que o monitoramento dos riscos será feito através do Burndown de Riscos. Assim como a visão do Scrum Master apresentando os riscos e como serão mitigados. 

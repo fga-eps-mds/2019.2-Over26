@@ -1,11 +1,4 @@
-# Histórico de Versões
-
-| Data | Versão | Autor(a) | Descrição |
-| - | - | - | - |
-| 26/09/2019 | 0.1 |Maria Luiza | Criação do plano de comunicação do projeto |
-
-
-# Índice
+# Plano de Comunicação
 
 * [Gerenciamento de Comunicação](#_Gerenciamento-de-Comunicação)
 * [Ferramentas](#_Ferramentas)
@@ -64,3 +57,10 @@ Reuniões semanais, com timeboxed (duração de no máximo 3h30), para a realiza
 * Planejamento da próxima Sprint (1h)
 * Pontuar as issues da próxima Sprint (20min)
 * Decidir os pareamentos com base no quadro de conhecimento e retrospectiva (10 min)
+
+
+# Histórico de Versões
+
+| Data | Versão | Autor(a) | Descrição |
+| - | - | - | - |
+| 26/09/2019 | 0.1 |Maria Luiza | Criação do plano de comunicação do projeto |

@@ -48,3 +48,9 @@
 
 
 # 2. Visão do Tech Leader
+Essa sprint foi um pouco atípica, pois teve um feriado, onde várias pessoas de EPS estariam viajando (viagens marcadas há um tempo), o que acabou prejudicando um pouco o andamento do projeto. Apesar disso, a equipe tem se mostrado bastante auto-gerenciável. Pois todas as tarefas foram concluídas e a equipe conseguiu se planejar mesmo com a ausência da maioria de EPS. 
+
+O velocity se manteve constante, o que mostra uma boa produtividade da equipe. Porém a comunicação tem se mostrado um grande gargalo na equipe, ainda mais com as viagens dos membros. 
+
+As práticas ágeis foram aplicadas, com reuniões diárias via Telegram (porém, nem todos os membros estão levando a sério a DAILY, mesmo insistindo) e reuniões semanais de planejamento ocorrida no início da sprint. Além das reuniões de retrospectiva e revisão ocorridas no final da sprint. Essas reuniões ocorrem todos os sábados presencialmente. A reunião presencial ocorreu, mesmo com somente um membro de EPS.
+

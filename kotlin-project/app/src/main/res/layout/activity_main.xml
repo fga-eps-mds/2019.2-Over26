@@ -35,7 +35,7 @@
         android:fontFamily="Roboto Slab"
         android:textColor="#000000"
         android:text="Cheque Especial"
-        android:textSize="20sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />

@@ -37,7 +37,7 @@ __Example:__
 Objetivando manter a confiabilidade do código fonte do nosso produto, propõe-se o uso de uma política de branches para orientar os desenvolvedores no modo de organização das suas contribuições neste repositório. Assim, estabelecemos:
 
 
-branch padrão master, para hospedar o código estável do projeto (que estará em ambiente de produção);
+A branch padrão é a master, para hospedar o código estável do projeto (que estará em ambiente de produção);
 
 
 __gh-pages__: Designada para conter todos os documentos do projeto, disponíveis no [Github Pages](https://fga-eps-mds.github.io/2019.2-Over26/#/)
@@ -52,7 +52,7 @@ Exemplo: `hotfix/1-<nome_bug>` (_issue_ #1)
 * __`feature/<feature-name>`__ - Branch usada para desenvolvimento de uma nova feature no projeto. O nome deve conter o número da issue registrada, no formato. 
 Exemplo: `feature/1-<feature-name>` (_issue_ #1)
 
-* __`release/<release-version>`__ - Branch destinada à ajustes finais/build que serão feitas para entrega de uma realize do software. O nome deve ser a própria versão da release. 
+* __`release-<release-version>`__ - Branch destinada à ajustes finais/build que serão feitas para entrega de uma realize do software. O nome deve ser a própria versão da release. 
 
 * __`improvement/<improvement-name>`__ - Branch usada para melhorar a usabilidade e outros aspectos das funcionalidade e/ou documentação do projeto. Deve possuir associado ao nome, o número da _issue_ inscrita no repositório.
 Exemplo: `improvement/1-<improvement-name>` (_issue_ #1)

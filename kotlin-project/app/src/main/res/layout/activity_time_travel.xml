@@ -12,9 +12,38 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
         android:layout_marginBottom="140dp"
-        android:text="Button"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Prosseguir"
         android:onClick="timeTravel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
          />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="320dp"
+        android:layout_height="340dp"
+        android:text="Esse aplicativo foi criado para que o usuário experiencie em sua totalidade a opção de cheque especial em uma conta bancária. Essa função, que ocorreria automaticamente após 26 dias criara uma divida a ser parcelada de acordo com a vontade do cliente. Para maior comodidade e facilitar o teste, ao apertar esse botão serão transcorridos 26 dias e a dívida será criada."
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.253" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="244dp"
+        android:layout_height="45dp"
+        android:text="Avanço de tempo"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.269"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.053" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,18 +7,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-   
+    <ImageView
+        android:id="@+id/blue_sprit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#5CE1E6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="50dp"
         android:layout_alignParentTop="true"
         android:text="Resumo das Faturas"
         android:textColor="#000000"
-        android:textSize="25dp"
+        android:textSize="30dp"
         android:textStyle="bold" />
 
 
@@ -26,7 +33,7 @@
         android:id="@+id/list_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="90dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

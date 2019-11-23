@@ -1,5 +1,6 @@
 package com.eps.creditoffer.connections
 
+import com.eps.creditoffer.BuildConfig
 import com.eps.creditoffer.models.Overdraft
 import com.eps.creditoffer.models.User
 import com.eps.creditoffer.utils.currentOverdraft
@@ -12,12 +13,11 @@ import org.json.JSONObject
 
 class UserLink {
     companion object {
-        private const val ip: String = "10.0.2.2"
+        private val ip: String =  BuildConfig.BASE_URL
 
         fun get(id: Int): Boolean {
             println("----UserLink.get----")
             val url = "http://$ip:3000/api/users/$id"
-
             val (_, _, result) = Fuel.get(url)
                 .responseObject(User.Deserializer())
             val (bytes, _) = result
@@ -44,6 +44,7 @@ class UserLink {
         fun create(name: String): Boolean {
             println("----UserLink.create----")
             val url = "http://$ip:3000/api/users"
+            println(url)
 
             val json = JSONObject()
             json.put("name", name)

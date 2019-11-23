@@ -86,14 +86,22 @@ class Installment : AppCompatActivity() {
         })
 
         button_confirm_installment.setOnClickListener(View.OnClickListener {
-            recentDebt.isDivided = TRUE
-            if (recentDebt.createInstallment(currentUser.id)) {
-                currentOverdraft.isBlocked = FALSE
-                Toast.makeText(this, "Cheque especial liberado!", Toast.LENGTH_LONG).show()
-                finish()
+            if(recentDebt.dueDay == 0) {
+                Toast.makeText(this, "Selecione uma data de vencimento.", Toast.LENGTH_LONG).show()
             } else {
-                recentDebt.isDivided = FALSE
-                Toast.makeText(this, "Não foi possível realizar o parcelamento.", Toast.LENGTH_LONG).show()
+                recentDebt.isDivided = TRUE
+                if (recentDebt.createInstallment(currentUser.id)) {
+                    currentOverdraft.isBlocked = FALSE
+                    Toast.makeText(this, "Cheque especial liberado!", Toast.LENGTH_LONG).show()
+                    finish()
+                } else {
+                    recentDebt.isDivided = FALSE
+                    Toast.makeText(
+                        this,
+                        "Não foi possível realizar o parcelamento.",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
             }
 
         })

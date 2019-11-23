@@ -131,11 +131,8 @@ class OverdraftDebtLink {
 
         val (request, response, result) = Fuel.post(url)
             .jsonBody(json.toString())
-            .responseObject(Overdraft.Deserializer())
+            .response()
         println("Response:" + response)
-        val (bytes, error) = result
-        if (bytes != null) {
-        }
         when (result) {
             is Result.Success -> {
                 println("Success")

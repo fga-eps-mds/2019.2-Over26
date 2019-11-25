@@ -10,12 +10,15 @@
         android:id="@+id/button"
         android:layout_width="158dp"
         android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="140dp"
         android:layout_marginBottom="116dp"
-        android:backgroundTint="@color/colorPrimary"
+        android:background="@drawable/big_button_shape"
+        android:fontFamily="@font/radley"
         android:onClick="timeTravel"
         android:text="Prosseguir"
-        android:textSize="21dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -29,21 +32,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-
         app:layout_constraintTop_toBottomOf="@+id/textView13"
         app:layout_constraintVertical_bias="0.124" />
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="244dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="120dp"
-        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="Roboto Slab"
+        android:gravity="center_horizontal"
         android:text="Avanço de tempo"
-        android:textColor="@color/colorPrimary"
-        android:textSize="30dp"
+        android:textColor="#000000"
+        android:textSize="30sp"
         android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/blue_sprit" />
+
+    <ImageView
+        android:id="@+id/blue_sprit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#5CE1E6"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

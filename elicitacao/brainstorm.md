@@ -2,8 +2,6 @@
 
 O brainstorming consiste numa técnica cujo objetivo é facilitar ou estimular a produção de ideias/soluções a respeito de um determinado tema. No contexto deste projeto essa técnica foi realizada principalmente durante as reuniões com o cliente. Isso porque consistiu na melhor oportunidade para angariar requisitos por meio da análise/observação por ponto de vista. Os resultados são explanados conforme relação abaixo:
 
-
-
 ## Primeira reunião
 
 As primeira reunião com o Eduardo, destinaram-se ao conhecimento do universo de informações e contexto da problemática. 

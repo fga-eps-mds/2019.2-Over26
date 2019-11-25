@@ -15,5 +15,5 @@ Apesar de o [teste de usabilidade](https://www.caelum.com.br/apostila-ux-usabili
 * [Mapa de Empatia](./elicitacao/empathy-map.md)
 * [Brainstorming](./elicitacao/brainstorm.md)
 * [Observação por Instrospecção](./elicitacao/introspection.md)
-* [Priorização](/product-backlog.md)
+* [Priorização](./elicitacao/prioritization.md)
 * [Teste usabilidade](./usability/5-acts-interview.md)

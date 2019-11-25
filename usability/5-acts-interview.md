@@ -40,7 +40,6 @@ Bom, vamos começar com algumas perguntas apenas para contextualizar o nosso pro
         * Ativar ou desativar cheque especial
         * Acompanhar as dívidas geradas 
         * Acompanhar o limite do cheque especial
-        * Pagar parcelas das dividas
 
 4. Tarefas
 
@@ -51,10 +50,6 @@ Bom, vamos começar com algumas perguntas apenas para contextualizar o nosso pro
     * Ver quanto do limite foi usado
 
     * Ajustar limite 
-
-    * Visualizar dívidas
-
-    * Pagar uma dívida -- Ainda não disponível
 
     * Utilizar o cheque especial
 
@@ -76,9 +71,11 @@ Bom, vamos começar com algumas perguntas apenas para contextualizar o nosso pro
 
                 Cliente entra em overdraft e não quita o saldo antes dos 26 dias. Cliente acompanha a dívida criada e paga parcela.
 
+    * Visualizar dívidas
+
 5. Debriefing
 
-    * Você utilizaria o serviço de cheque especial  Over26? Por quê?
+    * Você utilizaria o serviço de cheque especial Over26? Por quê?
     * O que você menos gostou no uso do cheque especial Over26?
     * Qual foi a sua impressão sobre o processo de ativar o cheque especial?
     * Qual foi a sua impressão sobre o processo de visualizar a sua dívida? 

@@ -14,8 +14,9 @@ Enfim, agora que o aviso geral foi dado, vamos aos aprendizados.
 
 * **Adrianne** 
 
-<p style="align:justify;">
-Por meio de sorteio acabei ficando com o papel de Product Owner, daí me veio o primeiro aprendizado: Talvez sorteio não seja a melhor forma de decidir as coisas. Mas ainda assim, um aprendizado ainda mais importante é entender a importância de utilizar toda e qualquer oportunidade, inclusive essa, para aprender um pouco mais. 
+<div align="justify">
+
+Por meio de sorteio acabei ficando com o papel de Product Owner, daí me veio o primeiro aprendizado: Talvez sorteio não seja a melhor forma de decidir as coisas. Mas ainda assim, um aprendizado ainda mais importante é entender a importância de utilizar toda e qualquer oportunidade, inclusive essa, para aprender um pouco mais.
 
 Já em minhas atribuições na equipe, percebi a necessidade de alguma regra ou metodologia para gerenciar as mudanças no escopo do produto. Não fiz um documento para isso que me ajudasse nas decisões e confesso que tive dificuldades em gerenciar as inúmeras mudanças. Além disso, achei muito positivo a possibilidade do restante do time opinar, participar e construir o escopo e backlog junto comigo, seja durante o entendimento inicial do projeto, com os outros EPS's ou nos planejamentos semanais com toda equipe. Entretanto, ainda nesse quesito, acredito que as mudanças sem qualquer controle, prejudicam o andamento do time, fazendo com que a equipe se sinta perdida sobre o que de fato entregaremos, além disso, toda essa liberdade faz com quê tudo seja incerto o tempo todo. Então em outros projetos, acredito que essa participação e abertura poderia ser melhor gerenciada e controlada. 
 
@@ -27,7 +28,7 @@ Um ponto importante, quanto time foi perceber a importância da motivação da e
 
 De maneira geral, o projeto foi extremamente cansativo, mas de grandes aprendizados. Inclusive, posso dizer que apesar de não ser um papel que eu tenha muita afinidade, pude aprender muito sobre o que não fazer das próximas vezes ou o que fazer melhor. Exemplos: Não atualizar o roadmap só pra controle interno mas disponibilizá-lo sempre que modificado, lançar release a cada semana, exigir critérios de qualidade desde as primeiras sprints, ainda que seja um desafio para o desenvolvimento, ser menos maleável com as entregas em termos visuais, inclusive, implantar a cultura de revisão de PR pelo time inteiro desde o início, para garantir a velocidade nas revisões; Implantar a cultura de responsabilidade geral pelo código e produto para todo o time de desenvolvimento, para que ao serem encontrados bugs ou necessidades de melhorias eles possuam autonomia para criar as issues e resolver ainda que não tenha sido "alocado" para aquela tarefa e, por último e não menos importante, realizar o teste do produto ainda na fase de prototipação, a fim de já conseguir uma versão mais acertiva.
 
-</p>
+</div>
 
 * **Andrew**
 
@@ -40,7 +41,8 @@ De maneira geral, o projeto foi extremamente cansativo, mas de grandes aprendiza
 
 * **Isabella**
 
-<p style="align:justify;">
+<div align="justify">
+
 Na minha percepção, o início do projeto foi um pouco conturbado. Eu acredito que comecei o projeto com pouca noção do que é realmente trabalhar em um sistema de software, além de não conhecer as linguagens e tecnologias que foram escolhidas e o que dificultou muito foi a demora em ter um escopo bem definido. Apesar de tudo, tive muitos aprendizados nesse começo, não só nas linguagens novas que aprendi, mas também na parte documental que nunca havia feito.
   
 Pessoalmente, foi um semestre muito difícil e tive que aprender a controlar e planejar melhor meu tempo para conseguir fazer sempre as entregas no tempo correto sem deixar dívidas para a sprint seguinte. Outro grande aprendizado foi a questão do trabalho em grupo, que vi os membros realmente se ajudando e querendo saber se tinha algum problema e como poderiam auxiliar. 
@@ -48,3 +50,17 @@ Pessoalmente, foi um semestre muito difícil e tive que aprender a controlar e p
 Percebo muitos detalhes que conseguirei aplicar em projetos futuros e até na vida, como por exemplo a importância da comunicação em um projeto em grupo e a integração dos membros do mesmo, o planejamento e cumprimento de prazos, como funciona a metodologia ágil na prática e muitas outras coisas. 
 
 Apesar das dificuldades que foram aparecendo no desenvolvimento do projeto, eu acredito que conseguimos entregar um ótimo trabalho e que formamos um grupo unido e esforçado, em que todos os membros fizeram o seu melhor.
+</div>
+
+* **Erick**
+
+<div align="justify">
+
+Logo no início da disciplina notei que o projeto seria muito diferentes daqueles que me acostumei a fazer no curso de Engenharia Eletrônica, que demandaria mais tempo e dedicação que o comum. Treinamentos e reuniões bem definidas me ajudaram muito com essa percepção mesmo não sabendo exatamente do que se tratava o projeto.
+
+No decorrer do projeto acho que consegui entender como se trabalha com o medologia ágil, algo que já tinha visto, mas nunca vivenciado a fundo. Daily, pareamento e as sprints me mostraram o quanto é importante executar de forma constante, e, não menos importante, como a comunicação entre a equipe pode afetar o desenvolvimento do produto.
+
+Ao longo de todo projeto tentei ficar bastante presente e procurei a todo momento saber o que estava acontecendo, isso me ajudou a aprender muitas coisas novas e principalmente, me fez conseguir entender quase todas as esferas do projeto.
+
+Por fim, acho que a equipe como um todo se dedicou bastante e a presença de equipe de EPS fez total diferença para a entrega de um produto mais robusto e funcional.
+</div>

@@ -31,7 +31,7 @@
 ### Principais funcionalidades
 
 <p align="justify"> 
-  Considerando o objetivo do produto, existe um conjunto de funcionalidades de maior importância, são elas:
+  Considerando o objetivo do produto, de testar o fluxo de contratação e uso do cheque especial, existe um conjunto de funcionalidades de maior importância, são elas:
   
   * Contratação do serviço de Cheque Especial;
   * Ativação do cheque especial;

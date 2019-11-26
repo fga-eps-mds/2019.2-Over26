@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         println("----MainActivity.onCreate----")
 
         saldo.text = "R$ " + "%.2f".format(currentAccount.balance)
-        if(recentDebt.id==0){
+        if(!UserLink.listDebt(currentUser.id)){
             debt_component.visibility = View.INVISIBLE
         }else{
             debt_component.visibility = View.VISIBLE
@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         saldo.text = "R$ " + "%.2f".format(currentAccount.balance)
 
 
-        if(recentDebt.id==0){
+        if(!UserLink.listDebt(currentUser.id)){
             debt_component.visibility = View.INVISIBLE
         }else{
             debt_component.visibility = View.VISIBLE
@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
             }
 
             this.doubleBackToExitPressedOnce = true
-            Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Clique VOLTAR novamente para sair", Toast.LENGTH_SHORT).show()
 
             Handler().postDelayed({ doubleBackToExitPressedOnce = false }, 2000)
         }
@@ -84,14 +84,14 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
             intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
             startActivityIfNeeded(intent, 0)
         } else {
-            Toast.makeText(this, "Overdraft desativado!", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Cheque especial desativado!", Toast.LENGTH_LONG).show()
         }
     }
 
     fun activeOverdraft(view: View) {
         if (OverdraftLink.get(currentOverdraft.id)) {
             if(currentOverdraft.isActive){
-                Toast.makeText(this, "Overdraft Ativo!", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Cheque especial Ativo!", Toast.LENGTH_LONG).show()
             } else {
                 val intent = Intent(this, OverdraftConfirmation::class.java)
                 startActivity(intent)
@@ -181,7 +181,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
                     } else {
                         Toast.makeText(
                             this,
-                            "Overdraft não encontrado ou não utilizado!",
+                            "Cheque especial não encontrado ou não utilizado!",
                             Toast.LENGTH_LONG
                         ).show()
                     }

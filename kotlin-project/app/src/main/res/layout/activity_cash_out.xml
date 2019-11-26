@@ -14,29 +14,32 @@
         android:layout_width="0dp"
         android:gravity="center"
         android:text="Retirada"
-        android:textColor="#060505"
+        android:textColor="#000000"
         android:textSize="50sp"
+        android:fontFamily="Roboto Slab"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024" />
+        app:layout_constraintVertical_bias="0.124" />
 
     <TextView
         android:id="@+id/cifrao"
         android:layout_height="134dp"
         android:layout_width="0dp"
         android:gravity="center"
-        android:text="$"
-        android:textColor="#AE009688"
-        android:textSize="110sp"
+        android:text="Para realizar a operação de retirada preencha os campos abaixo:"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:fontFamily="@font/radley"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.142" />
+        app:layout_constraintVertical_bias="0.242" />
 
 
     <TextView
@@ -46,12 +49,13 @@
         android:text="Valor:"
         android:textColor="#645C5C"
         android:textSize="40sp"
+        android:fontFamily="@font/radley"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.342" />
+        app:layout_constraintVertical_bias="0.442" />
 
 
     <TextView
@@ -67,7 +71,7 @@
         app:layout_constraintEnd_toEndOf="@+id/valor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.432" />
+        app:layout_constraintVertical_bias="0.532" />
 
     <EditText
         android:id="@+id/valor"
@@ -82,7 +86,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.418" />
+        app:layout_constraintVertical_bias="0.518" />
 
     <TextView
         android:id="@+id/descrição"
@@ -91,12 +95,13 @@
         android:text="Descrição:"
         android:textColor="#645C5C"
         android:textSize="40sp"
+        android:fontFamily="@font/radley"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.088"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.62" />
+        app:layout_constraintVertical_bias="0.72" />
 
     <Spinner
         android:id="@+id/cash_out_Spinner"
@@ -107,21 +112,31 @@
         app:layout_constraintHorizontal_bias="0.141"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.705" />
+        app:layout_constraintVertical_bias="0.805" />
 
     <Button
         android:id="@+id/retirarButton"
-        android:layout_width="336dp"
-        android:layout_height="66dp"
-        android:background="#55b6a6"
+        android:layout_width="205dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_with_one_word_shape"
         android:text="Retirar"
-        android:textColor="@android:color/white"
-        android:textSize="32sp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:fontFamily="@font/radley"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.876" />
+        app:layout_constraintVertical_bias="0.9" />
+
+    <ImageView
+        android:id="@+id/blue_sprit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#5CE1E6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,28 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F7F0F6"
-    android:padding="16dp"
+    android:background="#FFFFFF"
     tools:context=".activities.MainActivity">
 
 
     <ImageView
+        android:id="@+id/blue_sprit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#5CE1E6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
         android:id="@+id/imageView"
-        android:layout_width="154dp"
-        android:layout_height="107dp"
+        android:layout_width="170dp"
+        android:layout_height="120dp"
         android:layout_marginTop="115dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_calculadoracalendario_foreground"/>
+        app:srcCompat="@mipmap/ic_main" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="Roboto Slab"
+        android:textColor="#000000"
         android:text="Cheque Especial"
-        android:textSize="20sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -35,33 +45,36 @@
         android:id="@+id/bt1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="60dp"
         android:background="#fff"
         android:padding="0dp"
         android:clickable="true"
         android:onClick="overdraftScreen"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_spinner" />
+            app:srcCompat="@mipmap/ic_use_overdraft" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text = "Acompanhar Cheque Especial"
-            android:textColor="@android:color/background_dark"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toStartOf="@id/imageView2"
             android:layout_marginLeft="10dp"
+            android:fontFamily="@font/radley"
+            android:textColor="@android:color/background_dark"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView3"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -69,20 +82,13 @@
             android:id="@+id/textView3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Receba ofertas de empréstimos a partir de R$ 1000 com apenas alguns toques."
             android:layout_marginLeft="10dp"
-            app:layout_constraintEnd_toStartOf="@id/imageView2"
+            android:text="Receba ofertas de empréstimos a partir de R$ 1000 com apenas alguns toques."
+            android:fontFamily="@font/radley"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/imageView3"
             app:layout_constraintTop_toBottomOf="@id/textView2" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_plus_solid"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -96,51 +102,46 @@
         android:padding="0dp"
         android:clickable="true"
         android:onClick="activeOverdraft"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt1">
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="40dp"
-            android:layout_height="50dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_tachometer_alt_solid" />
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_plus_solid"/>
+            app:srcCompat="@mipmap/ic_activate_overdraft_main" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:text="Ativar Cheque Especial"
             android:textColor="@android:color/background_dark"
-            android:textSize="16sp"
-            android:layout_marginLeft="10dp"
-            app:layout_constraintEnd_toStartOf="@id/imageView5"
+            android:fontFamily="@font/radley"
+            android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/imageView4"
             app:layout_constraintTop_toTopOf="parent"
-
+            app:layout_constraintEnd_toEndOf="parent"
             />
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Precisa de um pouco mais de dinheiro no final do mês? "
             android:layout_marginLeft="10dp"
-            app:layout_constraintEnd_toStartOf="@id/imageView5"
+            android:text="Precisa de um pouco mais de dinheiro no final do mês? "
+            android:fontFamily="@font/radley"
+            android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@id/imageView4"
-            app:layout_constraintTop_toBottomOf="@id/textView4" />
+            app:layout_constraintTop_toBottomOf="@id/textView4"
+            app:layout_constraintEnd_toEndOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -152,102 +153,53 @@
         android:padding="0dp"
         android:clickable="true"
         android:onClick="viewDebts"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt2">
 
         <ImageView
             android:id="@+id/icon_debt_component"
-            android:layout_width="40dp"
-            android:layout_height="50dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_bar_solid" />
 
-        <ImageView
-            android:id="@+id/plus_signal_debt"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_plus_solid" />
-
         <TextView
             android:id="@+id/textView_debt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:text="Consultar dívidas"
             android:textColor="@android:color/background_dark"
-            android:textSize="16sp"
-            android:layout_marginLeft="10dp"
-            app:layout_constraintEnd_toStartOf="@id/plus_signal_debt"
+            android:fontFamily="@font/radley"
+            android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/icon_debt_component"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
         <TextView
             android:id="@+id/textView_info_debt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Precisa de um pouco mais de dinheiro no final do mês? "
             android:layout_marginLeft="10dp"
-            app:layout_constraintEnd_toStartOf="@id/plus_signal_debt"
+            android:fontFamily="@font/radley"
+            android:textSize="18sp"
+            android:text="Precisa de um pouco mais de dinheiro no final do mês? "
             app:layout_constraintStart_toEndOf="@id/icon_debt_component"
-            app:layout_constraintTop_toBottomOf="@id/textView_debt" />
+            app:layout_constraintTop_toBottomOf="@id/textView_debt"
+            app:layout_constraintEnd_toEndOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-
-        <ImageView
-            android:id="@+id/bar_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_bar_solid" />
-
-        <ImageView
-            android:id="@+id/four_squares_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_four_squares_button" />
-
-        <ImageView
-            android:id="@+id/plus_black_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_plus_black_solid" />
-
-        <ImageView
-            android:id="@+id/gift_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_gift_solid" />
-
-        <ImageView
-            android:id="@+id/user_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_user_solid" />
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
+        android:layout_width="250dp"
         android:layout_height="60dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="50dp"
         android:background="#fff"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -277,14 +229,14 @@
         android:id="@+id/settings_icon"
         android:layout_width="50dp"
         android:layout_height="38dp"
+        android:layout_marginTop="50dp"
         android:layout_weight="1"
         android:clickable="true"
         android:onClick="showPopUp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.994"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_settings" />
+        app:srcCompat="@mipmap/ic_config_menu" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

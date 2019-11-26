@@ -3,7 +3,7 @@
 **Data de início**: 17/11/2019 <br/>
 **Data de fim**: 23/11/2019 <br/>
 **Duração**: 7 dias <br/>
-**Pontuação**: 21 pontos 
+**Pontuação**: 29 pontos 
 
 ## 1. Objetivo
 
@@ -30,6 +30,12 @@ Fazer funcionalidades priorizadas pela product owner em conjunto com o a scrum m
 | [Adicionar tela de descrição da funcionalidade "Atualizar Data"](https://github.com/fga-eps-mds/2019.2-over26/issues/193) | 3 | João Gabriel e João Paulo | Não |
 | [Modificar ícones, fontes e espaçamentos](https://github.com/fga-eps-mds/2019.2-over26/issues/187) | 8 | Gabriel e Isabella | Não |
 | [Remover "Consultar Dívida"](https://github.com/fga-eps-mds/2019.2-over26/issues/185) | 2 | João Gabriel e João Paulo | Não |
+| [Parcelamento sem definir data de vencimento](https://github.com/fga-eps-mds/2019.2-over26/issues/204) | 2 | Erick | Não |
+| [Consertar tela de parcelamento](https://github.com/fga-eps-mds/2019.2-over26/issues/195) | 2 | Erick | Não |
+| [Colocar botão em torno de parcelar dívida e cancelar overdraft](https://github.com/fga-eps-mds/2019.2-over26/issues/186) | 2 | Erick | Não |
+
+
+
 
 ## 4. Pareamento
 ![](../../images/metrics_agile/pareamento_sprint12.png)

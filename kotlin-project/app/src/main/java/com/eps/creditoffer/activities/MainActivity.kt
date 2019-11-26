@@ -174,10 +174,14 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
                     OverdraftLink.get(currentOverdraft.id)
                     if (currentOverdraft.isActive && currentOverdraft.limitUsed != 0F) {
 
-                        val intent = Intent(this, TimeTravel::class.java)
+                        recentDebt.create(currentUser.id)
+
+                        Toast.makeText(this, "Data atualizada e divida criada!", Toast.LENGTH_LONG)
+                            .show()
+
+                        val intent = Intent(this, TrackLimit::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                         startActivityIfNeeded(intent, 0)
-
                     } else {
                         Toast.makeText(
                             this,

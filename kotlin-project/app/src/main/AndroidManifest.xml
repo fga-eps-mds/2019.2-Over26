@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         >
-        <activity android:name=".activities.TimeTravel"></activity>
+
         <activity android:name=".activities.MainActivity"/>
         <activity android:name=".activities.CashIn"/>
         <activity android:name=".activities.CashOut"/>

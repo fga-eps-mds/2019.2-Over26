@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         println("----MainActivity.onCreate----")
 
         saldo.text = "R$ " + "%.2f".format(currentAccount.balance)
-        if(recentDebt.id==0){
+        if(!UserLink.listDebt(currentUser.id)){
             debt_component.visibility = View.INVISIBLE
         }else{
             debt_component.visibility = View.VISIBLE
@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         saldo.text = "R$ " + "%.2f".format(currentAccount.balance)
 
 
-        if(recentDebt.id==0){
+        if(!UserLink.listDebt(currentUser.id)){
             debt_component.visibility = View.INVISIBLE
         }else{
             debt_component.visibility = View.VISIBLE

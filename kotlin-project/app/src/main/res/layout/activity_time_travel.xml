@@ -11,8 +11,7 @@
         android:layout_width="158dp"
         android:layout_height="60dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="140dp"
-        android:layout_marginBottom="116dp"
+        android:layout_marginBottom="88dp"
         android:background="@drawable/big_button_shape"
         android:fontFamily="@font/radley"
         android:onClick="timeTravel"
@@ -20,6 +19,8 @@
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView

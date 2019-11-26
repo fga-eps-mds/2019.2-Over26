@@ -7,33 +7,39 @@
     tools:context=".activities.CashOut">
 
 
+    <ImageView
+        android:id="@+id/blue_sprit"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#5CE1E6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/retirada"
-        android:layout_height="69dp"
-        android:layout_width="0dp"
-        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:fontFamily="@font/nunito"
         android:text="Retirada"
-        android:textColor="#000000"
-        android:textSize="50sp"
-        android:fontFamily="Roboto Slab"
+        android:textColor="#060505"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.124" />
 
     <TextView
-        android:id="@+id/cifrao"
-        android:layout_height="134dp"
-        android:layout_width="0dp"
+        android:id="@+id/textView11"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:gravity="center"
         android:text="Para realizar a operação de retirada preencha os campos abaixo:"
         android:textColor="#000000"
-        android:textSize="30sp"
-        android:fontFamily="@font/radley"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
@@ -42,101 +48,126 @@
         app:layout_constraintVertical_bias="0.242" />
 
 
-    <TextView
-        android:id="@+id/valor_texto"
-        android:layout_width="116dp"
-        android:layout_height="54dp"
-        android:text="Valor:"
-        android:textColor="#645C5C"
-        android:textSize="40sp"
-        android:fontFamily="@font/radley"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.09"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.442" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/valuewrapper"
 
-
-    <TextView
-        android:id="@+id/real"
-        android:layout_width="67dp"
-        android:layout_height="74dp"
-        android:layout_marginEnd="208dp"
-        android:text="R$"
-        android:textColor="@android:color/darker_gray"
-        android:textSize="40sp"
-        android:gravity="end"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/valor"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.532" />
-
-    <EditText
-        android:id="@+id/valor"
-        android:layout_width="227dp"
-        android:layout_height="69dp"
-        android:ems="20"
-        android:hint="0.00"
-        android:inputType="numberDecimal"
-        android:textColor="@android:color/darker_gray"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.518" />
-
-    <TextView
-        android:id="@+id/descrição"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Descrição:"
-        android:textColor="#645C5C"
-        android:textSize="40sp"
-        android:fontFamily="@font/radley"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.088"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.72" />
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/valor_texto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
-    <Spinner
-        android:id="@+id/cash_out_Spinner"
-        android:layout_width="263dp"
-        android:layout_height="59dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+            android:fontFamily="@font/nunito"
+            android:text="Valor:"
+            android:textColor="#645C5C"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/real"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/real"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/valor"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textCursorDrawable="@null"
+            android:ems="20"
+            android:hint="0.00"
+            android:inputType="numberDecimal"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/real"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/trasanctiontypewrapper"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/retirarButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.141"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.805" />
+        app:layout_constraintTop_toBottomOf="@+id/valuewrapper">
+
+        <TextView
+            android:id="@+id/descrição"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito"
+            android:text="Descrição:"
+            android:textColor="#645C5C"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/cashInSpinnercontainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <RelativeLayout
+            android:id="@+id/cashInSpinnercontainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:background="#f2f2f2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <Spinner
+                android:id="@+id/cash_out_Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <Button
         android:id="@+id/retirarButton"
         android:layout_width="205dp"
         android:layout_height="40dp"
         android:background="@drawable/button_with_one_word_shape"
+        android:fontFamily="@font/nunito"
         android:text="Retirar"
         android:textColor="@android:color/black"
         android:textSize="16sp"
-        android:fontFamily="@font/radley"
+        android:layout_marginBottom="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.9" />
 
-    <ImageView
-        android:id="@+id/blue_sprit"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#5CE1E6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

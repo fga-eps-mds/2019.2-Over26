@@ -1,59 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activities.TimeTravel">
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="158dp"
-        android:layout_height="60dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="140dp"
-        android:layout_marginBottom="116dp"
-        android:background="@drawable/big_button_shape"
-        android:fontFamily="@font/radley"
-        android:onClick="timeTravel"
-        android:text="Prosseguir"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="320dp"
-        android:layout_height="340dp"
-        android:text="Esse aplicativo foi criado para que o usuário experiencie em sua totalidade a opção de cheque especial em uma conta bancária. Essa função, que ocorreria automaticamente após 26 dias criara uma divida a ser parcelada de acordo com a vontade do cliente. Para maior comodidade e facilitar o teste, ao apertar esse botão serão transcorridos 26 dias e a dívida será criada."
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
-        app:layout_constraintVertical_bias="0.124" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="Roboto Slab"
-        android:gravity="center_horizontal"
-        android:text="Avanço de tempo"
-        android:textColor="#000000"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/blue_sprit" />
 
     <ImageView
         android:id="@+id/blue_sprit"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#5CE1E6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="#5CE1E6" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito"
+        android:gravity="center_horizontal"
+        android:text="Avanço de tempo"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+    android:layout_marginHorizontal="16dp"
+        android:text="Esse aplicativo foi criado para que o usuário experiencie em sua totalidade a opção de cheque especial em uma conta bancária. Essa função, que ocorreria automaticamente após 26 dias criara uma divida a ser parcelada de acordo com a vontade do cliente. Para maior comodidade e facilitar o teste, ao apertar esse botão serão transcorridos 26 dias e a dívida será criada."
+        android:textSize="16dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical"
+        android:layout_marginBottom="32dp"
+        >
+    <Button
+        android:id="@+id/button"
+        android:layout_width="158dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal|center"
+
+        android:background="@drawable/big_button_shape"
+        android:fontFamily="@font/nunito"
+        android:onClick="timeTravel"
+        android:text="Prosseguir"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    </LinearLayout>
+</LinearLayout>

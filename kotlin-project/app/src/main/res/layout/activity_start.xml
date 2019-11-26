@@ -1,23 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:paddingHorizontal="16dp">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:srcCompat="@mipmap/ic_launcher_foreground" />
+
+
+    <TextView
+        android:id="@+id/bem-vindo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito"
+        android:gravity="center"
+        android:text="Bem-vindo"
+        android:textColor="#000000"
+        android:textSize="36dp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView-startName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
         android:gravity="center"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="446dp"
-        android:layout_marginEnd="17dp"
-        android:fontFamily="@font/radley"
+        android:fontFamily="@font/nunito"
         android:text="Para iniciar a aplicação insira seu nome abaixo:"
         android:textColor="#000000"
         android:textSize="20sp" />
@@ -26,53 +40,38 @@
         android:id="@+id/editText_startName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="527dp"
-        android:layout_marginEnd="10dp"
         android:inputType="textPersonName"
         android:hint="Nome"
         android:textColor="@android:color/darker_gray"
         android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/button_start"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
-        android:background="#00FCFCFC"
-        android:fontFamily="@font/radley"
-        android:gravity="center_vertical"
-        android:text="ENTRAR"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="#000000"
-        android:textSize="20sp" />
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="match_parent"
-        android:layout_height="342dp"
-        app:srcCompat="@mipmap/ic_launcher_foreground" />
 
-    <TextView
-        android:id="@+id/bem-vindo"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="375dp"
-        android:layout_marginEnd="14dp"
-        android:fontFamily="@font/roboto_slab_thin"
-        android:gravity="center"
-        android:text="Bem-vindo"
-        android:textColor="#000000"
-        android:textSize="36dp"
-        android:textStyle="bold" />
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical"
+        android:layout_marginBottom="32dp"
+        >
+        <Button
+            android:id="@+id/button_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/big_button_shape"
+            android:fontFamily="@font/nunito"
+            android:gravity="center_vertical"
+            android:text="ENTRAR"
+            android:paddingHorizontal="16dp"
+            android:layout_gravity="center_horizontal|center"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="20sp" />
 
-</RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

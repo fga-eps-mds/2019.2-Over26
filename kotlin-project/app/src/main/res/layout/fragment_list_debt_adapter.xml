@@ -20,15 +20,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.137" />
 
+
     <TextView
         android:id="@+id/overdraft_debt"
         android:layout_width="195dp"
-        android:layout_height="38dp"
-        android:fontFamily="Rawley"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito"
         android:paddingLeft="16dp"
         android:text="Cheque especial"
         android:textColor="#000000"
-        android:textSize="24dp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
@@ -37,12 +38,12 @@
         android:id="@+id/list_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:fontFamily="Rawley"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/nunito"
         android:paddingRight="16dp"
         android:text="value"
-        android:textColor="#AE009688"
-        android:textSize="20dp"
+        android:textColor="#5CE1E6"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -50,11 +51,11 @@
         android:id="@+id/invoice_due"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:fontFamily="Rawley"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/nunito"
         android:paddingLeft="16dp"
         android:text="date"
-        android:textSize="23dp"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -62,12 +63,13 @@
         android:id="@+id/total"
         android:layout_width="51dp"
         android:layout_height="24dp"
-        android:layout_marginTop="4dp"
         android:layout_marginEnd="32dp"
-        android:fontFamily="Rawley"
+        android:fontFamily="@font/nunito"
         android:text="Total"
         android:textColor="#000000"
-        android:textSize="22dp"
+        android:textSize="21sp"
+        android:textStyle="bold"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -78,7 +80,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:text="Numero de parcelas"
-        android:textSize="22dp"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/overdraft_debt" />
 

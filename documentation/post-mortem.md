@@ -37,3 +37,14 @@ De maneira geral, o projeto foi extremamente cansativo, mas de grandes aprendiza
 
 
 ## Aprendizados e percepções do time de Metodologia e Desenvolvimento de Software
+
+* **Isabella**
+
+<p style="align:justify;">
+Na minha percepção, o início do projeto foi um pouco conturbado. Eu acredito que comecei o projeto com pouca noção do que é realmente trabalhar em um sistema de software, além de não conhecer as linguagens e tecnologias que foram escolhidas e o que dificultou muito foi a demora em ter um escopo bem definido. Apesar de tudo, tive muitos aprendizados nesse começo, não só nas linguagens novas que aprendi, mas também na parte documental que nunca havia feito.
+  
+Pessoalmente, foi um semestre muito difícil e tive que aprender a controlar e planejar melhor meu tempo para conseguir fazer sempre as entregas no tempo correto sem deixar dívidas para a sprint seguinte. Outro grande aprendizado foi a questão do trabalho em grupo, que vi os membros realmente se ajudando e querendo saber se tinha algum problema e como poderiam auxiliar. 
+
+Percebo muitos detalhes que conseguirei aplicar em projetos futuros e até na vida, como por exemplo a importância da comunicação em um projeto em grupo e a integração dos membros do mesmo, o planejamento e cumprimento de prazos, como funciona a metodologia ágil na prática e muitas outras coisas. 
+
+Apesar das dificuldades que foram aparecendo no desenvolvimento do projeto, eu acredito que conseguimos entregar um ótimo trabalho e que formamos um grupo unido e esforçado, em que todos os membros fizeram o seu melhor.

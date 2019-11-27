@@ -3,7 +3,7 @@
 **Data de início**: 24/11/2019 <br/>
 **Data de fim**: 27/11/2019 <br/>
 **Duração**: 4 dias <br/>
-**Pontuação**: 21 pontos 
+**Pontuação**: 24 pontos 
 
 ## 1. Objetivo
 
@@ -28,7 +28,7 @@ Fazer funcionalidades priorizadas pela product owner em conjunto com o a scrum m
 | [Deixar o ambiente de produção funcionando](https://github.com/fga-eps-mds/2019.2-Over26/issues/217) | 5 | Andrew | Não |
 | [Página principal congelada ao entrar em "Consultar Dívidas"](https://github.com/fga-eps-mds/2019.2-Over26/issues/217) | 3 | Gabriel e Luiza  | Não |
 | [Atualizar saldo ao criar nova dívida](https://github.com/fga-eps-mds/2019.2-Over26/issues/188) | 3 | João Gabriel e João Paulo | Não |
-| [Não é possível retirar um valor superior ao limite do cheque especial](https://github.com/fga-eps-mds/2019.2-Over26/issues/203) | 5 | Erick e Isabella | Não |
+| [TS19 - Salvar o limite com valor inferior ao valor utilizado](https://github.com/fga-eps-mds/2019.2-Over26/issues/203) | 5 | Erick e Isabella | Não |
 | [Fazer apresentação](https://github.com/fga-eps-mds/2019.2-Over26/issues/219) | 3 | Todos | Não |
 | [Parcelar Dívida](https://github.com/fga-eps-mds/2019.2-Over26/issues/211) | 3 | João Gabriel | Não |
 

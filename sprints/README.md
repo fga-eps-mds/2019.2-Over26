@@ -79,3 +79,5 @@
     - Sprint 12
 
       - [Planejamento](/sprints/sprint12/planejamento.md)
+       
+      - [Resultado](/sprints/sprint12/resultado.md)

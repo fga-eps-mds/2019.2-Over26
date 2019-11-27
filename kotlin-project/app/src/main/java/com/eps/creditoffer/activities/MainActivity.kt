@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
             return
         }
         if (inDebtsFlag) {
-            setContentView(R.layout.activity_main)
+            recreate()
             inDebtsFlag = FALSE
         } else {
             if (doubleBackToExitPressedOnce) {

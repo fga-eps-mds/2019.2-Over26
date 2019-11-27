@@ -90,7 +90,9 @@ class CashOut : AppCompatActivity() {
                                     Toast.LENGTH_LONG
                                 ).show()
                             } else {
-                                if (currentAccount.balance + currentOverdraft.limit - currentOverdraft.limitUsed >= valueRead) {
+                                var balance = 0F
+                                if (currentAccount.balance > 0) balance = currentAccount.balance
+                                if (balance + currentOverdraft.limit - currentOverdraft.limitUsed >= valueRead) {
                                     transaction.value = valueRead
                                     if (transaction.create()) {
                                         Toast.makeText(

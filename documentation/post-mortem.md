@@ -30,6 +30,23 @@ De maneira geral, o projeto foi extremamente cansativo, mas de grandes aprendiza
 
 * **Maria Luiza**
 
+Comecei essa disciplina com uma expectativa grande de aprendizado e anseio por novas exeperiências. E foi o que realmente aconteceu! Como esperado, o desafio foi grande, gerenciar uma equipe de tecnologia não é nada fácil e bastante desafiador. Eu queria o papel de Scrum Master e consegui por meio de um sorteio, pois queria ter a experiência de ser uma. 
+
+A indefinição de escopo no início prejudicou o projeto, pois por muito tempo ficamos bastante perdidos com relação ao que seria o nosso projeto e qual linha seguir dentro das primeiras reuniões com o cliente. Logo no início já nos deparamos com um grande desafio de limitar o escopo proposto para que pudéssemos realizar dentro do escopo da disciplina. 
+
+Mitigar os riscos do projeto, monitorar a comunicação do grupo (O maior desafio!), remover impedimentos para a realização das demandas e melhorar a produtividade do time foram desafios grandes para mim, pois são muitos fatores que impactam diretamente. 
+
+Vou descrever alguns fatores que acredito impactar no andamento do grupo e no desenvolvimento do projeto como um todo:
+
+Uma decisão errada da escolha da tecnologia, foi um exemplo, pois muitas pessoas da equipe não conseguiam ao menos abrir o Android Studio, que é a ferramenta necessária para o desenvolvimento de um aplicativo em Kotlin. Isso impactou bastante no desenvolvimento e nas análises das entregas. 
+
+Outra questão está relacionada a lidar com equipe, pois envolve pessoas e cada uma tem suas particularidades e problemas pessoais. Lidar com isso foi desafiador, pois foi necessário entender cada particularidade para que mesmo com ela o projeto tinha de continuar. Entender que umas pessoas têm mais facilidade que outras (isso ajudou bastante na decisão dos pareamentos, que é foi fundamental!), além de entender que tudo isso impacta no projeto foi fundamental. E driblar isso para dar continuidade foi de grande valia para o meu crescimento profissional. 
+
+Todos esses desafios foram importantes para que o grupo se posicionasse e tomasse decisões pondendo ser erradas ou certas. Como grupo tomamos muitas decisões certas e erradas, mas todas elas serviram de base para continuar o projeto. Um fator positivo, na minha visão, é que conseguimos reagir bem aos problemas que íamos encontrando nas retrospectivas feitas a cada sprint. Um exemplo disso é que inicialmente estávamos fazendo issues muito grande, o que dificultava na entrega, percebendo isso através das métricas, mitigamos escrevendo issues menores e mais modularizadas. Outro exemplo, é conseguirmos ser mais produtivos e uma equipe muito mais autogerenciável do que no início do projeto. O empenho de toda a equipe, mesmo com muitos impecilhos, foram essenciais para que finalizássemos o projeto e o escopo definido. 
+
+Como sugestões para projetos futuros são: ponderar todos os fatores de risco na escolha da tecnologia para a sua equipe. Monitorar sempre as métricas de produtividade. Realizar retrospectiva a cada sprint é essencial, pois é possível a identificação dos problemas mais rapidamente e mitagá-los. Nas Dailies falar sobre todos os problemas encontrados para realizar a sua demanda, a fim de que alguém possa auxiliar. Trazer sempre o senso de responsabilidade para a equipe, a fim de ter uma equipe autogerenciável.
+
+
 * **Natália**
 
 Como já esperado, o desenvolvimento deste projeto me trouxe experiências e aprendizados que me fizeram crescer e amadurecer no que se diz respeito a gestão e planejamento de projetos de software. Lidar com diferentes pessoas e gerenciar uma equipe de desenvolvimento não é nada fácil. Tudo impacta no produto final desenvolvido! E fazer a gestão de risco, analisando todos os fatores envolvidos, requer uma certa maturidade, que foi sendo adquirida pela equipe no decorrer do projeto.
@@ -63,6 +80,7 @@ Ao longo de todo projeto tentei ficar bastante presente e procurei a todo moment
 
 Por fim, acho que a equipe como um todo se dedicou bastante e a presença de equipe de EPS fez total diferença para a entrega de um produto mais robusto e funcional.
 
+<<<<<<< HEAD
 * **João Gabriel**
 
 De início,  me senti perdido quanto ao que seria o projeto devido à dificuldade de definir o escopo da aplicação, ao fato de não estar previamente familiarizado com as tecnologias escolhidas para o mesmo.
@@ -70,3 +88,14 @@ De início,  me senti perdido quanto ao que seria o projeto devido à dificuldad
 Com o passar do semestre o escopo foi definido, me familiarizei com as tecnologias e acredito ter me adaptado bem  com o uso das metodologias ágeis - apesar de ter tido meu primeiro contato com as mesmas este semestre - e acredito que a experiência de usá-las será muito útil futuramente.
 
 Apesar da existência de certo nível de dificuldade no que se refere a comunicação dentro do grupo - tanto entre os grupos de EPS e MDS quanto dentro do grupo de MDS em sí - a meu ver todos demonstraram interesse e dedicação para que o produto fosse o melhor que conseguíssemos  produzir.
+=======
+* **Gabriel**
+
+No início do semestre, não tinha muita noção do funcionamento da disciplina. Dessa maneira, quando comecei a de fato trabalhar, percebi como ainda há  muito para aprender no curso. Por ser tudo muito novo e por não termos um escopo bem definido, o começo de projeto foi bem complexo. Mas mesmo assim posso dizer que minha bagagem de conhecimento aumentou. 
+
+Essa foi a primeira vez que trabalhei usando github, e percebi como foi útil para o desenvolvimento do projeto. Além das linguagens e ferramentas novas, aprendi na prática como funciona a metodologia ágil, que fui fundamental para o projeto. Uma percepção que tive foi a importância da comunicação entre os membros do grupo, pois a troca de informações é de extrema importância.
+
+Os aprendizados desse semestre com certeza serão importantes para o decorrer do curso e para minha carreira. Amadureci bastando após cursar a disciplina, aprendi a me organizar melhor e criei uma maior independência para buscar novos aprendizados. 
+
+Concluindo, acredito que todos do grupo se esforçaram muito. Tanto a dedicação de MDS para aprender e realizar as demandas, quanto a gerência  e o suporte de EPS foram essenciais. Do contrário não teríamos ido muito longe.
+>>>>>>> c02a93da5ee7127d851443bfe621d599a1ea1680

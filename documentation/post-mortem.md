@@ -62,3 +62,11 @@ No decorrer do projeto acho que consegui entender como se trabalha com o medolog
 Ao longo de todo projeto tentei ficar bastante presente e procurei a todo momento saber o que estava acontecendo, isso me ajudou a aprender muitas coisas novas e principalmente, me fez conseguir entender quase todas as esferas do projeto.
 
 Por fim, acho que a equipe como um todo se dedicou bastante e a presença de equipe de EPS fez total diferença para a entrega de um produto mais robusto e funcional.
+
+* **João Gabriel**
+
+De início,  me senti perdido quanto ao que seria o projeto devido à dificuldade de definir o escopo da aplicação, ao fato de não estar previamente familiarizado com as tecnologias escolhidas para o mesmo.
+
+Com o passar do semestre o escopo foi definido, me familiarizei com as tecnologias e acredito ter me adaptado bem  com o uso das metodologias ágeis - apesar de ter tido meu primeiro contato com as mesmas este semestre - e acredito que a experiência de usá-las será muito útil futuramente.
+
+Apesar da existência de certo nível de dificuldade no que se refere a comunicação dentro do grupo - tanto entre os grupos de EPS e MDS quanto dentro do grupo de MDS em sí - a meu ver todos demonstraram interesse e dedicação para que o produto fosse o melhor que conseguíssemos  produzir.

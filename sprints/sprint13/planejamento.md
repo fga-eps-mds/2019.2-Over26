@@ -30,7 +30,7 @@ Fazer funcionalidades priorizadas pela product owner em conjunto com o a scrum m
 | [Atualizar saldo ao criar nova dívida](https://github.com/fga-eps-mds/2019.2-Over26/issues/188) | 3 | João Gabriel e João Paulo | Não |
 | [Não é possível retirar um valor superior ao limite do cheque especial](https://github.com/fga-eps-mds/2019.2-Over26/issues/203) | 5 | Erick e Isabella | Não |
 | [Fazer apresentação](https://github.com/fga-eps-mds/2019.2-Over26/issues/219) | 3 | Todos | Não |
-
+| [Parcelar Dívida](https://github.com/fga-eps-mds/2019.2-Over26/issues/211) | 3 | João Gabriel | Não |
 
 
 ## 4. Pareamento

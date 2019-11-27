@@ -3,7 +3,7 @@
 **Data de início**: 24/11/2019 <br/>
 **Data de fim**: 27/11/2019 <br/>
 **Duração**: 4 dias <br/>
-**Pontuação**: 25 pontos 
+**Pontuação**: 28 pontos 
 
 ## 1. Objetivo
 
@@ -32,6 +32,7 @@ Fazer funcionalidades priorizadas pela product owner em conjunto com o a scrum m
 | [Fazer apresentação](https://github.com/fga-eps-mds/2019.2-Over26/issues/219) | 3 | Todos | Não |
 | [Parcelar Dívida](https://github.com/fga-eps-mds/2019.2-Over26/issues/211) | 3 | João Gabriel | Não |
 | [TS19 - Salvar o limite com valor inferior ao valor utilizado](https://github.com/fga-eps-mds/2019.2-Over26/issues/215) | 1 | João Gabriel | Não |
+| [TS20 - Melhorar UI do aplicativo ](https://github.com/fga-eps-mds/2019.2-Over26/issues/220) | 3 | Andrew | Não |
 
 
 

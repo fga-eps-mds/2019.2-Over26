@@ -79,3 +79,13 @@ No decorrer do projeto acho que consegui entender como se trabalha com o medolog
 Ao longo de todo projeto tentei ficar bastante presente e procurei a todo momento saber o que estava acontecendo, isso me ajudou a aprender muitas coisas novas e principalmente, me fez conseguir entender quase todas as esferas do projeto.
 
 Por fim, acho que a equipe como um todo se dedicou bastante e a presença de equipe de EPS fez total diferença para a entrega de um produto mais robusto e funcional.
+
+* **Gabriel**
+
+No início do semestre, não tinha muita noção do funcionamento da disciplina. Dessa maneira, quando comecei a de fato trabalhar, percebi como ainda há  muito para aprender no curso. Por ser tudo muito novo e por não termos um escopo bem definido, o começo de projeto foi bem complexo. Mas mesmo assim posso dizer que minha bagagem de conhecimento aumentou. 
+
+Essa foi a primeira vez que trabalhei usando github, e percebi como foi útil para o desenvolvimento do projeto. Além das linguagens e ferramentas novas, aprendi na prática como funciona a metodologia ágil, que fui fundamental para o projeto. Uma percepção que tive foi a importância da comunicação entre os membros do grupo, pois a troca de informações é de extrema importância.
+
+Os aprendizados desse semestre com certeza serão importantes para o decorrer do curso e para minha carreira. Amadureci bastando após cursar a disciplina, aprendi a me organizar melhor e criei uma maior independência para buscar novos aprendizados. 
+
+Concluindo, acredito que todos do grupo se esforçaram muito. Tanto a dedicação de MDS para aprender e realizar as demandas, quanto a gerência  e o suporte de EPS foram essenciais. Do contrário não teríamos ido muito longe.

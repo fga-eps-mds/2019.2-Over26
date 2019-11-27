@@ -32,7 +32,8 @@ Fazer funcionalidades priorizadas pela product owner em conjunto com o a scrum m
 | [Remover "Consultar Dívida"](https://github.com/fga-eps-mds/2019.2-over26/issues/185) | 2 | João Gabriel e João Paulo | Não |
 | [Parcelamento sem definir data de vencimento](https://github.com/fga-eps-mds/2019.2-over26/issues/204) | 2 | Erick | Não |
 | [Consertar tela de parcelamento](https://github.com/fga-eps-mds/2019.2-over26/issues/195) | 2 | Erick | Não |
-| [Colocar botão em torno de parcelar dívida e cancelar overdraft](https://github.com/fga-eps-mds/2019.2-over26/issues/186) | 2 | Erick | Não |
+| [Colocar botão em torno de parcelar dívida e cancelar overdraft](https://github.com/fga-eps-mds/2019.2-over26/issues/186) | 2 | Gabriel e Isabella | Não |
+| [Aumentar a cobertura de testes - Backend](https://github.com/fga-eps-mds/2019.2-over26/issues/199) | 3 | Natália | Não |
 
 
 

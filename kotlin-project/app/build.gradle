@@ -53,13 +53,13 @@ android {
     }
     buildTypes {
         debug{
-            buildConfigField "String", 'BASE_URL', System.env.STAGING?: '"10.0.2.2"'
+            buildConfigField "String", 'BASE_URL', System.env.STAGING?: '"http://10.0.2.2:3000"'
         }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
-            buildConfigField "String", 'BASE_URL', System.env.PRODUCTION?: '"10.0.2.2"'
+            buildConfigField "String", 'BASE_URL', System.env.PRODUCTION?:  '"http://10.0.2.2:3000"'
         }
     }
 }

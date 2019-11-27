@@ -26,7 +26,7 @@ class TransactionLink {
 
     fun create(): Boolean {
         println("----TrasactionLink.create----")
-        val url: String = "http://" + ip + ":3000/api/transactions/"
+        val url: String = ip + "/api/transactions/"
 
         val json = JSONObject()
         json.put("accountId", currentAccount.id)
@@ -63,7 +63,7 @@ class TransactionLink {
 
     fun get(id: Int): Boolean {
         println("----TransactionLink.get----")
-        val url: String = "http://" + ip + ":3000/api/transactions/" + id.toString()
+        val url: String = ip + "/api/transactions/" + id.toString()
 
         val (request, response, result) = Fuel.get(url)
             .responseObject(Deserializer())

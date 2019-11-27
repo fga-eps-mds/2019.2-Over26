@@ -15,12 +15,12 @@ import com.eps.creditoffer.connections.OverdraftLink
 import com.eps.creditoffer.R
 import com.eps.creditoffer.models.Overdraft
 import com.eps.creditoffer.utils.currentOverdraft
-import com.eps.creditoffer.utils.currentUser
 import com.eps.creditoffer.utils.recentDebt
 import java.lang.Boolean.TRUE
 
 class TrackLimit : AppCompatActivity() {
 
+    var limit = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,8 +64,15 @@ class TrackLimit : AppCompatActivity() {
 
         save.setOnClickListener(View.OnClickListener {
             println("----saveButton----")
-            OverdraftLink.save(currentOverdraft.id)
-            finish()
+            if(limit < currentOverdraft.limitUsed) {
+                Toast.makeText(this,
+                    "O limite não pode ser inferior ao valor utilizado.",
+                    Toast.LENGTH_LONG).show()
+            } else {
+                OverdraftLink.save(currentOverdraft.id)
+                finish()
+            }
+
         })
     }
 
@@ -99,7 +106,7 @@ class TrackLimit : AppCompatActivity() {
             textView_warning.visibility = View.INVISIBLE
 
             // SeekBar
-            textView_currentUsage.text = "Uso Atual"
+            textView_currentUsage.text = "Você já usou "
             textView_usage.setTextColor(Color.BLACK)
             textView_usage.setTypeface(Typeface.DEFAULT)
 
@@ -111,6 +118,7 @@ class TrackLimit : AppCompatActivity() {
 
                 override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
                     // Display the current progress of SeekBar
+                    limit = i
                     textView_cur.text = "R$"+i.toString()
                     currentOverdraft.limit = i.toFloat()
                 }
@@ -138,9 +146,9 @@ class TrackLimit : AppCompatActivity() {
             seek_bar.isEnabled = FALSE
             seek_bar.progress = 0
 
-            textView_usage.text = "%.2f".format(recentDebt.totalAmount)
+            textView_usage.text = "R$ %.2f".format(recentDebt.totalAmount)
 
-            textView_currentUsage.text = "Total a ser Pago"
+            textView_currentUsage.text = "Total a ser Pago: "
             textView_cur.text = "-"
             textView_usage.setTextColor(Color.RED)
         }

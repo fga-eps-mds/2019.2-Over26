@@ -1,212 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView_installment_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:text="111111"
-        android:textSize="40sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView_installment_quant"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="230dp"
-        android:text="1"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:textSize="25sp"
-        android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/blue_sprit"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#5CE1E6" />
 
     <TextView
         android:id="@+id/textView_title_installment"
-        android:layout_width="401dp"
-        android:layout_height="39dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="0dp"
-        android:baselineAligned="false"
-        android:fontFamily="@font/antic"
-        android:gravity="center_horizontal"
-        android:shadowColor="#00D62323"
-        android:text="Parcelamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito"
+        android:gravity="center"
+        android:text="Parcelar Dívida"
         android:textColor="#000000"
-        android:textColorHighlight="#000000"
-        android:textColorHint="#050000"
-        android:textColorLink="#090000"
-        android:textIsSelectable="false"
-        android:textSize="18sp" />
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
 
     <TextView
         android:id="@+id/textView_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
-        android:fontFamily="@font/antic"
+        android:fontFamily="@font/nunito"
         android:gravity="center_horizontal"
-        android:shadowColor="#00D62323"
         android:text="Valor da Parcela"
-        android:textColor="#000000"
-        android:textColorHighlight="#000000"
-        android:textColorHint="#050000"
-        android:textColorLink="#090000"
-        android:textIsSelectable="false"
-        android:textSize="18sp" />
+        android:layout_marginTop="32dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView_installment_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="111111"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
 
     <TextView
         android:id="@+id/textView_info2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:fontFamily="@font/antic"
+        android:fontFamily="@font/nunito"
         android:gravity="center_horizontal"
-        android:shadowColor="#00D62323"
+        android:layout_marginTop="32dp"
+
         android:text="Quantidade de Parcelas"
-        android:textColor="#000000"
-        android:textColorHighlight="#000000"
-        android:textColorHint="#050000"
-        android:textColorLink="#090000"
-        android:textIsSelectable="false"
-        android:textSize="18sp" />
+        android:textSize="20dp" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="10dp"
+
+        >
+        <Button
+            android:id="@+id/button_minus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toStartOf="@+id/textView_installment_quant"
+            android:background="@drawable/big_button_shape"
+            android:text="-"
+            android:layout_weight="0.5"
+
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/textView_installment_quant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="1"
+            android:gravity="center_horizontal"
+
+            android:layout_weight="1"
+
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/button_plus"
+            android:layout_width="40dp"
+            android:layout_weight="0.5"
+
+            android:layout_height="40dp"
+            android:layout_toEndOf="@+id/textView_installment_quant"
+            android:background="@drawable/big_button_shape"
+            android:text="+"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+
 
     <TextView
         android:id="@+id/textView_info3"
+        android:layout_marginTop="32dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="325dp"
-        android:fontFamily="@font/antic"
+        android:fontFamily="@font/nunito"
         android:gravity="center_horizontal"
-        android:shadowColor="#00D62323"
         android:text="Data de Vencimento"
-        android:textColor="#000000"
-        android:textColorHighlight="#000000"
-        android:textColorHint="#050000"
-        android:textColorLink="#090000"
-        android:textIsSelectable="false"
-        android:textSize="18sp" />
+        android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/button_cancel_installment"
-        android:layout_width="match_parent"
+
+    <GridLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="480dp"
-        android:background="#00FCFCFC"
-        android:fontFamily="@font/antic"
-        android:isScrollContainer="false"
-        android:text="Cancelar"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="#FF0000"
-        android:textSize="16sp"/>
+        android:layout_gravity="center"
+        android:padding="3dp"
+        >
+        <Button
+            android:id="@+id/button_day1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#00FFFFFF"
+            android:text="1"
+            android:textSize="16sp" />
 
-    <Button
-        android:id="@+id/button_confirm_installment"
+        <Button
+            android:id="@+id/button_day5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#00FFFFFF"
+            android:text="5"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button_day10"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:background="#00FFFFFF"
+            android:text="10"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button_day15"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#00FFFFFF"
+            android:text="15"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button_day20"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:background="#00FFFFFF"
+            android:text="20"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button_day25"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#00FFFFFF"
+            android:text="25"
+            android:textSize="16sp" />
+    </GridLayout>
+
+
+
+
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="420dp"
-        android:background="#00FCFCFC"
-        android:fontFamily="@font/antic"
-        android:isScrollContainer="false"
-        android:text="Confirmar Parcelamento"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="#000000"
-        android:textSize="16sp" />
-
-    <Button
-        android:id="@+id/button_plus"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="225dp"
-        android:layout_toEndOf="@+id/textView_installment_quant"
-        android:background="#00FFFFFF"
-        android:text="+"
-        android:textSize="30sp" />
-
-    <Button
-        android:id="@+id/button_minus"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="225dp"
-        android:layout_marginEnd="50dp"
-        android:layout_toStartOf="@+id/textView_installment_quant"
-        android:background="#00FFFFFF"
-        android:text="-"
-        android:textSize="30sp" />
-
-    <Button
-        android:id="@+id/button_day1"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="350dp"
-        android:background="#00FFFFFF"
-        android:text="1"
-        android:textSize="16sp" />
-
-    <Button
-        android:id="@+id/button_day5"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="350dp"
-        android:background="#00FFFFFF"
-        android:layout_toRightOf="@+id/button_day1"
-        android:text="5"
-        android:textSize="16sp" />
-
-    <Button
-        android:id="@+id/button_day10"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="350dp"
-        android:background="#00FFFFFF"
-        android:layout_toRightOf="@+id/button_day5"
-        android:text="10"
-        android:textSize="16sp" />
-
-    <Button
-        android:id="@+id/button_day15"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="350dp"
-        android:background="#00FFFFFF"
-        android:layout_toRightOf="@+id/button_day10"
-        android:text="15"
-        android:textSize="16sp" />
-
-    <Button
-        android:id="@+id/button_day20"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="350dp"
-        android:background="#00FFFFFF"
-        android:layout_toRightOf="@+id/button_day15"
-        android:text="20"
-        android:textSize="16sp" />
-
-    <Button
-        android:id="@+id/button_day25"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="350dp"
-        android:layout_toRightOf="@+id/button_day20"
-        android:background="#00FFFFFF"
-        android:text="25"
-        android:textSize="16sp" />
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical"
+        android:layout_marginBottom="32dp"
+        >
 
 
-</RelativeLayout>
+
+        <Button
+            android:id="@+id/button_confirm_installment"
+            android:layout_width="205dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/big_button_shape"
+            android:layout_gravity="center_horizontal|center"
+
+            android:fontFamily="@font/nunito"
+            android:isScrollContainer="false"
+            android:text="Confirmar Parcelamento"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:layout_marginBottom="32dp"/>
+
+        <Button
+            android:id="@+id/button_cancel_installment"
+            android:layout_width="205dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:layout_gravity="center_horizontal|center"
+
+            android:fontFamily="@font/nunito"
+            android:isScrollContainer="false"
+            android:text="Cancelar"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#FF0000"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         println("----MainActivity.onCreate----")
 
         saldo.text = "R$ " + "%.2f".format(currentAccount.balance)
-        if(recentDebt.id==0){
+        if(!UserLink.listDebt(currentUser.id)){
             debt_component.visibility = View.INVISIBLE
         }else{
             debt_component.visibility = View.VISIBLE
@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         saldo.text = "R$ " + "%.2f".format(currentAccount.balance)
 
 
-        if(recentDebt.id==0){
+        if(!UserLink.listDebt(currentUser.id)){
             debt_component.visibility = View.INVISIBLE
         }else{
             debt_component.visibility = View.VISIBLE
@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
             return
         }
         if (inDebtsFlag) {
-            setContentView(R.layout.activity_main)
+            recreate()
             inDebtsFlag = FALSE
         } else {
             if (doubleBackToExitPressedOnce) {
@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
             }
 
             this.doubleBackToExitPressedOnce = true
-            Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Clique VOLTAR novamente para sair", Toast.LENGTH_SHORT).show()
 
             Handler().postDelayed({ doubleBackToExitPressedOnce = false }, 2000)
         }
@@ -84,14 +84,14 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
             intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
             startActivityIfNeeded(intent, 0)
         } else {
-            Toast.makeText(this, "Overdraft desativado!", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Cheque especial desativado!", Toast.LENGTH_LONG).show()
         }
     }
 
     fun activeOverdraft(view: View) {
         if (OverdraftLink.get(currentOverdraft.id)) {
             if(currentOverdraft.isActive){
-                Toast.makeText(this, "Overdraft Ativo!", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Cheque especial Ativo!", Toast.LENGTH_LONG).show()
             } else {
                 val intent = Intent(this, OverdraftConfirmation::class.java)
                 startActivity(intent)
@@ -174,18 +174,14 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
                     OverdraftLink.get(currentOverdraft.id)
                     if (currentOverdraft.isActive && currentOverdraft.limitUsed != 0F) {
 
-                        recentDebt.create(currentUser.id)
-
-                        Toast.makeText(this, "Data atualizada e divida criada!", Toast.LENGTH_LONG)
-                            .show()
-
-                        val intent = Intent(this, TrackLimit::class.java)
+                        val intent = Intent(this, TimeTravel::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                         startActivityIfNeeded(intent, 0)
+
                     } else {
                         Toast.makeText(
                             this,
-                            "Overdraft não encontrado ou não utilizado!",
+                            "Cheque especial não encontrado ou não utilizado!",
                             Toast.LENGTH_LONG
                         ).show()
                     }

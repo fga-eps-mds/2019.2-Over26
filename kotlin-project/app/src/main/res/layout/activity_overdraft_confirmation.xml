@@ -5,27 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff"
+
+
     tools:context=".activities.OverdraftConfirmation">
 
     <ImageView
-        android:id="@+id/moneysack"
-        android:layout_width="293dp"
-        android:layout_height="232dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/blue_sprit"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#5CE1E6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.207"
-        app:srcCompat="@mipmap/ic_money_sack_foreground" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ativação do Cheque Especial"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:text="Ative seu Cheque Especial"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:fontFamily="@font/nunito"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -33,14 +38,32 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.087" />
 
+
+
+
+    <ImageView
+        android:id="@+id/moneysack"
+        android:layout_width="200dp"
+        android:layout_height="139dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35"
+        app:srcCompat="@mipmap/ic_activate_overdraft" />
+
+
+
     <TextView
         android:id="@+id/textView2"
-        style="@android:style/Widget.DeviceDefault.Light.TextView"
-        android:layout_width="299dp"
+        android:layout_width="350dp"
         android:layout_height="66dp"
-        android:text="Parabéns! Você recebeu aprovação para até R$ 200.00"
+        android:fontFamily="@font/nunito"
+        android:text="Parabéns, você recebeu a aprovação para até R$200,00!"
         android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/moneysack" />
@@ -48,12 +71,14 @@
 
     <CheckBox
         android:id="@+id/checkBox2"
-        style="@android:style/Widget.DeviceDefault.Light.TextView"
         android:layout_width="327dp"
-        android:layout_height="75dp"
-        android:buttonTint="#5DBCD2"
+        android:layout_height="85dp"
+        android:buttonTint="#5CE1E6"
         android:text="Eu concordo com as informações de utilização de crédito e com os Termos e Condições do Cheque Especial."
         android:textAlignment="textStart"
+        android:textSize="12sp"
+        android:textColor="#000000"
+        android:fontFamily="@font/nunito"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,15 +87,18 @@
 
     <Button
         android:id="@+id/activateOverdraft"
-        android:layout_width="353dp"
-        android:layout_height="60dp"
-        android:backgroundTint="#5DBCD2"
+        android:layout_width="210dp"
+        android:layout_height="40dp"
+        android:background="@drawable/big_button_shape"
         android:text="Ativar Cheque Especial"
+        android:fontFamily="@font/nunito"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.991" />
+        app:layout_constraintVertical_bias="0.97" />
+
 
 
 

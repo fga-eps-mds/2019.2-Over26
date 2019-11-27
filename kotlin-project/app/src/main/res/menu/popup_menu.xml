@@ -2,13 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/cashInMenu"
-        android:title="Cash in">
+        android:title="Depósito">
 
     </item>
 
     <item
         android:id="@+id/cashOutMenu"
-        android:title="Cash out">
+        android:title="Retirada">
 
     </item>
 

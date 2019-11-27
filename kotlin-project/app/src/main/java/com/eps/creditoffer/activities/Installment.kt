@@ -89,9 +89,10 @@ class Installment : AppCompatActivity() {
             if(recentDebt.dueDay == 0) {
                 Toast.makeText(this, "Selecione uma data de vencimento.", Toast.LENGTH_LONG).show()
             } else {
-                recentDebt.isDivided = TRUE
                 if (recentDebt.createInstallment(currentUser.id)) {
                     currentOverdraft.isBlocked = FALSE
+                    recentDebt = OverdraftDebtLink()
+
                     Toast.makeText(this, "Cheque especial liberado!", Toast.LENGTH_LONG).show()
                     finish()
                 } else {

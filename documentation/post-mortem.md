@@ -26,7 +26,17 @@ Um ponto importante, quanto time foi perceber a importância da motivação da e
 De maneira geral, o projeto foi extremamente cansativo, mas de grandes aprendizados. Inclusive, posso dizer que apesar de não ser um papel que eu tenha muita afinidade, pude aprender muito sobre o que não fazer das próximas vezes ou o que fazer melhor. Exemplos: Não atualizar o roadmap só pra controle interno mas disponibilizá-lo sempre que modificado, lançar release a cada semana, exigir critérios de qualidade desde as primeiras sprints, ainda que seja um desafio para o desenvolvimento, ser menos maleável com as entregas em termos visuais, inclusive, implantar a cultura de revisão de PR pelo time inteiro desde o início, para garantir a velocidade nas revisões; Implantar a cultura de responsabilidade geral pelo código e produto para todo o time de desenvolvimento, para que ao serem encontrados bugs ou necessidades de melhorias eles possuam autonomia para criar as issues e resolver ainda que não tenha sido "alocado" para aquela tarefa e, por último e não menos importante, realizar o teste do produto ainda na fase de prototipação, a fim de já conseguir uma versão mais acertiva.
 
 
-* **Andrew**
+* **Andrew**  
+Apesar de cansativo, esse participar desse projeto me ajudou muito no meu aprendizado. E a principal lição que eu tirei desse projeto, é a importancia da tomada de decisão, seja ela técnica ou de produto. 
+
+A primeira decisão, que eu julgo ser a que mais afetou o andamento do projeto, foi a escolha da tecnologia utilizada no frontend(mobile), por basicamente dois motivos, ninguém da equipe tinha experiencia e segundo quase metade das maquinas equipe não rodava o "famoso" android-studio. O primeiro problema foi levantado na hora da escolha, porém o segundo foi sendo descoberto um pouco tarde.
+
+Uma outra decisão que afetou a qualidade do que é entregue, foi a de aceitar PR que não cumpriam 100% com os critérios, e isso gerou muito retrabalho. E o motivo dessa decisão lá no inicio, foi o curto tempo entre a nossa definição de escopo e a a R1.
+
+Após a R1, a evolução da equipe foi nítida, vide melhora nas entregas, amadurecimento de mds. E com isso eu pude trabalhar nas minhas atividades de DevOps, pois até a R1 eu havia feito bem pouco, pois passei grande parte do tempo até a R1, dando suporte técnico a mds.
+
+E foi então que amadureci bastante na área de entrega contínua, que antes eu não sabia nada. E a medida que fui aprendendo nessa disciplina, a frase que eu mais repeti foi "queria muito ter aprendido isso antes". E isso me exemplifica, a maior qualidade dessa equipe, que sempre que um problema aparecia, nós trabalhavamos para solucinar e evitar que ele voltasse.
+
 
 * **Maria Luiza**
 

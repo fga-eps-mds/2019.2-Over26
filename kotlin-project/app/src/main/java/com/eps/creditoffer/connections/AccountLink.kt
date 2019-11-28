@@ -15,7 +15,7 @@ class AccountLink {
 
         fun get(id: Int): Boolean {
             println("----AccountLink.get----")
-            val url = "http://$ip:3000/api/accounts/$id"
+            val url = "$ip/api/accounts/$id"
 
             val (_, _, result) = Fuel.get(url)
                 .responseObject(Account.Deserializer())
@@ -41,7 +41,7 @@ class AccountLink {
 
         fun create(userId: Int): Boolean {
             println("----AccountLink.create----")
-            val url = "http://$ip:3000/api/accounts"
+            val url = "$ip/api/accounts"
 
             val json = JSONObject()
             json.put("userId", userId)

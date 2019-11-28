@@ -106,7 +106,7 @@ class TrackLimit : AppCompatActivity() {
             textView_warning.visibility = View.INVISIBLE
 
             // SeekBar
-            textView_currentUsage.text = "Uso Atual"
+            textView_currentUsage.text = "Você já usou "
             textView_usage.setTextColor(Color.BLACK)
             textView_usage.setTypeface(Typeface.DEFAULT)
 
@@ -146,9 +146,9 @@ class TrackLimit : AppCompatActivity() {
             seek_bar.isEnabled = FALSE
             seek_bar.progress = 0
 
-            textView_usage.text = "%.2f".format(recentDebt.totalAmount)
+            textView_usage.text = "R$ %.2f".format(recentDebt.totalAmount)
 
-            textView_currentUsage.text = "Total a ser Pago"
+            textView_currentUsage.text = "Total a ser Pago: "
             textView_cur.text = "-"
             textView_usage.setTextColor(Color.RED)
         }

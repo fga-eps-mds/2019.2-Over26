@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="414dp"
+        android:layout_height="20dp"
         android:layout_marginBottom="25dp"
         android:text="_______________________________________________________________"
         app:layout_constraintBottom_toTopOf="@+id/list_value"
@@ -18,17 +18,15 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.47" />
+        app:layout_constraintVertical_bias="0.137"  />
 
     <TextView
         android:id="@+id/list_month"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="4dp"
-        android:paddingLeft="16dp"
+        android:layout_marginStart="16dp"
         android:text="month"
-        android:textSize="42dp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
@@ -37,11 +35,11 @@
         android:id="@+id/list_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
         android:paddingRight="16dp"
         android:text="value"
         android:textColor="#AE009688"
-        android:textSize="28dp"
+        android:paddingBottom="10sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.941"
@@ -52,12 +50,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="96dp"
-        android:paddingLeft="16dp"
         android:text="date"
-        android:textSize="20dp"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/list_month" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

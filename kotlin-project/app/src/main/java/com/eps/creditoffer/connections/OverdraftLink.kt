@@ -18,7 +18,7 @@ class OverdraftLink {
 
         fun get(id: Int): Boolean {
             println("----OverdraftLink.get----")
-            val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts"
+            val url: String = ip + "/api/users/" + id.toString() + "/overdrafts"
 
             val (request, response, result) = Fuel.get(url)
                 .responseObject(Overdraft.Deserializer())
@@ -47,7 +47,7 @@ class OverdraftLink {
 
         fun create(id: Int): Boolean {
             println("----OverdraftLink.create----")
-            val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts"
+            val url: String = ip + "/api/users/" + id.toString() + "/overdrafts"
 
             val json = JSONObject()
             // json.put("limit", this.limit)
@@ -81,7 +81,7 @@ class OverdraftLink {
 
         fun cancel(id: Int) {
             println("----OverdraftLink.cancel----")
-            val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts/cancel"
+            val url: String = ip + "/api/users/" + id.toString() + "/overdrafts/cancel"
 
             val (request, response, result) = Fuel.put(url)
                 .responseObject(Overdraft.Deserializer())
@@ -102,7 +102,7 @@ class OverdraftLink {
 
         fun save(id: Int) {
             println("----OverdraftLink.save----")
-            val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts"
+            val url: String = ip + "/api/users/" + id.toString() + "/overdrafts"
 
             val json = JSONObject()
             json.put("limit", currentOverdraft.limit)
@@ -129,7 +129,7 @@ class OverdraftLink {
 
         fun checkUsability(id: Int): Boolean {
             println("----OverdraftLink.checkUsability----")
-            val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts/usability"
+            val url: String = ip + "/api/users/" + id.toString() + "/overdrafts/usability"
 
             val (request, response, result) = Fuel.get(url)
                 .response()
@@ -148,7 +148,7 @@ class OverdraftLink {
 
         fun activate(id: Int): Boolean {
             println("----OverdraftLink.activate----")
-            val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts/activate"
+            val url: String = ip + "/api/users/" + id.toString() + "/overdrafts/activate"
 
             val (request, response, result) = Fuel.put(url)
                 .responseObject(Overdraft.Deserializer())

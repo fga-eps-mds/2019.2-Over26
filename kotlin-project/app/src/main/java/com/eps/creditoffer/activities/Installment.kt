@@ -24,7 +24,7 @@ class Installment : AppCompatActivity() {
         recentDebt.get(recentDebt.id)
         recentDebt.checkAmout(recentDebt.id)
 
-        OverdraftLink.get(currentUser.id)
+        OverdraftLink.get(currentOverdraft.id)
 
         textView_installment_quant.text = recentDebt.quantityInstalment.toString()
         val value = "%.2f".format(recentDebt.totalAmount / recentDebt.quantityInstalment)

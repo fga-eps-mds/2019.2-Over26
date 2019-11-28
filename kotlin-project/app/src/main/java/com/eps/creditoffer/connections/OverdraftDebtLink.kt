@@ -40,7 +40,7 @@ class OverdraftDebtLink {
 
     fun get(id: Int): Boolean {
         println("----OverdraftDebtLink.get----")
-        val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString()
+        val url: String = ip + "/api/overdraftDebts/" + id.toString()
 
         val (request, response, result) = Fuel.get(url)
             .responseObject(Deserializer())
@@ -70,7 +70,7 @@ class OverdraftDebtLink {
 
     fun create(id: Int): Boolean {//overdraft's createDebt controller
         println("----OverdraftDebtLink.create---")
-        val url: String = "http://" + ip + ":3000/api/users/" + id.toString() + "/overdrafts/createDebt"
+        val url: String = ip + "/api/users/" + id.toString() + "/overdrafts/createDebt"
 
         val (request, response, result) = Fuel.post(url)
             .responseObject(Deserializer())
@@ -99,7 +99,7 @@ class OverdraftDebtLink {
 
     fun checkAmout(id: Int) : Float {
         println("----OverdraftDebtLink.checkAmout---")
-        val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString() + "/check"
+        val url: String = ip + "/api/overdraftDebts/" + id.toString() + "/check"
 
         val (request, response, result) = Fuel.get(url)
             .responseObject(Deserializer())
@@ -122,7 +122,7 @@ class OverdraftDebtLink {
 
     fun createInstallment(id: Int): Boolean{
         println("----OverdraftLinkDebt.createInstallment----")
-        val url: String = "http://" + ip + ":3000/api/overdraftDebts/" + id.toString() + "/instalments"
+        val url: String = ip + "/api/overdraftDebts/" + id.toString() + "/instalments"
 
         val json = JSONObject()
         json.put("isDivided", this.isDivided)
@@ -147,7 +147,7 @@ class OverdraftDebtLink {
 
     fun listInstalments(id: Int) {
         println("----OverdraftDebtLink.listInstalments---")
-        val url: String = "http://" + ip + ":3000/api/overdraftDebt/" + id.toString() + "/listInstalments"
+        val url: String = ip + "/api/overdraftDebt/" + id.toString() + "/listInstalments"
 
         val (request, response, result) = Fuel.get(url)
             .responseObject(InstalmentLink.ListDeserializer())

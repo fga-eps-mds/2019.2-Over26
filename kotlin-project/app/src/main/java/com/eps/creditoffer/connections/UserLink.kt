@@ -17,7 +17,7 @@ class UserLink {
 
         fun get(id: Int): Boolean {
             println("----UserLink.get----")
-            val url = "http://$ip:3000/api/users/$id"
+            val url = "$ip/api/users/$id"
             val (_, _, result) = Fuel.get(url)
                 .responseObject(User.Deserializer())
             val (bytes, _) = result
@@ -43,7 +43,7 @@ class UserLink {
 
         fun create(name: String): Boolean {
             println("----UserLink.create----")
-            val url = "http://$ip:3000/api/users"
+            val url = "$ip/api/users"
             println(url)
 
             val json = JSONObject()
@@ -77,7 +77,7 @@ class UserLink {
         fun listDebt(id: Int): Boolean {
             println("----User.listDebt---")
 
-            val url = "http://$ip:3000/api/overdraftDebts/$id/listDebt"
+            val url = "$ip/api/overdraftDebts/$id/listDebt"
             val (_, _, result) = Fuel.get(url)
                 .responseObject(OverdraftDebtLink.ListDeserializer())
             val (bytes, _) = result

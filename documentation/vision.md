@@ -26,6 +26,7 @@
   * [6.3. Restrições de Segurança](#63-restrições-de-segurança)
   * [6.4. Restrições de Uso](#64-restrições-de-uso)
 - [7. Intervalos de Qualidade](#7-intervalos-de-qualidade)
+- [Histórico de Versões](#_histórico-de-versões)
 
 ## 1. Introdução
 

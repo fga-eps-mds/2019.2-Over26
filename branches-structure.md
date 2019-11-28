@@ -8,6 +8,7 @@
     * [2.3. Fluxo de adição de uma nova funcionalidade](#_23-Fluxo-de-adição-de-uma-nova-funcionalidade)
     * [2.4. Fluxo de adição de documentos](#_24-Fluxo-de-adição-de-documentos)
 * [3. Referências](#_3-Referências)
+* [Histórico de Versões](#_histórico-de-versões)
     
 
 # 1. Estrutura de branches

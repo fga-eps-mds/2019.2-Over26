@@ -18,6 +18,7 @@
 - [6. Desempenho](#_6-desempenho)
 
 - [7. Qualidade](#_7-qualidade)
+- [Histórico de Versões](#_histórico-de-versões)
 
 ## 1. Introdução
 
@@ -301,3 +302,4 @@ O código deverá ser bem estruturado, seguindo as normas de Boas Práticas de p
 | 02/10/2019 | 1.6 | Natália Rodrigues | Modificando diagrama e descrição dos casos de uso |
 | 02/10/2019 | 1.7 | Natália Rodrigues | Atualizando diagramas de classe e lógico e adicionando diagrama de pacotes | 
 | 07/10/2019 | 1.8 | Maria Luiza | Ajustando imagens do documento | 
+| 27/11/2019 | 1.9 | Natália | Atualizando diagramas |

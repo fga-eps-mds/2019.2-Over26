@@ -18,6 +18,7 @@
     * [4.4. Comentários](#_44-Comentários)
 * [5. Recomendações](#_5-Recomendações)
 * [6. Referências](#_6-Referências)
+* [Histórico de Versões](#_histórico-de-versões)
 
 # 1. Introdução
 

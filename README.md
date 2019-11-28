@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- Build Status - Maintainability --> 
 
 
@@ -26,6 +27,14 @@
 
 <p align="justify">
   O Over26 consiste em um Mínimo Produto viável (MVP) para o teste de uma nova experiência de crédito por meio do cheque especial em uma conta de pagamento. O objetivo deste produto consiste em estabelecer um melhor resultado em termos de experiência de usuário e usabilidade para a oferta do serviço no Brasil. Caso você deseje embarcar nessa aventura conosco e contribuir com o nosso projeto, você pode obter mais informações no nosso <a href="https://github.com/fga-eps-mds/2019.2-Grupo2/blob/master/.github/CONTRIBUTING.md">Contributing </a> e <a href="https://github.com/fga-eps-mds/2019.2-Grupo2/blob/master/.github/CODE_OF_CONDUCT.md">Code of Conduct </a>
+=======
+<br><br>
+ 
+ ### Sobre o projeto
+
+<p align="justify"> &emsp;&emsp;
+  O Over26 consiste em um Mínimo Produto viável (MVP) para o teste de uma nova experiência de crédito por meio do cheque especial em uma conta de pagamento. O objetivo deste produto consiste em estabelecer um melhor resultado em termos de experiência de usuário e usabilidade para a oferta do serviço no Brasil.
+>>>>>>> 9af1962a3dd338c01b2c7c9456450cb85f1d3cb0
 </p>
 
 ### Principais funcionalidades
@@ -41,6 +50,7 @@
   * Acompanhamento das dívidas;
 </p>
 
+<<<<<<< HEAD
 ## Para colaborar
 Interessado no nosso produto? Deseja contribuir no desenvolvimento de uma nova experiência de cheque especial? Você está no lugar certo. Se você deseja contribuir com o nosso produto, talvez queira começar sabendo um pouco mais no nosso [README](https://github.com/fga-eps-mds/2019.2-Over26) e no nosso [código de conduta](https://github.com/fga-eps-mds/2019.2-Over26/blob/master/.github/CODE_OF_CONDUCT.md). 
 
@@ -70,3 +80,18 @@ O projeto conta com pipeline de entrega contínua, para saber mais detalhes, [ac
 
 [MIT License
 ](https://github.com/fga-eps-mds/2019.2-Grupo2/blob/master/LICENSE)
+=======
+#### [Frontend](https://github.com/fga-eps-mds/2019.2-Over26)
+
+[![Test Coverage](https://api.codeclimate.com/v1/badges/c851dcabaf95d246afd4/test_coverage)](https://codeclimate.com/github/fga-eps-mds/2019.2-Grupo2/test_coverage)  [![Maintainability](https://api.codeclimate.com/v1/badges/c851dcabaf95d246afd4/maintainability)](https://codeclimate.com/github/fga-eps-mds/2019.2-Grupo2/maintainability) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+#### [Backend](https://github.com/fga-eps-mds/2019.2-Over26-Backend)
+
+[![TesTest Coveragets](https://codecov.io/gh/fga-eps-mds/2019.2-Over26-Backend/branch/master/graph/badge.svg)](https://codecov.io/gh/fga-eps-mds/2019.2-Over26-Backend/branch/master/) [![Maintainability](https://api.codeclimate.com/v1/badges/c851dcabaf95d246afd4/maintainability)](https://codeclimate.com/github/fga-eps-mds/2019.2-Grupo2-Backend/maintainability) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+### Licença
+
+Para visualizar a licença, acesse [Licence](https://github.com/fga-eps-mds/2019.2-Grupo2/blob/master/LICENSE)
+
+Caso queira contribuir, visualize o nosso [contributing](https://github.com/fga-eps-mds/2019.2-Over26/blob/master/.github/CONTRIBUTING.md)
+>>>>>>> 9af1962a3dd338c01b2c7c9456450cb85f1d3cb0

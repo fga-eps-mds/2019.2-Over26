@@ -26,3 +26,13 @@ A primeira iteração contou com um público mais diverso, não apenas segundo o
 * Usuários gostaram da possibilidade de escolha de um grande número de parcelas 
 * Usuários gostaram de poder parcelar a dívida e escolher data de vencimento e/ou limite
 * 
+
+## Segunda iteração
+
+Na segunda iteração observou-se as seguintes considerações:
+
+* Não disponibilização dos termos de compromisso para leitura incomodou os usuários
+* Sentiram falta de mais informações sobre o serviço de cheque especial
+* Parcelar a dívida assim que clicar nela, na lista de dívidas
+* Visualizar data de criação da dívida na lista de dívidas
+* Erro ao tentar realizar retirada pela segunda vez 

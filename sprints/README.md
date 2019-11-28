@@ -85,3 +85,5 @@
     - Sprint 13
 
       - [Planejamento](/sprints/sprint13/planejamento.md)
+
+      - [Resultado](/sprints/sprint13/resultado.md)

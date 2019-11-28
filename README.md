@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <img src="https://i.ibb.co/TcRs6mJ/2e4fe184-7bdd-4498-ae84-d88d4c00fc71.jpg" height="200px" alt="Logo">
+  <img src="https://i.ibb.co/TcRs6mJ/2e4fe184-7bdd-4498-ae84-d88d4c00fc71.jpg" height="250px" alt="Logo">
 
 </p>
 

@@ -21,7 +21,7 @@
 | [TS20 - Melhorar UI do aplicativo ](https://github.com/fga-eps-mds/2019.2-Over26/issues/220) | Concluída |
 
 ## 1.2 Burndown
-<!-- ![](../../images/metrics_agile/burndown_sprint12.png) -->
+![](../../images/metrics_agile/burndown_sprint13.png)
 
 ## 1.3 Velocity 
 ![](../../images/metrics_agile/velocity_sprint13.png)

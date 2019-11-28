@@ -1,8 +1,11 @@
 # Código de Conduta
 
 ## Nosso compromisso
+, regardless of age, body size, disability, ethnicity, identity and gender, level of experience, nationality, personal appearance, race, religion or sexual identity and orientation.
 
-Com o interesse de fomentar uma comunidade aberta e acolhedora, nós, como colaboradores e administradores deste projeto, comprometemo-nos a fazer da participação deste projeto uma experiência livre de assédio, independentemente de idade, características pessoais, deficiência, etnia, identidade e gênero, nível de experiência, nacionalidade, raça, orientação sexual ou religião. 
+Com o interesse de fomentar uma comunidade aberta e acolhedora,
+nós, como colaboradores e administradores deste projeto, comprometemo-nos
+a fazer da participação deste projeto uma experiência livre de assédio, independentemente de idade, características pessoais, deficiência, etnia, identidade e gênero, nível de experiência, nacionalidade, raça, orientação sexual ou religião. 
 
 ## Nossos padrões
 

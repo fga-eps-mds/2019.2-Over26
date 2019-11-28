@@ -1,6 +1,6 @@
 # Contribuindo com o MVP Over26
 
-Interessado no nosso produto? Deseja contribuir no desenvolvimento de uma nova experiência de cheque especial? Você está no lugar certo. Se você deseja contribuir com o nosso produto, talvez queira começar sabendo um pouco mais no nosso [README](https://github.com/fga-eps-mds/2019.2-Over26) e no nosso [código de conduta](https://github.com/fga-eps-mds/2019.2-Over26/blob/master/.github/CODE_OF_CONDUCT.md). 
+Interessado no nosso produto? Deseja contribuir no desenvolvimento de uma nova experiência de cheque especial? Você está no lugar certo. Se você deseja contribuir com o nosso produto, talvez queira começar sabendo um pouco mais no nosso [README] e no nosso [código de conduta](). 
 
 Esteja ciente que a sua contribuição é importante para nós! O que você está esperando? Deixe-nos saber como melhorar a nossa proposta. 
 
@@ -8,15 +8,15 @@ Esteja ciente que a sua contribuição é importante para nós! O que você est�
 
 ## Reportando bugs 
 
-* Este projeto possui um padrão para criação de [_Issue_](https://github.com/fga-eps-mds/2019.2-Over26/blob/master/.github/ISSUE_TEMPLATE/template-de-issue.md). Logo, se você encontrar um bug, cheque se já se encontra cadastrado nas nossas [issues](https://github.com/fga-eps-mds/2019.2-Over26/issues), caso a resposta seja não, apenas abra uma [nova issue](https://github.com/fga-eps-mds/2019.2-Over26/issues/new?assignees=&labels=&template=template-de-issue.md&title=) utilizando como tag a label __bug__.
+* Este projeto possui um padrão para criação de [_Issue_](https://github.com/fga-eps-mds/2019.2-Grupo2/blob/master/.github/ISSUE_TEMPLATE.md). Logo, se você encontrar um bug, cheque se já se encontra cadastrado nas nossas [issues](https://github.com/fga-eps-mds/2019.2-Grupo2/issues), caso a resposta seja não, apenas abra uma [nova issue](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/new) utilizando como tag a label __bug__.
 
 ## Sugerindo mudanças em funcionalidades existentes
 
-* Primeiramente, verifique se não existe nenhuma issue já cadastrada que solicite essa modificação nas [issues](https://github.com/fga-eps-mds/2019.2-Over26/issues). 
+* Primeiramente, verifique se não existe nenhuma issue já cadastrada que solicite essa modificação nas  [_Issues_](https://github.com/fga-eps-mds/2019.2-Grupo2/issues). 
 
-* Se não existir, será preciso criar uma nova, com uma boa descrição da sugestão de mudança em [nova issue](https://github.com/fga-eps-mds/2019.2-Over26/issues/new?assignees=&labels=&template=template-de-issue.md&title=) e um título de fácil entendimento. Além disso, associe à issua a label __Improvement__.
+* Se não existir, será preciso criar uma nova, com uma boa descrição da sugestão de mudança em [_Nova_Issue_](https://github.com/fga-eps-mds/2019.2-Grupo2/issues/new) e um título de fácil entendimento. Além disso, associe à issua a label __Improvement__.
 
-* As suas mudanças devem ser submetidas por meio de [_Pull Requests_](https://github.com/fga-eps-mds/2019.2-Over26/pulls), que conta com um [_Template_](https://github.com/fga-eps-mds/2019.2-Over26/blob/master/.github/PULL_REQUEST_TEMPLATE.md).
+* As suas mudanças devem ser submetidas por meio de [_Pull Requests_](https://github.com/fga-eps-mds/2019.2-Grupo2/pulls), que conta com um [_Template_](https://github.com/fga-eps-mds/2019.2-Grupo2/blob/master/.github/PULL_REQUEST_TEMPLATE.md).
 
 # Padrão de Commits 
 
@@ -37,10 +37,10 @@ __Example:__
 Objetivando manter a confiabilidade do código fonte do nosso produto, propõe-se o uso de uma política de branches para orientar os desenvolvedores no modo de organização das suas contribuições neste repositório. Assim, estabelecemos:
 
 
-A branch padrão é a master, para hospedar o código estável do projeto (que estará em ambiente de produção);
+branch padrão master, para hospedar o código estável do projeto (que estará em ambiente de produção);
 
 
-__gh-pages__: Designada para conter todos os documentos do projeto, disponíveis no [Github Pages](https://fga-eps-mds.github.io/2019.2-Over26/#/)
+__gh-pages__: Designada para conter todos os documentos do projeto, disponíveis no [Github Pages](https://fga-eps-mds.github.io/2019.2-Grupo2/#/)
 
 * __`docs/nome_documento`__ - Branch onde será consolidada a documentação do projeto, sendo usada exclusivamente para isso.
 
@@ -52,10 +52,10 @@ Exemplo: `hotfix/1-<nome_bug>` (_issue_ #1)
 * __`feature/<feature-name>`__ - Branch usada para desenvolvimento de uma nova feature no projeto. O nome deve conter o número da issue registrada, no formato. 
 Exemplo: `feature/1-<feature-name>` (_issue_ #1)
 
-* __`release-<release-version>`__ - Branch destinada à ajustes finais/build que serão feitas para entrega de uma realize do software. O nome deve ser a própria versão da release. 
+* __`release/<release-version>`__ - Branch destinada à ajustes finais/build que serão feitas para entrega de uma realize do software. O nome deve ser a própria versão da release. 
 
 * __`improvement/<improvement-name>`__ - Branch usada para melhorar a usabilidade e outros aspectos das funcionalidade e/ou documentação do projeto. Deve possuir associado ao nome, o número da _issue_ inscrita no repositório.
 Exemplo: `improvement/1-<improvement-name>` (_issue_ #1)
 
-Para mais informações acesse [Estrutura de Branches e Padrões](https://fga-eps-mds.github.io/2019.2-Over26/#/branches-structure)
+Para mais informações acesse [Estrutura de Branches e Padrões](https://fga-eps-mds.github.io/2019.2-Grupo2/#/branches-structure)
 

@@ -90,7 +90,6 @@ Ao longo de todo projeto tentei ficar bastante presente e procurei a todo moment
 
 Por fim, acho que a equipe como um todo se dedicou bastante e a presença de equipe de EPS fez total diferença para a entrega de um produto mais robusto e funcional.
 
-<<<<<<< HEAD
 * **João Gabriel**
 
 De início,  me senti perdido quanto ao que seria o projeto devido à dificuldade de definir o escopo da aplicação, ao fato de não estar previamente familiarizado com as tecnologias escolhidas para o mesmo.
@@ -98,7 +97,7 @@ De início,  me senti perdido quanto ao que seria o projeto devido à dificuldad
 Com o passar do semestre o escopo foi definido, me familiarizei com as tecnologias e acredito ter me adaptado bem  com o uso das metodologias ágeis - apesar de ter tido meu primeiro contato com as mesmas este semestre - e acredito que a experiência de usá-las será muito útil futuramente.
 
 Apesar da existência de certo nível de dificuldade no que se refere a comunicação dentro do grupo - tanto entre os grupos de EPS e MDS quanto dentro do grupo de MDS em sí - a meu ver todos demonstraram interesse e dedicação para que o produto fosse o melhor que conseguíssemos  produzir.
-=======
+
 * **Gabriel**
 
 No início do semestre, não tinha muita noção do funcionamento da disciplina. Dessa maneira, quando comecei a de fato trabalhar, percebi como ainda há  muito para aprender no curso. Por ser tudo muito novo e por não termos um escopo bem definido, o começo de projeto foi bem complexo. Mas mesmo assim posso dizer que minha bagagem de conhecimento aumentou. 
@@ -121,4 +120,10 @@ Tive que aprender a administrar meu tempo, porque a matéria por si só demanda 
 
 A experiência na matéria foi positiva, o suporte de EPS foi essencial para o projeto e facilitou a matéria em diversos aspectos. O comprometimento da equipe de MDS também foi essencial, devido a complexidade do projeto, não seria possível finalizar o semestre sem o trabalho de todos, a equipe foi muito entrosada e prestativa. 
 
->>>>>>> c02a93da5ee7127d851443bfe621d599a1ea1680
+* **João Paulo**
+
+Ao começar a matéria eu não tinha muita noção de pra onde correr, o que precisávamos fazer e o que era necessário aprender. Mas com o passar das sprints o escopo foi mais bem definido e consegui perceber os caminhos que deveria tomar. No início os treinamentos, principalmente na parte de Git ajudaram demais a lidar com essa parte que tinha muito pouco conhecimento. No começo de botar a mão na massa, foi preciso muita ajuda do time de EPS em relação ao Node, a língua escolhida para criar nosso backend, mas com o passar do tempo conseguimos aprender bastante e a produtividade e independência do time de MDS aumentou muito e assim conseguimos seguir sem maiores problemas.
+
+De todas tecnologias aprendidas minha favorita foi o Node, claro que ainda preciso melhorar e estudar bastante a língua, mas sinto que o conhecimento adquirido irá ajudar muito daqui pra frente e quem sabe guiar meus gostos, pois achei bastante interessante e versátil. Também percebi como o Git é importante e utilizando-se dos métodos ágeis ajuda demais a organizar e manter uma boa sequência e documentação do projeto, aprender bastante de Git foi uma das melhores coisas!
+
+O amadurecimento que tive durante o decorrer de todo projeto vai ser essencial daqui pra frente e com certeza me fizeram ter muito mais animo com o curso, que até o dado momento eu realmente não tinha sentido em nenhuma outra matéria, tudo isso se dá a todos os membros do projeto que se ajudaram bastante, resolveram problemas e evoluíram muito juntos, todos foram essenciais para o sucesso desse projeto e chegar até aqui, eu diria no que no final tudo correu perfeitamente e rendeu grande aprendizado.
